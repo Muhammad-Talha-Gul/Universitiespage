@@ -1,0 +1,104 @@
+[12-Jan-2022 15:13:26 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[13-Jan-2022 18:51:29 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Broadcast' not found in /home/universities/public_html/routes/channels.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/channels.php on line 18
+[16-Jan-2022 13:28:44 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/web.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/web.php on line 16
+[02-Feb-2022 05:42:09 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/api.php on line 16
+[24-Oct-2022 20:44:30 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/api.php on line 16
+[26-Oct-2022 14:46:17 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[28-Oct-2022 01:33:25 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Broadcast' not found in /home/universities/public_html/routes/channels.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/channels.php on line 18
+[30-Oct-2022 11:44:34 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/web.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/web.php on line 16
+[23-Nov-2022 04:36:37 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/web.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/web.php on line 16
+[25-Nov-2022 23:22:06 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/web.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/web.php on line 16
+[07-Dec-2022 15:08:08 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[10-Dec-2022 00:02:25 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[11-Dec-2022 04:13:32 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/api.php on line 16
+[14-Dec-2022 18:37:57 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[17-Dec-2022 09:52:14 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[21-Dec-2022 13:53:53 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[21-Dec-2022 23:40:02 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[29-Dec-2022 01:45:47 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[25-Feb-2023 11:56:16 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Broadcast' not found in /home/universities/public_html/routes/channels.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/channels.php on line 18
+[03-Jul-2023 00:57:34 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/api.php on line 16
+[03-Aug-2023 06:21:16 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Broadcast' not found in /home/universities/public_html/routes/channels.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/channels.php on line 18
+[06-Aug-2023 02:13:41 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/web.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/web.php on line 16
+[24-Aug-2023 14:31:05 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/api.php on line 16
+[26-Sep-2023 01:59:55 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/web.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/web.php on line 16
+[19-Oct-2023 18:40:30 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/universities/public_html/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/console.php on line 16
+[07-Jan-2024 01:36:35 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Broadcast' not found in /home/universities/public_html/routes/channels.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/channels.php on line 18

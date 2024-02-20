@@ -1,0 +1,106 @@
+body { 
+    background: #f4f6f8;
+    font-family: 'Raleway', sans-serif !important;
+}
+.navbar-default {
+	background-color: #782572;
+}
+.button-menu-mobile {
+    color: #ffffff;
+}
+.side-menu {
+	background: #f4f6f8;
+}
+.topbar .topbar-left { background: #f4f6f8; }
+#sidebar-menu > ul > li > a { color: #000; }
+#sidebar-menu > ul > li > a:hover {
+	color: #643a93;
+    text-decoration: none;
+    background-color: #f4f6f8;
+}
+#wrapper.enlarged .left.side-menu #sidebar-menu > ul > li > a:hover {
+    color: #643a93 !important;
+    background-color: #f4f6f8;
+}
+#wrapper.enlarged .left.side-menu #sidebar-menu ul > li:hover > a {
+    position: relative;
+    width: 260px;
+    color: #fffefe !important;
+    background-color: #782572;
+}
+#wrapper.enlarged .left.side-menu #sidebar-menu > ul > li:hover > a i {
+    color: #fff;
+}
+#sidebar-menu ul li a i {color: #782572;}
+#sidebar-menu ul ul li.active a {
+    color: #643a93;
+}
+#sidebar-menu ul ul a:hover {
+    color: #643a93;
+}
+#sidebar-menu > ul > li > a.active {
+    color: #36404e !important;
+    background-color: #f4f6f8;
+}
+.slimScrollBar { background: rgb(54, 64, 78) !important; }
+.help-box { color: rgb(54, 64, 78); }
+.content, .footer { background: #f4f6f8;}
+#wrapper.enlarged .left.side-menu #sidebar-menu ul > li:hover > ul {
+	background: #f4f6f8;
+}
+#wrapper.enlarged .left.side-menu #sidebar-menu ul ul li.active a {
+    color: #782572;
+}
+#sidebar-menu > ul > li > a.active {
+    color: #782572 !important;
+    background-color: #f4f6f8;
+}
+.widget-title {
+    color:#782572;
+}
+#sidebar-menu .subdrop {
+    color: #782572 !important;
+    background-color: #f4f6f8;
+}
+.account-logo-box {
+    background-color: #643a93;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.table>thead>tr>th {
+    border-bottom: 2px solid #643a93 !important;
+}
+.font-secondary {
+    font-family: 'Raleway', sans-serif !important;
+}
+.page-title-box .page-title {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 16px;
+}
+.page-title-box .breadcrumb {
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif !important;
+}
+.font-600 {
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: unset;
+}
+#sidebar-menu > ul > li {
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif !important;
+    color: #000;
+}
+.nav>li {
+    font-family: 'Raleway', sans-serif !important;
+}
+.tabs-vertical-env .nav.tabs-vertical li > a {
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif !important;
+}
+label {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 12px;
+}

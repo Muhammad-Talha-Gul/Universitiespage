@@ -1,0 +1,2 @@
+[05-Jan-2024 01:22:07 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/universities/public_html/app/Http/Controllers_old/Auth/ForgotPasswordController.php on line 8
+[06-Jan-2024 08:47:44 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/universities/public_html/app/Http/Controllers_old/Auth/RegisterController.php on line 10

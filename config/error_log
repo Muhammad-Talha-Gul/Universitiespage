@@ -1,0 +1,188 @@
+[26-Oct-2021 05:02:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/services.php on line 18
+[26-Oct-2021 05:03:03 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/mail.php on line 19
+[26-Oct-2021 05:09:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/filesystems.php on line 16
+[26-Oct-2021 05:11:03 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/app.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/app.php on line 15
+[26-Oct-2021 12:36:54 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/services.php on line 18
+[26-Oct-2021 12:40:25 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/mail.php on line 19
+[26-Oct-2021 13:15:41 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/filesystems.php on line 16
+[26-Oct-2021 13:22:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/app.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/app.php on line 15
+[22-Mar-2022 10:19:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/database.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/database.php on line 16
+[26-Mar-2022 00:00:04 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/session.php on line 19
+[26-Mar-2022 06:23:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/queue.php on line 18
+[28-Mar-2022 10:35:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/session.php on line 19
+[31-Mar-2022 19:27:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/filesystems.php on line 16
+[01-Apr-2022 01:48:42 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/database.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/database.php on line 16
+[03-Apr-2022 03:08:20 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/app.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/app.php on line 15
+[03-Apr-2022 11:21:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/session.php on line 19
+[05-Apr-2022 13:29:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/cache.php on line 18
+[05-Apr-2022 22:47:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/mail.php on line 19
+[06-Apr-2022 23:03:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/universities/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/view.php on line 17
+[07-Apr-2022 00:43:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/database.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/database.php on line 16
+[07-Apr-2022 15:39:02 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/services.php on line 18
+[08-Apr-2022 00:34:56 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/session.php on line 19
+[08-Apr-2022 16:24:00 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/broadcasting.php on line 18
+[12-Apr-2022 05:22:12 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/universities/public_html/config/paypal.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/paypal.php on line 29
+[16-Apr-2022 15:57:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/database.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/database.php on line 16
+[20-Apr-2022 11:55:22 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/session.php on line 19
+[25-Apr-2022 04:29:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/filesystems.php on line 16
+[27-Apr-2022 13:01:32 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/app.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/app.php on line 15
+[30-Apr-2022 18:32:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/universities/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/view.php on line 17
+[01-May-2022 11:52:28 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/services.php on line 18
+[02-May-2022 12:42:42 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/broadcasting.php on line 18
+[05-May-2022 18:46:12 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/database.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/database.php on line 16
+[14-May-2022 03:09:23 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/queue.php on line 18
+[31-May-2022 14:55:39 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/database.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/database.php on line 16
+[14-Jun-2022 14:37:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/app.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/app.php on line 15
+[11-Nov-2022 18:59:28 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/universities/public_html/config/paypal.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/paypal.php on line 29
+[26-Nov-2022 19:32:04 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/universities/public_html/config/paypal.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/paypal.php on line 29
+[28-Nov-2022 13:52:59 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/universities/public_html/config/paypal.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/paypal.php on line 29
+[30-Nov-2022 21:53:05 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/universities/public_html/config/paypal.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/paypal.php on line 29
+[03-Dec-2022 03:09:37 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/universities/public_html/config/paypal.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/paypal.php on line 29
+[05-Dec-2022 15:55:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/universities/public_html/config/paypal.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/paypal.php on line 29
+[14-Mar-2023 10:35:42 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/universities/public_html/config/paypal.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/paypal.php on line 29
+[04-May-2023 23:07:21 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/universities/public_html/config/paypal.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/paypal.php on line 29
+[21-May-2023 10:04:05 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/app.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/app.php on line 15
+[26-Aug-2023 23:38:28 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/session.php on line 19
+[04-Sep-2023 17:42:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/app.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/app.php on line 15
+[15-Nov-2023 07:04:14 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/universities/public_html/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/config/session.php on line 19

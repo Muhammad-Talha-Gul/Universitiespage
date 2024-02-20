@@ -1,0 +1,20 @@
+[06-Feb-2023 10:31:53 America/New_York] PHP Notice:  Undefined variable: factory in /home/universities/public_html/database/factories/ModelFactory.php on line 15
+[06-Feb-2023 10:31:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/universities/public_html/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/database/factories/ModelFactory.php on line 15
+[21-May-2023 22:16:19 America/New_York] PHP Notice:  Undefined variable: factory in /home/universities/public_html/database/factories/ModelFactory.php on line 15
+[21-May-2023 22:16:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/universities/public_html/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/database/factories/ModelFactory.php on line 15
+[30-Oct-2023 13:48:23 America/New_York] PHP Notice:  Undefined variable: factory in /home/universities/public_html/database/factories/ModelFactory.php on line 15
+[30-Oct-2023 13:48:23 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/universities/public_html/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/database/factories/ModelFactory.php on line 15
+[21-Dec-2023 20:25:50 America/New_York] PHP Notice:  Undefined variable: factory in /home/universities/public_html/database/factories/ModelFactory.php on line 15
+[21-Dec-2023 20:25:50 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/universities/public_html/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/database/factories/ModelFactory.php on line 15

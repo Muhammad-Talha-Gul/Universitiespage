@@ -1,0 +1,65 @@
+[03-Jan-2024 15:56:18 America/New_York] PHP Notice:  Undefined variable: __env in /home/universities/public_html/storage/framework/views/2a2531f4a153dd78f98fb18fc3e7db9f6d6da75f.php on line 2
+[03-Jan-2024 15:56:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function startSection() on null in /home/universities/public_html/storage/framework/views/2a2531f4a153dd78f98fb18fc3e7db9f6d6da75f.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/2a2531f4a153dd78f98fb18fc3e7db9f6d6da75f.php on line 2
+[04-Jan-2024 08:14:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function e() in /home/universities/public_html/storage/framework/views/9111fa46e8de94e58688c9c2c3deb9182fee0a5c.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/9111fa46e8de94e58688c9c2c3deb9182fee0a5c.php on line 2
+[04-Jan-2024 23:52:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function e() in /home/universities/public_html/storage/framework/views/ccc5f9710c35949b57172ad95a1420032e90365b.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/ccc5f9710c35949b57172ad95a1420032e90365b.php on line 5
+[08-Jan-2024 00:19:21 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/universities/public_html/storage/framework/views/64ec821dd0c39683fa6363b23a96705e16afe43b.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/64ec821dd0c39683fa6363b23a96705e16afe43b.php on line 1
+[10-Jan-2024 03:34:05 America/New_York] PHP Notice:  Undefined variable: paginator in /home/universities/public_html/storage/framework/views/a8dd96440d62fb08c5452cb8b02529f600655249.php on line 1
+[10-Jan-2024 03:34:05 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function hasPages() on null in /home/universities/public_html/storage/framework/views/a8dd96440d62fb08c5452cb8b02529f600655249.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/a8dd96440d62fb08c5452cb8b02529f600655249.php on line 1
+[10-Jan-2024 14:18:34 America/New_York] PHP Notice:  Undefined variable: __env in /home/universities/public_html/storage/framework/views/187509550f4e7e2a1b7552be8fc07d6802e3d660.php on line 2
+[10-Jan-2024 14:18:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function startSection() on null in /home/universities/public_html/storage/framework/views/187509550f4e7e2a1b7552be8fc07d6802e3d660.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/187509550f4e7e2a1b7552be8fc07d6802e3d660.php on line 2
+[10-Jan-2024 14:19:04 America/New_York] PHP Notice:  Undefined variable: root_folders in /home/universities/public_html/storage/framework/views/87315ddcc2d3a2dfe7fd7f107d96969c6b631f39.php on line 2
+[10-Jan-2024 14:19:04 America/New_York] PHP Notice:  Undefined variable: __env in /home/universities/public_html/storage/framework/views/87315ddcc2d3a2dfe7fd7f107d96969c6b631f39.php on line 2
+[10-Jan-2024 14:19:04 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function addLoop() on null in /home/universities/public_html/storage/framework/views/87315ddcc2d3a2dfe7fd7f107d96969c6b631f39.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/87315ddcc2d3a2dfe7fd7f107d96969c6b631f39.php on line 2
+[10-Jan-2024 18:07:16 America/New_York] PHP Notice:  Undefined variable: __env in /home/universities/public_html/storage/framework/views/c958f479e6ad45a3ab5ec3848066d030d4a502ee.php on line 3
+[10-Jan-2024 18:07:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function startSection() on null in /home/universities/public_html/storage/framework/views/c958f479e6ad45a3ab5ec3848066d030d4a502ee.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/c958f479e6ad45a3ab5ec3848066d030d4a502ee.php on line 3
+[10-Jan-2024 19:21:44 America/New_York] PHP Notice:  Undefined variable: __env in /home/universities/public_html/storage/framework/views/73c4769a5008745cbb4e4a99e578a953008bd31c.php on line 3
+[10-Jan-2024 19:21:44 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function startSection() on null in /home/universities/public_html/storage/framework/views/73c4769a5008745cbb4e4a99e578a953008bd31c.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/73c4769a5008745cbb4e4a99e578a953008bd31c.php on line 3
+[10-Jan-2024 20:22:20 America/New_York] PHP Notice:  Undefined variable: files in /home/universities/public_html/storage/framework/views/3a990ae60d727e082417f3425bb39b0827617b7b.php on line 1
+[10-Jan-2024 20:22:20 America/New_York] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/storage/framework/views/3a990ae60d727e082417f3425bb39b0827617b7b.php on line 1
+[10-Jan-2024 20:22:20 America/New_York] PHP Notice:  Undefined variable: directories in /home/universities/public_html/storage/framework/views/3a990ae60d727e082417f3425bb39b0827617b7b.php on line 1
+[10-Jan-2024 20:22:20 America/New_York] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/storage/framework/views/3a990ae60d727e082417f3425bb39b0827617b7b.php on line 1
+[10-Jan-2024 20:22:20 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function e() in /home/universities/public_html/storage/framework/views/3a990ae60d727e082417f3425bb39b0827617b7b.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/3a990ae60d727e082417f3425bb39b0827617b7b.php on line 57
+[11-Jan-2024 16:08:36 America/New_York] PHP Notice:  Undefined variable: __env in /home/universities/public_html/storage/framework/views/f9ac1901bf7eb594488166efbc6e83ca4b6b69dc.php on line 2
+[11-Jan-2024 16:08:36 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function startSection() on null in /home/universities/public_html/storage/framework/views/f9ac1901bf7eb594488166efbc6e83ca4b6b69dc.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/f9ac1901bf7eb594488166efbc6e83ca4b6b69dc.php on line 2
+[11-Jan-2024 23:38:52 America/New_York] PHP Notice:  Undefined variable: __env in /home/universities/public_html/storage/framework/views/6d6f87b0fb91bef0cf448c395d5febe882d63c70.php on line 3
+[11-Jan-2024 23:38:52 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function startSection() on null in /home/universities/public_html/storage/framework/views/6d6f87b0fb91bef0cf448c395d5febe882d63c70.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/6d6f87b0fb91bef0cf448c395d5febe882d63c70.php on line 3
+[12-Jan-2024 10:25:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function e() in /home/universities/public_html/storage/framework/views/13f33109cb1eaf2e28efaa9e3102087e0557071b.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/storage/framework/views/13f33109cb1eaf2e28efaa9e3102087e0557071b.php on line 2

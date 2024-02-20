@@ -1,0 +1,86 @@
+[14-Nov-2022 12:50:12 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function allCountry() in /home/universities/public_html/resources/views/frontend/components/programs.blade.php:69
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/programs.blade.php on line 69
+[27-Dec-2022 09:18:02 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 12
+[27-Dec-2022 09:18:02 America/New_York] PHP Notice:  Trying to get property 'title' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 12
+[27-Dec-2022 09:18:02 America/New_York] PHP Notice:  Undefined variable: uni in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 44
+[27-Dec-2022 09:18:02 America/New_York] PHP Notice:  Trying to get property 'name' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 44
+[30-Dec-2022 21:29:17 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 14
+[30-Dec-2022 21:29:17 America/New_York] PHP Notice:  Trying to get property 'title' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 14
+[30-Dec-2022 21:29:17 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 28
+[30-Dec-2022 21:29:17 America/New_York] PHP Notice:  Trying to get property 'title' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 28
+[30-Dec-2022 21:29:17 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 198
+[30-Dec-2022 21:29:17 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 198
+[30-Dec-2022 21:29:17 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 199
+[30-Dec-2022 21:29:17 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 199
+[30-Dec-2022 21:29:17 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 200
+[30-Dec-2022 21:29:17 America/New_York] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:235
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 235
+[17-Mar-2023 16:52:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function allCountry() in /home/universities/public_html/resources/views/frontend/components/programs.blade.php:69
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/programs.blade.php on line 69
+[07-May-2023 13:34:31 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function allCountry() in /home/universities/public_html/resources/views/frontend/components/programs.blade.php:82
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/programs.blade.php on line 82
+[14-Oct-2023 19:28:20 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 60
+[14-Oct-2023 19:28:20 America/New_York] PHP Notice:  Trying to get property 'title' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 60
+[14-Oct-2023 19:28:20 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 93
+[14-Oct-2023 19:28:20 America/New_York] PHP Notice:  Trying to get property 'title' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 93
+[14-Oct-2023 19:28:20 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 296
+[14-Oct-2023 19:28:20 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 296
+[14-Oct-2023 19:28:20 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 297
+[14-Oct-2023 19:28:20 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 297
+[14-Oct-2023 19:28:20 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 298
+[14-Oct-2023 19:28:20 America/New_York] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:333
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 333
+[31-Oct-2023 03:19:26 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 35
+[31-Oct-2023 03:19:26 America/New_York] PHP Notice:  Trying to get property 'short_description' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 35
+[31-Oct-2023 03:19:26 America/New_York] PHP Notice:  Undefined variable: uni in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 114
+[31-Oct-2023 03:19:26 America/New_York] PHP Notice:  Trying to get property 'name' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 114
+[31-Oct-2023 03:19:26 America/New_York] PHP Notice:  Undefined variable: uni in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 115
+[31-Oct-2023 03:19:26 America/New_York] PHP Notice:  Trying to get property 'name' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 115
+[31-Oct-2023 03:22:12 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function url() in /home/universities/public_html/resources/views/frontend/components/programs.blade.php:91
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/programs.blade.php on line 91
+[06-Nov-2023 16:38:58 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 35
+[06-Nov-2023 16:38:58 America/New_York] PHP Notice:  Trying to get property 'short_description' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 35
+[06-Nov-2023 16:38:58 America/New_York] PHP Notice:  Undefined variable: uni in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 114
+[06-Nov-2023 16:38:58 America/New_York] PHP Notice:  Trying to get property 'name' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 114
+[06-Nov-2023 16:38:58 America/New_York] PHP Notice:  Undefined variable: uni in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 115
+[06-Nov-2023 16:38:58 America/New_York] PHP Notice:  Trying to get property 'name' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 115
+[19-Nov-2023 08:01:42 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 142
+[19-Nov-2023 08:01:42 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 142
+[19-Nov-2023 08:01:42 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 143
+[19-Nov-2023 08:01:42 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 143
+[19-Nov-2023 08:01:42 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 144
+[28-Dec-2023 14:06:54 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 69
+[28-Dec-2023 14:06:54 America/New_York] PHP Notice:  Trying to get property 'short_description' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 69
+[28-Dec-2023 14:06:54 America/New_York] PHP Notice:  Undefined variable: uni in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 146
+[28-Dec-2023 14:06:54 America/New_York] PHP Notice:  Trying to get property 'name' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 146
+[28-Dec-2023 14:06:54 America/New_York] PHP Notice:  Undefined variable: uni in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 147
+[28-Dec-2023 14:06:54 America/New_York] PHP Notice:  Trying to get property 'name' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 147
+[01-Jan-2024 16:07:20 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 68
+[01-Jan-2024 16:07:20 America/New_York] PHP Notice:  Trying to get property 'title' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 68
+[01-Jan-2024 16:07:20 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 101
+[01-Jan-2024 16:07:20 America/New_York] PHP Notice:  Trying to get property 'title' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 101
+[01-Jan-2024 16:07:20 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 304
+[01-Jan-2024 16:07:20 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 304
+[01-Jan-2024 16:07:20 America/New_York] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 305
+[01-Jan-2024 16:07:20 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 305
+[01-Jan-2024 16:07:20 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 306
+[01-Jan-2024 16:07:20 America/New_York] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:341
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 341
+[03-Jan-2024 21:52:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function url() in /home/universities/public_html/resources/views/frontend/components/programs.blade.php:166
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/programs.blade.php on line 166

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "webnet-pk",
+  "private_key_id": "a1cd39a4acfcf29e84ab8757d01a35049cea7af0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCcb07gTWO32/rJ\nHRWS+3HupeGJbruC7Uiv9/XQVvQpfA86HwP8LpBqcu0IqiAw+kRC0fEsDXq7chJW\nvZWEO5eadoxUjBAOZiWxm5nZuQKdWxtBjddc8Mwr/wZqAtkEJ/AAtXcoiArRpXJZ\nHp/2PuwbYT5UClk/hPKlmlupZaOyYnYm/4I7Y3QCalDrml4F6EL/50mRvu7nES2i\nvHmRDo+ONT0IFt+RMM2HNX96Eh01/JOj7IrfQyp8nzSh3RNedIyEVkh/vSpMa651\ngcGuN3qsTddfPBzGL1yTFbLgzgWmvhTiguImUZWxygBbmmx8MNmUn6j0eR5Vdn5/\nB/IEFvcXAgMBAAECggEAPwGl5znEXB1B2RbZxaV4sgIl4NC0vXsMt7NLUmpzVPIe\nv+4WENBAYl9/kOnUpWVncPJWDMQxFqZPNJiPS/8khJYS10rCfMovjGV7hfG6V96G\nD9UtVMW3tlC1KKWU+tOLGv37zFte4Cme8L4g93FIb46vJ/IzGB5YDNMq8AN79zCH\ne87QUaqBemO+hHRbeIzrhnsEkauKOsHqET6yKjgXGzw9dAHGSJCjo5R2FfCM9FSG\nv9BK3Wgi1zUP5GW12X+FVppnelxg+uJab10goX2Z3rlNubxByqX5atq8c/uWXc88\nbQvxJsTuynOoZM4pv4Z4rqZIEoYFpnrcSZOzc7dYQQKBgQDXSHR1QV69QFO9fsyB\nY9K7R0mLXcUTAAN4+DvX/EjAmRrgfNIuE7ywRR3guMIIVDFj9xm7bf+6QB1itLyA\n95N8CB3WPqqTVyOHeQgNgI2IfuJCRnSXv9Fa4oAkrar94sH6+Ze4Fgk1p/YWnf8R\n3QLO5CILGN7o1+ON5yIcge+63wKBgQC6BYwivDs6OLUn7PNqOLdqcAwU5oD6hv+x\ndEzY5GT3Yxbw45IGnqH3bqBkCXGSQUAydwac4LBUgVQDabec7DMzumjNS7QYL/HI\n2x305lbbIXrS8YA4poyFCZNZ1zH7YHaXGDRitwlvwX4S24fkv/9LE4Cdu89aziTH\nCn6h9QiCyQKBgGTmNI7wQHL6v0TFNRw/qPjVhIapQECTdQ0xavrj50U9fPdSCUBH\nR9xlyIcWkPpOW4e6vHi4KW8ltaAZjW/0mU88jp9nZ5L++Ev6UefiJHOg5HKjiunE\noV6zYdPPAaFUsg3rBUzmJxLa0d/v1SiOKU7GZZ5F3dPLu386oSYzUCSJAoGAFfgp\nwMByTkH8Qybc6KKiJtPs2VsPyIbBE/gkS0lOE1mEkBaQXG/HuS07jBUBcMB8EHm2\nMjjnGlPb1DtcEBBlS6qsTfKu5lxjNdGLDC1X/LFLjDYxan9hASVMXcPoh0OxPc8C\nANaVKrmzZg6/UejLAdbfzcEskBDgjxFSO1ZxFuECgYEAoQ3eUFAFVbBKvpRj+Mqj\n27SJB6NUYqSZ8riWDYP0EQOU2zAnXPFdOJ3pRMMyYYbJhduaUjME7ETtPSdgHIvG\nmxNMvpwSUAynPH1vCn6FVpjA4pAdA7qviOoTpIgmGnFiSxzj1oYnDmk5O4b3a58G\nzXUXHMDcHroIRsnluU2d3cU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "webnet-api@webnet-pk.iam.gserviceaccount.com",
+  "client_id": "116233472929259766833",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/webnet-api%40webnet-pk.iam.gserviceaccount.com"
+}

@@ -1,0 +1,79 @@
+[12-Mar-2022 01:41:37 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 786
+[12-Mar-2022 01:41:37 America/New_York] PHP Notice:  Trying to get property 'id' of non-object in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 786
+[12-Mar-2022 01:48:12 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 107
+[02-Apr-2022 14:58:32 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 350
+[02-Apr-2022 14:58:32 America/New_York] PHP Notice:  Trying to get property 'id' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 350
+[29-Dec-2022 07:35:31 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 142
+[29-Dec-2022 07:35:31 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 142
+[29-Dec-2022 07:35:31 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 143
+[29-Dec-2022 07:35:31 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 143
+[29-Dec-2022 07:35:31 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[09-Jan-2023 22:00:22 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 129
+[02-Mar-2023 11:24:10 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 129
+[25-Oct-2023 00:34:21 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 82
+[31-Oct-2023 03:19:03 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 322
+[31-Oct-2023 03:19:03 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 322
+[31-Oct-2023 03:19:03 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 323
+[31-Oct-2023 03:19:03 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 323
+[31-Oct-2023 03:19:03 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 324
+[31-Oct-2023 03:19:03 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 443
+[31-Oct-2023 03:19:03 America/New_York] PHP Notice:  Trying to get property 'id' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 443
+[06-Nov-2023 16:35:11 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 322
+[06-Nov-2023 16:35:11 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 322
+[06-Nov-2023 16:35:11 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 323
+[06-Nov-2023 16:35:11 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 323
+[06-Nov-2023 16:35:11 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 324
+[06-Nov-2023 16:35:11 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 443
+[06-Nov-2023 16:35:11 America/New_York] PHP Notice:  Trying to get property 'id' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 443
+[06-Nov-2023 16:38:16 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 142
+[06-Nov-2023 16:38:16 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 142
+[06-Nov-2023 16:38:16 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 143
+[06-Nov-2023 16:38:16 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 143
+[06-Nov-2023 16:38:16 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[17-Nov-2023 00:30:54 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[17-Nov-2023 00:30:54 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[17-Nov-2023 00:30:54 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[17-Nov-2023 00:30:54 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[17-Nov-2023 00:30:54 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[17-Nov-2023 11:27:15 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[17-Nov-2023 11:27:15 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[17-Nov-2023 11:27:15 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[17-Nov-2023 11:27:15 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[17-Nov-2023 11:27:15 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[18-Nov-2023 09:34:19 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[18-Nov-2023 09:34:19 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[18-Nov-2023 09:34:19 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[18-Nov-2023 09:34:19 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[18-Nov-2023 09:34:19 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[19-Nov-2023 00:04:07 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[19-Nov-2023 00:04:07 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[19-Nov-2023 00:04:07 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[19-Nov-2023 00:04:07 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[19-Nov-2023 00:04:07 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[20-Nov-2023 03:49:49 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[20-Nov-2023 03:49:49 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[20-Nov-2023 03:49:49 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[20-Nov-2023 03:49:49 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[20-Nov-2023 03:49:49 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[18-Dec-2023 10:43:43 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[18-Dec-2023 10:43:43 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[18-Dec-2023 10:43:43 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[18-Dec-2023 10:43:43 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[18-Dec-2023 10:43:43 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[28-Dec-2023 21:08:46 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[28-Dec-2023 21:08:46 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[28-Dec-2023 21:08:46 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[28-Dec-2023 21:08:46 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[28-Dec-2023 21:08:46 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[28-Dec-2023 22:08:37 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 142
+[28-Dec-2023 22:08:37 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 142
+[28-Dec-2023 22:08:37 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 143
+[28-Dec-2023 22:08:37 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 143
+[28-Dec-2023 22:08:37 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[29-Dec-2023 01:07:25 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 624
+[29-Dec-2023 01:07:25 America/New_York] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 624
+[29-Dec-2023 01:07:25 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 625
+[29-Dec-2023 01:07:25 America/New_York] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 625
+[29-Dec-2023 01:07:25 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 626
+[29-Dec-2023 01:07:25 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 925
+[29-Dec-2023 01:07:25 America/New_York] PHP Notice:  Trying to get property 'id' of non-object in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 925

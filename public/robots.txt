@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 
+Disallow: /https://universitiespage.com/admin
+Disallow: /*admin*
+Disallow: /*terms-and-condition*
+
+Sitemap: https://universitiespage.com/sitemap.xml

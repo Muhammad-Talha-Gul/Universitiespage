@@ -1,0 +1,2 @@
+[15-May-2022 12:20:09 America/New_York] PHP Fatal error:  Class 'Illuminate\Routing\Controller' not found in /home/universities/public_html/app/Http/Controllers_old/Controller.php on line 10
+[13-Nov-2023 16:54:26 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/universities/public_html/app/Http/Controllers_old/HomeController.php on line 7

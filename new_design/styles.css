@@ -1,0 +1,1130 @@
+/* ............header css Start............. */
+
+.topbar{
+top: 0px;
+background: #FFFFFF;
+}
+
+.logo{
+width: 168px;
+height: 56px;
+}
+
+.logocol{
+    padding-left: 60px;
+    padding-top: 5px;
+}
+
+.whatsapp{
+width: 15px;
+height: 16px;
+}
+
+.iconcol{
+    padding-top: 15px;
+}
+
+.Islamabad{
+color: #000;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.topbarrow ul li{
+    list-style: none;
+    display: inline;
+    
+}
+
+.iconcol{
+    text-align: right;
+    padding-right: 60px;
+}
+
+.menubar{
+
+    background: #0B6D76;
+}
+
+.search{
+width: 21px;
+height: 21px;
+}
+
+.searchcol{
+    padding-top: 20px;
+}
+
+.menucol{
+    padding-top: 8px;
+}
+
+.navbar-nav li a{
+color: #FFF !important;
+font-family: sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.navbar-nav li{
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    .logocol {
+            text-align: center !important;
+    }
+  }
+  
+  @media screen and (max-width: 717px) {
+    .iconcol  {
+            text-align: center !important;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .searchcol {
+        position: absolute;
+        text-align: right;
+    }
+  }
+
+  @media screen and (max-width: 717px) {
+    .iconcol ul  {
+        display: inline-grid !important;
+    }
+  }
+  
+  #navbarNav ul li a{
+    font-size: 15px;
+    font-weight: bolder;
+  }
+
+  #navbarNav ul li a:hover{
+    color: rgb(42, 56, 87) !important;
+  }
+
+  #navbarNav ul li{
+    padding-left: 0px !important;
+  }
+
+  .topbarrow ul li {
+    list-style: none;
+    display: inline;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+.container1{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay{
+  background: rgba(11, 109, 118, 0.50);
+    min-width: 37vh;
+    min-height: 10vh;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.overlay p{
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .overlay {
+    min-width: 60vh !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .overlay {
+    min-width: 40vh !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .overlay {
+    min-width: 30vh !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .overlay p {
+    font-size: 24px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .overlay p {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .overlay p {
+    font-size: 20px !important;
+  }
+}
+
+/* ............header css End............. */
+
+
+
+/* <!-- ..................Home herro Section css Start............. --> */
+
+
+.herrobgimg{
+  background-image: url(college-students.jpg);
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-size: 100% 100%; 
+  position: relative;
+  text-align: center;
+}
+
+.overlay11{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #00000092;
+}
+
+.centertextdiv{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
+.searchdiv{
+  border-radius: 0px 10px 10px 0px;
+    opacity: 0.78;
+    background: #0B6D76;
+    width: 100%;   
+    top: 50%;
+    left: 50%;
+    transform: translate(-0%, 500%);
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.centertextdiv h6{
+  color: #FFF;
+font-family: sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.centertextdiv h4{
+  color: #FFF;
+font-family: sans-serif;
+font-size: 50px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.centertextdiv p{
+  color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: 138%; /* 34.5px */
+}
+
+.centertextdiv button{
+  border-radius: 5px;
+background: #0B6D76;
+padding-left: 30px;
+padding-right: 30px;
+color: #FFF;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 138%; /* 27.6px */
+}
+
+.heroinput{
+  border-radius: 4px;
+background: #FFF;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+color: rgba(0, 0, 0, 0.46);
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 138%; /* 27.6px */
+padding-left: 20px;
+height: 47px;
+}
+
+.heroformsubmit{
+  border-radius: 4px;
+background: #FFF;
+height: 47px;
+width: 100%;
+}
+
+.fa-magnifying-glass{
+  stroke-width: 2px;
+color: #0A636B;
+}
+
+@media screen and (max-width: 767px) {
+  .searchdiv {
+    transform: translate(-0%, 170%);
+     
+   }
+ }
+
+
+ @media screen and (max-width: 767px) {
+  .overlay11  {
+      min-height: 115vh;
+   }
+ }
+
+ @media screen and (max-width: 767px) {
+  .herrobgimg  {
+      min-height: 115vh;
+   }
+ }
+
+ @media screen and (max-width: 526px) {
+  .herrobgimg  {
+      min-height: 120vh;
+   }
+ }
+
+ @media screen and (max-width: 526px) {
+  .overlay11  {
+      min-height: 120vh;
+   }
+ }
+
+ @media screen and (max-width: 767px) {
+  .searchdiv {
+    transform: translate(-0%, 185%);
+     
+   }
+ }
+
+
+
+
+
+
+ @media screen and (max-width: 478px) {
+  .herrobgimg  {
+      min-height: 130vh;
+   }
+ }
+
+ @media screen and (max-width: 478px) {
+  .overlay11  {
+      min-height: 130vh;
+   }
+ }
+ 
+ @media screen and (max-width: 478px) {
+  .searchdiv {
+    transform: translate(-0%, 190%);
+     
+   }
+ }
+
+ @media screen and (max-width: 991px) {
+  .heroinput {
+    margin-bottom: 5px;
+     
+   }
+ }
+
+
+
+
+ @media screen and (max-width: 439px) {
+  .herrobgimg  {
+      min-height: 140vh;
+   }
+ }
+
+ @media screen and (max-width: 439px) {
+  .overlay11  {
+      min-height: 140vh;
+      
+   }
+ }
+ 
+ @media screen and (max-width: 439px) {
+  .searchdiv {
+    transform: translate(-0%, 200%);
+     
+   }
+ }
+
+
+ 
+
+
+
+/* <!-- ..................Home herro Section css End............. --> */
+
+
+
+
+
+/* <!-- ..................POPULAR UNIVERSITIES Section Start............. --> */
+
+
+
+
+.owl-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  padding-right: 900px;
+  position: absolute;
+}
+
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -264px;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.carouselimg1{
+  background-image: url(Rectangle.png);
+  width: 100%;
+  min-height: 31vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.uni_milan{
+  width: 80%;
+  min-height: 8vh;
+  background: rgba(11, 109, 118, 0.5);
+  margin-left: 30px;
+  text-align: center;
+  padding-top: 12px;
+}
+
+@media screen and (max-width: 991px) {
+ .po_un_col1 {
+    text-align: center !important;
+    
+  }
+}
+
+
+
+
+
+
+
+      
+/* <!-- ..................POPULAR UNIVERSITIES Section End............. --> */
+
+
+
+
+/* <!-- ..................Popular Courses Section Start............. --> */
+
+.popularcouresesection h1{
+color: #0B6D76;
+text-align: center;
+font-family: sans-serif;
+font-size: 50px;
+font-style: normal;
+font-weight: 600;
+line-height: 126.5%; 
+}
+
+.popularcouresesection{
+  text-align: center;
+
+}
+
+.popularcouresesection p{
+  color: #000;
+text-align: center;
+font-family: sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 151.5%;
+}
+
+.inaerdiv{
+  width: 82%;
+  height: 29vh;
+  flex-shrink: 0;
+  background: #FFF;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.10);
+  position: absolute;
+  margin-top: -80px;
+  margin-left: 16px;
+  padding-top: 66px;
+  text-align: center;
+}
+
+.Rectangle45{
+  width: 100%;
+  height: auto;
+}
+
+.MBBSimg{
+  margin-bottom: 100px;
+}
+
+.inaerdiv h4{
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 126.5%;
+}
+
+.inaerdiv h5{
+  color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 126.5%;
+}
+
+.inaerdiv h6{
+  color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 126.5%;
+}
+
+.inaerdiv p{
+  color: #A5A5A5;
+text-align: center;
+font-family: Poppins;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: 126.5%;
+}
+
+.inaerdivimg{
+  margin-top: -380px;
+}
+
+@media screen and (max-width: 1304px) {
+  .owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    padding-top: 30px !important;
+  }
+}
+
+@media screen and (max-width: 1216px) {
+  .owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    padding-top: 50px !important;
+  }
+}
+
+@media screen and (max-width: 1094px) {
+  .owl-theme .owl-dots, .owl-theme .owl-nav  {
+    margin-left: -260px !important;
+    margin-top: 30px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .owl-theme .owl-dots, .owl-theme .owl-nav  {
+    padding-right: 0px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .owl-theme .owl-dots, .owl-theme .owl-nav   {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+  }
+}
+
+@media screen and (max-width: 1178px) {
+  .inaerdiv  {
+    margin-left: 11px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .inaerdiv  {
+    width: 87% !important;
+  }
+}
+
+@media screen and (max-width: 897px) {
+  .inaerdiv  {
+    width: 87% !important;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .inaerdiv  {
+    width: 87% !important;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .inaerdiv  {
+    width: 84% !important;
+  }
+}
+
+ 
+
+
+/* <!-- ..................Popular Courses Section End............. --> */
+
+
+
+
+
+/* <!-- ..................Browse Courses Section Start............. --> */
+
+
+
+.Browsesection{
+  background: #F0F0F0;
+
+}
+
+
+.Selectone p{
+  color: #000;
+font-family: sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 126.5%;
+}
+
+.Selectone ul li{
+
+  list-style: none;
+  padding-left: 10px;
+  min-height: 7vh;
+  padding-top: 10px;
+  border-radius: 5px;
+border: 1px solid #A5A5A5;
+background-color: #FFFFFF;
+
+}
+
+.Selectone ul{
+  padding-left: 0px;
+}
+
+.Selectone ul li a{
+  color: #000000;
+font-family: sans-serif;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 126.5%;
+}
+
+.Browsesection{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card-header1 .title {
+  font-size: 17px;
+  color: #FFF;
+font-family: Poppins;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: 126.5%; /* 27.83px */
+}
+
+.card-header .title {
+  font-size: 17px;
+  color: #030303;
+font-family: Poppins;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: 126.5%; /* 27.83px */
+}
+
+.card-header1 .accicon {
+float: right;
+font-size: 20px;  
+width: 1.2em;
+}
+
+.card-header .accicon {
+  float: right;
+  font-size: 20px;  
+  width: 1.2em;
+  }
+
+.card-header1{
+cursor: pointer;
+border-bottom: none;
+width: 100%;
+min-height: 8vh;
+border-radius: 5px !important;
+background: #2A3857;
+color: #FFFFFF;
+padding-top: 10px;
+    padding-left: 15px;
+}
+
+.card-header{
+  cursor: pointer;
+  border-bottom: none;
+  width: 100%;
+  min-height: 8vh;
+  border-radius: 15px !important;
+  background: #ffffff;
+  color: #000000;
+  padding-top: 10px;
+  padding-left: 15px;
+  }
+
+.card{
+border: 1px solid #F0F0F0;
+}
+.card-body{
+border-top: 1px solid #ddd;
+background-color: #F0F0F0;
+}
+.card-header:not(.collapsed) .rotate-icon {
+transform: rotate(180deg);
+}
+
+
+
+
+
+/* <!-- ..................Browse Courses Section End............. --> */
+
+
+
+
+.card-body{
+  border: 1px solid rgb(27, 23, 23);
+  border-top: none;
+  width: 97%;
+  margin-left: 9px;
+  margin-top: -11px;
+  background: transparent;
+  text-align: center;
+}
+
+.card-body h4{
+  color: #000;
+text-align: center;
+font-family: sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 151.5%; /* 21.21px */
+}
+
+.card-body p{
+  color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 151.5%; /* 18.18px */
+}
+
+.card-body a{
+  color: #2A3857;
+text-align: center;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 151.5%; /* 21.21px */
+text-decoration-line: underline;
+}
+
+.owl-theme .owl-nav {
+    margin-top: 10px;
+    display: none;
+}
+
+
+
+
+
+/* <!-- ..................Our Team Section Start............. --> */
+
+.ourteamcol{
+  text-align: center;
+  padding-top: 60px;
+}
+
+.ourteamcol h2{
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 126.5%;
+}
+
+.OurTeamsection{
+
+background: #0B6D76;
+}
+
+.UniversitiesPageTeamcol p{
+  color: #FFF;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 133.5%;
+}
+
+.UniversitiesPageTeamcol h3{
+  color: #FFF;
+font-family: sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: 126.5%; 
+}
+
+.UniversitiesPageTeamcol h6{
+  color: #FFF;
+font-family: sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 133.5%; /* 26.7px */
+}
+
+.OurTeamsection{
+  padding: 20px 0px 20px 0px;
+}
+
+@media screen and (max-width: 992px) {
+  .OurTeamsection  {
+    text-align: center !important;
+  }
+}
+
+
+
+/* <!-- ..................Our Team Section End............. --> */
+
+
+
+/* footer */
+
+
+.footercol1 p{
+  color: #000;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 141.5%; /* 28.3px */
+}
+
+.footercol2 h3{
+  color: #000;
+font-family: sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: 141.5%; /* 35.375px */
+padding-left: 38px;
+}
+
+.footercol2 ul li{
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+
+
+.footercol2 ul li a:hover{
+  color: #2A3857;
+}
+
+.footercol2 ul li a{
+  color: #000;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 141.5%; /* 28.3px */
+text-decoration: none;
+}
+
+.footersection{
+  background: #F0F0F0;
+  padding-top: 50px;
+}
+
+.footercol3 h3{
+  color: #000;
+font-family: sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: 141.5%; /* 35.375px */
+}
+
+.footercol3 a{
+ text-decoration: none;
+ color: #000;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 141.5%; /* 28.3px */
+}
+
+.footercol3 a:hover{
+  color: #2A3857;
+}
+
+.footercol3 ul li{
+  list-style: none;
+  display: inline;
+  padding-left: 10px;
+}
+
+.footercol3 ul{
+  padding-left: 0px;
+  padding-top: 20px;
+}
+
+.footercol3 ul li a i{
+  background-color: #000;
+  color: white;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.footercol3 img{
+  width: 80%;
+}
+
+.footerlastrow h3{
+  color: #000;
+font-family: sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 141.5%; /* 25.47px */
+}
+
+.footerlastrow p{
+  color: #000;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; 
+}
+
+.po_un_col1 p{
+  color: #2A3857;
+font-family: sans-serif;
+font-size: 33px;
+font-style: normal;
+font-weight: 500;
+line-height: 126.5%; /* 41.745px */
+}
+
+.po_un_col1 p span{
+  color: #0B6D76;
+font-family: sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: 126.5%;
+}
+
+.newpp{
+  color: #000 !important;
+font-family: Poppins !important;
+font-size: 18px !important;
+font-style: normal !important;
+font-weight: 400 !important;
+line-height: 151.5% !important; /* 27.27px */
+}
+
+@media screen and (max-width: 991px) {
+  .footercol1 {
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footercol2 {
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footercol2 ul {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footercol3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footerlastrow {
+    text-align: center;
+  }
+}
+
+.hr1{
+  height: 1px;
+  background: #000;
+}
+
+.hr3{
+  height: 1px;
+  background: #000;
+}
+
+.hr2{
+  height: 1px;
+  background: #000;
+  width: 47%;
+}
+
+.emailp{
+  color: #0B6D76;
+font-family: sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 141.5%; /* 25.47px */
+}
+
+.emailsection{
+  text-align: center !important;
+  align-items: center;
+}
+
+.projectp{
+  color: #0B6D76;
+font-family: sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 141.5%; /* 25.47px */
+}
+
+.emailsection ul li{
+  list-style: none;
+  display: inline !important;
+  padding-left: 20px;
+}
+
+.emailsection ul{
+  padding-left: 0px;
+}
+
+@media screen and (max-width: 991px) {
+  .emailsection ul li {
+          display: block !important;
+  }
+}
+
+
+.span6{
+  width: 100%;
+  height: 8vh;
+  border-radius: 5px;
+background: rgb(11, 109, 118);
+color: #FFF;
+color: #FFF;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 141.5%; 
+margin-bottom: 10px;
+}
+
+
+
+/* footer */
+
+
+
+
+

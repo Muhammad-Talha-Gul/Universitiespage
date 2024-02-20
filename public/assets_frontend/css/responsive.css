@@ -1,0 +1,3200 @@
+.jconfirm-box.jconfirm-hilight-shake.jconfirm-type-default.jconfirm-type-animated{
+    width: 100% !important;
+}
+/* responsive start */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /* header start */
+    .navbar-nav {
+        display: unset !important;
+    }
+
+    #navbarNav ul li {
+        padding-left: 0px !important;
+        display: inline-block;
+        align-items: center;
+        flex-wrap: wrap;
+        white-space: nowrap;
+        /* max-width: max-content; */
+    }
+
+    /* header end */
+    /* banner start */
+    .herrobgimg {
+        padding: 0px 0px 0px;
+    }
+
+    .banner-sub-heading {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 0px;
+    }
+
+    .banner-heading {
+        font-size: 36px;
+        line-height: 38PX;
+    }
+
+    .banner-description {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .btn-uni {
+        padding: 10px 20px;
+        line-height: 20px;
+        margin-top: 7px;
+    }
+
+    .overlay11 {
+        width: 100%;
+        min-height: auto;
+        padding: 16rem 20px 8rem;
+    }
+
+    .heroformsubmit {
+        height: 40px;
+        width: 40px;
+        margin: 0px auto 0px;
+    }
+
+    .stickynavstylye {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 109 !important;
+        margin-top: 0px !important;
+        width: 102%;
+        opacity: 1 !important;
+        display: none;
+    }
+
+    /* .collapse {
+        margin-top: 20px;
+    } */
+
+    .bottom-nav .bottom-nav-links {
+        width: 100%;
+        display: flex !important;
+        text-align: left;
+        padding: 0px 5px !important;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .bottom-nav .bottom-nav-links .fa {
+        font-size: 14px !important;
+        margin-bottom: 7px;
+    }
+
+    .top-navbar {
+        border-bottom: none !important;
+    }
+
+    .header-logo {
+        height: 40px;
+        width: 180px !important;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .sticky-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9999 !important;
+        margin-top: 0px !important;
+        width: 100%;
+        opacity: 1 !important;
+        background-color: #fff;
+        padding: 10px 0px 0px;
+    }
+
+
+    /* banner end */
+
+    /* top header start */
+    .header-logo {
+        height: 40px;
+        width: 120px;
+        object-fit: contain;
+    }
+
+    .c-navbar-contactUs .fa::after {
+        top: 0px;
+        bottom: 0px;
+        right: -5px;
+    }
+
+    .c-navbar-contactUs .fa span {
+        font-size: 12px;
+    }
+
+    .displaynonethis {
+        display: none !important;
+    }
+
+    .bg-light {
+        padding-top: 0px !important;
+    }
+
+    /* top header end */
+
+    /* papolar universities start */
+    /* papular universities end */
+
+    /* home page responsive */
+    .inaerdiv {
+        margin-bottom: 15px;
+        max-width: 400px !important;
+        margin: 0 auto 15px;
+    }
+
+    .section-left-heading-block {
+        max-width: 400px;
+        text-align: left;
+    }
+
+    .po_un_col1 .section-heading {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .po_un_col1 .section-heading span {
+        font-size: 28px;
+    }
+
+    .section-paragraph {
+        font-size: 16px !important;
+        line-height: 20px !important;
+    }
+
+    .po_un_col1 {
+        max-width: 400px;
+        margin: 0 auto 30px;
+    }
+
+    .section-heading-span {
+        font-size: 28px !important;
+    }
+
+    .card-header1 {
+        font-size: 14px;
+    }
+
+    .card-body {
+        margin-top: 0px !important;
+    }
+
+    /* our team start */
+    .ourteamcol h2 {
+        font-size: 30px;
+    }
+
+    .UniversitiesPageTeamcol p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .UniversitiesPageTeamcol h3 {
+        font-size: 22px;
+        line-height: 26px;
+        margin-top: 40px;
+    }
+
+    .UniversitiesPageTeamcol h6 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .ourteamcol {
+        padding-top: 20px;
+    }
+
+    .papolar-universities {
+        padding-left: 0px !important;
+    }
+
+    /* our team end */
+
+    /* footer start */
+    .footercol2 {
+        margin: 0px 0px;
+        text-align: left !important;
+    }
+
+    .footercol2 ul {
+        padding-left: 40px;
+    }
+
+    .footer-sub-heading {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 0px;
+    }
+
+    .footer-right-sub-column {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .footercol3 a {
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .emailp {
+        font-size: 16px;
+    }
+
+    .email-span {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .emailp b {
+        font-size: 16px;
+    }
+
+    .emailsection ul li {
+        padding-left: 0px;
+        text-align: left;
+    }
+
+    .country-column {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .footerlastrow p {
+        line-height: 18px;
+    }
+
+    .copy-right-paragraph {
+        font-size: 16px;
+    }
+
+    .footercol3 {
+        margin-top: 0px;
+    }
+
+    .footercol3 img {
+        width: 180px;
+        height: 51px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .footer-logo-block {
+        height: auto;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    /* footer end */
+    /* home page responsive end */
+
+    /* guide page start */
+    .gide-top-image-container {
+        margin-top: 0px;
+        height: 350px;
+    }
+
+    .gide-top-image-container img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .top-link-main {
+        padding: 15px 10px 10px;
+        font-size: 16px;
+        padding-top: 160px;
+    }
+
+    .gide-heading {
+        font-size: 28px;
+        margin-bottom: 30px !important;
+    }
+
+    .card-columns {
+        column-count: 3;
+    }
+
+    .headingguide {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    /* guide page end */
+
+    /* universities page start */
+    ul.column-list {
+        column-count: 2;
+    }
+
+    .firstsection h1 {
+        font-size: 26px !important;
+    }
+
+    .firstsection p {
+        font-size: 18px !important;
+    }
+
+    .textcol1 h4 {
+        font-size: 28px !important;
+        margin-bottom: 0px;
+    }
+
+    .country-search {
+        padding: 10px 0px !important;
+    }
+
+    .view-all-button {
+        margin: 30px 0px 40px !important;
+    }
+
+    /* universities page end */
+
+    /*  Articles section start */
+
+    .textcol h3 {
+        font-size: 24px;
+        line-height: 24px;
+        /* 145.455% */
+    }
+
+    .textcol p {
+        font-size: 16px;
+        line-height: 18px;
+        /* 166.667% */
+    }
+
+
+    .blog-content-main {
+        padding: 15px;
+    }
+
+    .imgcol {
+        width: 100%;
+        height: 200px;
+    }
+
+
+    .article-card-main {
+        max-width: 100% !important;
+        margin: 0px 0px 15px !important;
+        flex: 0 0 100%;
+    }
+
+    .Page.navigation {
+        max-width: 100%;
+        overflow: auto;
+        margin: 0 auto;
+    }
+
+    .blogs-pagination {
+        width: 100%;
+    }
+
+    /* article page end */
+
+    /* .search-column {
+        flex: 0 0 33%;
+        max-width: 33%;
+    } */
+
+
+    /* articles section end */
+
+    .flagcol1 p {
+        font-size: 28px;
+        padding-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* visit visa end */
+
+    /* track page start */
+    .track-application-form-main {
+        margin: 180px auto 0px;
+    }
+
+    .track-section-heading {
+        font-size: 28px !important;
+    }
+
+    .track-section-heading span {
+        font-size: 28px !important;
+    }
+
+    /* track page end */
+
+    /* descount page start */
+    .discount-content-main {
+        margin: 0px auto !important;
+    }
+
+    .first-section {
+        margin-top: 150px;
+    }
+
+    /* descount page end */
+
+
+    /* details page start */
+
+    .banner-overlay {
+        padding: 20rem 20px 10rem;
+    }
+
+    .details-banner-heading {
+        font-size: 42px !important;
+        line-height: 48px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .details-banner-sub-heading {
+        margin-bottom: 20px;
+    }
+
+    .fillter-button {
+        height: 120px;
+        width: 121px;
+        margin-bottom: 0px;
+    }
+
+    .fillter-icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    .fillter-button-heading {
+        font-size: 16px;
+        ;
+    }
+
+    .Accommodationdiv {
+        padding: 10px;
+    }
+
+    .Accommodationdiv p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .fillter-button {
+        height: 120px;
+        width: 121px;
+        margin-bottom: 0px;
+    }
+
+    .fillter-icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    .fillter-button-heading {
+        font-size: 16px;
+        ;
+    }
+
+    .Accommodationdiv {
+        padding: 10px;
+    }
+
+    .Accommodationdiv p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .fillter-button {
+        height: 120px;
+        width: 121px;
+        margin-bottom: 0px;
+    }
+
+    .fillter-icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    .fillter-button-heading {
+        font-size: 16px;
+        ;
+    }
+
+    .Accommodationdiv {
+        padding: 10px;
+    }
+
+    .Accommodationdiv p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .fillter-button {
+        height: 140px;
+        width: 140px;
+        margin-bottom: 0px;
+    }
+
+    .fillter-icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    .fillter-button-heading {
+        font-size: 16px;
+        ;
+    }
+
+    .Accommodationdiv {
+        padding: 12px;
+    }
+
+    .Accommodationdiv p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .custom-select {
+        padding: 15px 20px !important;
+    }
+
+    .select-block::after {
+        top: 17px;
+        height: 9px;
+        width: 9px;
+    }
+
+    /* details page end */
+
+    /* article details page start */
+    .article-details-heading {
+        font-size: 32px;
+    }
+
+    .article-details-header-paragraph {
+        font-size: 16px;
+    }
+
+    .o-2colLayout section .d-lg-none {
+        display: none !important;
+    }
+
+    .o-2colLayout section .d-none {
+        display: block !important;
+    }
+
+    .o-2colLayout section .d-none a {
+        max-width: max-content;
+        width: 100%;
+        display: inline-block !important;
+        font-size: 16px !important;
+        margin: 0 auto;
+    }
+
+    .article-details-content-main h2 {
+        font-size: 26px;
+        margin-bottom: 16px !important;
+    }
+
+    .article-details-content-main .table tr td span {
+        font-size: 16px;
+    }
+
+    .article-details-content-main .table tr td b span font {
+        font-size: 16px;
+        line-height: 18px !important;
+    }
+
+    .article-details-content-main .table {
+        width: 100% !important;
+    }
+
+    .o-2colLayout section h4 {
+        font-size: 24px;
+    }
+
+
+    /* article details page end */
+    .guide-detail-section {
+        padding-top: 200px !important;
+    }
+
+    .MsoNormal iframe {
+        min-height: 250px !important;
+    }
+
+    .article-details-content-main h3 font {
+        font-size: 28px;
+    }
+
+    .span-on:after {
+        width: 142px;
+    }
+
+    .track-status-column {
+        min-width: 200px !important;
+        width: 200px;
+    }
+
+    .track-status-column-main::-webkit-scrollbar-track {
+        display: block;
+    }
+
+    /* user dasahboard start */
+    .boxbar2 .tablinks {
+        width: 90px;
+    }
+
+    /* .boxbar2 {
+                margin-top: 120px !important;
+                display: block;
+                margin-bottom: 20px !important;
+        
+            } */
+    /* .tab.custom_tab1 {
+        display: flex;
+    } */
+
+    /* .boxbar{
+                display: none;
+            } */
+    .tablinks:first-child {
+        margin-left: 0px !important;
+    }
+
+    .dashboard-section-heading {
+        margin-top: 20px;
+        font-size: 30px;
+        margin-bottom: 3px;
+    }
+
+    .dashboard-sub-heading {
+        font-size: 24px;
+    }
+
+    .f-app-table th,
+    .f-app-table td {
+        min-width: 150px;
+    }
+
+    .dashboard-table-header-heading a {
+        font-size: 16px;
+    }
+
+    .bottom-paragraph {
+        font-size: 14px !important;
+        text-align: left;
+    }
+
+    .f-app-table {
+        margin: 20px 0px !important;
+    }
+
+    .edit-profile-heading {
+        margin-bottom: 30px !important;
+    }
+
+    .table-responsive {
+        margin-bottom: 0px !important;
+    }
+
+    .custom_tab1 .tablinks span {
+        font-size: 10px;
+    }
+
+    .dashboard-section {
+        padding-top: 180px !important;
+    }
+
+    .add-student-heading {
+        margin-bottom: 5px !important;
+    }
+
+    /* user dashborad end */
+    .searchdiv_row {
+        max-width: 800px !important;
+    }
+    .largest-portal-paragraph {
+        line-height: 15px;
+    }
+
+    .largest-icon-main {
+        height: 35px;
+        width: 35px;
+    }
+
+    .largest-icon {
+        height: 35px;
+        width: 35px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* banner start */
+    .herrobgimg {
+        padding: 0px 0px 0px;
+    }
+
+    .banner-sub-heading {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 0px;
+    }
+
+    .banner-heading {
+        font-size: 36px;
+        line-height: 38PX;
+    }
+
+    .banner-description {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .btn-uni {
+        padding: 10px 20px;
+        line-height: 20px;
+        margin-top: 7px;
+    }
+
+    .overlay11 {
+        width: 100%;
+        min-height: auto;
+        padding: 14rem 20px 7rem;
+    }
+
+    .heroformsubmit {
+        height: 40px;
+        width: 40px;
+        margin: 0px auto 0px;
+    }
+
+    .stickynavstylye {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 109 !important;
+        margin-top: 0px !important;
+        width: 102%;
+        opacity: 1 !important;
+        display: none;
+    }
+
+    /* .collapse {
+        margin-top: 20px;
+    } */
+
+    .bottom-nav .bottom-nav-links {
+        width: 100%;
+        display: flex !important;
+        text-align: left;
+        padding: 0px 5px !important;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .bottom-nav .bottom-nav-links .fa {
+        font-size: 14px !important;
+        margin-bottom: 7px;
+    }
+
+    .top-navbar {
+        border-bottom: none !important;
+    }
+
+    .header-logo {
+        height: 40px;
+        width: 180px !important;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .sticky-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9999 !important;
+        margin-top: 0px !important;
+        width: 100%;
+        opacity: 1 !important;
+        background-color: #fff;
+        padding: 10px 0px 0px;
+    }
+
+
+    /* banner end */
+
+    /* top header start */
+    .header-logo {
+        height: 40px;
+        width: 120px;
+        object-fit: contain;
+    }
+
+    .c-navbar-contactUs .fa::after {
+        top: 0px;
+        bottom: 0px;
+        right: -5px;
+    }
+
+    .c-navbar-contactUs .fa span {
+        font-size: 12px;
+    }
+
+    .displaynonethis {
+        display: none !important;
+    }
+
+    .bg-light {
+        padding-top: 0px !important;
+    }
+
+    /* top header end */
+
+    /* papolar universities start */
+    /* papular universities end */
+
+    /* home page responsive */
+    .inaerdiv {
+        margin-bottom: 15px;
+        max-width: 400px !important;
+        margin: 0 auto 15px;
+    }
+
+    .section-left-heading-block {
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .po_un_col1 .section-heading {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .po_un_col1 .section-heading span {
+        font-size: 28px;
+    }
+
+    .section-paragraph {
+        font-size: 16px !important;
+        line-height: 20px !important;
+    }
+
+    .po_un_col1 {
+        max-width: 400px;
+        margin: 0 auto 30px;
+    }
+
+    .section-heading-span {
+        font-size: 28px !important;
+    }
+
+    .card-header1 {
+        font-size: 14px;
+    }
+
+    .card-body {
+        margin-top: 0px !important;
+    }
+
+    /* our team start */
+    .ourteamcol h2 {
+        font-size: 30px;
+    }
+
+    .UniversitiesPageTeamcol p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .UniversitiesPageTeamcol h3 {
+        font-size: 22px;
+        line-height: 26px;
+        margin-top: 40px;
+    }
+
+    .UniversitiesPageTeamcol h6 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .ourteamcol {
+        padding-top: 20px;
+    }
+
+    .papolar-universities {
+        padding-left: 0px !important;
+    }
+
+    /* our team end */
+
+    /* footer start */
+    .footercol2 {
+        margin: 0px 0px;
+        text-align: left !important;
+    }
+
+    .footercol2 ul {
+        padding-left: 40px;
+    }
+
+    .footer-sub-heading {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 0px;
+    }
+
+    .footer-right-sub-column {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .footercol3 a {
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .emailp {
+        font-size: 16px;
+    }
+
+    .email-span {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .emailp b {
+        font-size: 16px;
+    }
+
+    .emailsection ul li {
+        padding-left: 0px;
+        text-align: left;
+    }
+
+    .country-column {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .footerlastrow p {
+        line-height: 18px;
+    }
+
+    .copy-right-paragraph {
+        font-size: 16px;
+    }
+
+    .footercol3 {
+        margin-top: 0px;
+    }
+
+    .footercol3 img {
+        width: 180px;
+        height: 51px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .footer-logo-block {
+        height: auto;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    /* footer end */
+    /* home page responsive end */
+
+    /* guide page start */
+    .gide-top-image-container {
+        margin-top: 0px;
+        height: 250px;
+    }
+
+    .gide-top-image-container img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .top-link-main {
+        padding: 15px 10px 10px;
+        font-size: 16px;
+        padding-top: 140px;
+    }
+
+    .gide-heading {
+        font-size: 26px;
+        margin-bottom: 30px !important;
+    }
+
+    .card-columns {
+        column-count: 2;
+    }
+
+    .headingguide {
+        font-size: 15px;
+        line-height: 16px;
+    }
+
+    /* guide page end */
+
+
+    /* universities page start */
+    ul.column-list {
+        column-count: 2;
+    }
+
+    .firstsection h1 {
+        font-size: 24px !important;
+    }
+
+    .firstsection p {
+        font-size: 16px !important;
+    }
+
+    .textcol1 h4 {
+        font-size: 26px !important;
+        margin-bottom: 0px;
+    }
+
+    .country-search {
+        padding: 10px 0px !important;
+    }
+
+    .view-all-button {
+        margin: 20px 0px 40px !important;
+    }
+
+    /* universities page end */
+
+    /* courses page start */
+    .search-filter {
+        max-width: 100%;
+        margin-right: 10px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        /* display: none; */
+    }
+
+    /* .see-more {
+      display: none;
+    } */
+    .d-lg-none {
+        display: none !important;
+    }
+
+    .onimgtext {
+        max-width: 550px !important;
+    }
+
+    .onimgtext p {
+        font-size: 32px !important;
+    }
+
+    /* courses page end */
+
+    /*  Articles section start */
+
+    .textcol h3 {
+        font-size: 24px;
+        line-height: 24px;
+        /* 145.455% */
+    }
+
+    .textcol p {
+        font-size: 16px;
+        line-height: 18px;
+        /* 166.667% */
+    }
+
+
+    .blog-content-main {
+        padding: 15px;
+    }
+
+    .imgcol {
+        width: 100%;
+        height: 200px;
+    }
+
+
+    .article-card-main {
+        max-width: 100% !important;
+        margin: 0px 0px 15px !important;
+        flex: 0 0 100%;
+    }
+
+
+    .Page.navigation {
+        max-width: 100%;
+        overflow: auto;
+        margin: 0 auto;
+    }
+
+    .blogs-pagination {
+        width: 100%;
+    }
+
+    /* article page end */
+
+    /* articles section end */
+
+    .flagcol1 p {
+        font-size: 26px;
+        padding-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* visit visa end */
+    /* track page start */
+    .track-application-form-main {
+        margin: 120px auto 0px;
+    }
+
+    .track-section-heading {
+        font-size: 24px !important;
+    }
+
+    .track-section-heading span {
+        font-size: 24px !important;
+    }
+
+    /* track page end */
+
+
+    /* descount page start */
+    .discount-content-main {
+        margin: 0px auto !important;
+    }
+
+    .first-section {
+        margin-top: 110px;
+    }
+
+    /* descount page end */
+
+    /* details page start */
+
+    .banner-overlay {
+        padding: 14rem 20px 8rem;
+    }
+
+    .details-banner-heading {
+        font-size: 42px !important;
+        line-height: 48px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .details-banner-sub-heading {
+        margin-bottom: 20px;
+    }
+
+    .fillter-button {
+        height: 120px;
+        width: 121px;
+        margin-bottom: 0px;
+    }
+
+    .fillter-icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    .fillter-button-heading {
+        font-size: 16px;
+        ;
+    }
+
+    .Accommodationdiv {
+        padding: 10px;
+    }
+
+    .Accommodationdiv p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .custom-select {
+        padding: 10px 20px !important;
+    }
+
+    .select-block::after {
+        top: 15px;
+        height: 8px;
+        width: 8px;
+    }
+
+    .select-block {
+        margin-bottom: 10px;
+    }
+
+    /* details page end */
+
+    /* article details page start */
+    .article-details-heading {
+        font-size: 28px;
+    }
+
+    .article-details-header-paragraph {
+        font-size: 16px;
+    }
+
+    .o-2colLayout section .d-lg-none {
+        display: none !important;
+    }
+
+    .o-2colLayout section .d-none {
+        display: block !important;
+    }
+
+    .o-2colLayout section .d-none a {
+        max-width: max-content;
+        width: 100%;
+        display: inline-block !important;
+        font-size: 16px !important;
+        margin: 0 auto;
+    }
+
+    .article-details-content-main h2 {
+        font-size: 24px;
+        margin-bottom: 16px !important;
+    }
+
+    .article-details-content-main .table tr td span {
+        font-size: 16px;
+    }
+
+    .article-details-content-main .table tr td b span font {
+        font-size: 16px;
+        line-height: 18px !important;
+    }
+
+    .article-details-content-main .table {
+        width: 100% !important;
+    }
+
+    .o-2colLayout section h4 {
+        font-size: 22px;
+    }
+
+    /* article details page end */
+
+    .guide-detail-section {
+        padding-top: 180px !important;
+    }
+
+    .MsoNormal iframe {
+        min-height: 300px !important;
+    }
+
+    .article-details-content-main h3 font {
+        font-size: 24px;
+    }
+
+    .span-on:after {
+        width: 142px;
+    }
+
+    .track-status-column {
+        min-width: 180px !important;
+        width: 180px;
+    }
+
+    .track-status-column-main::-webkit-scrollbar-track {
+        display: block;
+    }
+
+    /* user dasahboard start */
+    .boxbar2 .tablinks {
+        width: 90px;
+    }
+
+    .boxbar2 {
+        margin-top: 120px !important;
+        display: block;
+        margin-bottom: 20px !important;
+
+    }
+
+    .tab.custom_tab1 {
+        display: flex;
+    }
+
+    .boxbar {
+        display: none;
+    }
+
+    .tablinks:first-child {
+        margin-left: 0px !important;
+    }
+
+    .dashboard-section-heading {
+        margin-top: 20px;
+        font-size: 30px;
+        margin-bottom: 3px;
+    }
+
+    .dashboard-sub-heading {
+        font-size: 24px;
+    }
+
+    .f-app-table th,
+    .f-app-table td {
+        min-width: 150px;
+    }
+
+    .dashboard-table-header-heading a {
+        font-size: 16px;
+    }
+
+    .bottom-paragraph {
+        font-size: 14px !important;
+        text-align: left;
+    }
+
+    .f-app-table {
+        margin: 20px 0px !important;
+    }
+
+    .edit-profile-heading {
+        margin-bottom: 30px !important;
+    }
+
+    .table-responsive {
+        margin-bottom: 0px !important;
+    }
+
+    .custom_tab1 .tablinks span {
+        font-size: 10px;
+    }
+
+    .dashboard-section {
+        padding-top: 20px !important;
+    }
+
+    .mobile-tab-main .tablinks {
+        width: 120px;
+    }
+
+    .file-input-column {
+        max-width: 50% !important;
+    }
+
+    .add-student-heading {
+        margin-bottom: 5px !important;
+    }
+
+    /* user dashborad end */
+    .searchdiv_row {
+        max-width: 800px !important;
+    }
+    .largest-portal-block {
+        margin: 10px auto 0px;
+    }
+
+    .largest-portal-paragraph {
+       font-size: 15px;
+    }
+
+    .largest-icon-main {
+        height: 30px;
+        width: 30px;
+    }
+
+    .largest-icon {
+        height: 30px;
+        width: 30px;
+    }
+    .course-articles {
+        margin: 10px 0px;
+        flex-wrap: wrap !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        min-height: 160px;
+        height: auto;
+    }
+    .course-articles .col{
+        min-width: 100%;
+    }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    /* banner start */
+    .herrobgimg {
+        padding: 0px 0px 0px;
+    }
+
+    .banner-sub-heading {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 0px;
+    }
+
+    .banner-heading {
+        font-size: 36px;
+        line-height: 38PX;
+    }
+
+    .banner-description {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .btn-uni {
+        padding: 10px 20px;
+        line-height: 20px;
+        margin-top: 7px;
+    }
+
+    .overlay11 {
+        width: 100%;
+        min-height: auto;
+        padding: 15rem 20px 4rem;
+    }
+
+    .heroformsubmit {
+        height: 40px;
+        width: 80px;
+        margin: 10px auto 0px;
+    }
+
+    .stickynavstylye {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 109 !important;
+        margin-top: 0px !important;
+        width: 102%;
+        opacity: 1 !important;
+        display: none;
+    }
+
+    /* .collapse {
+        margin-top: 20px;
+    } */
+
+    .bottom-nav .bottom-nav-links {
+        width: 100%;
+        display: flex !important;
+        text-align: left;
+        padding: 0px 5px !important;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .bottom-nav .bottom-nav-links .fa {
+        font-size: 14px !important;
+        margin-bottom: 7px;
+    }
+
+    .top-navbar {
+        border-bottom: none !important;
+    }
+
+    .c-navbar {
+        display: unset !important;
+    }
+
+    .header-logo {
+        height: 40px;
+        width: 180px !important;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .sticky-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9999 !important;
+        margin-top: 0px !important;
+        width: 100%;
+        opacity: 1 !important;
+        background-color: #fff;
+        padding: 10px 0px 0px;
+    }
+
+    .top-navbar a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* banner end */
+
+    /* top header start */
+    .header-logo {
+        height: 40px;
+        width: 120px;
+        object-fit: contain;
+    }
+
+    .c-navbar-contactUs .fa::after {
+        top: 0px;
+        bottom: 0px;
+        right: -5px;
+    }
+
+    .c-navbar-contactUs .fa span {
+        font-size: 12px;
+    }
+
+    .displaynonethis {
+        display: none !important;
+    }
+
+    .bottom-nav {
+        max-width: 100%;
+    }
+
+    .bg-light {
+        padding-top: 0px !important;
+    }
+
+    /* top header end */
+
+    /* papolar universities start */
+    /* papular universities end */
+
+    /* home page responsive */
+    .inaerdiv {
+        margin-bottom: 15px;
+        max-width: 400px !important;
+        margin: 0 auto 15px;
+    }
+
+    .section-left-heading-block {
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .po_un_col1 .section-heading {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .po_un_col1 .section-heading span {
+        font-size: 28px;
+    }
+
+    .section-paragraph {
+        font-size: 16px !important;
+    }
+
+    .po_un_col1 {
+        margin-bottom: 30px;
+    }
+
+    .section-heading-span {
+        font-size: 28px !important;
+    }
+
+    .card-header1 {
+        font-size: 14px;
+    }
+
+    .card-body {
+        margin-top: 0px !important;
+    }
+
+    /* our team start */
+    .ourteamcol h2 {
+        font-size: 30px;
+    }
+
+    .UniversitiesPageTeamcol p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .UniversitiesPageTeamcol h3 {
+        font-size: 22px;
+        line-height: 26px;
+        margin-top: 40px;
+    }
+
+    .UniversitiesPageTeamcol h6 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .ourteamcol {
+        padding-top: 20px;
+    }
+
+    .papolar-universities {
+        padding-left: 0px !important;
+    }
+
+    /* our team end */
+
+    /* footer start */
+    .footercol2 {
+        margin: 20px 0px;
+        text-align: left !important;
+    }
+
+    .footercol2 ul {
+        padding-left: 40px;
+    }
+
+    .footer-sub-heading {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 0px;
+    }
+
+    .footer-right-sub-column {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .footercol3 a {
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .emailp {
+        font-size: 16px;
+    }
+
+    .email-span {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .emailp b {
+        font-size: 16px;
+    }
+
+    .emailsection ul li {
+        padding-left: 0px;
+        text-align: left;
+    }
+
+    .country-column {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .footerlastrow p {
+        line-height: 18px;
+    }
+
+    .copy-right-paragraph {
+        font-size: 16px;
+    }
+
+    .footercol3 {
+        margin-top: 30px;
+    }
+
+    .footercol3 img {
+        width: 180px;
+        height: 51px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .footer-logo-block {
+        height: auto;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    /* footer end */
+    /* home page responsive end */
+
+
+    /* guide page start */
+    .gide-top-image-container {
+        margin-top: 0px;
+        height: 200px;
+    }
+
+    .gide-top-image-container img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .top-link-main {
+        padding: 15px 10px 10px;
+        font-size: 15px;
+        padding-top: 180px;
+    }
+
+    .gide-heading {
+        font-size: 24px;
+        margin-bottom: 30px !important;
+    }
+
+    .card-columns {
+        column-count: 2;
+    }
+
+    .headingguide {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    /* guide page end */
+    /* universities page start */
+    ul.column-list {
+        column-count: 2;
+    }
+
+    .firstsection h1 {
+        font-size: 22px !important;
+    }
+
+    .firstsection p {
+        font-size: 16px !important;
+    }
+
+    .textcol1 h4 {
+        font-size: 24px !important;
+        margin-bottom: 0px;
+    }
+
+    .country-search {
+        padding: 10px 0px !important;
+    }
+
+    .view-all-button {
+        margin: 10px 0px 30px !important;
+    }
+
+    /* universities page end */
+
+    .footercol3 ul li {
+        padding-left: 5px;
+    }
+
+    /* courses page start */
+    .search-filter {
+        max-width: 100%;
+        margin-right: 10px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        /* display: none; */
+    }
+
+    .see-more {
+        display: none;
+    }
+
+    .onimgtext {
+        max-width: 400px !important;
+    }
+
+    .onimgtext p {
+        font-size: 26px !important;
+    }
+
+    /* courses page end */
+
+    /*  Articles section start */
+
+    .textcol h3 {
+        font-size: 20px;
+        line-height: 24px;
+        /* 145.455% */
+    }
+
+    .textcol p {
+        font-size: 14px;
+        line-height: 18px;
+        /* 166.667% */
+    }
+
+
+    .blog-content-main {
+        padding: 15px;
+    }
+
+    .imgcol {
+        width: 100%;
+        height: 200px;
+    }
+
+    .article-card-main {
+        max-width: 100% !important;
+        margin: 0px 0px 15px !important;
+        flex: 0 0 100%;
+    }
+
+
+    .Page.navigation {
+        max-width: 100%;
+        overflow: auto;
+        margin: 0 auto;
+    }
+
+    .blogs-pagination {
+        width: 100%;
+    }
+
+    /* articles section end */
+
+    .flagcol1 p {
+        font-size: 24px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* visit visa end */
+
+    /* track page start */
+    .track-application-form-main {
+        margin: 120px auto 0px;
+    }
+
+    .track-section-heading {
+        font-size: 22px !important;
+    }
+
+    .track-section-heading span {
+        font-size: 22px !important;
+    }
+
+    /* track page end */
+
+    /* descount page start */
+    .discount-content-main {
+        margin: 0px auto !important;
+    }
+
+    .first-section {
+        margin-top: 130px;
+    }
+
+    .descount-list .descount-list-item .descount-paragaraph {
+        font-size: 14px !important;
+    }
+
+    /* descount page end */
+
+    /* details page start */
+    .details-banner {
+        background-position: center !important;
+    }
+
+    .banner-overlay {
+        padding: 14rem 20px 8rem;
+    }
+
+    .details-banner-heading {
+        font-size: 36px !important;
+        line-height: 40px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .details-banner-sub-heading {
+        margin-bottom: 20px;
+    }
+
+
+    .fillter-button {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 15px;
+    }
+
+    .fillter-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .fillter-button-heading {
+        font-size: 14px;
+        ;
+    }
+
+    .Accommodationdiv {
+        padding: 10px;
+    }
+
+    .Accommodationdiv p {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .custom-select {
+        padding: 10px 20px !important;
+    }
+
+    .select-block::after {
+        top: 15px;
+        height: 8px;
+        width: 8px;
+    }
+
+    .fillter-form-main {
+        padding: 10px 0px;
+    }
+
+    .course-articles {
+        margin: 10px 0px;
+    }
+
+    /* details page end */
+
+    /* course details start */
+    .course-details-header {
+        padding-top: 20px !important;
+    }
+
+    .course-header-right {
+        margin-bottom: 15px;
+    }
+
+    .course-header-icon i {
+        padding: 0 !important;
+    }
+
+
+    .course-detail-overlay {
+        padding: 14rem 20px 4rem;
+    }
+
+    .course-banner-button {
+        margin-right: 0px !important;
+        font-size: 16px;
+    }
+
+    /* course details end */
+
+    /* article details page start */
+    .article-details-heading {
+        font-size: 26px;
+    }
+
+    .article-details-header-paragraph {
+        font-size: 16px;
+    }
+
+    .o-2colLayout section .d-lg-none {
+        display: none !important;
+    }
+
+    .o-2colLayout section .d-none {
+        display: block !important;
+    }
+
+    .o-2colLayout section .d-none a {
+        max-width: max-content;
+        width: 100%;
+        display: inline-block !important;
+        font-size: 16px !important;
+        margin: 0 auto;
+    }
+
+    .article-details-content-main h2 {
+        font-size: 24px;
+        margin-bottom: 16px !important;
+    }
+
+    .article-details-content-main .table tr td span {
+        font-size: 16px;
+    }
+
+    .article-details-content-main .table tr td b span font {
+        font-size: 16px;
+        line-height: 18px !important;
+    }
+
+    .article-details-content-main .table {
+        width: 100% !important;
+    }
+
+    .o-2colLayout section h4 {
+        font-size: 20px;
+    }
+
+    /* article details page end */
+
+    /* track details page start */
+    .status-column {
+        max-width: 50% !important;
+    }
+
+    .track-details-label {
+        font-size: 16px;
+    }
+
+    .track-application-details-paragraph {
+        font-size: 16px;
+        line-height: 22px !important;
+    }
+
+    .track-data {
+        padding: 0px 15px;
+    }
+
+    .curcle-paragraph {
+        font-size: 14px;
+    }
+
+    .pgb .img-circle {
+        margin-bottom: 10px;
+    }
+
+    .guide-detail-section {
+        padding-top: 180px !important;
+    }
+
+    .MsoNormal iframe {
+        min-height: 250px !important;
+    }
+
+    .article-details-content-main h3 font {
+        font-size: 22px;
+    }
+
+    .span-on:after {
+        width: 142px;
+    }
+
+    .track-status-column {
+        min-width: 150px !important;
+        width: 150px;
+    }
+
+    .track-status-column-main::-webkit-scrollbar-track {
+        display: block;
+    }
+
+    /* user dasahboard start */
+    .boxbar2 .tablinks {
+        width: 90px;
+    }
+
+    .boxbar2 {
+        margin-top: 100px !important;
+        display: block;
+        margin-bottom: 20px !important;
+
+    }
+
+    .dashboard-section-heading {
+        margin-top: 30px;
+        font-size: 30px;
+        margin-bottom: 3px;
+    }
+
+    .dashboard-sub-heading {
+        font-size: 24px;
+    }
+
+    .f-app-table th,
+    .f-app-table td {
+        min-width: 150px;
+    }
+
+    .dashboard-table-header-heading a {
+        font-size: 16px;
+    }
+
+    .bottom-paragraph {
+        font-size: 14px !important;
+        text-align: left;
+    }
+
+    .f-app-table {
+        margin: 20px 0px !important;
+    }
+
+    .edit-profile-heading {
+        margin-bottom: 5px !important;
+    }
+
+    .change-password-heading {
+        margin-bottom: 30px !important;
+    }
+
+    .table-responsive {
+        margin-bottom: 0px !important;
+    }
+
+    .custom_tab1 .tablinks span {
+        font-size: 10px;
+    }
+
+    .user-login-icons a i {
+        margin-left: 5px !important;
+    }
+
+    .password-tab {
+        padding: 10px 0px !important;
+    }
+
+    .mobile-tab-main {
+        display: flex !important;
+    }
+
+    .add-student-heading {
+        margin-bottom: 5px !important;
+    }
+
+    /* user dashborad end */
+
+    .largest-portal-block {
+        margin: 5px auto 0px;
+    }
+
+    .largest-portal-paragraph {
+        font-size: 14px;
+    }
+
+    .largest-icon-main {
+        height: 30px;
+        width: 30px;
+    }
+
+    .largest-icon {
+        height: 30px;
+        width: 30px;
+    }
+    .largest-portal-block {
+        position: absolute;
+        top: 4px;
+        right: 5px;
+    }
+    .top-navbar .col-auto{
+        max-width: max-content !important;
+        padding: 7px;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+
+    /* banner start */
+    .herrobgimg {
+        /* padding: 0px 0px 0px;
+        background-image: url('../../photos/1/new_style/home-banner-bg.png'); */
+        background-position: right;
+    }
+
+    .banner-sub-heading {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 0px;
+    }
+
+    .banner-heading {
+        font-size: 35px;
+        line-height: 38PX;
+    }
+
+    .banner-description {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .btn-uni {
+        padding: 10px 20px;
+        line-height: 20px;
+        margin-top: 7px;
+    }
+
+    .overlay11 {
+        width: 100%;
+        min-height: auto;
+        padding: 15rem 20px 4rem;
+    }
+
+    .heroformsubmit {
+        height: 40px;
+        width: 80px;
+        margin: 10px auto 0px;
+    }
+
+    .stickynavstylye {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 109 !important;
+        margin-top: 0px !important;
+        width: 102%;
+        opacity: 1 !important;
+        display: none;
+    }
+
+    .collapse {
+        /* margin-top: 20px; */
+    }
+
+    .bottom-nav .bottom-nav-links {
+        width: 100%;
+        display: flex !important;
+        text-align: left;
+        padding: 0px 5px !important;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .bottom-nav .bottom-nav-links .fa {
+        font-size: 14px !important;
+        margin-bottom: 7px;
+    }
+
+    .top-navbar {
+        border-bottom: none !important;
+    }
+
+    .c-navbar {
+        display: unset !important;
+    }
+
+    .header-logo {
+        height: 40px;
+        width: 180px !important;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .sticky-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9999 !important;
+        margin-top: 0px !important;
+        width: 100%;
+        opacity: 1 !important;
+        background-color: #fff;
+        padding: 10px 0px 0px;
+    }
+
+    .top-navbar a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0px;
+    }
+
+    /* banner end */
+
+    /* top header start */
+    .header-logo {
+        height: 40px;
+        width: 120px;
+        object-fit: contain;
+    }
+
+    .c-navbar-contactUs .fa::after {
+        top: 0px;
+        bottom: 0px;
+        right: -5px;
+    }
+
+    .c-navbar-contactUs .fa span {
+        font-size: 12px;
+    }
+
+    .displaynonethis {
+        display: none !important;
+    }
+
+    .bottom-nav {
+        max-width: 100%;
+    }
+
+    .bg-light {
+        padding-top: 0px !important;
+    }
+
+    /* top header end */
+
+    /* papolar universities start */
+    /* papular universities end */
+
+    /* home page responsive */
+    .inaerdiv {
+        margin-bottom: 15px;
+        max-width: 400px !important;
+        margin: 0 auto 15px;
+    }
+
+    .section-left-heading-block {
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .po_un_col1 .section-heading {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .po_un_col1 .section-heading span {
+        font-size: 28px;
+    }
+
+    .section-paragraph {
+        font-size: 16px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .po_un_col1 {
+        margin-bottom: 30px;
+    }
+
+    .section-heading-span {
+        font-size: 28px !important;
+    }
+
+    .card-header1 {
+        font-size: 14px;
+    }
+
+    .card-body {
+        margin-top: 0px !important;
+    }
+
+    /* our team start */
+    .ourteamcol h2 {
+        font-size: 30px;
+    }
+
+    .UniversitiesPageTeamcol p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .UniversitiesPageTeamcol h3 {
+        font-size: 22px;
+        line-height: 26px;
+        margin-top: 40px;
+    }
+
+    .UniversitiesPageTeamcol h6 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .ourteamcol {
+        padding-top: 20px;
+    }
+
+    .papolar-universities {
+        padding-left: 0px !important;
+    }
+
+    /* our team end */
+
+    /* footer start */
+    .footercol2 {
+        margin: 20px 0px;
+    }
+
+    .footer-sub-heading {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 0px;
+    }
+
+    .footer-right-sub-column {
+        margin-bottom: 20px;
+    }
+
+    .footercol3 a {
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .emailp {
+        font-size: 16px;
+    }
+
+    .email-span {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .emailp b {
+        font-size: 14px;
+    }
+
+    .emailsection ul li {
+        padding-left: 0px;
+        text-align: left;
+    }
+
+    .country-column {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .footerlastrow p {
+        line-height: 18px;
+    }
+
+    .copy-right-paragraph {
+        font-size: 14px;
+    }
+
+    .footercol3 img {
+        width: 180px;
+        height: 51px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .social-list li a i {
+        font-size: 16px !important;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        padding: 5px !important;
+    }
+
+    .footercol3 ul li {
+        padding-left: 5px;
+    }
+
+    .footer-logo-block {
+        height: auto;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    /* footer end */
+    /* home page responsive end */
+
+    /* guide page start */
+    .gide-top-image-container {
+        margin-top: 0px;
+        height: 150px;
+    }
+
+    .gide-top-image-container img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .top-link-main {
+        padding: 15px 10px 10px;
+        font-size: 14px;
+        padding-top: 230px;
+    }
+
+    .gide-heading {
+        font-size: 22px;
+        margin-bottom: 20px !important;
+    }
+
+    /* guide page end */
+
+    /* universities page start */
+    ul.column-list {
+        column-count: 1;
+    }
+
+    .firstsection h1 {
+        font-size: 22px !important;
+    }
+
+    .firstsection p {
+        font-size: 16px !important;
+    }
+
+    .textcol1 h4 {
+        font-size: 24px !important;
+        margin-bottom: 0px;
+    }
+
+    .country-search {
+        padding: 10px 0px !important;
+    }
+
+    .view-all-button {
+        margin: 10px 0px 30px !important;
+    }
+
+    /* universities page end */
+
+    /* footer start */
+    .footercol2 ul {
+        padding-left: 20px;
+    }
+
+    .footercol2 ul li {
+        max-width: max-content;
+    }
+
+    .footer-heading {
+        font-size: 20px;
+        line-height: 22px;
+        padding-left: 0px;
+        text-align: left;
+    }
+
+    .footer-sub-heading {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .footercol3 ul {
+        padding-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* footer end */
+
+    /* courses page start */
+    .search-filter {
+        max-width: 100%;
+        margin-right: 10px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        /* display: none; */
+    }
+
+    .see-more {
+        display: none;
+    }
+
+    .onimgtext {
+        max-width: 350px !important;
+    }
+
+    .onimgtext p {
+        font-size: 22px !important;
+    }
+
+    /* courses page end */
+
+    /*  Articles section start */
+
+    .textcol h3 {
+        font-size: 20px;
+        line-height: 24px;
+        /* 145.455% */
+    }
+
+    .textcol p {
+        font-size: 14px;
+        line-height: 18px;
+        /* 166.667% */
+    }
+
+
+    .blog-content-main {
+        padding: 15px;
+    }
+
+    .imgcol {
+        width: 100%;
+        height: 200px;
+    }
+
+    .article-card-main {
+        max-width: 100% !important;
+        margin: 0px 15px 15px !important;
+    }
+
+
+    .Page.navigation {
+        max-width: 300px;
+        overflow: auto;
+        margin: 0 auto;
+    }
+
+    .blogs-pagination {
+        width: 100%;
+    }
+
+    .Page.navigation {
+        max-width: 100%;
+        overflow: auto;
+        margin: 0 auto;
+    }
+
+    .blogs-pagination {
+        width: 100%;
+    }
+
+    /* articles section end */
+
+    /* visit visa start */
+    .flagcol1 {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .flagcol1 p {
+        font-size: 22px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* visit visa end */
+
+    /* track page start */
+    .track-application-form-main {
+        margin: 130px 20px 0px;
+    }
+
+    .track-section-heading {
+        font-size: 20px !important;
+    }
+
+    .track-section-heading span {
+        font-size: 20px !important;
+    }
+
+    /* track page end */
+
+
+    /* descount page start */
+    .discount-content-main {
+        margin: 0px !important;
+    }
+
+    .first-section {
+        margin-top: 150px;
+    }
+
+    .descount-list .descount-list-item .descount-paragaraph {
+        font-size: 14px !important;
+    }
+
+    /* descount page end */
+
+    /* details page start */
+    .details-banner {
+        background-position: center !important;
+    }
+
+    .banner-overlay {
+        padding: 16rem 20px 6rem;
+    }
+
+    .details-banner-heading {
+        font-size: 33px !important;
+        line-height: 40px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .details-banner-sub-heading {
+        margin-bottom: 20px;
+    }
+
+
+    .fillter-button {
+        height: 90px;
+        width: 90px;
+        margin-bottom: 15px;
+    }
+
+    .fillter-icon {
+        height: 40px;
+        width: 40px;
+        margin-bottom: 5px;
+    }
+
+    .fillter-button-heading {
+        font-size: 14px;
+        ;
+    }
+
+    .Accommodationdiv {
+        padding: 10px;
+    }
+
+    .Accommodationdiv p {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .slider-main-heading {
+        font-size: 24px !important;
+    }
+
+    .textdivcolcss {
+        padding: 15px;
+    }
+
+    .table-block {
+        margin-bottom: 0px !important;
+    }
+
+    .textdivcolcss .Accommodationdiv {
+        margin-bottom: 0px !important;
+    }
+
+    .course-image-column {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .custom-select {
+        padding: 10px 20px !important;
+    }
+
+    .select-block::after {
+        top: 15px;
+        height: 8px;
+        width: 8px;
+    }
+
+    .select-block {
+        margin-bottom: 7px;
+    }
+
+    .select-block {
+        margin-bottom: 7px;
+    }
+
+    .fillter-form-main {
+        padding: 10px 0px;
+    }
+
+    .course-articles {
+        margin: 10px 0px;
+        flex-wrap: wrap !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        height: auto;
+    }
+    .course-articles .col{
+        min-width: 100%;
+    }
+
+    /* unoversities details page end */
+
+    /* course details start */
+    .course-details-header {
+        padding-top: 20px !important;
+    }
+
+    .course-header-main {
+        display: unset;
+        text-align: center;
+    }
+
+    .course-header-right {
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    .course-header-icon i {
+        padding: 0 !important;
+    }
+
+    .apply-btn a {
+        margin: 0px auto 0px;
+    }
+
+
+    .course-detail-overlay {
+        padding: 14rem 20px 4rem;
+        min-height: 80vh;
+    }
+
+    .course-banner-button {
+        margin-right: 0px !important;
+        font-size: 16px;
+    }
+
+    /* course details end */
+
+    /* article details page start */
+    .article-details-heading {
+        font-size: 24px;
+    }
+
+    .article-details-header-paragraph {
+        font-size: 14px;
+    }
+
+    .o-2colLayout section .d-lg-none {
+        display: none !important;
+    }
+
+    .o-2colLayout section .d-none {
+        display: block !important;
+    }
+
+    .o-2colLayout section .d-none a {
+        max-width: 200px;
+        width: 100%;
+        display: inline-block !important;
+        font-size: 14px !important;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .article-details-content-main h2 {
+        font-size: 22px;
+        margin-bottom: 16px !important;
+    }
+
+    .article-details-content-main .table tr td span {
+        font-size: 14px;
+    }
+
+    .article-details-content-main .table tr td b span font {
+        font-size: 12px;
+        line-height: 18px !important;
+    }
+
+    .article-details-content-main .table {
+        width: 100% !important;
+    }
+
+    .o-2colLayout section h4 {
+        font-size: 20px;
+    }
+
+    .article-details-content-main .table tr td:nth-child(2) {
+        min-width: 125px !important;
+        width: 100% !important;
+    }
+
+    .article-details-content-main .table tr td:nth-child(3) {
+        min-width: 105px !important;
+        width: 100% !important;
+    }
+
+    .article-details-content-main .table td,
+    .table th {
+        padding: 7px;
+        vertical-align: top;
+    }
+
+    /* article details page end */
+
+    /* track details page start */
+    .status-column {
+        max-width: 50% !important;
+    }
+
+    .track-details-label {
+        font-size: 16px;
+    }
+
+    .track-application-details-paragraph {
+        font-size: 16px;
+        line-height: 22px !important;
+    }
+
+    .track-data {
+        padding: 0px 15px;
+    }
+
+    .curcle-paragraph {
+        font-size: 14px;
+    }
+
+    .pgb .img-circle {
+        margin-bottom: 10px;
+    }
+
+
+    .pgb .img-circle {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+    }
+
+    .pgb .step p {
+        line-height: 40px;
+    }
+
+    .track-status-column {
+        min-width: 130px !important;
+        width: 130px;
+    }
+
+    .span-on:after {
+        height: 2px;
+        width: 132px;
+        bottom: 46%;
+        left: 30px;
+    }
+
+    /* track details page end */
+
+    .guide-detail-section {
+        padding-top: 235px !important;
+    }
+
+    .MsoNormal iframe {
+        min-height: 200px !important;
+    }
+
+    .article-details-content-main h3 font {
+        font-size: 18px;
+    }
+
+    /* user dasahboard start */
+    .boxbar2 .tablinks {
+        width: 90px;
+        margin-bottom: 5px;
+    }
+
+    .boxbar2 {
+        margin-top: 120px !important;
+        display: block;
+
+    }
+
+    .user-login-icons a i {
+        margin-bottom: 0px !important;
+        margin-left: 5px !important;
+        font-size: 14px !important;
+    }
+
+    .dashboard-section-heading {
+        margin-top: 30px;
+        font-size: 26px;
+        margin-bottom: 3px;
+    }
+
+    .dashboard-sub-heading {
+        font-size: 20px;
+    }
+
+    .f-app-table th,
+    .f-app-table td {
+        min-width: 150px;
+    }
+
+    .dashboard-table-header-heading a {
+        font-size: 14px;
+    }
+
+    .bottom-paragraph {
+        font-size: 14px !important;
+        text-align: left;
+    }
+
+    .f-app-table {
+        margin: 20px 0px !important;
+    }
+
+    .edit-profile-heading {
+        margin-bottom: 20px !important;
+    }
+
+    .table-responsive {
+        margin-bottom: 0px !important;
+    }
+
+    .custom_tab1 .tablinks span {
+        font-size: 10px;
+    }
+
+    .edit-profile-select-column {
+        width: 100% !important;
+    }
+
+    .dashboard-button {
+        font-size: 14px !important;
+    }
+
+    .f-app-table th {
+        font-size: 12px !important;
+    }
+
+    .f-app-table a {
+        font-size: 14px;
+    }
+
+    .f-app-table td {
+        font-size: 12px !important;
+    }
+
+    /* .password-tab{
+        padding: 10px 0px !important;
+    } */
+    .mobile-tab-main {
+        display: flex !important;
+    }
+
+    input[type="file"]::file-selector-button {
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .add-student-heading {
+        margin-bottom: 5px !important;
+    }
+
+    /* user dashborad end */
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .auth-form-main {
+        margin-top: 150px !important;
+    }
+    .largest-portal-block {
+        margin: 5px auto 0px;
+    }
+
+    .largest-portal-paragraph {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .largest-span{
+        font-size: 11px;
+    }
+
+    .largest-icon-main {
+        height: 25px;
+        width: 25px;
+        margin-left: 3px;
+    }
+
+    .largest-icon {
+        height: 25px;
+        width: 25px;
+    }
+
+    .bottom-nav-links.col-auto.c-navbar-contactUs{
+        justify-content: center;
+        padding: 5px 0px;
+    }
+    .dashboard-section {
+        padding-top: 100px !important;
+    }
+
+    .message-box {
+        left: -80px;
+        top: -40px;
+    }
+    .message {
+      font-size: 11px;
+    }
+    .mobile-button-section{
+        display: block;
+    }
+    .desktop-button-section{
+        display: none;
+    }
+
+}
+
+
+/* Extra Media Query */
+@media (min-width: 400px) and (max-width: 575px) {
+
+    /* banner start */
+    .banner-heading {
+        font-size: 40px;
+        line-height: 61PX;
+    }
+
+    /* banner end */
+
+    /* footer start */
+    .footercol2 {
+        margin: 20px 0px;
+        max-width: 50%;
+        text-align: left !important;
+    }
+
+    .footercol3 {
+        max-width: 50%;
+        margin-top: 20px;
+    }
+
+    .country-column {
+        margin-bottom: 15px;
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .footercol3 ul li {
+        padding-left: 2px;
+    }
+
+    /* footer end */
+
+    /* visit visa start */
+    .flagcol1 {
+        max-width: 50%;
+    }
+
+    /* visit visa end */
+    .slider-column {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .course-details-column {
+        max-width: 50%;
+    }
+
+    .track-status-column-main::-webkit-scrollbar-track {
+        display: block;
+    }
+
+    .slider-column {
+        max-width: 50%;
+    }
+
+    .top-link-main {
+        padding-top: 190px;
+    }
+
+    .largest-portal-block {
+        position: absolute;
+        top: 4px;
+        right: 5px;
+    }
+    .top-navbar .col-auto{
+        max-width: max-content !important;
+    }
+
+    .guide-detail-section {
+        padding-top: 180px !important;
+    }
+
+    .track-application-form-main {
+        margin: 60px 20px 0px;
+    }
+    .dashboard-section {
+        padding-top: 50px !important;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .article-details-content-main .table tr td p a {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: 9px !important;
+        margin-top: 10px;
+    }
+
+    .article-details-content-main .table tr td p a::before {
+        margin-right: 7px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1900px) {
+    .universities-card-column {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+}

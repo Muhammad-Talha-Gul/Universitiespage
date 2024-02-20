@@ -1,0 +1,1120 @@
+/* ............header css Start............. */
+
+.topbar {
+  top: 0px;
+  background: #FFFFFF;
+}
+
+.logo {
+  width: 168px;
+  height: 56px;
+}
+
+.logocol {
+  padding-left: 60px;
+  padding-top: 5px;
+}
+
+.whatsapp {
+  width: 15px;
+  height: 16px;
+}
+
+.iconcol {
+  padding-top: 15px;
+}
+
+.Islamabad {
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.topbarrow ul li {
+  list-style: none;
+  display: inline;
+
+}
+
+.iconcol {
+  text-align: right;
+  padding-right: 60px;
+}
+
+.menubar {
+
+  background: #0B6D76;
+}
+
+.search {
+  width: 21px;
+  height: 21px;
+}
+
+.searchcol {
+  padding-top: 20px;
+}
+
+.menucol {
+  padding-top: 8px;
+}
+
+.navbar-nav li a {
+  color: #FFF !important;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.navbar-nav li {
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .logocol {
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 717px) {
+  .iconcol {
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .searchcol {
+    position: absolute;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 717px) {
+  .iconcol ul {
+    display: inline-grid !important;
+  }
+}
+
+#navbarNav ul li a {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#navbarNav ul li a:hover {
+  color: rgb(42, 56, 87) !important;
+}
+
+#navbarNav ul li {
+  padding-left: 0px !important;
+}
+
+.topbarrow ul li {
+  list-style: none;
+  display: inline;
+  padding-left: 20px;
+}
+
+
+/* ............header css End............. */
+
+
+
+
+
+
+
+
+
+
+.firstsection {
+  max-width: 600px;
+  margin: 30px auto 50px;
+}
+
+.firstsection h1 {
+  color: #2A3857;
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.section2 {
+  background-image: url(Rectangle52.png);
+  width: 100%;
+  min-height: 70vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.universities-form-block {
+  position: relative;
+}
+
+/* Removes the default 20px margin and creates some padding space for the indicators and controls */
+.carousel {
+  margin-bottom: 0;
+  padding: 0 40px 30px 40px;
+}
+
+/* Reposition the controls slightly */
+.carousel-control {
+  left: -12px;
+}
+
+.carousel-control.right {
+  right: -12px;
+}
+
+/* Changes the position of the indicators */
+.carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+
+/* Changes the colour of the indicators */
+.carousel-indicators li {
+  background: #c0c0c0;
+}
+
+.carousel-indicators .active {
+  background: #333333;
+}
+
+/* .owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  padding-left: 20px;
+}
+
+
+.container1{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+
+
+
+
+
+/* ......................  Articles section css ..................... */
+
+.textcol h3 {
+  color: #0B6D76;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  /* 145.455% */
+}
+
+.textcol p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16pxm;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  /* 166.667% */
+}
+
+.textcol {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.blog-content-main {
+  padding: 20px;
+}
+
+.imgcol {
+  background-image: url(Rectangle92.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  background-size: 100% 100%;
+}
+
+
+/* .article-card-main:nth-child(even){
+  direction: rtl !important;
+}
+.article-card-main:nth-child(even) .textcol h3{
+  text-align: left !important;
+}
+.article-card-main:nth-child(even) .textcol p{
+  text-align: left !important;
+} */
+.article-card-main {
+  background: #fff !important;
+  margin-bottom: 20px;
+  max-width: calc(50% - 20px);
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+.card-img-top {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.article-card-main:hover {
+  transform: scale(1.1);
+}
+
+.blog-main-row {
+  justify-content: space-between;
+}
+
+.pagination li.active .page-link {
+  background-color: #0B6D76;
+  color: #fff !important;
+}
+
+
+.Page.navigation::-webkit-scrollbar {
+  width: 3px;
+  height: 4px;
+}
+
+/* Track */
+.Page.navigation::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+.Page.navigation::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+.Page.navigation::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ................. Find Universities Colleges section css start .................. */
+
+
+
+
+
+.searchsectionbg {
+  background: #0B6D76;
+  padding: 15px 20px;
+}
+
+.textcol1 h4 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.searchform {
+  height: 47px;
+  color: rgba(11, 109, 118, 0.60);
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Searchbtn {
+  position: absolute;
+  right: 17px;
+  top: 2px;
+  border-radius: 1px;
+  background: #0B6D76;
+  height: 43px;
+  width: 120px;
+  border: 1px solid #0B6D76;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.firstsection p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Searchbtn2 {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  right: 0px;
+  background: #0B6D76;
+  width: 80px;
+  border: 1px solid #0B6D76;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.searchform2 {
+  height: 47px;
+  color: rgba(11, 109, 118, 0.60);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  padding-right: 90px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: lightgray !important;
+
+}
+
+.country-select-link {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #FFFFFF;
+  padding: 15px 20px;
+  margin-bottom: 5px;
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  font-size: 16px;
+}
+
+.view-all-button {
+  margin: 40px 0px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: inline-block;
+}
+
+.firstsection2 h1 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+.card-header1 .accicon {
+  float: right;
+  font-size: 20px;
+  width: 1.2em;
+}
+
+.input1 {
+  color: #A5A5A5;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.select-heading {
+  text-transform: capitalize;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 30px !important;
+  color: #0B6D76;
+}
+
+.panel.panel-default {
+  border: none !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.form1 p a {
+  color: #000;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  padding-top: 10px;
+}
+
+/* .linksection1 ul li {
+  margin: 0px 10px 15px;
+  color: #0275d8;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.linksection1 ul li a {
+  color: #000;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+} */
+
+/* .linksection1 ul li a:hover {
+  color: #0B6D76;
+} */
+
+.flagcol1 p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-top: 15px;
+}
+
+.flagcol1 {
+  text-align: center;
+
+}
+
+.flagcol1 a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.flagcol1 a:hover {
+  transform: scale(1.1);
+}
+
+.flagcol1 a img {
+  height: 120px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.flagcol1 a:hover .visit-block-paragraph {
+  color: #0B6D76 !important;
+}
+
+.label1 {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.inputTrack {
+  height: 47px;
+  color: black;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none !important;
+  border: none;
+  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.Filterbtn {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: #0B6D76;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
+
+.firstsection ul li {
+  list-style: none;
+  margin-bottom: -11px;
+}
+
+.dotspan {
+  font-size: 30px;
+}
+
+/* .Discountform {
+  padding: 20px 50px 20px 50px;
+} */
+
+.inputcol121 {
+  text-align: left;
+}
+
+/* .inputcol121 label {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+} */
+
+.inputcol1213 label {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.inputcol121 .descount-input {
+  height: 47px !important;
+  color: black;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none !important;
+  border: none;
+  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.inputcol121 .textarea {
+  height: auto !important;
+  padding: 20px !important;
+}
+
+.inputcol1213 input {
+  height: 47px !important;
+  color: black;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none !important;
+  border: none;
+  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.newcssinput {
+  margin-top: 7px;
+}
+
+.select {
+  height: 47px;
+  height: 47px;
+  color: #A5A5A5;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 10px;
+}
+
+.courses-banner {
+  position: relative;
+  background-image: url('../../photos/1/small/courses-banner-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 12rem 0px;
+}
+
+.firstsectionimgbg {
+  width: 100%;
+  height: 100%;
+}
+
+.overlaynew1 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000088;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlaynew1.search-banner-main {}
+
+.onimgtext p {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-top: 9px;
+
+}
+
+.onimgtext {
+  /* background-color: rgba(255, 255, 255, 0.463); */
+  text-align: center;
+  max-width: max-content;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.inputtype {
+  height: 47px;
+}
+
+.nnlabel {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.newborderinput {
+  border: 1px solid #CED4DA;
+  height: 47px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.nnblabel {
+  color: #A5A5A5;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.Ratingp {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.newaa a {
+  color: #0B6D76;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.mb.card-body {
+  text-align: center;
+}
+
+.mb.btn {
+  border-radius: 0;
+  box-shadow: 0.5px 1px 2px hsla(0, 0%, 20%, 1);
+}
+
+.mb.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
+
+.mb.card {
+  border-radius: 0px / 0px;
+  overflow: hidden;
+  box-shadow: 0.5px 1px 2px rgb(255, 254, 254);
+}
+
+
+.card1 p {
+  margin-bottom: 5px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-text {
+  color: #000;
+  font-family: Poppins !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+}
+
+
+.fa-calendar {
+  color: #0B6D76;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.fa-book-open-cover {
+  color: #0B6D76;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.Requestbtn {
+  background: #0B6D76;
+  border-radius: 0px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+.imgsection p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.formRegistrationcol {
+  background: #FFF;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.14);
+}
+
+.Registrationinput {
+  height: 47px;
+  color: #A5A5A5;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logintext h5 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.logintext p {
+  color: #000;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logintext span a {
+  color: #0B6D76;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.formRegistrationcol {
+  padding: 20px 40px 20px 40px;
+}
+
+.checboxlabel {
+  color: #A5A5A5;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Registerbtnnn {
+  color: #FFF;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #0B6D76;
+  border-radius: 0px;
+  padding: 10px 30px 10px 30px;
+}
+/* .details-banner{
+  background-image: url(university-old-building-campus-college.jpg) !important;
+} */
+.Milanbgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background-image: url('../../photos/1/new_style/home-banner-bg.png');
+
+}
+
+.Milanbgimgoverly {
+  width: 100%;
+  padding: 18rem 0rem;
+}
+.banner-overlay{
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  text-align: center;
+}
+.details-banner-heading{
+  color: #fff !important;
+}
+.details-banner-sub-heading{
+  color: #fff !important;
+}
+.centered2 {
+  font-family: sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60PX;
+}
+
+.centered2 h6 {
+  font-family: sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60PX;
+  color: #fff;
+}
+
+.centered2 p {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.Milanbtn1 {
+  color: #FFF;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 4px;
+  background: #00C008;
+  margin-right: 10px;
+  padding: 12px 25px;
+}
+
+.Milanbtn2 {
+  color: #FFF;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 4px;
+  background: #FF3D00;
+  padding: 12px 25px;
+}
+
+@media screen and (max-width: 912px) {
+  .Milanbtn1 {
+    margin-bottom: 11px !important;
+  }
+}
+
+@media screen and (max-width: 892px) {
+  .Milanbtn1 {
+    margin-right: 0px !important;
+  }
+}
+
+.Milansamlimg {
+  border-radius: 5px;
+  background: #0B6D76;
+  padding: 30px 0px 10px 0px;
+}
+
+.Milansamlimg2 {
+  border-radius: 5px;
+  padding: 30px 0px 10px 0px;
+}
+
+.Milansamlimg p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.Milansamlimg2 p {
+  color: #0B6D76;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 11px;
+}
+
+.Accommodationdiv {
+  padding: 15px;
+}
+
+.Accommodationdiv p {
+  color: #000;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0px !important;
+}
+
+.textdivcolcss {
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+@media screen and (max-width: 767px) {
+  .textdivcolcss {
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .newdivtext {
+    text-align: center !important;
+  }
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.slide {
+  flex: 0 0 33.33%;
+  /* Adjust this width for responsiveness */
+}
+
+.slide-arrows {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  transform: translateY(-50%);
+  display: flex;
+}
+
+.slide-arrow {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ccc;
+  border: none;
+  outline: none;
+}
+
+.newnewcard {
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.15);
+  padding: 15px 0px 15px 0px;
+}
+
+.newnewcard h6 {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.newnewcard p {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.fa-location-dot {
+  font-size: 15px;
+  color: #0B6D76;
+}
+
+.slide {
+  padding: 10px;
+}
+
+.slider-container h6 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 10px;
+}

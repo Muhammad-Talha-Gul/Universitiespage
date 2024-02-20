@@ -1,0 +1,2 @@
+[09-Jan-2022 08:59:57 America/New_York] PHP Fatal error:  Class 'Tests\TestCase' not found in /home/universities/public_html/tests/Feature/ExampleTest.php on line 10
+[12-Jan-2022 04:26:11 America/New_York] PHP Fatal error:  Class 'Tests\TestCase' not found in /home/universities/public_html/tests/Feature/ExampleTest.php on line 10

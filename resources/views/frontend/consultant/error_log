@@ -1,0 +1,100 @@
+[20-Oct-2022 11:31:44 America/New_York] PHP Notice:  Undefined variable: cstudents in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 417
+[20-Oct-2022 11:31:44 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 417
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'photo_doc' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[22-Dec-2022 10:08:41 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 33
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 222
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'course_finalaztion' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 222
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 235
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'application_submitted' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 235
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 248
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'got_admission' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 248
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 261
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'visa_applied' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 261
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 274
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'case_closed' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 274
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 308
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'course_finalaztion' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 308
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 314
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'application_submitted' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 314
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 320
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'got_admission' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 320
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 326
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'visa_applied' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 326
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
+[22-Dec-2022 10:08:41 America/New_York] PHP Notice:  Trying to get property 'case_closed' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'photo_doc' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[23-May-2023 09:00:31 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 33
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 222
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'course_finalaztion' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 222
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 235
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'application_submitted' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 235
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 248
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'got_admission' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 248
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 261
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'visa_applied' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 261
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 274
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'case_closed' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 274
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 308
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'course_finalaztion' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 308
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 314
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'application_submitted' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 314
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 320
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'got_admission' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 320
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 326
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'visa_applied' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 326
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
+[23-May-2023 09:00:31 America/New_York] PHP Notice:  Trying to get property 'case_closed' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
+[31-Oct-2023 03:18:39 America/New_York] PHP Notice:  Undefined variable: cstudents in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 540
+[31-Oct-2023 03:18:39 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 540
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'photo_doc' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[06-Nov-2023 16:27:10 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 33
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 222
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'course_finalaztion' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 222
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 235
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'application_submitted' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 235
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 248
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'got_admission' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 248
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 261
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'visa_applied' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 261
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 274
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'case_closed' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 274
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 308
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'course_finalaztion' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 308
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 314
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'application_submitted' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 314
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 320
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'got_admission' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 320
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 326
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'visa_applied' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 326
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
+[06-Nov-2023 16:27:10 America/New_York] PHP Notice:  Trying to get property 'case_closed' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
+[06-Nov-2023 16:50:38 America/New_York] PHP Notice:  Undefined variable: cstudents in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 540
+[06-Nov-2023 16:50:38 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 540
+[28-Dec-2023 16:12:40 America/New_York] PHP Notice:  Undefined variable: cstudents in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 540
+[28-Dec-2023 16:12:40 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 540
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'photo_doc' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[28-Dec-2023 18:13:55 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 33
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 222
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'course_finalaztion' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 222
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 235
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'application_submitted' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 235
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 248
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'got_admission' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 248
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 261
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'visa_applied' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 261
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 274
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'case_closed' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 274
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 308
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'course_finalaztion' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 308
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 314
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'application_submitted' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 314
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 320
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'got_admission' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 320
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 326
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'visa_applied' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 326
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
+[28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'case_closed' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
