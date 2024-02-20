@@ -1,0 +1,4 @@
+User-agent: *
+
+Sitemap: https://universitiespage.com/sitemap_course1.xml
+Sitemap: https://universitiespage.com/sitemap_course2.xml
