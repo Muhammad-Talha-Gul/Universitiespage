@@ -12,21 +12,21 @@
   <meta property="og:image:width" content="400" />
   <meta property="og:image:height" content="300" />
   <meta property="og:image:alt" content="veiversities page" />
-  <!--<input type="text" value="{{ csrf_token() }}" >-->
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link rel="icon" href="{{asset('fav.png')}}" type="image/x-icon" />
-  <title>@yield('title') </title>
+  <!--<input type="text" value="<?php echo e(csrf_token()); ?>" >-->
+  <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+  <link rel="icon" href="<?php echo e(asset('fav.png')); ?>" type="image/x-icon" />
+  <title><?php echo $__env->yieldContent('title'); ?> </title>
 
-  @yield('seo')
+  <?php echo $__env->yieldContent('seo'); ?>
 
-  @if(isset($data))
-  @php $page = $data; @endphp
-  @endif
-  @if(isset($category_page))
-  @php $page = $category_page; @endphp
-  @endif
-  @isset($page['seo']->show_meta)
-  @if($page['seo']->meta_title!=null)
+  <?php if(isset($data)): ?>
+  <?php $page = $data; ?>
+  <?php endif; ?>
+  <?php if(isset($category_page)): ?>
+  <?php $page = $category_page; ?>
+  <?php endif; ?>
+  <?php if(isset($page['seo']->show_meta)): ?>
+  <?php if($page['seo']->meta_title!=null): ?>
 
   <?php
   // if(!empty($_GET['type']) && ($_GET['type'] == 'course' || $_GET['type'] == 'university') )
@@ -41,10 +41,10 @@
   // }
   ?>
 
-  <meta name="title" content="{!! $meta_title_with_new_year !!}">
-  @else
+  <meta name="title" content="<?php echo $meta_title_with_new_year; ?>">
+  <?php else: ?>
   <meta name="title" content="Web Development Company in Pakistan, Affordable Website Design Services">
-  @endif
+  <?php endif; ?>
 
   <?php
   $urlForUniSub = $_SERVER['REQUEST_URI'];
@@ -113,16 +113,16 @@
 
   ?>
 
-  <meta name="keywords" content="{!!$meta_keyword_with_new_year or ''!!}">
-  <meta name="description" content="{!!$meta_description_with_new_year or ''!!}">
-  @endisset
+  <meta name="keywords" content="<?php echo isset($meta_keyword_with_new_year) ? $meta_keyword_with_new_year : ''; ?>">
+  <meta name="description" content="<?php echo isset($meta_description_with_new_year) ? $meta_description_with_new_year : ''; ?>">
+  <?php endif; ?>
 
   <!-- Icon css link -->
-  <link type="text/css" rel="stylesheet" href="{{ asset('assets_frontend/css/ltr.css') }}">
-  <link type="text/css" href="{{asset("plugins/select2/css/select2.min.css")}}" rel="stylesheet" />
-  <link type="text/css" rel="stylesheet" href="{{ asset('assets_frontend/css/animate.min.css') }}">
-  <link type="text/css" href="{{ asset('assets_frontend/css/aos.css') }}" rel="stylesheet">
-  <link type="text/css" href="{{ asset('assets_frontend/dist/css/datepicker.css') }}" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="<?php echo e(asset('assets_frontend/css/ltr.css')); ?>">
+  <link type="text/css" href="<?php echo e(asset("plugins/select2/css/select2.min.css")); ?>" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="<?php echo e(asset('assets_frontend/css/animate.min.css')); ?>">
+  <link type="text/css" href="<?php echo e(asset('assets_frontend/css/aos.css')); ?>" rel="stylesheet">
+  <link type="text/css" href="<?php echo e(asset('assets_frontend/dist/css/datepicker.css')); ?>" rel="stylesheet">
 
   <link rel="canonical" href="https://universitiespage.com<?php echo $_SERVER['REQUEST_URI']; ?>">
   <style>
@@ -159,9 +159,9 @@
 
 
 
-  @if(getAnalyticsCode() !== '')
+  <?php if(getAnalyticsCode() !== ''): ?>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{getAnalyticsCode()}}">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo e(getAnalyticsCode()); ?>">
   </script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -170,23 +170,23 @@
       dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', '{{getAnalyticsCode()}}');
+    gtag('config', '<?php echo e(getAnalyticsCode()); ?>');
   </script>
-  @endif
+  <?php endif; ?>
 
 
-  <script src="{{asset('assets_frontend/js/vendor/siema.min.js') }}"></script>
-  @stack('css')
-  @yield('customStyles')
-  @yield('chatterCss')
+  <script src="<?php echo e(asset('assets_frontend/js/vendor/siema.min.js')); ?>"></script>
+  <?php echo $__env->yieldPushContent('css'); ?>
+  <?php echo $__env->yieldContent('customStyles'); ?>
+  <?php echo $__env->yieldContent('chatterCss'); ?>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="{{asset('assets_frontend')}}/css/whatsapp-chat.css?ver=0.30">
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/custom.min.css?ver=0.30') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/new_style.css?ver=0.30') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/pages.min.css?ver=0.30') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/responsive.css?ver=0.30') }}">
+  <link rel="stylesheet" href="<?php echo e(asset('assets_frontend')); ?>/css/whatsapp-chat.css?ver=0.30">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/custom.min.css?ver=0.30')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/new_style.css?ver=0.30')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/pages.min.css?ver=0.30')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/responsive.css?ver=0.30')); ?>">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148598570-1"></script>
   <script>
@@ -214,7 +214,7 @@
       "alternateName": "University college school education | Want to study abroad | Find the prefect courses  and universities to meet your educational goals"
     }
   </script>
-  @yield('schemaMarkup')
+  <?php echo $__env->yieldContent('schemaMarkup'); ?>
 
   <script>
     (function(w, d, s, l, i) {
@@ -283,50 +283,50 @@
 
 
 
-  <input type="hidden" id="baseUrl" value="{{ url('/') }}">
-  <input type="hidden" id="authCheck" value="{{ Auth::check() }}">
-  <input type="hidden" id="chat_key" value="{{(getContactMeta()['pusher']['key'])??''}}">
-  <input type="hidden" id="cluster" value="{{(getContactMeta()['pusher']['cluster'])??''}}">
-  @if(Auth::check())
-  <input type="hidden" id="authId" value="{{ Auth::user()->id }}">
-  <input type="hidden" id="authType" value="{{ Auth::user()->user_type }}">
-  @endif
+  <input type="hidden" id="baseUrl" value="<?php echo e(url('/')); ?>">
+  <input type="hidden" id="authCheck" value="<?php echo e(Auth::check()); ?>">
+  <input type="hidden" id="chat_key" value="<?php echo e((getContactMeta()['pusher']['key'])??''); ?>">
+  <input type="hidden" id="cluster" value="<?php echo e((getContactMeta()['pusher']['cluster'])??''); ?>">
+  <?php if(Auth::check()): ?>
+  <input type="hidden" id="authId" value="<?php echo e(Auth::user()->id); ?>">
+  <input type="hidden" id="authType" value="<?php echo e(Auth::user()->user_type); ?>">
+  <?php endif; ?>
 
   <div class="t_loader" align="center">
-    <img src="{{asset('page_loader.gif')}}">
+    <img src="<?php echo e(asset('page_loader.gif')); ?>">
   </div>
 
 
-  @include('includes.frontend.contact_form')
+  <?php echo $__env->make('includes.frontend.contact_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-  @include('includes.frontend.header')
+  <?php echo $__env->make('includes.frontend.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-  @yield('content')
+  <?php echo $__env->yieldContent('content'); ?>
 
-  @include('includes.frontend.footer')
+  <?php echo $__env->make('includes.frontend.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-  @include('frontend.student.modal')
+  <?php echo $__env->make('frontend.student.modal', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-  {{-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> --}}
-  <script type="text/javascript" src="{{asset('assets_frontend/js/jquery.js') }}"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/js/popper.min.js') }}"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/js/bootstrap.min.js') }}"></script>
+  
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/jquery.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/popper.min.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/bootstrap.min.js')); ?>"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
-  {{-- <script src="{{asset('assets_frontend/js/polyfill.js') }}"></script> --}}
-  <script type="text/javascript" src="{{asset('assets_frontend/js/vendor.js') }}"></script>
-  {{-- <script src="{{asset('assets_frontend/js/bundle.js') }}"></script> --}}
-  {{-- <script src="{{asset('assets_frontend/js/OneSignalSDK.js') }}" async=""></script> --}}
-  <script type="text/javascript" src="{{asset('assets_frontend/dist/js/datepicker.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/dist/js/i18n/datepicker.en.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/js/moment.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/js/vue.js') }}"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/js/axios.js') }}"></script>
-  <script type="text/javascript" src="{{asset("plugins/select2/js/select2.min.js")}}"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/js/aos.js') }}"></script>
-  <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend')}}/js/whatsapp-chat.js?ver=0.30"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/js/custom.js?ver=0.30') }}"></script>
+  
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/vendor.js')); ?>"></script>
+  
+  
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/dist/js/datepicker.min.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/dist/js/i18n/datepicker.en.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/moment.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/vue.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/axios.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset("plugins/select2/js/select2.min.js")); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/aos.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('js/app.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend')); ?>/js/whatsapp-chat.js?ver=0.30"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/custom.js?ver=0.30')); ?>"></script>
   <style>
     .ayoan_whatsapp_chatbox_container {
       z-index: 1000;
@@ -337,7 +337,7 @@
       padding: 22px 21px;
     }
 
-    @media screen and (max-width: 770px) {
+    @media  screen and (max-width: 770px) {
       .ayoan_whatsapp_chatbox_container {
         width: 314px !important;
         /* height: 58vh !important; */
@@ -429,9 +429,9 @@
     });
     setInterval(_ => carsel.next(), 4000);
   </script>
-  @yield('customScripts')
-  @yield('chatterJs')
-  @stack('scripts')
+  <?php echo $__env->yieldContent('customScripts'); ?>
+  <?php echo $__env->yieldContent('chatterJs'); ?>
+  <?php echo $__env->yieldPushContent('scripts'); ?>
   <script>
     $(document).ready(function() {
       $('#Country').attr("selected", "selected");
@@ -454,7 +454,7 @@
         }, 10000)
         var data = $(this).serialize();
         $.ajax({
-          url: "{{url('send-comment')}}",
+          url: "<?php echo e(url('send-comment')); ?>",
           type: 'post',
           data: data,
           success: function(response) {
@@ -529,7 +529,7 @@
         _this.find('.submit-btn').text('Submit');
       }, 4000);
       $.ajax({
-        url: '{{url("login")}}',
+        url: '<?php echo e(url("login")); ?>',
         type: 'POST',
         dataType: 'json',
         data: data,
@@ -578,8 +578,8 @@
     var registerValidate = new Vue({
       el: '#register-validate',
       data: {
-        url: "{{route('student.store')}}",
-        baseUrl: '{{preg_match("~\b(university/|courses)\b~i",url()->current())?url()->current():url("/")."/dashboard"}}',
+        url: "<?php echo e(route('student.store')); ?>",
+        baseUrl: '<?php echo e(preg_match("~\b(university/|courses)\b~i",url()->current())?url()->current():url("/")."/dashboard"); ?>',
 
         list: {
           user_type: 'student',
@@ -593,7 +593,7 @@
           country: '',
           prefer: '',
           terms: '',
-          _token: '{{csrf_token()}}',
+          _token: '<?php echo e(csrf_token()); ?>',
         },
         errors: {},
         counter: 1,
@@ -644,8 +644,8 @@
     var registerValidate = new Vue({
       el: '#registerValidate',
       data: {
-        url: "{{route('student.store')}}",
-        baseUrl: '{{preg_match("~\b(university/|courses)\b~i",url()->current())?url()->current():url("/")."/dashboard"}}',
+        url: "<?php echo e(route('student.store')); ?>",
+        baseUrl: '<?php echo e(preg_match("~\b(university/|courses)\b~i",url()->current())?url()->current():url("/")."/dashboard"); ?>',
         list: {
           user_type: 'student',
           first_name: '',
@@ -658,7 +658,7 @@
           country: '',
           prefer: '',
           terms: '',
-          _token: '{{csrf_token()}}',
+          _token: '<?php echo e(csrf_token()); ?>',
         },
         errors: {},
         counter: 1,
@@ -710,8 +710,8 @@
      var registerValidate = new Vue({
       el: '#registerValidateConsult',
       data: {
-        url: "{{route('student.store')}}",
-        baseUrl: '{{preg_match("~\b(university/|courses)\b~i",url()->current())?url()->current():url("/")."/dashboard"}}',
+        url: "<?php echo e(route('student.store')); ?>",
+        baseUrl: '<?php echo e(preg_match("~\b(university/|courses)\b~i",url()->current())?url()->current():url("/")."/dashboard"); ?>',
         list: {
           user_type: 'consultant',
           first_name: '',
@@ -729,7 +729,7 @@
           designation: '',
           comment: '',
           terms: '',
-          _token: '{{csrf_token()}}',
+          _token: '<?php echo e(csrf_token()); ?>',
         },
         errors: {},
         counter: 1,
@@ -781,8 +781,8 @@
     var registerValidate = new Vue({
       el: '#register-validateconsult',
       data: {
-        url: "{{route('student.store')}}",
-        baseUrl: '{{preg_match("~\b(university/|courses)\b~i",url()->current())?url()->current():url("/")."/dashboard"}}',
+        url: "<?php echo e(route('student.store')); ?>",
+        baseUrl: '<?php echo e(preg_match("~\b(university/|courses)\b~i",url()->current())?url()->current():url("/")."/dashboard"); ?>',
         list: {
           user_type: 'consultant',
           first_name: '',
@@ -800,7 +800,7 @@
           designation: '',
           comment: '',
           terms: '',
-          _token: '{{csrf_token()}}',
+          _token: '<?php echo e(csrf_token()); ?>',
         },
         errors: {},
         counter: 1,
@@ -856,7 +856,7 @@
       el: '#search-comp',
       data() {
         return {
-          baseUrl: '{{url("/")}}',
+          baseUrl: '<?php echo e(url("/")); ?>',
           search: '',
           location: '',
           suggestion: {},
@@ -900,7 +900,7 @@
     // var search = new Vue({
     //   el: '#search-comp',
     //   data: {
-    //     baseUrl: '{{url("/")}}',
+    //     baseUrl: '<?php echo e(url("/")); ?>',
     //     search: '',
     //     location: '',
     //     suggestion: {},
@@ -964,7 +964,7 @@
     // var search = new Vue({
     //   el: '#search-comp',
     //   data: {
-    //     baseUrl: '{{url("/")}}',
+    //     baseUrl: '<?php echo e(url("/")); ?>',
     //     search: '',
     //     location: '',
     //     suggestion: {},
@@ -1027,7 +1027,7 @@
         // var search = new Vue({
     //   el: '#search-comp',
     //   data: {
-    //     baseUrl: '{{url("/")}}',
+    //     baseUrl: '<?php echo e(url("/")); ?>',
     //     search: '',
     //     location: '',
     //     suggestion: {},
@@ -1306,12 +1306,12 @@
       $('.quick-chat').css('border-left', 'solid 3px #464646');
     })
     $(document).on('change', '.search-subject-footer', function() {
-      let baseUrl = '{{url("/")}}'
+      let baseUrl = '<?php echo e(url("/")); ?>'
       let val = $(this).val();
       window.location.href = baseUrl + '/search?type=course&subject=' + val;
     });
     $(document).on('change', '.search-university-footer', function() {
-      let baseUrl = '{{url("/")}}'
+      let baseUrl = '<?php echo e(url("/")); ?>'
       let val = $(this).val();
       window.location.href = baseUrl + '/university/' + val;
     });
@@ -1505,7 +1505,7 @@
     var action_button = action_button;
     var page_hit_name = "";
     var whatsapp_button_text = whatsapp_button_text;
-    var csrfToken = '{{ csrf_token() }}';
+    var csrfToken = '<?php echo e(csrf_token()); ?>';
 
     var currentURL = window.location.href;
 
@@ -1523,7 +1523,7 @@
 
 
     $.ajax({
-      url: '{{route("event_trigger_web")}}',
+      url: '<?php echo e(route("event_trigger_web")); ?>',
       type: 'POST',
       dataType: 'json',
       data: {

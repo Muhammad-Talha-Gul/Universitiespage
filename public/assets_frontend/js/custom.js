@@ -69,4 +69,15 @@ setInterval(function() {
 }, 5000);
 $('.select2').select2();
 
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazyload");
+  lazyloadImages.forEach(function(img) {
+      img.setAttribute("src", img.getAttribute("data-src"));
+  });
+});
+
+
+
+
+
 });
