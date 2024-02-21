@@ -22,7 +22,7 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                 </div>
-                                <input type="email" name="email" class="form-control" id="login_email" placeholder="Enter Your Email">
+                                <input type="email" name="email" class="form-control"  placeholder="Enter Your Email">
                                 <div id="ResetMsg" style="font-size: 12px;color: red;position: absolute;text-align: center;width: 100%;font-weight: 500;top: -20px;"></div>
                             </div>
 
@@ -33,7 +33,7 @@
                                         <i class="fa fa-key"></i>
                                     </div>
                                 </div>
-                                <input type="password" name="password" class="form-control" id="login_password" placeholder="Password">
+                                <input type="password" name="password" class="form-control" placeholder="Password">
                             </div>
 
                             <!-- <div class="form-check mb-2 mr-sm-2">

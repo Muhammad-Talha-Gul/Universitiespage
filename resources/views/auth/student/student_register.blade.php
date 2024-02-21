@@ -5,8 +5,8 @@
         <div class="container">
             <div class="login-section-main">
                 <div class="formcol track-application-form-main auth-form-main">
-                    <!-- registration start -->
-                    <div class="registration-form" id="registerValidate">
+                    <!-- registration start --> 
+                    <div class="registration-form" id="registerValidate" >
                         <div class="modal-heading-container">
                             <h3 class="user-modal-heading user-form-heading">Registration as Student
                             </h3>

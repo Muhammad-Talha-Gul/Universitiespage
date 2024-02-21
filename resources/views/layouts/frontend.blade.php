@@ -296,7 +296,6 @@
     <img src="{{asset('page_loader.gif')}}">
   </div>
 
-
   @include('includes.frontend.contact_form')
 
   @include('includes.frontend.header')
@@ -326,7 +325,7 @@
   <script type="text/javascript" src="{{asset('assets_frontend/js/aos.js') }}"></script>
   <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
   <script type="text/javascript" src="{{asset('assets_frontend')}}/js/whatsapp-chat.js?ver=0.30"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/js/custom.js?ver=0.30') }}"></script>
+  <script type="text/javascript" src="{{asset('assets_frontend/js/custom.min.js?ver=0.30') }}"></script>
   <style>
     .ayoan_whatsapp_chatbox_container {
       z-index: 1000;
@@ -575,6 +574,7 @@
   </script>
 
   <script>
+    
     var registerValidate = new Vue({
       el: '#register-validate',
       data: {
@@ -641,6 +641,7 @@
         });
       },
     });
+    
     var registerValidate = new Vue({
       el: '#registerValidate',
       data: {

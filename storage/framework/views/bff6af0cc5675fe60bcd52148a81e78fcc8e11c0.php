@@ -19,18 +19,18 @@
                 <div class="modal-body">
                     <div class="row input">
                         <div class="col-md-6">
-                            <input type="text" name="name" class="form-control" id="login_email" placeholder="Enter Your Name">
+                            <input type="text" name="name" class="form-control"  placeholder="Enter Your Name">
                         </div>
                         <div class="col-md-6">
-                            <input type="email" name="email" class="form-control" id="login_email" placeholder="Enter Your Email">
+                            <input type="email" name="email" class="form-control"  placeholder="Enter Your Email">
                         </div>
                     </div>
                     <div class="row input">
                     <div class="col-md-6">
-                        <input type="text" name="phone_number" class="form-control" id="login_email" placeholder="Enter Your Phone Number ">
+                        <input type="text" name="phone_number" class="form-control"  placeholder="Enter Your Phone Number ">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="last_education" class="form-control" id="login_email" placeholder="Enter Your Last Education">
+                        <input type="text" name="last_education" class="form-control"  placeholder="Enter Your Last Education">
                     </div>
                     </div>
          <div class="row input">
@@ -53,7 +53,7 @@
                 <option selected>Select City</option>
             </select></div>
                     <div class="col-md-6">
-                        <input type="text" name="apply_for" class="form-control" id="login_email" placeholder="Apply For">
+                        <input type="text" name="apply_for" class="form-control"  placeholder="Apply For">
                     </div>
                     </div>
                 </div>

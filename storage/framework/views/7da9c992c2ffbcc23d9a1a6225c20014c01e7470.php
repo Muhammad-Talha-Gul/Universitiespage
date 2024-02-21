@@ -1,5 +1,4 @@
-@extends('layouts.frontend')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="bg-light">
     <section class="login-section py-5 mb-3">
         <div class="container">
@@ -481,7 +480,7 @@
                             <div class="form-check text-left mb-4">
                                 <label class="login-remember-label mb-0">
                                     <input type="checkbox" name="terms" v-model="list.terms" value="1">
-                                    <span> I agree to the <a class="term-condition-link" href="{{url('terms-and-condition')}}">Terms And Conditions</a> </span>
+                                    <span> I agree to the <a class="term-condition-link" href="<?php echo e(url('terms-and-condition')); ?>">Terms And Conditions</a> </span>
                                 </label>
                                 <div class="reg-error-msg" style="bottom:-3px;" v-if="errors.terms" v-for="error in errors.terms">
                                     <span v-text="error"></span>
@@ -491,7 +490,7 @@
                             <button type="submit" class="btn btn-primary mb-2 w100p submit-btn">Register</button>
                         </form>
                         <div class="bottom-link-main text-center mt-2">
-                            <a href="{{route('consultant-login')}}" class="form-bottom-link">Login As Consultant</a>
+                            <a href="<?php echo e(route('consultant-login')); ?>" class="form-bottom-link">Login As Consultant</a>
                         </div>
                     </div>
                     <!-- consultant register end here -->
@@ -500,4 +499,5 @@
             </div>
     </section>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.frontend', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
