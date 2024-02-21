@@ -81,7 +81,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 slider-column mb-3">
               <div class="container1 m-0">
                 <a class="o-blockLink" href="{{url(('university/'.$uni->slug)??'#')}}">
-                  <img class="img-fluid" src="{{ ($bg!==null)?url(($bg)??'#.'):url((fix($uni->logo,'thumbs'))??iph()) }}" alt="<?php echo $uni->name; ?>" alt="Snow" style="width:100%;">
+                  <img class="img-fluid lazyloaded" src="{{ ($bg!==null)?url(($bg)??'#.'):url((fix($uni->logo,'thumbs'))??iph()) }}" alt="<?php echo $uni->name; ?>" alt="Snow" style="width:100%;">
                   <div class="centered">
                     <div class="overlay">
                       <p><?php echo $uni->name; ?></p>
