@@ -321,30 +321,37 @@ $(document).ready(function(){
         
      // dynamic row for schema end
 
-    // Define function to open filemanager window
-    var lfm = function(options, cb) {
-        var route_prefix = (options && options.prefix) ? options.prefix : '{{url('/filemanager')}}';
-        window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
-        window.SetUrl = cb;
-    };
-    
-    // Define LFM summernote button
-    var LFMButton = function(context) {
-        var ui = $.summernote.ui;
-        var button = ui.button({
-            contents: '<i class="note-icon-picture"></i> ',
-            tooltip: 'Insert image with filemanager',
-            click: function() {
-        
-                lfm({type: 'image', prefix: '{{url('/filemanager')}}'}, function(url, path) {
-                    context.invoke('insertLink', url);
-                    //console.log($url,'image url path');
-                });
 
-            }
-        });
-        return button.render();
+// Define function to open filemanager window
+var lfm = function(options, cb) {
+    var route_prefix = (options && options.prefix) ? options.prefix : '{{url('/filemanager')}}';
+    window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
+    window.SetUrl = function(url, path) {
+        console.log("Received URL:", url); // Debugging
+        cb(url); // Pass the url to the callback function
     };
+};
+
+// Define LFM summernote button
+var LFMButton = function(context) {
+    var ui = $.summernote.ui;
+    var button = ui.button({
+        contents: '<i class="note-icon-picture"></i> ',
+        tooltip: 'Insert image with filemanager',
+        click: function() {
+            var altText = prompt("Please enter alt text for the image:", ""); // Prompt for alt text
+            if (altText !== null) { // If user didn't cancel
+                lfm({type: 'image', prefix: '{{url('/filemanager')}}'}, function(url) {
+                    console.log("Received URL in callback:", url); // Debugging
+                    var img = $('<img>').attr('src', url).attr('alt', altText); // Create img element with alt attribute
+                    console.log("Created image element:", img); // Debugging
+                    context.invoke('editor.insertNode', img[0]); // Insert the img element into the editor
+                });
+            }
+        }
+    });
+    return button.render();
+};
     
     // Define whatsapp  summernote button
         var whatsappButton = function(context) {

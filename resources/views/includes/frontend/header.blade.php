@@ -364,7 +364,7 @@
                                         <i class="fa fa-home"></i>
                                       </div>
                                     </div>
-                                        <select name="country" class="form-control w100p country-select">
+                                        <select name="country" class="form-control w100p country-select" required>
                                             <option selected="">--Nationality--</option>
 
                                             <option value="Afganistan">Afghanistan</option>
