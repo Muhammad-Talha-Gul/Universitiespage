@@ -1,5 +1,8 @@
 <?php
-
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +23,115 @@ Route::get('/clear-cache', function() {
     Artisan::call('view:clear');
     return redirect('/');
 });
+
+
+
+
+Route::get('/', function () {
+    // Check if assets are already cached
+    if (!Cache::has('assets_cached')) {
+        // Cache frontend assets
+        cacheAssets('frontend', 'css');
+        cacheAssets('frontend', 'js');
+        cacheImages('frontend');
+
+        // Cache backend assets
+        cacheAssets('backend', 'css');
+        cacheAssets('backend', 'js');
+        cacheImages('backend');
+
+        // Mark assets as cached
+        Cache::put('assets_cached', true, now()->addDay());
+    }
+
+    // Return a response indicating that assets are cached
+    return response()->json(['message' => 'Assets cached successfully']);
+});
+
+// Function to cache assets from a directory based on type (css/js) and area (frontend/backend)
+function cacheAssets($area, $type)
+{
+    // Define the directory path based on the area and type
+    $directory = public_path("assets_{$area}/{$type}");
+
+    // Get all files in the directory
+    $files = File::allFiles($directory);
+
+    // Loop through each file
+    foreach ($files as $file) {
+        $filename = $file->getRelativePathname();
+
+        // Check if the file is already cached
+        if (!Cache::has("{$area}_{$type}_{$filename}")) {
+            // Read the file contents
+            $content = File::get($file->getPathname());
+
+            // Set appropriate cache headers
+            $headers = [
+                'Content-Type' => File::mimeType($file->getPathname()),
+                'Cache-Control' => 'public, max-age=' . (strtotime('12:00 PM') - time()), // Cache until 12:00 PM
+            ];
+
+            // Create the response
+            $response = Response::make($content, 200, $headers);
+
+            // Cache the response
+            Cache::put("{$area}_{$type}_{$filename}", $response, now()->until('12:00 PM'));
+        }
+    }
+}
+
+// Function to cache all images from the public folder
+function cacheImages($area)
+{
+    // Define the directory path
+    $directory = public_path();
+
+    // Recursively get all image files in the directory
+    $imageFiles = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($directory)
+    );
+
+    // Loop through each image file
+    foreach ($imageFiles as $imageFile) {
+        // Exclude directories and non-image files
+        if ($imageFile->isFile() && starts_with(mime_content_type($imageFile), 'image/')) {
+            $filename = $imageFile->getRelativePathname();
+
+            // Check if the file is already cached
+            if (!Cache::has("{$area}_img_{$filename}")) {
+                // Read the file contents
+                $content = File::get($imageFile->getPathname());
+
+                // Set appropriate cache headers
+                $headers = [
+                    'Content-Type' => File::mimeType($imageFile->getPathname()),
+                    'Cache-Control' => 'public, max-age=' . (strtotime('12:00 PM') - time()), // Cache until 12:00 PM
+                ];
+
+                // Create the response
+                $response = Response::make($content, 200, $headers);
+
+                // Cache the response
+                Cache::put("{$area}_img_{$filename}", $response, now()->until('12:00 PM'));
+            }
+        }
+    }
+}
+
+// Route to serve cached assets
+Route::get('assets/{area}/{type}/{filename}', function ($area, $type, $filename) {
+    $cacheKey = "{$area}_{$type}_{$filename}";
+
+    // Check if the asset is cached
+    if (Cache::has($cacheKey)) {
+        return Cache::get($cacheKey);
+    }
+
+    // If the asset is not cached, return a 404 response
+    abort(404);
+});
+
 
 Route::get('sendbtnemail/{id}/{type}','FrontEnd\HomeController@sendbtnemail')->name('sendbtnemail');
 

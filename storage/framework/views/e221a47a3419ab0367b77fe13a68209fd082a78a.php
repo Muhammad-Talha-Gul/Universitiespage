@@ -96,7 +96,7 @@
                                 <?php $__currentLoopData = $country_chunk; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <li itemscope="" itemtype="http://schema.org/Country" class="countries-list-item">
                                         <a href="<?php echo e(url('search?type=university&location='.$c->country)); ?>" class="countries-link" itemprop="<?php echo e(url('search?type=university&location='.$c->country)); ?>">
-                                            <img src="<?php echo e($c->image); ?>" alt="<?php echo e($c->country); ?>" data-lazy-src="<?php echo e($c->image); ?>" data-was-processed="true" class="countries-image">
+                                            <img src="<?php echo e($c->image); ?>" alt="<?php echo e($c->country); ?>" data-lazy-src="<?php echo e($c->image); ?>" class="lazyloaded" data-was-processed="true" class="countries-image">
                                             <noscript><img src="<?php echo e($c->image); ?>" alt="<?php echo e($c->country); ?>"></noscript>
                                             <span itemprop="name" class="countries-name-span"><?php echo e($c->country); ?> (<?php echo e($c->code); ?>)</span>
                                         </a>

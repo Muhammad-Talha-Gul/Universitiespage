@@ -5,7 +5,6 @@
 
 
 <!-- /* ..................Our LATEST ARTICLES start............. */ -->
-
 <section class="papolar-universities pl-5">
   <div class="container-fluid">
     <div class="row">

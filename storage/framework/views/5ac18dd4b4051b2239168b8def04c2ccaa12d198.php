@@ -1307,7 +1307,7 @@
 
         <li class="nav-item">
           <a class="nav-link " style="margin-right: 7px;" href="<?php echo e(url(($menu['url'])??'#.')); ?>">
-            <i class="<?php echo e(($menu['icon'])??''); ?>"></i> <span class="u-xs-small95"><?php echo e(($menu['title'])??''); ?> talha</span>
+            <i class="<?php echo e(($menu['icon'])??''); ?>"></i> <span class="u-xs-small95"><?php echo e(($menu['title'])??''); ?></span>
           </a>
         </li>
         <?php else: ?>
