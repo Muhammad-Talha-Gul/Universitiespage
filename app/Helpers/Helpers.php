@@ -648,16 +648,28 @@ function createSiteMap(){
     fclose($f_robot);
 }
 
+// function getBlogs($paginate, $category){
+// 	if($paginate !== 0 && $category==null){
+// 		return Blog::where('is_active', 1)->where('is_featured',0)->with('category')->orderBy('sort_order', 'ASC')->paginate($paginate);
+// 	}elseif($paginate !== 0 && $category!==null){
+// 		return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->paginate($paginate);
+// 	}elseif($paginate == 0 && $category!==null){
+// 		return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->get();
+// 	}else{
+// 		return Blog::where('is_active', 1)->where('is_featured',0)->orderBy('sort_order', 'ASC')->with('category')->get();
+// 	}
+// }
+
 function getBlogs($paginate, $category){
-	if($paginate !== 0 && $category==null){
-		return Blog::where('is_active', 1)->where('is_featured',0)->with('category')->orderBy('sort_order', 'ASC')->paginate($paginate);
-	}elseif($paginate !== 0 && $category!==null){
-		return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->paginate($paginate);
-	}elseif($paginate == 0 && $category!==null){
-		return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->get();
-	}else{
-		return Blog::where('is_active', 1)->where('is_featured',0)->orderBy('sort_order', 'ASC')->with('category')->get();
-	}
+    if($paginate !== 0 && $category==null){
+        return Blog::where('is_active', 1)->where('is_featured',0)->with('category')->orderBy('sort_order', 'ASC')->paginate($paginate + 1);
+    } elseif($paginate !== 0 && $category!==null){
+        return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->paginate($paginate + 1);
+    } elseif($paginate == 0 && $category!==null){
+        return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->get();
+    } else {
+        return Blog::where('is_active', 1)->where('is_featured',0)->orderBy('sort_order', 'ASC')->with('category')->get();
+    }
 }
 
 function pluckBlog(){

@@ -4,6 +4,20 @@
   }
 </style>
 
+<div class="container-fluid text-center firstsection">
+        <h1>Search Here Blogs Articles</h1>
+        <p>Browse, explore, Request Information from Articles.</p>
+        <div class="universities-form-main">
+            <form  class="mb-1" action="{{ route('blog.search') }}" method="GET">
+                <div class="universities-form-block">
+                    <input type="text" name="keyword" class="form-control uni-search searchform2" placeholder="Search..." autocomplete="Off">
+                    <button type="submit" class="Searchbtn2"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+            <div style="position: absolute;" class="is-dropdown w-100 u-maxw-680px bg-white u-boxShadow-light d-none search-uni scroll2"></div>
+        </div>
+    </div>
+
 
 @if(!in_array(request()->path(), pluckBlog()))
 <div class="po_un_col1 my-5 left-heading-container">
@@ -28,79 +42,80 @@
     $category = (isset($blog->id))?$blog->id:null;
     @endphp
     @if(count(getBlogs(0,$category))>0)
-    @foreach(popularBlog() as $blog)
-    <div class="article-card-main col-sm-6">
-      <a href="{{url(($blog->slug)??'#')}}">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pl-0 pr-0">
-            <div class="imgcol">
-              <img class="card-img-top" width="100%" height="100%" alt="<?php echo $blog->title; ?>" src="{{url(($blog->image)??'#')}}" data-echo="{{url(($blog->image)??'#')}}">
-            </div>
-          </div>
+        @foreach(popularBlog() as $blog)
+        <div class="article-card-main col-sm-6">
+          <a href="{{url(($blog->slug)??'#')}}">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pl-0 pr-0">
+                <div class="imgcol">
+                  <img class="card-img-top" width="100%" height="100%" alt="<?php echo $blog->title; ?>" src="{{url(($blog->image)??'#')}}" data-echo="{{url(($blog->image)??'#')}}">
+                </div>
+              </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
-            <div class="colmd12 textcol">
-              <div class="blog-content-main">
-                <h3>{{($blog->title)??''}}</h3>
-                <p>{!!($blog->short_description)??''!!}</p>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+                <div class="colmd12 textcol">
+                  <div class="blog-content-main">
+                    <h3>{{($blog->title)??''}} 1</h3>
+                    <p>{!!($blog->short_description)??''!!}</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
-      </a>
-    </div>
-    @endforeach
-    <?php $check_count = 0; ?>
-    @foreach(getBlogs($paginate,$category) as $blog)
-    @if($blog->is_featured == 0)
-    <?php if ($check_count == 0) { ?>
-      <div class="article-card-main  col-sm-6">
-        <a href="{{url(($blog->slug)??'#')}}">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pl-0 pr-0">
-              <div class="imgcol">
-                <img class="card-img-top" width="100%" height="100%" alt="<?php echo $blog->title; ?>" src="{{url(($blog->image)??'#')}}" data-echo="{{url(($blog->image)??'#')}}">
-              </div>
-            </div>
+        @endforeach
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
-              <div class="colmd12 textcol">
-                <div class="blog-content-main">
-                  <h3>{{($blog->title)??''}}</h3>
-                  <p>{!!($blog->short_description)??''!!}</p>
+
+        <?php $check_count = 0; ?>
+        @foreach(getBlogs($paginate,$category) as $blog)
+        @if($blog->is_featured == 0)
+        <?php if ($check_count == 0) { ?>
+          <div class="article-card-main  col-sm-6">
+            <a href="{{url(($blog->slug)??'#')}}">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pl-0 pr-0">
+                  <div class="imgcol">
+                    <img class="card-img-top" width="100%" height="100%" alt="<?php echo $blog->title; ?>" src="{{url(($blog->image)??'#')}}" data-echo="{{url(($blog->image)??'#')}}">
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+                  <div class="colmd12 textcol">
+                    <div class="blog-content-main">
+                      <h3>{{($blog->title)??''}}  2</h3>
+                      <p>{!!($blog->short_description)??''!!}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-        </a>
-      </div>
-    <?php $check_count = 1;
-    } else { ?>
-      <div class="article-card-main  col-sm-6">
-        <a href="{{url(($blog->slug)??'#')}}">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pl-0 pr-0">
-              <div class="imgcol">
-                <img class="card-img-top" width="100%" height="100%" alt="<?php echo $blog->title; ?>" src="{{url(($blog->image)??'#')}}" data-echo="{{url(($blog->image)??'#')}}">
-              </div>
-            </div>
+        <?php $check_count = 1;
+        } 
+        else { ?>
+          <div class="article-card-main  col-sm-6">
+            <a href="{{url(($blog->slug)??'#')}}">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pl-0 pr-0">
+                  <div class="imgcol">
+                    <img class="card-img-top" width="100%" height="100%" alt="<?php echo $blog->title; ?>" src="{{url(($blog->image)??'#')}}" data-echo="{{url(($blog->image)??'#')}}">
+                  </div>
+                </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
-              <div class="colmd12 textcol">
-                <div class="blog-content-main">
-                  <h3>{{($blog->title)??''}}</h3>
-                  <p>{!!($blog->short_description)??''!!}</p>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+                  <div class="colmd12 textcol">
+                    <div class="blog-content-main">
+                      <h3>{{($blog->title)??''}} 3</h3>
+                      <p>{!!($blog->short_description)??''!!}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-        </a>
-      </div>
-    <?php  } ?>
-    @endif
-
-
-    @endforeach
+        <?php  } ?>
+        @endif
+        @endforeach
 
     <div class="col-sm-12 mt-5">
       @if(count(getBlogs($paginate,$category))>0 && $paginate !== 0 && count(getBlogs($paginate,$category))<count(getBlogs(0,$category))) <nav class="Page navigation" aria-label="Page navigation">
@@ -311,7 +326,6 @@
 <div style="clear: both;"></div>
 
 @endif
-
 
 
 <div class="modal " id="apply_now_form" data-toggle="modal">

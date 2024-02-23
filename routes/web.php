@@ -147,6 +147,8 @@ Route::get('/student-register', 'Auth\RegisterController@register')->name('stude
 Route::get('/consultant-login', 'Auth\Consultant\LoginController@login')->name('consultant-login');
 Route::get('/consultant-register', 'Auth\Consultant\RegisterController@register')->name('consultant-register');
 Route::get('/discount-offer', 'FrontEnd\HomeController@discountOfferPage')->name('discount-offer');
+Route::get('/blog/search', 'FrontEnd\HomeController@search')->name('blog.search');
+
 
 
 

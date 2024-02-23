@@ -2,6 +2,13 @@
     width: 100% !important;
 }
 /* responsive start */
+
+@media (min-width: 1200px) and (max-width: 2400px) {
+.footer-colmun-main{
+    max-width: max-content;
+    margin-left: auto;
+}
+}
 @media (min-width: 992px) and (max-width: 1199px) {
 
     /* header start */
@@ -732,7 +739,10 @@
         height: 35px;
         width: 35px;
     }
-
+    .footer-colmun-main{
+        max-width: max-content;
+        margin-left: auto;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
