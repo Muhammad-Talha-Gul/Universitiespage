@@ -562,7 +562,7 @@
       })
     });
 
-
+    
     function isJson(str) {
       try {
         JSON.parse(str);

@@ -8,9 +8,6 @@
                     <div class="login-form">
                         <div class="modal-heading-container">
                             <h2 class="user-modal-heading user-form-heading" align="center">Login as Consultant</h2>
-                            <button type="button modal-close-button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
                         </div>
                         <form class="form-inline login-student" method="POST">
                             <?php echo e(csrf_field()); ?>
@@ -37,14 +34,14 @@
                             </div>
 
                             <!-- <div class="form-check mb-2 mr-sm-2">
-                  <label>
-                    <input type="checkbox" name="" value="1">
-                    <span> Remember me </span>
-                  </label>
-                </div>
-                
-                <p><small><a href="<?php echo e(route('password.request')); ?>"><?php echo app('translator')->getFromJson('Forgot password?'); ?></a></small></p>
-                 -->
+                            <label>
+                                <input type="checkbox" name="" value="1">
+                                <span> Remember me </span>
+                            </label>
+                            </div>
+                            
+                            <p><small><a href="<?php echo e(route('password.request')); ?>"><?php echo app('translator')->getFromJson('Forgot password?'); ?></a></small></p>
+                             -->
 
                             <div class="login-forgot-main pt-2 pb-4">
                                 <div class="form-check mb-0">
@@ -72,4 +69,7 @@
     </section>
 </div>
 <?php $__env->stopSection(); ?>
+
+
+
 <?php echo $__env->make('layouts.frontend', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

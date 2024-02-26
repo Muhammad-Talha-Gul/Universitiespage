@@ -9,9 +9,6 @@
                     <div class="login-form">
                         <div class="modal-heading-container">
                             <h2 class="user-modal-heading user-form-heading" align="center">Login as Consultant</h2>
-                            <button type="button modal-close-button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
                         </div>
                         <form class="form-inline login-student" method="POST">
                             {{csrf_field()}}
@@ -37,14 +34,14 @@
                             </div>
 
                             <!-- <div class="form-check mb-2 mr-sm-2">
-                  <label>
-                    <input type="checkbox" name="" value="1">
-                    <span> Remember me </span>
-                  </label>
-                </div>
-                {{-- =========Amir edit --}}
-                <p><small><a href="{{ route('password.request') }}">@lang('Forgot password?')</a></small></p>
-                {{-- =======End amir edit======= --}} -->
+                            <label>
+                                <input type="checkbox" name="" value="1">
+                                <span> Remember me </span>
+                            </label>
+                            </div>
+                            {{-- =========Amir edit --}}
+                            <p><small><a href="{{ route('password.request') }}">@lang('Forgot password?')</a></small></p>
+                            {{-- =======End amir edit======= --}} -->
 
                             <div class="login-forgot-main pt-2 pb-4">
                                 <div class="form-check mb-0">
@@ -72,3 +69,5 @@
     </section>
 </div>
 @endsection
+
+

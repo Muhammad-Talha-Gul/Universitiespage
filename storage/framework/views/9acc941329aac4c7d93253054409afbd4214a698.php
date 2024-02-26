@@ -4,7 +4,7 @@
     <div class="topbar-left">
         
         <!-- Image logo -->
-        <a href="<?php echo e(url("/")); ?>" class="logo">
+        <a href="<?php echo e(url("/admin/home")); ?>" class="logo">
         <span>
         <img style="margin-top: 10px;" class="logo" src="<?php echo e(asset('assets_backend/images/webnet.png')); ?>" alt="" height="30">
         </span>

@@ -238,7 +238,7 @@
                     <div class="form-group<?php echo e($errors->has('passport_doc') ? ' has-error' : ''); ?>">
                         <label class="form__label dashboard-form-label">Passport<span class="label__required">*</span>
                         </label>
-                          <input type="file" name="passport_doc[]" multiple class="form-control file-upload-input" placeholder="Passport"  value="<?php echo e($user->passport_doc); ?>">
+                          <input  type="file" name="passport_doc[]" multiple class="form-control file-upload-input" placeholder="Passport"  value="<?php echo e($user->passport_doc); ?>">
                           <?php if($errors->has('passport_doc')): ?>
                           <span class="help-block">
                               <strong><?php echo e($errors->first('passport_doc')); ?></strong>
@@ -249,7 +249,7 @@
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 file-input-column">
                     <div class="form-group<?php echo e($errors->has('photo_doc') ? ' has-error' : ''); ?>">
                         <label class="form__label dashboard-form-label">Photo</label>
-                          <input type="file" name="photo_doc[]" multiple class="form-control file-upload-input" placeholder="Photo" value="<?php echo e($user->photo_doc); ?>">
+                          <input  type="file" name="photo_doc[]" multiple class="form-control file-upload-input" placeholder="Photo" value="<?php echo e($user->photo_doc); ?>">
                           <?php if($errors->has('photo_doc')): ?>
                           <span class="help-block">
                               <strong><?php echo e($errors->first('photo_doc')); ?></strong>
@@ -260,7 +260,7 @@
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 file-input-column">
                     <div class="form-group<?php echo e($errors->has('educational_degree_doc') ? ' has-error' : ''); ?>">
                         <label class="form__label dashboard-form-label">Educational Degree</label>
-                          <input type="file" name="educational_degree_doc[]" multiple class="form-control file-upload-input" placeholder=">Educational Degree" value="<?php echo e($user->educational_degree_doc); ?>">
+                          <input  type="file" name="educational_degree_doc[]" multiple class="form-control file-upload-input" placeholder=">Educational Degree" value="<?php echo e($user->educational_degree_doc); ?>">
                           <?php if($errors->has('educational_degree_doc')): ?>
                           <span class="help-block">
                               <strong><?php echo e($errors->first('educational_degree_doc')); ?></strong>
@@ -272,7 +272,7 @@
                     <div class="form-group<?php echo e($errors->has('educational_certificate_doc') ? ' has-error' : ''); ?>">
                         <label class="form__label dashboard-form-label">Educational Certificate<span class="label__required">*</span>
                         </label>
-                          <input type="file" name="educational_certificate_doc[]" multiple class="form-control file-upload-input" placeholder="Educational Certificate"  value="<?php echo e($user->educational_certificate_doc); ?>">
+                          <input  type="file" name="educational_certificate_doc[]" multiple class="form-control file-upload-input" placeholder="Educational Certificate"  value="<?php echo e($user->educational_certificate_doc); ?>">
                           <?php if($errors->has('educational_certificate_doc')): ?>
                           <span class="help-block">
                               <strong><?php echo e($errors->first('educational_certificate_doc')); ?></strong>
@@ -284,7 +284,7 @@
                     <div class="form-group<?php echo e($errors->has('recomendation_letter_doc') ? ' has-error' : ''); ?>">
                         <label class="form__label dashboard-form-label">Recomendation Letter<span class="label__required">*</span>
                         </label>
-                          <input type="file" name="recomendation_letter_doc[]" multiple class="form-control file-upload-input" placeholder="Recomendation Letter"  value="<?php echo e($user->recomendation_letter_doc); ?>">
+                          <input  type="file" name="recomendation_letter_doc[]" multiple class="form-control file-upload-input" placeholder="Recomendation Letter"  value="<?php echo e($user->recomendation_letter_doc); ?>">
                           <?php if($errors->has('recomendation_letter_doc')): ?>
                           <span class="help-block">
                               <strong><?php echo e($errors->first('recomendation_letter_doc')); ?></strong>
@@ -295,7 +295,7 @@
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 file-input-column">
                     <div class="form-group<?php echo e($errors->has('study_plan') ? ' has-error' : ''); ?>">
                         <label class="form__label dashboard-form-label">Study Plan</label>
-                          <input type="file" name="study_plan[]" multiple class="form-control file-upload-input" placeholder="Study Plan" value="<?php echo e($user->study_plan); ?>">
+                          <input  type="file" name="study_plan[]" multiple class="form-control file-upload-input" placeholder="Study Plan" value="<?php echo e($user->study_plan); ?>">
                           <?php if($errors->has('study_plan')): ?>
                           <span class="help-block">
                               <strong><?php echo e($errors->first('study_plan')); ?></strong>
@@ -307,7 +307,7 @@
                     <div class="form-group<?php echo e($errors->has('ielts_english_proficiency_letter') ? ' has-error' : ''); ?>">
                         <label class="form__label dashboard-form-label">IELTS or English proficiency letter<span class="label__required">*</span>
                         </label>
-                          <input type="file" name="ielts_english_proficiency_letter[]" multiple class="form-control file-upload-input" placeholder="IELTS or English proficiency letter"  value="<?php echo e($user->ielts_english_proficiency_letter); ?>">
+                          <input  type="file" name="ielts_english_proficiency_letter[]" multiple class="form-control file-upload-input" placeholder="IELTS or English proficiency letter"  value="<?php echo e($user->ielts_english_proficiency_letter); ?>">
                           <?php if($errors->has('ielts_english_proficiency_letter')): ?>
                           <span class="help-block">
                               <strong><?php echo e($errors->first('ielts_english_proficiency_letter')); ?></strong>
@@ -390,7 +390,7 @@
             
             <br>
 
-            <div class="table-responsive">
+            <div class="table-responsive" style="scroll-behavior: smooth;overflow-y:hidden;overflow-x: auto;margin-bottom: 50px;">
               <table class="f-app-table uni_table">
                 <caption>List of users</caption>
                 <thead>
@@ -435,13 +435,13 @@
                     </div>
                     <div class="modal-body" style="overflow: scroll; height: 100vh;">
                     <!-- passport --> <br>
-                    <div class="row" id="passport_docrow"> 
+                    <div class="row resume-block" id="passport_docrow"> 
                     <div class="col-md-12" style="margin-bottom: 10px;"><h5 style="color: black;">Passport Documents
                       <form enctype="multipart/form-data" method="post" onsubmit="add_doc(this, '<?php echo $cstudent->id; ?>', 'passport_doc')">
                       <?php echo e(csrf_field()); ?>
 
                       <span id="show_message_profilepassport_doc"></span>
-                        <input type="file" name="file_name">
+                        <input class="resume-file-input"  type="file" name="file_name">
                         <input type="hidden" name="type" value="passport_doc">
                         <input type="hidden" name="recordid" value="<?php echo $cstudent->id; ?>">
                         <button class="btn btn-success" id="upload_btnpassport_doc" type="submit">Add</button>
@@ -452,8 +452,9 @@
                       foreach($passport_docs as $passport_doc) {
                       ?>
 
-                      <div class="col-md-2" id="doc<?php $newcourdocname = str_replace(".", "", $passport_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
-                        <h6 class="artigo_nome"><?php echo $passport_doc; ?></h6>
+                      <div class="col-md-4 resume-block-column mt-3" id="doc<?php $newcourdocname = str_replace(".", "", $passport_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
+                       <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$passport_doc; ?>" alt="Passport Document" >   
+                      <!-- <h6 class="artigo_nome image-title-heading"><?php echo $passport_doc; ?></h6> -->
                         <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$passport_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
                         <button onclick="delete_doc('passport_doc', '<?php echo $cstudent->id; ?>', '<?php echo $passport_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
                       </div>
@@ -465,13 +466,13 @@
     
 
                   <!-- photos --> <br>
-                  <div class="row" id="photo_docrow">    
+                  <div class="row resume-block" id="photo_docrow">    
                     <div class="col-md-12" style="margin-bottom: 10px;"><h5 style="color: black;">Photos
                       <form enctype="multipart/form-data" method="post" onsubmit="add_doc(this, '<?php echo $cstudent->id; ?>', 'photo_doc')">
                       <?php echo e(csrf_field()); ?>
 
                       <span id="show_message_profilephoto_doc"></span>
-                        <input type="file" name="file_name">
+                        <input class="resume-file-input"  type="file" name="file_name">
                         <input type="hidden" name="type" value="photo_doc">
                         <input type="hidden" name="recordid" value="<?php echo $cstudent->id; ?>">
                         <button class="btn btn-success" id="upload_btnphoto_doc" type="submit">Add</button>
@@ -488,8 +489,9 @@
 
                   ?>
 
-                  <div class="col-md-2" id="doc<?php $newcourdocname = str_replace(".", "", $photo_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
-                    <h6 class="artigo_nome"><?php echo $photo_doc; ?></h6>
+                  <div class="col-md-4 resume-block-column mt-3" id="doc<?php $newcourdocname = str_replace(".", "", $photo_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
+                   <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$photo_doc; ?>" alt="Passport Document" >   
+                  <!-- <h6 class="artigo_nome image-title-heading"><?php echo $photo_doc; ?></h6> -->
                     <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$photo_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
                     <button onclick="delete_doc('photo_doc', '<?php echo $cstudent->id; ?>', '<?php echo $photo_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
                   </div>
@@ -504,7 +506,7 @@
                   </div>
                     <!-- Educational Degree --> <br>
 
-                    <div class="row" id="educational_degree_docrow">
+                    <div class="row resume-block" id="educational_degree_docrow">
                           
                             
                     <div class="col-md-12" style="margin-bottom: 10px;"><h5 style="color: black;">Educational Degree Documents
@@ -513,7 +515,7 @@
                     <?php echo e(csrf_field()); ?>
 
                     <span id="show_message_profileeducational_degree_doc"></span>
-                      <input type="file" name="file_name">
+                      <input class="resume-file-input"  type="file" name="file_name">
                       <input type="hidden" name="type" value="educational_degree_doc">
                       <input type="hidden" name="recordid" value="<?php echo $cstudent->id; ?>">
                       <button class="btn btn-success" id="upload_btneducational_degree_doc" type="submit">Add</button>
@@ -532,8 +534,9 @@
 
                     ?>
 
-                    <div class="col-md-2" id="doc<?php $newcourdocname = str_replace(".", "", $educational_degree_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
-                      <h6  class="artigo_nome"><?php echo $educational_degree_doc; ?></h6>
+                    <div class="col-md-4 resume-block-column mt-3" id="doc<?php $newcourdocname = str_replace(".", "", $educational_degree_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
+                    <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$educational_degree_doc; ?>" alt="Passport Document" > 
+                    <!-- <h6  class="artigo_nome image-title-heading"><?php echo $educational_degree_doc; ?></h6> -->
                       <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$educational_degree_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
                       <button onclick="delete_doc('educational_degree_doc', '<?php echo $cstudent->id; ?>', '<?php echo $educational_degree_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
                     </div>
@@ -552,13 +555,13 @@
 
 
 <!-- Educational Certificate --> <br>
-<div class="row" id="educational_certificate_docrow">      
+<div class="row resume-block" id="educational_certificate_docrow">      
 <div class="col-md-12" style="margin-bottom: 10px;"><h5 style="color: black;">Educational Certificates Documents
 <form enctype="multipart/form-data" method="post" onsubmit="add_doc(this, '<?php echo $cstudent->id; ?>', 'educational_certificate_doc')">
 <?php echo e(csrf_field()); ?>
 
 <span id="show_message_profileeducational_certificate_doc"></span>
-  <input type="file" name="file_name">
+  <input class="resume-file-input" type="file" name="file_name">
   <input type="hidden" name="type" value="educational_certificate_doc">
   <input type="hidden" name="recordid" value="<?php echo $cstudent->id; ?>">
   <button class="btn btn-success" id="upload_btneducational_certificate_doc" type="submit">Add</button>
@@ -570,8 +573,9 @@
 if($educational_certificate_docs != '[]') {   
 foreach($educational_certificate_docs as $educational_certificate_doc) {
 ?>
-<div class="col-md-2" id="doc<?php $newcourdocname = str_replace(".", "", $educational_certificate_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
-  <h6 class="artigo_nome"><?php echo $educational_certificate_doc; ?></h6>
+<div class="col-md-4 resume-block-column mt-3" id="doc<?php $newcourdocname = str_replace(".", "", $educational_certificate_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
+ <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$educational_certificate_doc; ?>" alt="Passport Document" >   
+<!-- <h6 class="artigo_nome image-title-heading"><?php echo $educational_certificate_doc; ?></h6> -->
   <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$educational_certificate_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
   <button onclick="delete_doc('educational_certificate_doc', '<?php echo $cstudent->id; ?>', '<?php echo $educational_certificate_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
 </div>
@@ -584,13 +588,13 @@ foreach($educational_certificate_docs as $educational_certificate_doc) {
 
 
 <!-- Recomendation Letter --> <br>
-<div class="row" id="recomendation_letter_docrow">     
+<div class="row resume-block" id="recomendation_letter_docrow">     
 <div class="col-md-12" style="margin-bottom: 10px;"><h5 style="color: black;">Recomendation Letter Documents
 <form enctype="multipart/form-data" method="post" onsubmit="add_doc(this, '<?php echo $cstudent->id; ?>', 'recomendation_letter_doc')">
 <?php echo e(csrf_field()); ?>
 
 <span id="show_message_profilerecomendation_letter_doc"></span>
-  <input type="file" name="file_name">
+  <input  class="resume-file-input" type="file" name="file_name">
   <input type="hidden" name="type" value="recomendation_letter_doc">
   <input type="hidden" name="recordid" value="<?php echo $cstudent->id; ?>">
   <button class="btn btn-success" id="upload_btnrecomendation_letter_doc" type="submit">Add</button>
@@ -602,8 +606,9 @@ foreach($educational_certificate_docs as $educational_certificate_doc) {
 if($recomendation_letter_docs != '[]') {  
 foreach($recomendation_letter_docs as $recomendation_letter_doc) {
 ?>
-<div class="col-md-2" id="doc<?php $newcourdocname = str_replace(".", "", $recomendation_letter_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
-  <h6 class="artigo_nome"><?php echo $recomendation_letter_doc; ?></h6>
+<div class="col-md-4 resume-block-column mt-3" id="doc<?php $newcourdocname = str_replace(".", "", $recomendation_letter_doc); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
+ <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$recomendation_letter_doc; ?>" alt="Passport Document" >   
+<!-- <h6 class="artigo_nome image-title-heading"><?php echo $recomendation_letter_doc; ?></h6> -->
   <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$recomendation_letter_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
   <button onclick="delete_doc('recomendation_letter_doc', '<?php echo $cstudent->id; ?>', '<?php echo $recomendation_letter_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
 </div>
@@ -617,13 +622,13 @@ foreach($recomendation_letter_docs as $recomendation_letter_doc) {
 
 <!-- Study Plan --> <br>
 
-<div class="row" id="study_planrow">     
+<div class="row resume-block" id="study_planrow">     
 <div class="col-md-12" style="margin-bottom: 10px;"><h5 style="color: black;">Study Plan Documents
 <form enctype="multipart/form-data" method="post" onsubmit="add_doc(this, '<?php echo $cstudent->id; ?>', 'study_plan')">
 <?php echo e(csrf_field()); ?>
 
 <span id="show_message_profilestudy_plan"></span>
-  <input type="file" name="file_name">
+  <input class="resume-file-input" type="file" name="file_name">
   <input type="hidden" name="type" value="study_plan">
   <input type="hidden" name="recordid" value="<?php echo $cstudent->id; ?>">
   <button class="btn btn-success" id="upload_btnstudy_plan" type="submit">Add</button>
@@ -635,8 +640,9 @@ if($study_plans != '[]') {
 foreach($study_plans as $study_plan) {
 ?>
 
-<div class="col-md-2" id="doc<?php $newcourdocname = str_replace(".", "", $study_plan); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
-  <h6 class="artigo_nome"><?php echo $study_plan; ?></h6>
+<div class="col-md-4 resume-block-column mt-3" id="doc<?php $newcourdocname = str_replace(".", "", $study_plan); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
+ <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$study_plan; ?>" alt="Passport Document" >   
+<!-- <h6 class="artigo_nome image-title-heading"><?php echo $study_plan; ?></h6> -->
   <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$study_plan; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
   <button onclick="delete_doc('study_plan', '<?php echo $cstudent->id; ?>', '<?php echo $study_plan; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
 </div>
@@ -648,13 +654,13 @@ foreach($study_plans as $study_plan) {
 <!-- Ielts English Proficiency Letter --> <br>
 
 
-<div class="row" id="ielts_english_proficiency_letterrow">  
+<div class="row resume-block"  id="ielts_english_proficiency_letterrow">  
 <div class="col-md-12" style="margin-bottom: 10px;"><h5 style="color: black;">Ielts English Proficiency Documents
 <form enctype="multipart/form-data" method="post" onsubmit="add_doc(this, '<?php echo $cstudent->id; ?>', 'ielts_english_proficiency_letter')">
 <?php echo e(csrf_field()); ?>
 
 <span id="show_message_profileielts_english_proficiency_letter"></span>
-  <input type="file" name="file_name">
+  <input class="resume-file-input" type="file" name="file_name">
   <input type="hidden" name="type" value="ielts_english_proficiency_letter">
   <input type="hidden" name="recordid" value="<?php echo $cstudent->id; ?>">
   <button class="btn btn-success" id="upload_btnielts_english_proficiency_letter" type="submit">Add</button>
@@ -665,8 +671,9 @@ foreach($study_plans as $study_plan) {
 if($ielts_english_proficiency_letters != '[]') { 
 foreach($ielts_english_proficiency_letters as $ielts_english_proficiency_letter) {
 ?>
-<div class="col-md-2" id="doc<?php $newcourdocname = str_replace(".", "", $ielts_english_proficiency_letter); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
-  <h6 class="artigo_nome"><?php echo $ielts_english_proficiency_letter; ?></h6>
+<div class="col-md-4 resume-block-column mt-3" id="doc<?php $newcourdocname = str_replace(".", "", $ielts_english_proficiency_letter); $newcourdocname = str_replace("-", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); $newcourdocname = str_replace(" ", "", $newcourdocname); echo $newcourdocname; ?>">
+ <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$ielts_english_proficiency_letter; ?>" alt="Passport Document" >   
+<!-- <h6 class="artigo_nome image-title-heading"><?php echo $ielts_english_proficiency_letter; ?></h6> -->
   <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$ielts_english_proficiency_letter; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
   <button onclick="delete_doc('ielts_english_proficiency_letter', '<?php echo $cstudent->id; ?>', '<?php echo $ielts_english_proficiency_letter; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
 </div>
@@ -717,14 +724,15 @@ foreach($ielts_english_proficiency_letters as $ielts_english_proficiency_letter)
           <input type="text" class="form-control" name="course_doc" id="editcourse_doc">
           <input type="hidden" class="form-control" name="recordid" id="editrecordid">
           <br>
+          <div class="modal-footer table-model-button-main">
           <button class="btn btn-success" id="editrecordbtn" type="submit">Update</button>
+            <button type="button btn-success" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
           
         </form>
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -998,7 +1006,7 @@ jQuery.ajax({
                     type = "'"+type+"'";
                     id = "'"+id+"'";
 
-                    $('<div class="col-md-2" id="doc'+newdocname+'"><h6 class="artigo_nome">'+data.docname+'</h6><a target="_blank" href="public/assets_frontend/cstudent/'+data.docname+'" class="btn btn-success"><i class="fa fa-eye"></i></a><button onclick="delete_doc('+type+', '+id+', '+docname+')" class="btn btn-success"><i class="fa fa-trash"></i></button></div>').appendTo('#'+type1+'row')
+                    $('<div class="col-md-4 resume-block-column mt-3" id="doc'+newdocname+'"><h6 class="artigo_nome image-title-heading">'+data.docname+'</h6><a target="_blank" href="public/assets_frontend/cstudent/'+data.docname+'" class="btn btn-success"><i class="fa fa-eye"></i></a><button onclick="delete_doc('+type+', '+id+', '+docname+')" class="btn btn-success"><i class="fa fa-trash"></i></button></div>').appendTo('#'+type1+'row')
 
                     $("#show_message_profile"+type).html(data);
                   //  $('#row'+id).hide();
