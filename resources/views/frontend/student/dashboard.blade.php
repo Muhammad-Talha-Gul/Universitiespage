@@ -310,9 +310,9 @@
                       <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
                         <label class="form__label dashboard-form-label">Nationality<span class="label__required">*</span></label>
                         <select name="country" class="form-control" required="">
-                          <option selected="" disabled="">--Please select--</option>
+                          <option selected="" disabled>--Please select--</option>
                           @foreach(allCountry() as $prefer)
-                          <option value="{{$prefer->country}}" @if($user->students->nationality == $prefer->country) selected="" @endif>{{$prefer->country}}</option>
+                          <option value="{{$prefer->country}}" @if($user->students->nationality == $prefer->country) selected @endif>{{$prefer->country}}</option>
                           @endforeach
                         </select>
                         @if($errors->has('country'))
@@ -327,9 +327,9 @@
                       <div class="form-group{{ $errors->has('prefer') ? ' has-error' : '' }}">
                         <label class="form__label dashboard-form-label">What type of program would you prefer? *<span class="label__required">*</span></label>
                         <select name="prefer" class="form-control" required="">
-                          <option selected="" disabled="">--Please select--</option>
+                          <option selected="" disabled>--Please select--</option>
                           @foreach(qualification() as $prefer)
-                          <option value="{{$prefer->id}}" @if($user->students->prefered_program == $prefer->id) selected="" @endif>{{$prefer->title}}</option>
+                          <option value="{{$prefer->id}}" @if($user->students->prefered_program == $prefer->id) selected @endif>{{$prefer->title}}</option>
                           @endforeach
                         </select>
                         @if($errors->has('prefer'))

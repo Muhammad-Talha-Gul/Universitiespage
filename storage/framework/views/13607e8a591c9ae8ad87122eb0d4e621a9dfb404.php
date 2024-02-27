@@ -311,9 +311,9 @@
                       <div class="form-group<?php echo e($errors->has('country') ? ' has-error' : ''); ?>">
                         <label class="form__label dashboard-form-label">Nationality<span class="label__required">*</span></label>
                         <select name="country" class="form-control" required="">
-                          <option selected="" disabled="">--Please select--</option>
+                          <option selected="" disabled>--Please select--</option>
                           <?php $__currentLoopData = allCountry(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $prefer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                          <option value="<?php echo e($prefer->country); ?>" <?php if($user->students->nationality == $prefer->country): ?> selected="" <?php endif; ?>><?php echo e($prefer->country); ?></option>
+                          <option value="<?php echo e($prefer->country); ?>" <?php if($user->students->nationality == $prefer->country): ?> selected <?php endif; ?>><?php echo e($prefer->country); ?></option>
                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                         <?php if($errors->has('country')): ?>
@@ -328,9 +328,9 @@
                       <div class="form-group<?php echo e($errors->has('prefer') ? ' has-error' : ''); ?>">
                         <label class="form__label dashboard-form-label">What type of program would you prefer? *<span class="label__required">*</span></label>
                         <select name="prefer" class="form-control" required="">
-                          <option selected="" disabled="">--Please select--</option>
+                          <option selected="" disabled>--Please select--</option>
                           <?php $__currentLoopData = qualification(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $prefer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                          <option value="<?php echo e($prefer->id); ?>" <?php if($user->students->prefered_program == $prefer->id): ?> selected="" <?php endif; ?>><?php echo e($prefer->title); ?></option>
+                          <option value="<?php echo e($prefer->id); ?>" <?php if($user->students->prefered_program == $prefer->id): ?> selected <?php endif; ?>><?php echo e($prefer->title); ?></option>
                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                         <?php if($errors->has('prefer')): ?>

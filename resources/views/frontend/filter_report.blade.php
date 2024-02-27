@@ -201,7 +201,7 @@
 
                         <div class="track-status-column mb-3 status-column step complete">
                           <div class="status-column-block">
-                            <span class="img-circle <?php echo ($cstudent['course_finalaztion'] == 'on') ? 'span-on' : 'span-off'; ?>" style="color: white;" style="color: white;">
+                            <span class="img-circle <?php echo ($cstudent['course_finalaztion'] == 'on') ? 'span-on' : 'span-off'; ?>" style="color: white;">
                               <p>2</p>
                             </span>
                             <center class="curcle-paragraph">Course Finalaztion</center>

@@ -1772,7 +1772,7 @@ class HomeController extends Controller
         ]);
 
         Session::flash('success', "Student Record Has Been Sucessfully Added");    
-        return redirect('dashboard#liststd');
+        return redirect('dashboard#student-list');
 
 
     }

@@ -365,7 +365,7 @@
                                       </div>
                                     </div>
                                         <select name="country" class="form-control w100p country-select" required>
-                                            <option selected="">--Nationality--</option>
+                                            <option selected="" disabled>--Nationality--</option>
 
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
@@ -628,7 +628,7 @@
                                         </div>
                                       </div>
                                         <select name="prefer" class="form-control w100p prefer-select">
-                                            <option selected="">--What type of program would you prefer?--</option>
+                                            <option selected="" disabled>--What type of program would you prefer?--</option>
                                             @foreach(qualification() as $prefer)
                                             <option value="{{$prefer->id}}" @if(old('prefer')==$prefer->id) selected="" @endif>{{$prefer->title}}</option>
                                             @endforeach

@@ -365,7 +365,7 @@
                                       </div>
                                     </div>
                                         <select name="country" class="form-control w100p country-select" required>
-                                            <option selected="">--Nationality--</option>
+                                            <option selected="" disabled>--Nationality--</option>
 
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
@@ -628,7 +628,7 @@
                                         </div>
                                       </div>
                                         <select name="prefer" class="form-control w100p prefer-select">
-                                            <option selected="">--What type of program would you prefer?--</option>
+                                            <option selected="" disabled>--What type of program would you prefer?--</option>
                                             <?php $__currentLoopData = qualification(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $prefer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <option value="<?php echo e($prefer->id); ?>" <?php if(old('prefer')==$prefer->id): ?> selected="" <?php endif; ?>><?php echo e($prefer->title); ?></option>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
