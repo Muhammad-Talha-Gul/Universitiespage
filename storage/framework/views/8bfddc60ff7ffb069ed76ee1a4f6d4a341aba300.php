@@ -4,17 +4,16 @@
         <div class="container">
             <div class="login-section-main">
                 <div class="formcol track-application-form-main auth-form-main">
-                    <!-- login start -->
+                    <!-- consultant login start here -->
                     <div class="login-form">
                         <div class="modal-heading-container">
-                            <h3 class=" user-modal-heading user-form-heading">Login as Student
-                            </h3>
+                            <h2 class="user-modal-heading user-form-heading" align="center">Login as Consultant</h2>
                         </div>
                         <form class="form-inline login-student" method="POST">
                             <?php echo e(csrf_field()); ?>
 
                             <label class="sr-only" for="login_email">Email</label>
-                            <div class="input-group " style="margin-bottom: 20px;">
+                            <div class="input-group mr-sm-2" style="margin-bottom: 20px;">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text input-icon student-login-icon">
                                         <i class="fa fa-envelope-o"></i>
@@ -25,14 +24,24 @@
                             </div>
 
                             <label class="sr-only" for="login_password">Password</label>
-                            <div class="input-group " style="margin-bottom: 10px;">
+                            <div class="input-group mr-sm-2" style="margin-bottom: 10px;">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text input-icon student-login-icon">
                                         <i class="fa fa-key"></i>
                                     </div>
                                 </div>
-                                <input type="password" name="password" class="form-control"  placeholder="Password">
+                                <input type="password" name="password" class="form-control" placeholder="Password">
                             </div>
+
+                            <!-- <div class="form-check mb-2 mr-sm-2">
+                            <label>
+                                <input type="checkbox" name="" value="1">
+                                <span> Remember me </span>
+                            </label>
+                            </div>
+                            
+                            <p><small><a href="<?php echo e(route('password.request')); ?>"><?php echo app('translator')->getFromJson('Forgot password?'); ?></a></small></p>
+                             -->
 
                             <div class="login-forgot-main pt-2 pb-4">
                                 <div class="form-check mb-0">
@@ -46,17 +55,21 @@
                                 
                             </div>
 
-                            <button type="submit" class="btn btn-primary mb-2 w100p submit-btn" >Submit</button>
+
+                            <button type="submit" class="btn btn-primary mb-2 w100p submit-btn">Submit</button>
                         </form>
                         <div class="bottom-link-main text-center mt-2">
-                            <a href="<?php echo e(route('student-register')); ?>" class="form-bottom-link" id="submitButton">Register As Student</a>
+                            <a href="<?php echo e(route('consultant-register')); ?>" class="form-bottom-link">Register As Consultant</a>
                         </div>
                     </div>
-                    <!-- login end -->
+                    <!-- consultant login end here -->
                 </div>
                 </main>
             </div>
     </section>
 </div>
 <?php $__env->stopSection(); ?>
+
+
+
 <?php echo $__env->make('layouts.frontend', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

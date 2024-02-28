@@ -3006,3 +3006,16 @@ input[type="file"]::file-selector-button {
 .image-title-heading{
   word-break: break-all;
 }
+#consultant::after{
+  display: none !important;
+}
+
+.repost-heading{
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #0B6D76;
+  padding-bottom: 6px;
+  max-width: max-content;
+  text-transform: capitalize;   
+}

@@ -24,6 +24,7 @@ if(isset($data['seo']->meta_title)){
       color: #ff6060;
       font-size: smaller;
     }
+    
   </style>
 @endsection
 @section('content')

@@ -46,10 +46,10 @@
                                 {{-- =======End amir edit======= --}}
                             </div>
 
-                            <button type="submit" class="btn btn-primary mb-2 w100p submit-btn">Submit</button>
+                            <button type="submit" class="btn btn-primary mb-2 w100p submit-btn" >Submit</button>
                         </form>
                         <div class="bottom-link-main text-center mt-2">
-                            <a href="{{route('student-register')}}" class="form-bottom-link">Register As Student</a>
+                            <a href="{{route('student-register')}}" class="form-bottom-link" id="submitButton">Register As Student</a>
                         </div>
                     </div>
                     <!-- login end -->

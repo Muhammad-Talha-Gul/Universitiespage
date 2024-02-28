@@ -2,6 +2,12 @@
   .note-video-clip {
     width: 100% !important;
   }
+    .MsoNormal a{
+        color: red !important;
+    }
+    .MsoNormal a:hover{
+        color: #b56308 !important;
+    }
 </style>
 
 

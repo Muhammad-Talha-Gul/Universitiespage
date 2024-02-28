@@ -1,14 +1,16 @@
-.jconfirm-box.jconfirm-hilight-shake.jconfirm-type-default.jconfirm-type-animated{
+.jconfirm-box.jconfirm-hilight-shake.jconfirm-type-default.jconfirm-type-animated {
     width: 100% !important;
 }
+
 /* responsive start */
 
 @media (min-width: 1200px) and (max-width: 2400px) {
-.footer-colmun-main{
-    max-width: max-content;
-    margin-left: auto;
+    .footer-colmun-main {
+        max-width: max-content;
+        margin-left: auto;
+    }
 }
-}
+
 @media (min-width: 992px) and (max-width: 1199px) {
 
     /* header start */
@@ -726,6 +728,7 @@
     .searchdiv_row {
         max-width: 800px !important;
     }
+
     .largest-portal-paragraph {
         line-height: 15px;
     }
@@ -739,9 +742,18 @@
         height: 35px;
         width: 35px;
     }
-    .footer-colmun-main{
+
+    .footer-colmun-main {
         max-width: max-content;
         margin-left: auto;
+    }
+    .app-dash {
+        margin-top: 180px;
+    }
+
+    .repost-heading {
+        font-size: 36px;
+        margin-bottom: 30px;
     }
 }
 
@@ -1407,12 +1419,13 @@
     .searchdiv_row {
         max-width: 800px !important;
     }
+
     .largest-portal-block {
         margin: 10px auto 0px;
     }
 
     .largest-portal-paragraph {
-       font-size: 15px;
+        font-size: 15px;
     }
 
     .largest-icon-main {
@@ -1424,6 +1437,7 @@
         height: 30px;
         width: 30px;
     }
+
     .course-articles {
         margin: 10px 0px;
         flex-wrap: wrap !important;
@@ -1432,8 +1446,18 @@
         min-height: 160px;
         height: auto;
     }
-    .course-articles .col{
+
+    .course-articles .col {
         min-width: 100%;
+    }
+
+    .app-dash {
+        margin-top: 160px;
+    }
+
+    .repost-heading {
+        font-size: 36px;
+        margin-bottom: 30px;
     }
 }
 
@@ -2179,14 +2203,25 @@
         height: 30px;
         width: 30px;
     }
+
     .largest-portal-block {
         position: absolute;
         top: 4px;
         right: 5px;
     }
-    .top-navbar .col-auto{
+
+    .top-navbar .col-auto {
         max-width: max-content !important;
         padding: 7px;
+    }
+
+    .app-dash {
+        margin-top: 180px;
+    }
+
+    .repost-heading {
+        font-size: 32px;
+        margin-bottom: 30px;
     }
 
 }
@@ -2783,7 +2818,8 @@
         padding-bottom: 20px !important;
         height: auto;
     }
-    .course-articles .col{
+
+    .course-articles .col {
         min-width: 100%;
     }
 
@@ -3057,6 +3093,7 @@
     .auth-form-main {
         margin-top: 150px !important;
     }
+
     .largest-portal-block {
         margin: 5px auto 0px;
     }
@@ -3065,7 +3102,8 @@
         font-size: 14px;
         line-height: 16px;
     }
-    .largest-span{
+
+    .largest-span {
         font-size: 11px;
     }
 
@@ -3080,10 +3118,11 @@
         width: 25px;
     }
 
-    .bottom-nav-links.col-auto.c-navbar-contactUs{
+    .bottom-nav-links.col-auto.c-navbar-contactUs {
         justify-content: center;
         padding: 5px 0px;
     }
+
     .dashboard-section {
         padding-top: 100px !important;
     }
@@ -3092,14 +3131,26 @@
         left: -80px;
         top: -40px;
     }
+
     .message {
-      font-size: 11px;
+        font-size: 11px;
     }
-    .mobile-button-section{
+
+    .mobile-button-section {
         display: block;
     }
-    .desktop-button-section{
+
+    .desktop-button-section {
         display: none;
+    }
+
+    .app-dash {
+        margin-top: 220px;
+    }
+
+    .repost-heading {
+        font-size: 28px;
+        margin-bottom: 20px;
     }
 
 }
@@ -3172,7 +3223,8 @@
         top: 4px;
         right: 5px;
     }
-    .top-navbar .col-auto{
+
+    .top-navbar .col-auto {
         max-width: max-content !important;
     }
 
@@ -3183,8 +3235,13 @@
     .track-application-form-main {
         margin: 60px 20px 0px;
     }
+
     .dashboard-section {
         padding-top: 50px !important;
+    }
+
+    .app-dash {
+        margin-top: 170px;
     }
 }
 

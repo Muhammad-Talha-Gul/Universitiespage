@@ -162,7 +162,7 @@
 
 
 
-            <div class="col-md-4 mb-3">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 mb-3">
               <div class="card">
                 <img src="<?php if ($profilephoto == '') {
                             echo 'https://st.depositphotos.com/2101611/3925/v/600/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg';
@@ -170,13 +170,13 @@
                             echo config('app.url') . 'public/assets_frontend/cstudent/' . $profilephoto;
                           } ?>" alt="Person" class="card__image">
                 <br>
-                <p class="card__name"><span class="card-name-span">Name:</span><br><br>Talha Gul rajput {{$cstudent->name}}</p>
-                <p class="card__name"><span class="card-name-span">Intrested Country:</span><br><br> Pakistan {{$cstudent->intrested_country_doc}}</p>
-                <p class="card__name"><span class="card-name-span">Passport Number:</span><br><br> Ak474849 {{$cstudent->passport_number}}</p>
+                <p class="card__name"><span class="card-name-span">Name:</span><br><br>{{$cstudent->name}}</p>
+                <p class="card__name"><span class="card-name-span">Intrested Country:</span><br><br>{{$cstudent->intrested_country_doc}}</p>
+                <p class="card__name"><span class="card-name-span">Passport Number:</span><br><br>{{$cstudent->passport_number}}</p>
               </div>
             </div>
 
-            <div class="col-md-8 mb-3" style="text-align: center;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 mb-3" style="text-align: center;">
               <div class="pgb p-2 application-status-main" style=" display: flex;  align-items: center;  min-height: 100%;">
               <div class="status-main-block" style="max-width: 100%;">
                 <div class="application-paragraph-main">

@@ -536,9 +536,9 @@
           _this.find('.submit-btn').attr('disabled', false);
           _this.find('.submit-btn').text('Submit');
           if (data.type == 'student') {
-            location.reload();
+            window.location.href = 'dashboard';
           } else if (data.type == 'consultant') {
-            location.reload();
+            window.location.href = 'dashboard';
           } else {
             window.location.href = data.url;
           }
@@ -553,8 +553,9 @@
               _this.find("#ResetMsg").text(resp['errors']['email'][0]);
             }
 
-          } else {
-            location.reload();
+          }
+          else {
+            window.location.href = 'dashboard';
           }
           _this.find('.submit-btn').attr('disabled', false);
           _this.find('.submit-btn').text('Submit');

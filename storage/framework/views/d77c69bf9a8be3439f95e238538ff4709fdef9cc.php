@@ -19,7 +19,7 @@
 
     <div class="row">
       <div class="col-md-12">
-        <div class="app-dash">
+        <div class="app-dash report-main">
           <!-- <h3><a href="<?php echo e(url('search?page=1&limit=18&scholarship=2&star=5&languages=English,Chinese,chinese,Franch&qualification=1,2,3')); ?>"><u>Search/Apply other Universities</u></a><i class="fa fa-arrow-right"></i></h3> -->
           <h2 class="repost-heading">Student Report </h2>
           <!-- <i class="fa fa-edit" onclick="openCity(event, 'profile')"></i> -->
@@ -153,11 +153,15 @@
                 grid-gap: 20px;
                 font-size: 1.2em;
               }
+              /* Extra Media Query */
+              @media (min-width: 300px) and (max-width: px) {
+
+              }
             </style>
 
 
 
-            <div class="col-md-4 mb-3">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 mb-3">
               <div class="card">
                 <img src="<?php if ($profilephoto == '') {
                             echo 'https://st.depositphotos.com/2101611/3925/v/600/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg';
@@ -171,7 +175,7 @@
               </div>
             </div>
 
-            <div class="col-md-8 mb-3" style="text-align: center;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 mb-3" style="text-align: center;">
               <div class="pgb p-2 application-status-main" style=" display: flex;  align-items: center;  min-height: 100%;">
               <div class="status-main-block" style="max-width: 100%;">
                 <div class="application-paragraph-main">

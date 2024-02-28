@@ -93,7 +93,7 @@
               <div class="col-md-12">
                 <div class="app-dash">
                   <!-- <h3><a href="{{url('search?page=1&limit=18&scholarship=2&star=5&languages=English,Chinese,chinese,Franch&qualification=1,2,3')}}"><u>Search/Apply other Universities</u></a><i class="fa fa-arrow-right"></i></h3> -->
-                  <h3 class="dashboard-table-header-heading">Profile Information </h3>
+                  <h3 class="dashboard-table-header-heading">Profile Information SDFSDGF</h3>
                   <div class="dashboard-table-main">
                   <div class="border textdivcolcss">
                   <div class="row mb-3">
@@ -385,7 +385,7 @@
         <main class="o-2colLayout-content">
 
           <section class="mb-3 mt-3 custom-html">
-            <h3 class="dashboard-section-heading edit-profile-heading">List Students</h3>
+            <h3 class="dashboard-section-heading edit-profile-heading">Students List</h3>
             
             <br>
 
@@ -418,7 +418,7 @@
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recordmodal<?php echo $cstudent->id; ?>">View</button>
                     </td>
                     <td>
-                      <button onclick="deleterow(<?php echo $cstudent->id; ?>)" class="btn btn-success"><i class="fa fa-trash"></i></button>
+                      <!-- <button onclick="deleterow(<?php echo $cstudent->id; ?>)" class="btn btn-success"><i class="fa fa-trash"></i></button> -->
                       <button onclick="editrow(<?php echo $cstudent->id; ?>)" class="btn btn-success"><i class="fa fa-edit"></i></button>
                       <a href="{{route('show_student_report',($cstudent->id)??'')}}" class="btn btn-success"><i class="fa fa-user"> Report</i></a>
                     </td>
@@ -454,7 +454,7 @@
                        <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$passport_doc; ?>" alt="Passport Document" >   
                       <!-- <h6 class="artigo_nome image-title-heading"><?php echo $passport_doc; ?></h6> -->
                         <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$passport_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
-                        <button onclick="delete_doc('passport_doc', '<?php echo $cstudent->id; ?>', '<?php echo $passport_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
+                        <!-- <button onclick="delete_doc('passport_doc', '<?php echo $cstudent->id; ?>', '<?php echo $passport_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button> -->
                       </div>
                       <?php
                       }
@@ -490,7 +490,7 @@
                    <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$photo_doc; ?>" alt="Passport Document" >   
                   <!-- <h6 class="artigo_nome image-title-heading"><?php echo $photo_doc; ?></h6> -->
                     <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$photo_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
-                    <button onclick="delete_doc('photo_doc', '<?php echo $cstudent->id; ?>', '<?php echo $photo_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
+                    <!-- <button onclick="delete_doc('photo_doc', '<?php echo $cstudent->id; ?>', '<?php echo $photo_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button> -->
                   </div>
                   <?php
 
@@ -534,7 +534,7 @@
                     <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$educational_degree_doc; ?>" alt="Passport Document" > 
                     <!-- <h6  class="artigo_nome image-title-heading"><?php echo $educational_degree_doc; ?></h6> -->
                       <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$educational_degree_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
-                      <button onclick="delete_doc('educational_degree_doc', '<?php echo $cstudent->id; ?>', '<?php echo $educational_degree_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
+                      <!-- <button onclick="delete_doc('educational_degree_doc', '<?php echo $cstudent->id; ?>', '<?php echo $educational_degree_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button> -->
                     </div>
 
                     <?php
@@ -572,7 +572,7 @@ foreach($educational_certificate_docs as $educational_certificate_doc) {
  <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$educational_certificate_doc; ?>" alt="Passport Document" >   
 <!-- <h6 class="artigo_nome image-title-heading"><?php echo $educational_certificate_doc; ?></h6> -->
   <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$educational_certificate_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
-  <button onclick="delete_doc('educational_certificate_doc', '<?php echo $cstudent->id; ?>', '<?php echo $educational_certificate_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
+  <!-- <button onclick="delete_doc('educational_certificate_doc', '<?php echo $cstudent->id; ?>', '<?php echo $educational_certificate_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button> -->
 </div>
 <?php
 }
@@ -604,7 +604,7 @@ foreach($recomendation_letter_docs as $recomendation_letter_doc) {
  <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$recomendation_letter_doc; ?>" alt="Passport Document" >   
 <!-- <h6 class="artigo_nome image-title-heading"><?php echo $recomendation_letter_doc; ?></h6> -->
   <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$recomendation_letter_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
-  <button onclick="delete_doc('recomendation_letter_doc', '<?php echo $cstudent->id; ?>', '<?php echo $recomendation_letter_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
+  <!-- <button onclick="delete_doc('recomendation_letter_doc', '<?php echo $cstudent->id; ?>', '<?php echo $recomendation_letter_doc; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button> -->
 </div>
 <?php
 }
@@ -637,7 +637,7 @@ foreach($study_plans as $study_plan) {
  <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$study_plan; ?>" alt="Passport Document" >   
 <!-- <h6 class="artigo_nome image-title-heading"><?php echo $study_plan; ?></h6> -->
   <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$study_plan; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
-  <button onclick="delete_doc('study_plan', '<?php echo $cstudent->id; ?>', '<?php echo $study_plan; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
+  <!-- <button onclick="delete_doc('study_plan', '<?php echo $cstudent->id; ?>', '<?php echo $study_plan; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button> -->
 </div>
 <?php
 }
@@ -667,7 +667,7 @@ foreach($ielts_english_proficiency_letters as $ielts_english_proficiency_letter)
  <img class="resume-add-image" src="<?php echo 'public/assets_frontend/cstudent/'.$ielts_english_proficiency_letter; ?>" alt="Passport Document" >   
 <!-- <h6 class="artigo_nome image-title-heading"><?php echo $ielts_english_proficiency_letter; ?></h6> -->
   <a target="_blank" href="<?php echo 'public/assets_frontend/cstudent/'.$ielts_english_proficiency_letter; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
-  <button onclick="delete_doc('ielts_english_proficiency_letter', '<?php echo $cstudent->id; ?>', '<?php echo $ielts_english_proficiency_letter; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button>
+  <!-- <button onclick="delete_doc('ielts_english_proficiency_letter', '<?php echo $cstudent->id; ?>', '<?php echo $ielts_english_proficiency_letter; ?>')" class="btn btn-success"><i class="fa fa-trash"></i></button> -->
 </div>
 <?php
 }
