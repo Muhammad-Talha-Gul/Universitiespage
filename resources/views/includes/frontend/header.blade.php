@@ -30,6 +30,14 @@
           opacity: 0;
         }
       }
+      .nav-item .nav-link{
+        display: flex;
+        align-items: center;
+        min-width: max-content;
+      }
+      .nav-item .nav-link i{
+        margin-right: 5px;
+      }
     </style>
 
 
@@ -812,7 +820,6 @@
                       </div>
                       <select name="country" class="form-control w100p country-select">
                         <option selected="">--Nationality--</option>
-
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -1384,6 +1391,11 @@
         <li class="nav-item">
           <a class="nav-link" href="{{route('discount-offer')}}" style="margin-right: 7px;">
             <span class="u-xs-small95">100% Discount Offer</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('apply-online')}}" style="margin-right: 7px;">
+            <span class="u-xs-small95">Apply Online</span>
           </a>
         </li>
 

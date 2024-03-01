@@ -25,7 +25,8 @@
             <div class="item">
               <a href="<?php echo e(url($blog->slug)); ?>">
                 <div class="card">
-                  <img src="<?php echo e((url(fix($blog->image, 'thumbs')))??iph()); ?>" style="height: 180px !important; width: 94%;" class="img-fluid card-img-top" alt="...">
+                  <!-- <img src="<?php echo e((url(fix($blog->image, 'thumbs')))??iph()); ?>" style="height: 180px !important; width: 94%;" class="img-fluid card-img-top" alt="..."> -->
+                  <img class="card-img-top" width="100%" height="100%" alt="<?php echo $blog->title; ?>" src="<?php echo e(url(($blog->image)??'#')); ?>" data-echo="<?php echo e(url(($blog->image)??'#')); ?>" style="height: 180px !important; width: 100%;" class="img-fluid card-img-top" alt="...">
                   <div class="card-body article-card-body" style="border: none; margin-top: 10px;">
                     <h4 class="articles-heading"><?php echo e(($blog->title)??''); ?></h4>
                     <p class="articles-paragraph"><?php echo substr($blog->short_description, 0, 100) ?></p>

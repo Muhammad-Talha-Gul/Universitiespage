@@ -1887,10 +1887,11 @@ class HomeController extends Controller
 
         $spassport = $request->spassport; 
         $sname = $request->sname;
+        $simage = $request->studentProfileDetail;
         $sname = str_replace(" ","%20", $sname);
         $accesstoken = 'x4jn9dwifn5kgjnd3nsdjcnxninzi1zwf2sd';
 
-        $url = "https://universitiespagecrm.com/Api/filteronbyone/".$accesstoken."/".$sname."/".$spassport."";
+        $url = "https://universitiespagecrm.com/Api/filteronbyone/".$accesstoken."/".$sname."/".$spassport."/".$simage."";
         $json = file_get_contents($url);
         
         if($json != 'false') {

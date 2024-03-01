@@ -2061,7 +2061,7 @@ ul.column-list.countries img {
 
 .s-content iframe {
   position: relative;
-  max-width: 100% !important;
+  /* max-width: 100% !important; */
   margin-left: 0px;
   height: 446px;
   height: 400px;
@@ -2241,9 +2241,10 @@ ul.column-list.countries img {
 .track-data {
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  margin: 50px 0px !important;
+  /* margin: 50px 0px !important; */
   border-radius: 5px;
   padding: 0px 20px;
+  text-align: center
 }
 
 .track-application-details-paragraph {

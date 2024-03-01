@@ -148,6 +148,7 @@ Route::get('/consultant-login', 'Auth\Consultant\LoginController@login')->name('
 Route::get('/consultant-register', 'Auth\Consultant\RegisterController@register')->name('consultant-register');
 Route::get('/discount-offer', 'FrontEnd\HomeController@discountOfferPage')->name('discount-offer');
 Route::get('/blog/search', 'FrontEnd\HomeController@search')->name('blog.search');
+Route::get('/apply-online', 'FrontEnd\HomeController@applyOnline')->name('apply-online');
 
 
 

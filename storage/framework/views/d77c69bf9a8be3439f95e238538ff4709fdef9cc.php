@@ -169,9 +169,9 @@
                             echo config('app.url') . 'public/assets_frontend/cstudent/' . $profilephoto;
                           } ?>" alt="Person" class="card__image">
                 <br>
-                <p class="card__name"><span class="card-name-span">Name:</span><br><br>Talha Gul rajput <?php echo e($cstudent->name); ?></p>
-                <p class="card__name"><span class="card-name-span">Intrested Country:</span><br><br> Pakistan <?php echo e($cstudent->intrested_country_doc); ?></p>
-                <p class="card__name"><span class="card-name-span">Passport Number:</span><br><br> Ak474849 <?php echo e($cstudent->passport_number); ?></p>
+                <p class="card__name"><span class="card-name-span">Name:</span><br><br><?php echo e($cstudent->name); ?></p>
+                <p class="card__name"><span class="card-name-span">Intrested Country:</span><br><br><?php echo e($cstudent->intrested_country_doc); ?></p>
+                <p class="card__name"><span class="card-name-span">Passport Number:</span><br><br><?php echo e($cstudent->passport_number); ?></p>
               </div>
             </div>
 

@@ -2000,5 +2000,7 @@ class HomeController extends Controller
         return view('frontend.search-article', compact('relatedBlogs', 'keyword'));
     }
     
-
+    public function applyOnline(){
+        return view('frontend.apply-online');
+    }
 }

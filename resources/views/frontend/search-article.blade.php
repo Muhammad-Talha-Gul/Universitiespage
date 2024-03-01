@@ -68,7 +68,7 @@
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                             <div class="colmd12 textcol">
                                 <div class="blog-content-main">
-                                    <h3>{{ $blog->title }} 1</h3>
+                                    <h3>{{ $blog->title }}</h3>
                                     <p>{!! $blog->short_description !!}</p>
                                 </div>
                             </div>

@@ -37,6 +37,7 @@ use App\User;
 use DevDojo\Chatter\Models\Models;
 use App\Model\Review;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\Cache;
 //use Storage;
 
 function show_types() {
@@ -660,17 +661,52 @@ function createSiteMap(){
 // 	}
 // }
 
+// function getBlogs($paginate, $category){
+//     if($paginate !== 0 && $category==null){
+//         return Blog::where('is_active', 1)->where('is_featured',0)->with('category')->orderBy('sort_order', 'ASC')->paginate($paginate + 1);
+//     } elseif($paginate !== 0 && $category!==null){
+//         return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->paginate($paginate + 1);
+//     } elseif($paginate == 0 && $category!==null){
+//         return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->get();
+//     } else {
+//         return Blog::where('is_active', 1)->where('is_featured',0)->orderBy('sort_order', 'ASC')->with('category')->get();
+//     }
+// }
+
 function getBlogs($paginate, $category){
     if($paginate !== 0 && $category==null){
-        return Blog::where('is_active', 1)->where('is_featured',0)->with('category')->orderBy('sort_order', 'ASC')->paginate($paginate + 1);
+        return Blog::where('is_active', 1)
+                   ->where('is_featured',0)
+                   ->with('category')
+                   ->orderBy('created_at', 'DESC') // Order by latest first
+                   ->orderBy('sort_order', 'ASC')
+                   ->paginate($paginate + 1);
     } elseif($paginate !== 0 && $category!==null){
-        return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->paginate($paginate + 1);
+        return Blog::where('is_active', 1)
+                   ->where('is_featured',0)
+                   ->where('category_id', $category)
+                   ->with('category')
+                   ->orderBy('created_at', 'DESC') // Order by latest first
+                   ->orderBy('sort_order', 'ASC')
+                   ->paginate($paginate + 1);
     } elseif($paginate == 0 && $category!==null){
-        return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->get();
+        return Blog::where('is_active', 1)
+                   ->where('is_featured',0)
+                   ->where('category_id', $category)
+                   ->with('category')
+                   ->orderBy('created_at', 'DESC') // Order by latest first
+                   ->orderBy('sort_order', 'ASC')
+                   ->get();
     } else {
-        return Blog::where('is_active', 1)->where('is_featured',0)->orderBy('sort_order', 'ASC')->with('category')->get();
+        return Blog::where('is_active', 1)
+                   ->where('is_featured',0)
+                   ->orderBy('created_at', 'DESC') // Order by latest first
+                   ->orderBy('sort_order', 'ASC')
+                   ->with('category')
+                   ->get();
     }
 }
+
 
 function pluckBlog(){
 	return Blog::where('is_active',1)->orderBy('sort_order', 'ASC')->pluck('slug')->toArray();
@@ -692,8 +728,30 @@ function popularBlog(){
 	return Blog::where('is_active',1)->where('is_featured', 1)->orderBy('sort_order', 'DESC')->get();
 }
 
+// function latestBlog($take){
+// 	return Blog::where('is_active',1)->orderBy('created_at', 'DESC')->take($take)->get();
+// }
 function latestBlog($take){
-	return Blog::where('is_active',1)->orderBy('created_at', 'DESC')->take($take)->get();
+    // Define the cache key
+    $cacheKey = 'latest_blogs_' . $take;
+
+    // Check if data is already cached
+    if (Cache::has($cacheKey)) {
+        // If cached, retrieve data from cache
+        return Cache::get($cacheKey);
+    } else {
+        // If not cached, fetch data from database
+        $latestBlogs = Blog::where('is_active', 1)
+            ->orderBy('created_at', 'DESC')
+            ->take($take)
+            ->get();
+
+        // Store data in cache until 12:00 PM
+        Cache::put($cacheKey, $latestBlogs, now()->until(now()->midDay()));
+
+        // Return fetched data
+        return $latestBlogs;
+    }
 }
 
 function getPopularBlog($take){

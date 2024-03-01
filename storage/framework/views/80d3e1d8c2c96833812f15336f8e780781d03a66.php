@@ -5,6 +5,12 @@
     .MsoNormal a{
         color: red !important;
     }
+    .MsoNormal a font{
+        color: red !important;
+    }
+    .MsoNormal a font:hover{
+      color: #b56308 !important;
+    }
     .MsoNormal a:hover{
         color: #b56308 !important;
     }
@@ -75,7 +81,7 @@
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
             <div class="colmd12 textcol">
               <div class="blog-content-main">
-                <h3><?php echo e(($blog->title)??''); ?> 1</h3>
+                <h3><?php echo e(($blog->title)??''); ?></h3>
                 <p><?php echo ($blog->short_description)??''; ?></p>
               </div>
             </div>
@@ -102,7 +108,7 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
               <div class="colmd12 textcol">
                 <div class="blog-content-main">
-                  <h3><?php echo e(($blog->title)??''); ?> 2</h3>
+                  <h3><?php echo e(($blog->title)??''); ?></h3>
                   <p><?php echo ($blog->short_description)??''; ?></p>
                 </div>
               </div>
@@ -124,7 +130,7 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
               <div class="colmd12 textcol">
                 <div class="blog-content-main">
-                  <h3><?php echo e(($blog->title)??''); ?> 3</h3>
+                  <h3><?php echo e(($blog->title)??''); ?></h3>
                   <p><?php echo ($blog->short_description)??''; ?></p>
                 </div>
               </div>
