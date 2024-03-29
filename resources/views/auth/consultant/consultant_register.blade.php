@@ -6,7 +6,7 @@
             <div class="login-section-main">
                 <div class="formcol track-application-form-main auth-form-main">
                     <!-- consultant register start here -->
-                    <div class="registration-form" id="registerValidateConsult">
+                    <div class="registration-form" id="registerValidateConsult" >
                         <div div class="modal-heading-container">
                             <h2 class="user-modal-heading user-form-heading">Registration as Consultant</h2>
                         </div>
@@ -34,7 +34,7 @@
                                             </div>
                                         </div>
                                         <select name="employeeno" class="form-control" v-model="list.employeeno">
-                                            <option selected="" value="">--No Of Employees--</option>
+                                            <option selected="" disabled value="">--No Of Employees--</option>
 
                                             <option value="1-5">1-5</option>
                                             <option value="6-10">6-10</option>
@@ -55,8 +55,7 @@
                                             </div>
                                         </div>
                                         <select name="country" class="form-control w100p country-select">
-                                            <option selected="">--Nationality--</option>
-
+                                            <option selected="" disabled>--Nationality--</option>
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
                                             <option value="Algeria">Algeria</option>

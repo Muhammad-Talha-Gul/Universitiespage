@@ -892,6 +892,8 @@ input[type=number]::-webkit-inner-spin-button {
 /* .details-banner{
   background-image: url(university-old-building-campus-college.jpg) !important;
 } */
+/*     */
+
 .Milanbgimg {
   background-position: center;
   background-repeat: no-repeat;
@@ -900,18 +902,62 @@ input[type=number]::-webkit-inner-spin-button {
   position: relative;
   text-align: center;
   background-image: url('../../photos/1/new_style/home-banner-bg.png');
+  /* background-image: url(university-old-building-campus-college.jpg); */
+  height: auto !important;
+  padding: 6rem 0rem;
+  /* background-position: left !important; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 }
+.university-details-banner{
+  border-radius: 5px;
+}
 
-.Milanbgimgoverly {
+.details-overlay::after{
+  /* background-color: rgba(0, 0, 0, 0.7) !important; */
+  text-align: center;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.university-details-overlay{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+  border-radius: 5px;
+}
+.university-details-banner-heading{
+  font-size: 42px ;
+}
+.banner-contant-main{
+  z-index:999;
+  position: relative;
+  padding: 0px 20px;
+}
+.course-logo{
+  height: 150px;
+  max-width: 150px;
   width: 100%;
-  padding: 18rem 0rem;
+  background-position: center;
+  background-size: contain;
+  /* position: absolute; */
+  top: 20px;
+  left: 20px;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
 .banner-overlay{
   background-color: rgba(0, 0, 0, 0.5) !important;
   text-align: center;
 }
 .details-banner-heading{
+  /* color: #0b6d76 !important; */
   color: #fff !important;
 }
 .details-banner-sub-heading{

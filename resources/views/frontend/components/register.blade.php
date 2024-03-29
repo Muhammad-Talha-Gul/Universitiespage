@@ -101,7 +101,7 @@
               <div class="col-6">
                 <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }} mbr" style="text-align: left;">
                   <div style="text-align: left;display: inline-block;">
-                    <input id="Schoolmale" type="radio" name="gender" @if(old('gender') == 'Male') selected="" @endif value="Male" checked="checked"><label for="Schoolmale">Male</label>
+                    <input id="Schoolmale" type="radio" name="gender" @if(old('gender') == 'Male') selected="" @endif value="Male"><label for="Schoolmale">Male</label>
                   </div>
                   <div style="text-align: left;display: inline-block;">
                     <input id="Schoolfemale" type="radio" name="gender" @if(old('gender') == 'Female') selected="" @endif value="Female"><label for="Schoolfemale">Female</label>

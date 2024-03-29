@@ -20,6 +20,7 @@ use App\Model\Subscribers;
 use App\Model\Message;
 use App\Model\ContactButton;
 use App\Model\UniversityDetail;
+use App\Permissions;
 use Carbon\Carbon;
 use App\User;
 use Auth;
@@ -39,6 +40,9 @@ class HomeController extends Controller
     }
     public function index(Request $request)
     {
+
+        // Retrieve permissions data
+        $permissions = Permissions::all();
 
         $users = User::whereDate('created_at',Carbon::today())->where('user_type','customer')->OrderBy('id','DESC')->get()->take(5);
         $visitors = Visitors::OrderBy('id','DESC')->whereDate('created_at',Carbon::today())->get();
@@ -66,7 +70,7 @@ class HomeController extends Controller
             return view('admin.stats',['visitors'=>$visitors,'countries'=>$countries,'cities'=>$cities,'referer_types'=>$referer_types,'socials'=>$socials,'devices'=>$devices,'pages'=>$pages,'users'=>$users])->render();
         }
         /*End Ajax*/
-        return view('admin/dashboard',['visitors'=>$visitors,'countries'=>$countries,'cities'=>$cities,'referer_types'=>$referer_types,'socials'=>$socials,'devices'=>$devices,'pages'=>$pages,'users'=>$users]);
+        return view('admin/dashboard',['visitors'=>$visitors,'countries'=>$countries,'cities'=>$cities,'referer_types'=>$referer_types,'socials'=>$socials,'devices'=>$devices,'pages'=>$pages,'users'=>$users,  'permissions' => $permissions]);
     }
 
     public function orders()

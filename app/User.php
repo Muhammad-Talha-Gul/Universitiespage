@@ -47,6 +47,11 @@ class User extends Authenticatable
         return $this->hasOne('App\Model\Consultant', 'user_id');
     }
 
+    public function permission()
+    {
+        return $this->hasOne(Permissions::class, 'admin_id');
+    }
+
     public static function creator($data)
     {
         // dd($data);

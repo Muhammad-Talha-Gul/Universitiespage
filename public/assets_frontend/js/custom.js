@@ -77,7 +77,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+    var selectedCountry = localStorage.getItem('selectedCountry');
+    
+    // If a value is found in local storage, set the dropdown value
+    if(selectedCountry) {
+        $('#countryDropdown').val(selectedCountry);
+    }
+    
+    // Listen for change events on the dropdown
+    $('#countryDropdown').change(function() {
+        // Store the selected value in local storage
+        var selectedValue = $(this).val();
+        localStorage.setItem('selectedCountry', selectedValue);
+    });
 
+    setTimeout(function() {
+			$('.alert-success').fadeOut('slow');
+		}, 5000); 
 
+    const observer = lozad('.lazyload');
+    observer.observe();
 
 });

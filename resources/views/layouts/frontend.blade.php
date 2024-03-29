@@ -182,11 +182,11 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="{{asset('assets_frontend')}}/css/whatsapp-chat.css?ver=0.30">
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/custom.min.css?ver=0.30') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/new_style.css?ver=0.30') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/pages.min.css?ver=0.30') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/responsive.css?ver=0.30') }}">
+  <link rel="stylesheet" href="{{asset('assets_frontend')}}/css/whatsapp-chat.css?ver=0.40">
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/custom.css?ver=0.40') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/new_style.min.css?ver=0.40') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/pages.css?ver=0.40') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/responsive.css?ver=0.40') }}">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148598570-1"></script>
   <script>
@@ -296,7 +296,6 @@
     <img src="{{asset('page_loader.gif')}}">
   </div>
 
-
   @include('includes.frontend.contact_form')
 
   @include('includes.frontend.header')
@@ -325,8 +324,10 @@
   <script type="text/javascript" src="{{asset("plugins/select2/js/select2.min.js")}}"></script>
   <script type="text/javascript" src="{{asset('assets_frontend/js/aos.js') }}"></script>
   <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend')}}/js/whatsapp-chat.js?ver=0.30"></script>
-  <script type="text/javascript" src="{{asset('assets_frontend/js/custom.js?ver=0.30') }}"></script>
+  <!-- Include lozad.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script type="text/javascript" src="{{asset('assets_frontend')}}/js/whatsapp-chat.js?ver=0.40"></script>
+  <script type="text/javascript" src="{{asset('assets_frontend/js/custom.js?ver=0.40') }}"></script>
   <style>
     .ayoan_whatsapp_chatbox_container {
       z-index: 1000;
@@ -537,9 +538,9 @@
           _this.find('.submit-btn').attr('disabled', false);
           _this.find('.submit-btn').text('Submit');
           if (data.type == 'student') {
-            location.reload();
+            window.location.href = 'dashboard';
           } else if (data.type == 'consultant') {
-            location.reload();
+            window.location.href = 'dashboard';
           } else {
             window.location.href = data.url;
           }
@@ -554,8 +555,9 @@
               _this.find("#ResetMsg").text(resp['errors']['email'][0]);
             }
 
-          } else {
-            location.reload();
+          }
+          else {
+            window.location.href = 'dashboard';
           }
           _this.find('.submit-btn').attr('disabled', false);
           _this.find('.submit-btn').text('Submit');
@@ -563,7 +565,7 @@
       })
     });
 
-
+    
     function isJson(str) {
       try {
         JSON.parse(str);
@@ -575,6 +577,7 @@
   </script>
 
   <script>
+    
     var registerValidate = new Vue({
       el: '#register-validate',
       data: {
@@ -641,6 +644,7 @@
         });
       },
     });
+    
     var registerValidate = new Vue({
       el: '#registerValidate',
       data: {

@@ -23,27 +23,29 @@
 
 
 
-<div class="details-banner herrobgimg" @if($data->feature_image!==null) style="background-image: url({{ url((isset($data->feature_image['image'][0]))?fix($data->feature_image['image'][0]):fix($data->logo)) }});" @endif>
-    <div class="overlay11 banner-overlay">
-        <div class="banner-contant-main">
-            <h6 class="banner-heading details-banner-heading">{{($data->name)??''}} ({{($data->founded_in)??''}})</h6>
+<div class="container">
+  <div class="details-banner herrobgimg university-details-banner my-4" @if($data->feature_image!==null) style="background-image: url({{ url((isset($data->feature_image['image'][0]))?fix($data->feature_image['image'][0]):fix($data->logo)) }});" @endif>
+      <div class="university-details-overlay banner-overlay">
+          <div class="banner-contant-main">
+              <h6 class="banner-heading details-banner-heading university-details-banner-heading">{{($data->name)??''}} ({{($data->founded_in)??''}})</h6>
 
-            @php
-                $ranking = ($data->ranking!==null)?explode('.', $data->ranking):0;
-              @endphp
-              @if($ranking[0]!==0) @for($i=0; $i<(int)$ranking[0]; $i++)
-                <i class="fa fa-star"></i>
-              @endfor @endif
-              @if(isset($ranking[1]) && $ranking[1]>=5)
-                <i class="fa fa-star-half"></i>
-              @endif
+              @php
+                  $ranking = ($data->ranking!==null)?explode('.', $data->ranking):0;
+                @endphp
+                @if($ranking[0]!==0) @for($i=0; $i<(int)$ranking[0]; $i++)
+                  <i class="fa fa-star"></i>
+                @endfor @endif
+                @if(isset($ranking[1]) && $ranking[1]>=5)
+                  <i class="fa fa-star-half"></i>
+                @endif
 
-            <p class="banner-sub-heading details-banner-sub-heading">{!! $data->city.', '.$data->country !!}</p>
-            <button class="btn btn-uni"  onclick="consulation()" style="cursor: pointer;">Apply to University</button>
-            <button class="btn btn-uni" onclick="send_emailcontat()" style="cursor: pointer;">Admission Request</button>
-        </div>
+              <p class="banner-sub-heading details-banner-sub-heading">{!! $data->city.', '.$data->country !!}</p>
+              <button class="btn btn-uni"  onclick="consulation()" style="cursor: pointer;">Apply to University</button>
+              <button class="btn btn-uni" onclick="send_emailcontat()" style="cursor: pointer;">Admission Request</button>
+          </div>
 
-    </div>
+      </div>
+  </div>
 </div>
 
 <section class="filter-section mobile-button-section py-5">

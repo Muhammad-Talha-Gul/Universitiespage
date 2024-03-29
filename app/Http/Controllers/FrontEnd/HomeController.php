@@ -57,6 +57,7 @@ use App\Model\DiscountOffers;
 use App\Model\WebEvents;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Auth\Passwords\PasswordBroker;
+
 use App\User;
 use Hash;
 use Response;
@@ -1771,7 +1772,7 @@ class HomeController extends Controller
         ]);
 
         Session::flash('success', "Student Record Has Been Sucessfully Added");    
-        return redirect('dashboard#liststd');
+        return redirect('dashboard#student-list');
 
 
     }
@@ -1985,4 +1986,21 @@ class HomeController extends Controller
     }
 
 
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+    
+        // Perform a search query to find related blogs based on the keyword
+        $relatedBlogs = Blog::where('title', 'like', '%' . $keyword . '%')
+                            ->select('title', 'slug', 'image', 'short_description')
+                            ->paginate(4); // Paginate the results with 12 items per page
+    
+        // Pass the search results to the view along with the keyword
+        return view('frontend.search-article', compact('relatedBlogs', 'keyword'));
+    }
+    
+    public function applyOnline(){
+        return view('frontend.apply-online');
+    }
 }

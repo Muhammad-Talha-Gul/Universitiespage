@@ -183,9 +183,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="<?php echo e(asset('assets_frontend')); ?>/css/whatsapp-chat.css?ver=0.30">
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/custom.min.css?ver=0.30')); ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/new_style.css?ver=0.30')); ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/pages.min.css?ver=0.30')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/custom.css?ver=0.30')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/new_style.min.css?ver=0.30')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/pages.css?ver=0.30')); ?>">
   <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/responsive.css?ver=0.30')); ?>">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148598570-1"></script>
@@ -296,7 +296,6 @@
     <img src="<?php echo e(asset('page_loader.gif')); ?>">
   </div>
 
-
   <?php echo $__env->make('includes.frontend.contact_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
   <?php echo $__env->make('includes.frontend.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -325,6 +324,8 @@
   <script type="text/javascript" src="<?php echo e(asset("plugins/select2/js/select2.min.js")); ?>"></script>
   <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/aos.js')); ?>"></script>
   <script type="text/javascript" src="<?php echo e(asset('js/app.js')); ?>"></script>
+  <!-- Include lozad.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
   <script type="text/javascript" src="<?php echo e(asset('assets_frontend')); ?>/js/whatsapp-chat.js?ver=0.30"></script>
   <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/custom.js?ver=0.30')); ?>"></script>
   <style>
@@ -537,9 +538,9 @@
           _this.find('.submit-btn').attr('disabled', false);
           _this.find('.submit-btn').text('Submit');
           if (data.type == 'student') {
-            location.reload();
+            window.location.href = 'dashboard';
           } else if (data.type == 'consultant') {
-            location.reload();
+            window.location.href = 'dashboard';
           } else {
             window.location.href = data.url;
           }
@@ -554,8 +555,9 @@
               _this.find("#ResetMsg").text(resp['errors']['email'][0]);
             }
 
-          } else {
-            location.reload();
+          }
+          else {
+            window.location.href = 'dashboard';
           }
           _this.find('.submit-btn').attr('disabled', false);
           _this.find('.submit-btn').text('Submit');
@@ -563,7 +565,7 @@
       })
     });
 
-
+    
     function isJson(str) {
       try {
         JSON.parse(str);
@@ -575,11 +577,13 @@
   </script>
 
   <script>
+    
     var registerValidate = new Vue({
       el: '#register-validate',
       data: {
         url: "<?php echo e(route('student.store')); ?>",
         baseUrl: '<?php echo e(preg_match("~\b(university/|courses)\b~i",url()->current())?url()->current():url("/")."/dashboard"); ?>',
+
         list: {
           user_type: 'student',
           first_name: '',
@@ -640,115 +644,7 @@
         });
       },
     });
-
-    var search = new Vue({
-      el: '#search-comp',
-      data: {
-        baseUrl: '<?php echo e(url("/")); ?>',
-        search: '',
-        location: '',
-        suggestion: {},
-        moment: moment,
-      },
-      created() {},
-      mounted() {
-        var _this = this;
-        $(document).ready(function() {
-          $('body').on('click', function() {
-            $('.suggestion-box').fadeOut(100);
-          })
-
-
-          $('body').on('click', '.search-btn', function() {
-
-            //console.log("value: "+_this.location);
-            //return false;
-
-            if (typeof _this.location === 'undefined') {
-              window.location.href = _this.baseUrl + '/search?search=' + _this.search;
-            } else {
-              window.location.href = _this.baseUrl + '/search?search=' + _this.search + '&location=' + _this.location;
-            }
-
-
-          });
-          $('body').on('click', '.suggestion-url', function() {
-            var url = $(this).attr('data-url');
-            window.location.href = url;
-          });
-        })
-      },
-      methods: {
-        suggest(event) {
-          var _this = this;
-          if (_this.search !== '' && _this.location !== '') {
-            var data = '?search=' + _this.search + '&country=' + _this.location;
-            axios
-              .get(_this.baseUrl + '/suggestion' + data)
-              .then(response => {
-                _this.suggestion = response.data;
-                if (_this.suggestion.uni.length > 0 || _this.suggestion.guide.length > 0 || _this.suggestion.course.length > 0 || _this.suggestion.article.length > 0) {
-                  $('.suggestion-box').fadeIn(100);
-                } else {
-                  $('.suggestion-box').fadeOut(100);
-                }
-              }).catch(error => {
-
-              })
-          } else {
-            _this.suggestion = {};
-            $('.suggestion-box').fadeOut(100);
-          }
-
-        },
-      }
-    });
-
-    var notification = new Vue({
-      el: '#vue-notification',
-      data: {
-        notifications: [],
-        msg: 0,
-        moment: moment,
-        baseUrl: document.getElementById('baseUrl').value,
-        authCheck: document.getElementById('authCheck').value,
-        authToken: '', // This will hold the authentication token
-      },
-      created() {
-        var _this = this;
-        setInterval(() => {
-          _this.get_notification()
-        }, 11000);
-        _this.get_notification()
-      },
-      methods: {
-        get_notification() {
-          var _this = this;
-          axios.post(_this.baseUrl + '/user-notifcation', {}, {
-            headers: {
-              Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
-            }
-          }).then(response => {
-            _this.notifications = response.data.note;
-            _this.msg = response.data.msg
-          }).catch(errors => {})
-        },
-        read(id) {
-          var _this = this;
-          axios.post(_this.baseUrl + '/read-notifcation', {
-            id: id
-          }, {
-            headers: {
-              Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
-            }
-          }).then(response => {})
-        }
-      },
-    });
-  </script>
-
-  <!-- student modal start -->
-  <script>
+    
     var registerValidate = new Vue({
       el: '#registerValidate',
       data: {
@@ -815,116 +711,7 @@
       },
     });
 
-    var search = new Vue({
-      el: '#search-comp',
-      data: {
-        baseUrl: '<?php echo e(url("/")); ?>',
-        search: '',
-        location: '',
-        suggestion: {},
-        moment: moment,
-      },
-      created() {},
-      mounted() {
-        var _this = this;
-        $(document).ready(function() {
-          $('body').on('click', function() {
-            $('.suggestion-box').fadeOut(100);
-          })
-
-
-          $('body').on('click', '.search-btn', function() {
-
-            //console.log("value: "+_this.location);
-            //return false;
-
-            if (typeof _this.location === 'undefined') {
-              window.location.href = _this.baseUrl + '/search?search=' + _this.search;
-            } else {
-              window.location.href = _this.baseUrl + '/search?search=' + _this.search + '&location=' + _this.location;
-            }
-
-
-          });
-          $('body').on('click', '.suggestion-url', function() {
-            var url = $(this).attr('data-url');
-            window.location.href = url;
-          });
-        })
-      },
-      methods: {
-        suggest(event) {
-          var _this = this;
-          if (_this.search !== '' && _this.location !== '') {
-            var data = '?search=' + _this.search + '&country=' + _this.location;
-            axios
-              .get(_this.baseUrl + '/suggestion' + data)
-              .then(response => {
-                _this.suggestion = response.data;
-                if (_this.suggestion.uni.length > 0 || _this.suggestion.guide.length > 0 || _this.suggestion.course.length > 0 || _this.suggestion.article.length > 0) {
-                  $('.suggestion-box').fadeIn(100);
-                } else {
-                  $('.suggestion-box').fadeOut(100);
-                }
-              }).catch(error => {
-
-              })
-          } else {
-            _this.suggestion = {};
-            $('.suggestion-box').fadeOut(100);
-          }
-
-        },
-      }
-    });
-
-    var notification = new Vue({
-      el: '#vue-notification',
-      data: {
-        notifications: [],
-        msg: 0,
-        moment: moment,
-        baseUrl: document.getElementById('baseUrl').value,
-        authCheck: document.getElementById('authCheck').value,
-        authToken: '', // This will hold the authentication token
-      },
-      created() {
-        var _this = this;
-        setInterval(() => {
-          _this.get_notification()
-        }, 11000);
-        _this.get_notification()
-      },
-      methods: {
-        get_notification() {
-          var _this = this;
-          axios.post(_this.baseUrl + '/user-notifcation', {}, {
-            headers: {
-              Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
-            }
-          }).then(response => {
-            _this.notifications = response.data.note;
-            _this.msg = response.data.msg
-          }).catch(errors => {})
-        },
-        read(id) {
-          var _this = this;
-          axios.post(_this.baseUrl + '/read-notifcation', {
-            id: id
-          }, {
-            headers: {
-              Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
-            }
-          }).then(response => {})
-        }
-      },
-    });
-  </script>
-  <!-- student modal end -->
-
-
-  <script>
-    var registerValidate = new Vue({
+     var registerValidate = new Vue({
       el: '#registerValidateConsult',
       data: {
         url: "<?php echo e(route('student.store')); ?>",
@@ -995,114 +782,6 @@
       },
     });
 
-    var search = new Vue({
-      el: '#search-comp',
-      data: {
-        baseUrl: '<?php echo e(url("/")); ?>',
-        search: '',
-        location: '',
-        suggestion: {},
-        moment: moment,
-      },
-      created() {},
-      mounted() {
-        var _this = this;
-        $(document).ready(function() {
-          $('body').on('click', function() {
-            $('.suggestion-box').fadeOut(100);
-          })
-
-
-          $('body').on('click', '.search-btn', function() {
-
-            //console.log("value: "+_this.location);
-            //return false;
-
-            if (typeof _this.location === 'undefined') {
-              window.location.href = _this.baseUrl + '/search?search=' + _this.search;
-            } else {
-              window.location.href = _this.baseUrl + '/search?search=' + _this.search + '&location=' + _this.location;
-            }
-
-
-          });
-          $('body').on('click', '.suggestion-url', function() {
-            var url = $(this).attr('data-url');
-            window.location.href = url;
-          });
-        })
-      },
-      methods: {
-        suggest(event) {
-          var _this = this;
-          if (_this.search !== '' && _this.location !== '') {
-            var data = '?search=' + _this.search + '&country=' + _this.location;
-            axios
-              .get(_this.baseUrl + '/suggestion' + data)
-              .then(response => {
-                _this.suggestion = response.data;
-                if (_this.suggestion.uni.length > 0 || _this.suggestion.guide.length > 0 || _this.suggestion.course.length > 0 || _this.suggestion.article.length > 0) {
-                  $('.suggestion-box').fadeIn(100);
-                } else {
-                  $('.suggestion-box').fadeOut(100);
-                }
-              }).catch(error => {
-
-              })
-          } else {
-            _this.suggestion = {};
-            $('.suggestion-box').fadeOut(100);
-          }
-
-        },
-      }
-    });
-
-    var notification = new Vue({
-      el: '#vue-notification',
-      data: {
-        notifications: [],
-        msg: 0,
-        moment: moment,
-        baseUrl: document.getElementById('baseUrl').value,
-        authCheck: document.getElementById('authCheck').value,
-        authToken: '', // This will hold the authentication token
-      },
-      created() {
-        var _this = this;
-        setInterval(() => {
-          _this.get_notification()
-        }, 11000);
-        _this.get_notification()
-      },
-      methods: {
-        get_notification() {
-          var _this = this;
-          axios.post(_this.baseUrl + '/user-notifcation', {}, {
-            headers: {
-              Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
-            }
-          }).then(response => {
-            _this.notifications = response.data.note;
-            _this.msg = response.data.msg
-          }).catch(errors => {})
-        },
-        read(id) {
-          var _this = this;
-          axios.post(_this.baseUrl + '/read-notifcation', {
-            id: id
-          }, {
-            headers: {
-              Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
-            }
-          }).then(response => {})
-        }
-      },
-    });
-  </script>
-
-  <!-- consultant modal start -->
-  <script>
     var registerValidate = new Vue({
       el: '#register-validateconsult',
       data: {
@@ -1173,70 +852,250 @@
         });
       },
     });
+  </script>
 
-    var search = new Vue({
+  <!-- student modal start -->
+  <script>
+     var search = new Vue({
       el: '#search-comp',
-      data: {
-        baseUrl: '<?php echo e(url("/")); ?>',
-        search: '',
-        location: '',
-        suggestion: {},
-        moment: moment,
+      data() {
+        return {
+          baseUrl: '<?php echo e(url("/")); ?>',
+          search: '',
+          location: '',
+          suggestion: {},
+          moment: moment
+        };
       },
-      created() {},
       mounted() {
-        var _this = this;
-        $(document).ready(function() {
-          $('body').on('click', function() {
-            $('.suggestion-box').fadeOut(100);
-          })
+        $('body').on('click', () => {
+          $('.suggestion-box').fadeOut(100);
+        });
 
+        $('body').on('click', '.search-btn', () => {
+          const searchParams = _this.location !== undefined ? `&location=${this.location}` : '';
+          const url = `${this.baseUrl}/search?search=${this.search}${searchParams}`;
+          window.location.href = url;
+        });
 
-          $('body').on('click', '.search-btn', function() {
-
-            //console.log("value: "+_this.location);
-            //return false;
-
-            if (typeof _this.location === 'undefined') {
-              window.location.href = _this.baseUrl + '/search?search=' + _this.search;
-            } else {
-              window.location.href = _this.baseUrl + '/search?search=' + _this.search + '&location=' + _this.location;
-            }
-
-
-          });
-          $('body').on('click', '.suggestion-url', function() {
-            var url = $(this).attr('data-url');
-            window.location.href = url;
-          });
-        })
+        $('body').on('click', '.suggestion-url', function() {
+          window.location.href = $(this).data('url');
+        });
       },
       methods: {
-        suggest(event) {
-          var _this = this;
-          if (_this.search !== '' && _this.location !== '') {
-            var data = '?search=' + _this.search + '&country=' + _this.location;
+        suggest() {
+          if (this.search !== '' && this.location !== '') {
+            const data = `?search=${this.search}&country=${this.location}`;
             axios
-              .get(_this.baseUrl + '/suggestion' + data)
+              .get(`${this.baseUrl}/suggestion${data}`)
               .then(response => {
-                _this.suggestion = response.data;
-                if (_this.suggestion.uni.length > 0 || _this.suggestion.guide.length > 0 || _this.suggestion.course.length > 0 || _this.suggestion.article.length > 0) {
-                  $('.suggestion-box').fadeIn(100);
-                } else {
-                  $('.suggestion-box').fadeOut(100);
-                }
-              }).catch(error => {
-
+                this.suggestion = response.data;
+                $('.suggestion-box').toggle(this.suggestion.uni.length > 0 || this.suggestion.guide.length > 0 || this.suggestion.course.length > 0 || this.suggestion.article.length > 0);
               })
+              .catch(error => {});
           } else {
-            _this.suggestion = {};
+            this.suggestion = {};
             $('.suggestion-box').fadeOut(100);
           }
-
         },
       }
     });
 
+    // var search = new Vue({
+    //   el: '#search-comp',
+    //   data: {
+    //     baseUrl: '<?php echo e(url("/")); ?>',
+    //     search: '',
+    //     location: '',
+    //     suggestion: {},
+    //     moment: moment,
+    //   },
+    //   created() {},
+    //   mounted() {
+    //     var _this = this;
+    //     $(document).ready(function() {
+    //       $('body').on('click', function() {
+    //         $('.suggestion-box').fadeOut(100);
+    //       })
+
+
+    //       $('body').on('click', '.search-btn', function() {
+
+    //         //console.log("value: "+_this.location);
+    //         //return false;
+
+    //         if (typeof _this.location === 'undefined') {
+    //           window.location.href = _this.baseUrl + '/search?search=' + _this.search;
+    //         } else {
+    //           window.location.href = _this.baseUrl + '/search?search=' + _this.search + '&location=' + _this.location;
+    //         }
+
+
+    //       });
+    //       $('body').on('click', '.suggestion-url', function() {
+    //         var url = $(this).attr('data-url');
+    //         window.location.href = url;
+    //       });
+    //     })
+    //   },
+    //   methods: {
+    //     suggest(event) {
+    //       var _this = this;
+    //       if (_this.search !== '' && _this.location !== '') {
+    //         var data = '?search=' + _this.search + '&country=' + _this.location;
+    //         axios
+    //           .get(_this.baseUrl + '/suggestion' + data)
+    //           .then(response => {
+    //             _this.suggestion = response.data;
+    //             if (_this.suggestion.uni.length > 0 || _this.suggestion.guide.length > 0 || _this.suggestion.course.length > 0 || _this.suggestion.article.length > 0) {
+    //               $('.suggestion-box').fadeIn(100);
+    //             } else {
+    //               $('.suggestion-box').fadeOut(100);
+    //             }
+    //           }).catch(error => {
+
+    //           })
+    //       } else {
+    //         _this.suggestion = {};
+    //         $('.suggestion-box').fadeOut(100);
+    //       }
+
+    //     },
+    //   }
+    // });
+
+    
+    // var search = new Vue({
+    //   el: '#search-comp',
+    //   data: {
+    //     baseUrl: '<?php echo e(url("/")); ?>',
+    //     search: '',
+    //     location: '',
+    //     suggestion: {},
+    //     moment: moment,
+    //   },
+    //   created() {},
+    //   mounted() {
+    //     var _this = this;
+    //     $(document).ready(function() {
+    //       $('body').on('click', function() {
+    //         $('.suggestion-box').fadeOut(100);
+    //       })
+
+
+    //       $('body').on('click', '.search-btn', function() {
+
+    //         //console.log("value: "+_this.location);
+    //         //return false;
+
+    //         if (typeof _this.location === 'undefined') {
+    //           window.location.href = _this.baseUrl + '/search?search=' + _this.search;
+    //         } else {
+    //           window.location.href = _this.baseUrl + '/search?search=' + _this.search + '&location=' + _this.location;
+    //         }
+
+
+    //       });
+    //       $('body').on('click', '.suggestion-url', function() {
+    //         var url = $(this).attr('data-url');
+    //         window.location.href = url;
+    //       });
+    //     })
+    //   },
+    //   methods: {
+    //     suggest(event) {
+    //       var _this = this;
+    //       if (_this.search !== '' && _this.location !== '') {
+    //         var data = '?search=' + _this.search + '&country=' + _this.location;
+    //         axios
+    //           .get(_this.baseUrl + '/suggestion' + data)
+    //           .then(response => {
+    //             _this.suggestion = response.data;
+    //             if (_this.suggestion.uni.length > 0 || _this.suggestion.guide.length > 0 || _this.suggestion.course.length > 0 || _this.suggestion.article.length > 0) {
+    //               $('.suggestion-box').fadeIn(100);
+    //             } else {
+    //               $('.suggestion-box').fadeOut(100);
+    //             }
+    //           }).catch(error => {
+
+    //           })
+    //       } else {
+    //         _this.suggestion = {};
+    //         $('.suggestion-box').fadeOut(100);
+    //       }
+
+    //     },
+    //   }
+    // });
+
+        // var search = new Vue({
+    //   el: '#search-comp',
+    //   data: {
+    //     baseUrl: '<?php echo e(url("/")); ?>',
+    //     search: '',
+    //     location: '',
+    //     suggestion: {},
+    //     moment: moment,
+    //   },
+    //   created() {},
+    //   mounted() {
+    //     var _this = this;
+    //     $(document).ready(function() {
+    //       $('body').on('click', function() {
+    //         $('.suggestion-box').fadeOut(100);
+    //       })
+
+
+    //       $('body').on('click', '.search-btn', function() {
+
+    //         //console.log("value: "+_this.location);
+    //         //return false;
+
+    //         if (typeof _this.location === 'undefined') {
+    //           window.location.href = _this.baseUrl + '/search?search=' + _this.search;
+    //         } else {
+    //           window.location.href = _this.baseUrl + '/search?search=' + _this.search + '&location=' + _this.location;
+    //         }
+
+
+    //       });
+    //       $('body').on('click', '.suggestion-url', function() {
+    //         var url = $(this).attr('data-url');
+    //         window.location.href = url;
+    //       });
+    //     })
+    //   },
+    //   methods: {
+    //     suggest(event) {
+    //       var _this = this;
+    //       if (_this.search !== '' && _this.location !== '') {
+    //         var data = '?search=' + _this.search + '&country=' + _this.location;
+    //         axios
+    //           .get(_this.baseUrl + '/suggestion' + data)
+    //           .then(response => {
+    //             _this.suggestion = response.data;
+    //             if (_this.suggestion.uni.length > 0 || _this.suggestion.guide.length > 0 || _this.suggestion.course.length > 0 || _this.suggestion.article.length > 0) {
+    //               $('.suggestion-box').fadeIn(100);
+    //             } else {
+    //               $('.suggestion-box').fadeOut(100);
+    //             }
+    //           }).catch(error => {
+
+    //           })
+    //       } else {
+    //         _this.suggestion = {};
+    //         $('.suggestion-box').fadeOut(100);
+    //       }
+
+    //     },
+    //   }
+    // });
+
+    
+  </script>
+  <!-- student modal end -->
+
+  <script>
     var notification = new Vue({
       el: '#vue-notification',
       data: {
@@ -1250,9 +1109,14 @@
       created() {
         var _this = this;
         setInterval(() => {
-          _this.get_notification()
+          if (_this.authCheck === 'true') { // Check if the user is authenticated
+            _this.get_notification();
+          }
         }, 11000);
-        _this.get_notification()
+
+        if (_this.authCheck === 'true') { // Check if the user is authenticated
+          _this.get_notification();
+        }
       },
       methods: {
         get_notification() {
@@ -1264,7 +1128,14 @@
           }).then(response => {
             _this.notifications = response.data.note;
             _this.msg = response.data.msg
-          }).catch(errors => {})
+          }).catch(error => {
+            if (error.response && error.response.status === 401) {
+              // User is not authenticated, do nothing or handle as needed
+              console.error('User is not authenticated');
+            } else {
+              console.error('Error fetching notifications:', error);
+            }
+          });
         },
         read(id) {
           var _this = this;
@@ -1274,10 +1145,139 @@
             headers: {
               Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
             }
-          }).then(response => {})
+          }).then(response => {}).catch(error => {
+            console.error('Error marking notification as read:', error);
+          });
         }
       },
     });
+
+    // var notification = new Vue({
+    //   el: '#vue-notification',
+    //   data: {
+    //     notifications: [],
+    //     msg: 0,
+    //     moment: moment,
+    //     baseUrl: document.getElementById('baseUrl').value,
+    //     authCheck: document.getElementById('authCheck').value,
+    //     authToken: '', // This will hold the authentication token
+    //   },
+    //   created() {
+    //     var _this = this;
+    //     setInterval(() => {
+    //       _this.get_notification()
+    //     }, 11000);
+    //     _this.get_notification()
+    //   },
+    //   methods: {
+    //     get_notification() {
+    //       var _this = this;
+    //       axios.post(_this.baseUrl + '/user-notifcation', {}, {
+    //         headers: {
+    //           Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
+    //         }
+    //       }).then(response => {
+    //         _this.notifications = response.data.note;
+    //         _this.msg = response.data.msg
+    //       }).catch(errors => {})
+    //     },
+    //     read(id) {
+    //       var _this = this;
+    //       axios.post(_this.baseUrl + '/read-notifcation', {
+    //         id: id
+    //       }, {
+    //         headers: {
+    //           Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
+    //         }
+    //       }).then(response => {})
+    //     }
+    //   },
+    // });
+
+
+     // var notification = new Vue({
+    //   el: '#vue-notification',
+    //   data: {
+    //     notifications: [],
+    //     msg: 0,
+    //     moment: moment,
+    //     baseUrl: document.getElementById('baseUrl').value,
+    //     authCheck: document.getElementById('authCheck').value,
+    //     authToken: '', // This will hold the authentication token
+    //   },
+    //   created() {
+    //     var _this = this;
+    //     setInterval(() => {
+    //       _this.get_notification()
+    //     }, 11000);
+    //     _this.get_notification()
+    //   },
+    //   methods: {
+    //     get_notification() {
+    //       var _this = this;
+    //       axios.post(_this.baseUrl + '/user-notifcation', {}, {
+    //         headers: {
+    //           Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
+    //         }
+    //       }).then(response => {
+    //         _this.notifications = response.data.note;
+    //         _this.msg = response.data.msg
+    //       }).catch(errors => {})
+    //     },
+    //     read(id) {
+    //       var _this = this;
+    //       axios.post(_this.baseUrl + '/read-notifcation', {
+    //         id: id
+    //       }, {
+    //         headers: {
+    //           Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
+    //         }
+    //       }).then(response => {})
+    //     }
+    //   },
+    // });
+
+    // var notification = new Vue({
+    //   el: '#vue-notification',
+    //   data: {
+    //     notifications: [],
+    //     msg: 0,
+    //     moment: moment,
+    //     baseUrl: document.getElementById('baseUrl').value,
+    //     authCheck: document.getElementById('authCheck').value,
+    //     authToken: '', // This will hold the authentication token
+    //   },
+    //   created() {
+    //     var _this = this;
+    //     setInterval(() => {
+    //       _this.get_notification()
+    //     }, 11000);
+    //     _this.get_notification()
+    //   },
+    //   methods: {
+    //     get_notification() {
+    //       var _this = this;
+    //       axios.post(_this.baseUrl + '/user-notifcation', {}, {
+    //         headers: {
+    //           Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
+    //         }
+    //       }).then(response => {
+    //         _this.notifications = response.data.note;
+    //         _this.msg = response.data.msg
+    //       }).catch(errors => {})
+    //     },
+    //     read(id) {
+    //       var _this = this;
+    //       axios.post(_this.baseUrl + '/read-notifcation', {
+    //         id: id
+    //       }, {
+    //         headers: {
+    //           Authorization: 'Bearer ' + _this.authToken // Include the auth token in the request headers
+    //         }
+    //       }).then(response => {})
+    //     }
+    //   },
+    // });
   </script>
   <!-- consultant modal end -->
   <script>

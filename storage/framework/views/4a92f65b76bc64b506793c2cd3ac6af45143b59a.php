@@ -88,32 +88,35 @@
       </div>
     </div>
     <div class="row footerlastrow">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
-        <h3  class="footer-sub-heading">China Address</h3>
-        <p>Select Universities</p>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
-        <h3  class="footer-sub-heading">Thailand Address</h3>
-        <p>Bangkok,Thailand.</p>
-        <p>Email:Thailand@universitiespage.com</p>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
+     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
         <h3  class="footer-sub-heading">Pakistan Lahore Addres</h3>
-        <p>Universities Page,2nd Floor faisal bank,Raja</p>
-        <p>Market,Garden town,Lahore,Pakistan</p>
+        <p>Universities Page,2nd Floor faisal bank,Raja Market,Garden town,Lahore,Pakistan</p>
         <p>Phone:0324 3640038</p>
         <p>Phone:0333 0033235</p>
         <p>Phone:0310 3162004</p>
       </div>
-
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
         <h3  class="footer-sub-heading">Islamabad Address</h3>
-        <p>Universities Page, Punjab market,Venus Plaza, 1st</p>
-        <p>Floor, Office No. 1, Sector G13/4,Islamabad</p>
+        <p>Universities Page, Punjab market,Venus Plaza, 1st Floor, Office No. 1, Sector G13/4,Islamabad</p>
         <p>Phone:0335 9990308</p>
         <p>Phone:0334 9990308</p>
       </div>
-
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 country-column">
+        <h3  class="footer-sub-heading">Karachi Address</h3>
+        <p>Universities Page,1st floor, Amber Estate, Shahrah-e-Faisal Rd, Bangalore Town Block A Shah, Karachi, Sindh</p>
+      </div>
+     
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 country-column">
+        <h3  class="footer-sub-heading">Thailand Address</h3>
+        <p>Bangkok,Thailand.</p>
+        <p>Email:Thailand@universitiespage.com</p>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 country-column" >
+        <div class="footer-colmun-main">
+        <h3  class="footer-sub-heading">China Address</h3>
+        <p>Select Universities</p>
+        </div>
+      </div>
     </div>
   </div>
   <!-- <hr class="hr3"> -->
@@ -132,6 +135,12 @@
 
   .ayoan_whatsapp_chatbox .widget-body .body-content .user-list .ayoan_item.active {
     border-left: 3px solid #0B6D76 !important;
+  }
+  @media (min-width: 1200px) and (max-width: 2400px) {
+.footer-colmun-main{
+    max-width: max-content;
+    margin-left: auto;
+}
   }
 </style>
 

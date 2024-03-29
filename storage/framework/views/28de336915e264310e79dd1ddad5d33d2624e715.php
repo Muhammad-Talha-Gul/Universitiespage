@@ -296,7 +296,6 @@
     <img src="<?php echo e(asset('page_loader.gif')); ?>">
   </div>
 
-
   <?php echo $__env->make('includes.frontend.contact_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
   <?php echo $__env->make('includes.frontend.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -326,7 +325,7 @@
   <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/aos.js')); ?>"></script>
   <script type="text/javascript" src="<?php echo e(asset('js/app.js')); ?>"></script>
   <script type="text/javascript" src="<?php echo e(asset('assets_frontend')); ?>/js/whatsapp-chat.js?ver=0.30"></script>
-  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/custom.js?ver=0.30')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/custom.min.js?ver=0.30')); ?>"></script>
   <style>
     .ayoan_whatsapp_chatbox_container {
       z-index: 1000;
@@ -537,9 +536,9 @@
           _this.find('.submit-btn').attr('disabled', false);
           _this.find('.submit-btn').text('Submit');
           if (data.type == 'student') {
-            location.reload();
+            window.location.href = 'dashboard';
           } else if (data.type == 'consultant') {
-            location.reload();
+            window.location.href = 'dashboard';
           } else {
             window.location.href = data.url;
           }
@@ -554,8 +553,9 @@
               _this.find("#ResetMsg").text(resp['errors']['email'][0]);
             }
 
-          } else {
-            location.reload();
+          }
+          else {
+            window.location.href = 'dashboard';
           }
           _this.find('.submit-btn').attr('disabled', false);
           _this.find('.submit-btn').text('Submit');
@@ -563,7 +563,7 @@
       })
     });
 
-
+    
     function isJson(str) {
       try {
         JSON.parse(str);
@@ -575,6 +575,7 @@
   </script>
 
   <script>
+    
     var registerValidate = new Vue({
       el: '#register-validate',
       data: {
@@ -641,6 +642,7 @@
         });
       },
     });
+    
     var registerValidate = new Vue({
       el: '#registerValidate',
       data: {

@@ -63,6 +63,7 @@
                                             <select class="form-control descount-input" name="location">
                                                 <option <?php echo e(old('location')== 'lahore' ? 'selected' : ''); ?> value="lahore">Lahore</option>
                                                 <option <?php echo e(old('location')== 'islamabad' ? 'selected' : ''); ?> value="islamabad">Islamabad</option>
+                                                <option <?php echo e(old('location')== 'islamabad' ? 'selected' : ''); ?> value="islamabad">Karachi</option>
                                             </select>
                                             <!--<input type="number" class="form-control descount-input" required="" value="<?php echo e(old('phone')); ?>" name="phone" autocomplete="Off">-->
                                         </div>
