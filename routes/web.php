@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Model\Course;
-
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
     Artisan::call('config:clear');
@@ -163,6 +163,7 @@ Route::get('contact-us', 'FrontEnd\ContactUsController@index')->name('contact-us
 Route::post('message-post', 'FrontEnd\ContactUsController@messagePost')->name('message-post');
 Route::get('get-messages', 'Admin\ContactUsController@getMessages')->name('get-messages');
 Route::get('/message-delete/{id}', 'Admin\ContactUsController@messageDelete')->name('message-delete');
+Route::post('reply-message', 'Admin\ContactUsController@replyMessage')->name('reply-message');
 
 Route::get('/consultant-details/{id}', 'ApplyOnlineController@show')->name('consultant-details');
 Route::get('/consultant-delete/{id}', 'ApplyOnlineController@delete')->name('consultant-delete');
