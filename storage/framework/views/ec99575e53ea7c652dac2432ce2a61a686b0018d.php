@@ -182,11 +182,11 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="<?php echo e(asset('assets_frontend')); ?>/css/whatsapp-chat.css?ver=0.30">
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/custom.css?ver=0.30')); ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/new_style.css?ver=0.30')); ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/pages.css?ver=0.30')); ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/responsive.css?ver=0.30')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('assets_frontend')); ?>/css/whatsapp-chat.css?ver=0.40">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/custom.css?ver=0.40')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/new_style.min.css?ver=0.40')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/pages.css?ver=0.40')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets_frontend/css/responsive.css?ver=0.40')); ?>">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148598570-1"></script>
   <script>
@@ -326,8 +326,8 @@
   <script type="text/javascript" src="<?php echo e(asset('js/app.js')); ?>"></script>
   <!-- Include lozad.js library -->
   <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-  <script type="text/javascript" src="<?php echo e(asset('assets_frontend')); ?>/js/whatsapp-chat.js?ver=0.30"></script>
-  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/custom.js?ver=0.30')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend')); ?>/js/whatsapp-chat.js?ver=0.40"></script>
+  <script type="text/javascript" src="<?php echo e(asset('assets_frontend/js/custom.js?ver=0.40')); ?>"></script>
   <style>
     .ayoan_whatsapp_chatbox_container {
       z-index: 1000;
