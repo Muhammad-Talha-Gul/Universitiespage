@@ -29,7 +29,6 @@ class ContactUsController extends Controller
             'id' => 'required|integer',
             'reply' => 'required|string|max:1000',
         ]);
-
         try {
             $message = ContactUsMessages::findOrFail($request->id);
             $message->reply = $request->reply;
