@@ -18,6 +18,7 @@ class CreateContactUsMessagesTable extends Migration
             $table->string('message_reason');
             $table->string('user_name');
             $table->string('user_email');
+            $table->text('reply')->nullable();
             $table->text('message');
             $table->timestamps();
         });

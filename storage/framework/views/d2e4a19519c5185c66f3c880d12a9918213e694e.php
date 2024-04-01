@@ -1,11 +1,10 @@
-@extends('layouts.backend')
-@section('customStyles')
-<link href="{{asset('/plugins/datatables/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css" />
-<link href="{{asset('/plugins/datatables/dataTables.bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-<link href="{{asset('plugins/bootstrap-sweetalert/sweet-alert.css')}}" rel="stylesheet" type="text/css">
-<link href="{{asset('plugins/toastr/toastr.min.css')}}" rel="stylesheet" type="text/css" />
-@endsection
-@section('content')
+<?php $__env->startSection('customStyles'); ?>
+<link href="<?php echo e(asset('/plugins/datatables/jquery.dataTables.min.css')); ?>" rel="stylesheet" type="text/css" />
+<link href="<?php echo e(asset('/plugins/datatables/dataTables.bootstrap.min.css')); ?>" rel="stylesheet" type="text/css" />
+<link href="<?php echo e(asset('plugins/bootstrap-sweetalert/sweet-alert.css')); ?>" rel="stylesheet" type="text/css">
+<link href="<?php echo e(asset('plugins/toastr/toastr.min.css')); ?>" rel="stylesheet" type="text/css" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
 <style type="text/css">
     .loader {
         float: right;
@@ -40,25 +39,27 @@
         margin-right: 8px;
     }
 </style>
-@if(check_access(Auth::user()->id,'student','_show')==1)
+<?php if(check_access(Auth::user()->id,'student','_show')==1): ?>
 <div class="container">
-@if(session('success'))
+<?php if(session('success')): ?>
     <div class="alert alert-success">
-        {{ session('success') }}
+        <?php echo e(session('success')); ?>
+
     </div>
-@endif
-@if(session('error'))
+<?php endif; ?>
+<?php if(session('error')): ?>
     <div class="alert alert-danger">
-        {{ session('error') }}
+        <?php echo e(session('error')); ?>
+
     </div>
-@endif
+<?php endif; ?>
     <div class="row">
         <div class="col-xs-12">
             <div class="page-title-box">
                 <h4 class="page-title">Consultant </h4>
                 <ol class="breadcrumb p-0 m-0">
                     <li>
-                        <a href="{{url('/admin/home')}}">Admin</a>
+                        <a href="<?php echo e(url('/admin/home')); ?>">Admin</a>
                     </li>
                     <li class="active">
                         Consultant
@@ -85,30 +86,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($messages as $message)
+                    <?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr>
-                        <td>{{($message->user_name)??''}}</td>
-                        <td>{{$message->user_email}}</td>
-                        <td>{{$message->message_reason}}</td>
-                        <td style="max-width: 200px;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{$message->message}}</td>
-                        <!-- <td>{{date('dS M, Y h:i a',strtotime($value->created_at))}}</td> -->
+                        <td><?php echo e(($message->user_name)??''); ?></td>
+                        <td><?php echo e($message->user_email); ?></td>
+                        <td><?php echo e($message->message_reason); ?></td>
+                        <td style="max-width: 200px;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo e($message->message); ?></td>
+                        <!-- <td><?php echo e(date('dS M, Y h:i a',strtotime($value->created_at))); ?></td> -->
                         <td>
-                            <!-- @if(check_access(Auth::user()->id,'student','_show')==1)<a href="{{ route('consultant-details', ['id' =>$message->id]) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a> -->
-                            @endif
-                            @if(check_access(Auth::user()->id,'student','_show')==1)<a href="{{ route('message-delete', ['id' =>$message->id]) }}" class="btn btn-info btn-xs"><i class="fa fa-trash"></i></a>
-                            @endif
+                            <!-- <?php if(check_access(Auth::user()->id,'student','_show')==1): ?><a href="<?php echo e(route('consultant-details', ['id' =>$message->id])); ?>" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a> -->
+                            <?php endif; ?>
+                            <?php if(check_access(Auth::user()->id,'student','_show')==1): ?><a href="<?php echo e(route('message-delete', ['id' =>$message->id])); ?>" class="btn btn-info btn-xs"><i class="fa fa-trash"></i></a>
+                            <?php endif; ?>
 
-                            @if(check_access(Auth::user()->id,'student','_show')==1)
-                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#replyModal{{$message->id}}">
+                            <?php if(check_access(Auth::user()->id,'student','_show')==1): ?>
+                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#replyModal<?php echo e($message->id); ?>">
                                 <i class="fa fa-eye"></i> Reply
                             </button>
-                            @endif
-                            <!-- @if(check_access(Auth::user()->id,'student','_show')==1)<a href="{{route('show_consultant_student',($value->id)??'')}}" class="btn btn-info btn-xs"><i class="fa fa-user"> Students</i></a>
-                            @endif -->
+                            <?php endif; ?>
+                            <!-- <?php if(check_access(Auth::user()->id,'student','_show')==1): ?><a href="<?php echo e(route('show_consultant_student',($value->id)??'')); ?>" class="btn btn-info btn-xs"><i class="fa fa-user"> Students</i></a>
+                            <?php endif; ?> -->
 
                         </td>
                     </tr>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
                 </tbody>
@@ -120,8 +121,8 @@
 </div>
 
 <!-- Modal -->
-@foreach($messages as $message)
-<div class="modal fade" id="replyModal{{$message->id}}" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+<?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+<div class="modal fade" id="replyModal<?php echo e($message->id); ?>" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -134,28 +135,29 @@
                 <div class="message-modal-main">
                     <div class="message-name">
                         <span class="name-left">Name:</span>
-                        <span class="name-right">{{($message->user_name)??''}}</span>
+                        <span class="name-right"><?php echo e(($message->user_name)??''); ?></span>
                     </div>
                     <div class="message-name">
                         <span class="name-left">Email:</span>
-                        <span class="name-right">{{($message->user_email)??''}}</span>
+                        <span class="name-right"><?php echo e(($message->user_email)??''); ?></span>
                     </div>
 
                     <div class="message-name">
                         <span class="name-left">Reason:</span>
-                        <span class="name-right">{{$message->message_reason}}</span>
+                        <span class="name-right"><?php echo e($message->message_reason); ?></span>
                     </div>
 
                     <div class="message-name">
                         <span class="name-left">Mesaage:</span>
-                        <span class="name-right">{{$message->message}}</span>
+                        <span class="name-right"><?php echo e($message->message); ?></span>
                     </div>
                 </div>
                 <div class="reply-main">
-                    <form action="{{route('reply-message')}}" method="post">
-                        {{ csrf_field() }}
-                        <input type="hidden" id="email" name="email" value="{{$message->user_email}}">
-                        <input type="hidden" id="id" name="id" value="{{$message->id}}">
+                    <form action="<?php echo e(route('reply-message')); ?>" method="post">
+                        <?php echo e(csrf_field()); ?>
+
+                        <input type="hidden" id="email" name="email" value="<?php echo e($message->user_email); ?>">
+                        <input type="hidden" id="id" name="id" value="<?php echo e($message->id); ?>">
 
                         <div class="reply-textarea-main">
                             <label for="" class="apply-inpu-label contact-us-label">Reply Here</label>
@@ -172,16 +174,16 @@
         </div>
     </div>
 </div>
-@endforeach
-@else
-@component('admin.access-denied') @endcomponent
-@endif
-@endsection
-@section('customScripts')
-<script src="{{asset('/plugins/datatables/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('/plugins/datatables/dataTables.bootstrap.js')}}"></script>
-<script src="{{asset('plugins/bootstrap-sweetalert/sweet-alert.min.js')}}"></script>
-<script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php else: ?>
+<?php $__env->startComponent('admin.access-denied'); ?> <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('customScripts'); ?>
+<script src="<?php echo e(asset('/plugins/datatables/jquery.dataTables.min.js')); ?>"></script>
+<script src="<?php echo e(asset('/plugins/datatables/dataTables.bootstrap.js')); ?>"></script>
+<script src="<?php echo e(asset('plugins/bootstrap-sweetalert/sweet-alert.min.js')); ?>"></script>
+<script src="<?php echo e(asset('plugins/toastr/toastr.min.js')); ?>"></script>
 <script type="text/javascript">
     autosize();
 
@@ -223,11 +225,11 @@
         var $loader = $(this).parent().find('.loader');
         $loader.html("<i class='fa fa-refresh fa-spin'></i>");
         var data = {
-            '_token': "{{csrf_token()}}",
+            '_token': "<?php echo e(csrf_token()); ?>",
             'id': $(this).data('id')
         };
         jQuery.ajax({
-            url: '{{route("ajaxPopularUniversity")}}',
+            url: '<?php echo e(route("ajaxPopularUniversity")); ?>',
             type: 'post',
             dataType: 'html',
             data: data,
@@ -248,7 +250,7 @@
 
             // AJAX request
             $.ajax({
-                url: "{{ route('reply-message') }}",
+                url: "<?php echo e(route('reply-message')); ?>",
                 type: "POST",
                 data: formData,
                 dataType: "json",
@@ -272,4 +274,5 @@
     
 </script>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.backend', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

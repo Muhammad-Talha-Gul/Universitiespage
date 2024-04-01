@@ -1500,6 +1500,7 @@ class HomeController extends Controller
 
     }
     
+    // here is end email function i think need to change here
     
      public function sendbtnemail($id,$type)
     {
