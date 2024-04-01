@@ -102,7 +102,7 @@
 <script type="text/javascript" src="<?php echo e(asset('assets_backend/js/bootstrap.min.js')); ?>"></script>
 <script type="text/javascript" src="<?php echo e(asset('assets_backend/js/detect.js')); ?>"></script>
 <script type="text/javascript" src="<?php echo e(asset('assets_backend/js/fastclick.js')); ?>"></script>
-<script type="text/javascript" src="<?php echo e(asset('assets_backend/js/jquery.blockUI.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('assets_backend/js/jquery.blockUI.min.js')); ?>"></script>
 <script type="text/javascript" src="<?php echo e(asset('assets_backend/js/waves.js')); ?>"></script>
 <script type="text/javascript" src="<?php echo e(asset('assets_backend/js/jquery.slimscroll.js')); ?>"></script>
 <script type="text/javascript" src="<?php echo e(asset('assets_backend/js/jquery.scrollTo.min.js')); ?>"></script>
@@ -124,8 +124,8 @@
 <script type="text/javascript" src="<?php echo e(asset("plugins/custombox/js/legacy.min.js")); ?>"></script>
 
 <!-- App js -->
-<script type="text/javascript" src="<?php echo e(asset('assets_backend/js/jquery.core.js')); ?>"></script>
-<script type="text/javascript" src="<?php echo e(asset('assets_backend/js/jquery.app.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('assets_backend/js/jquery.core.min.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('assets_backend/js/jquery.app.min.js')); ?>"></script>
 
 <?php echo $__env->yieldContent('customScripts'); ?>
 

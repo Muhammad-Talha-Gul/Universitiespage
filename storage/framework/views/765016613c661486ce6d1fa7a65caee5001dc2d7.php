@@ -412,23 +412,23 @@
                 <div class="modal-body">
                     <div class="row input">
                         <div class="col-md-6">
-                            <input type="text" name="name" class="form-control" id="login_email" placeholder="Enter Your Name">
+                            <input type="text" name="name" class="form-control"  placeholder="Enter Your Name">
                         </div>
                     <div class="col-md-6">
-                        <input type="text" name="phone_number" class="form-control" id="login_email" placeholder="Enter Your Phone Number ">
+                        <input type="text" name="phone_number" class="form-control"  placeholder="Enter Your Phone Number ">
                     </div>
                     </div>
                     <div class="row input">
                     <div class="col-md-6">
-                        <input type="text" name="city" class="form-control" id="login_email" placeholder="Enter Your City">
+                        <input type="text" name="city" class="form-control"  placeholder="Enter Your City">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="last_education" class="form-control" id="login_email" placeholder="Enter Your Last Education">
+                        <input type="text" name="last_education" class="form-control"  placeholder="Enter Your Last Education">
                     </div>
                     </div>
                     <div class="row input">
                     <div class="col-md-12">
-                        <input type="text" name="intrested_country" class="form-control" id="login_email" placeholder="Intrested Country">
+                        <input type="text" name="intrested_country" class="form-control"  placeholder="Intrested Country">
                     </div>
                     </div>
                 </div>

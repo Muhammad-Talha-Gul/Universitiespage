@@ -5,7 +5,6 @@
 
 
 <!-- /* ..................Our LATEST ARTICLES start............. */ -->
-
 <section class="papolar-universities pl-5">
   <div class="container-fluid">
     <div class="row">
@@ -22,11 +21,12 @@
       <div class="col-lg-9 col-md-12 col-sm-12">
         <div class="container-fluid">
           <div class="owl-carousel owl-theme row" id="imageSlider3">
-            @foreach(latestBlog(4) as $key => $blog)
+            @foreach(latestBlog(16) as $key => $blog)
             <div class="item">
               <a href="{{url($blog->slug)}}">
                 <div class="card">
-                  <img src="{{ (url(fix($blog->image, 'thumbs')))??iph() }}" style="height: 180px !important; width: 94%;" class="img-fluid card-img-top" alt="...">
+                  <!-- <img src="{{ (url(fix($blog->image, 'thumbs')))??iph() }}" style="height: 180px !important; width: 94%;" class="img-fluid card-img-top lazyloaded" alt="..."> -->
+                  <img class="card-img-top lazyloaded" width="100%" height="100%" alt="<?php echo $blog->title; ?>" src="{{url(($blog->image)??'#')}}" data-echo="{{url(($blog->image)??'#')}}" style="height: 180px !important; width: 100%;" class="img-fluid card-img-top" alt="...">
                   <div class="card-body article-card-body" style="border: none; margin-top: 10px;">
                     <h4 class="articles-heading">{{($blog->title)??''}}</h4>
                     <p class="articles-paragraph"><?php echo substr($blog->short_description, 0, 100) ?></p>
@@ -124,7 +124,7 @@
         <a class="o-blockLink" href="{{url(('courses/'.$uni->id)??'#')}}">
           <!--<img class="img-fluid Rectangle45" src="{{ ($bg!==null)?url(($bg)??'#.'):url((fix($uni->logo,'thumbs'))??iph()) }}" alt="">-->
           <div class="inaerdiv">
-            <img class="img-fluid inaerdivimg" src="{{ url((fix($uni->university->logo, 'thumbs'))??iph()) }}" alt="">
+            <img class="img-fluid inaerdivimg lazyload" src="{{ url((fix($uni->university->logo, 'thumbs'))??iph()) }}" alt="">
             <h4>{{($uni->name)??''}}</h4>
             <h5>{{($uni->university->name)??''}}</h5>
             <h6>Yearly Fee: {{($uni->yearly_fee)??''}}$</h6>

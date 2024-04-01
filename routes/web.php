@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\Api;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +18,6 @@
 */
 
 use App\Model\Course;
-
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
     Artisan::call('config:clear');
@@ -20,6 +25,115 @@ Route::get('/clear-cache', function() {
     Artisan::call('view:clear');
     return redirect('/');
 });
+
+
+
+
+Route::get('/', function () {
+    // Check if assets are already cached
+    if (!Cache::has('assets_cached')) {
+        // Cache frontend assets
+        cacheAssets('frontend', 'css');
+        cacheAssets('frontend', 'js');
+        cacheImages('frontend');
+
+        // Cache backend assets
+        cacheAssets('backend', 'css');
+        cacheAssets('backend', 'js');
+        cacheImages('backend');
+
+        // Mark assets as cached
+        Cache::put('assets_cached', true, now()->addDay());
+    }
+
+    // Return a response indicating that assets are cached
+    return response()->json(['message' => 'Assets cached successfully']);
+});
+
+// Function to cache assets from a directory based on type (css/js) and area (frontend/backend)
+function cacheAssets($area, $type)
+{
+    // Define the directory path based on the area and type
+    $directory = public_path("assets_{$area}/{$type}");
+
+    // Get all files in the directory
+    $files = File::allFiles($directory);
+
+    // Loop through each file
+    foreach ($files as $file) {
+        $filename = $file->getRelativePathname();
+
+        // Check if the file is already cached
+        if (!Cache::has("{$area}_{$type}_{$filename}")) {
+            // Read the file contents
+            $content = File::get($file->getPathname());
+
+            // Set appropriate cache headers
+            $headers = [
+                'Content-Type' => File::mimeType($file->getPathname()),
+                'Cache-Control' => 'public, max-age=' . (strtotime('12:00 PM') - time()), // Cache until 12:00 PM
+            ];
+
+            // Create the response
+            $response = Response::make($content, 200, $headers);
+
+            // Cache the response
+            Cache::put("{$area}_{$type}_{$filename}", $response, now()->until('12:00 PM'));
+        }
+    }
+}
+
+// Function to cache all images from the public folder
+function cacheImages($area)
+{
+    // Define the directory path
+    $directory = public_path();
+
+    // Recursively get all image files in the directory
+    $imageFiles = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($directory)
+    );
+
+    // Loop through each image file
+    foreach ($imageFiles as $imageFile) {
+        // Exclude directories and non-image files
+        if ($imageFile->isFile() && starts_with(mime_content_type($imageFile), 'image/')) {
+            $filename = $imageFile->getRelativePathname();
+
+            // Check if the file is already cached
+            if (!Cache::has("{$area}_img_{$filename}")) {
+                // Read the file contents
+                $content = File::get($imageFile->getPathname());
+
+                // Set appropriate cache headers
+                $headers = [
+                    'Content-Type' => File::mimeType($imageFile->getPathname()),
+                    'Cache-Control' => 'public, max-age=' . (strtotime('12:00 PM') - time()), // Cache until 12:00 PM
+                ];
+
+                // Create the response
+                $response = Response::make($content, 200, $headers);
+
+                // Cache the response
+                Cache::put("{$area}_img_{$filename}", $response, now()->until('12:00 PM'));
+            }
+        }
+    }
+}
+
+// Route to serve cached assets
+Route::get('assets/{area}/{type}/{filename}', function ($area, $type, $filename) {
+    $cacheKey = "{$area}_{$type}_{$filename}";
+
+    // Check if the asset is cached
+    if (Cache::has($cacheKey)) {
+        return Cache::get($cacheKey);
+    }
+
+    // If the asset is not cached, return a 404 response
+    abort(404);
+});
+
 
 Route::get('sendbtnemail/{id}/{type}','FrontEnd\HomeController@sendbtnemail')->name('sendbtnemail');
 
@@ -35,6 +149,25 @@ Route::get('/student-register', 'Auth\RegisterController@register')->name('stude
 Route::get('/consultant-login', 'Auth\Consultant\LoginController@login')->name('consultant-login');
 Route::get('/consultant-register', 'Auth\Consultant\RegisterController@register')->name('consultant-register');
 Route::get('/discount-offer', 'FrontEnd\HomeController@discountOfferPage')->name('discount-offer');
+Route::get('/blog/search', 'FrontEnd\HomeController@search')->name('blog.search');
+Route::get('/apply-online', 'FrontEnd\HomeController@applyOnline')->name('apply-online');
+Route::post('/apply-online', 'ApplyOnlineController@store')->name('apply-online');
+Route::get('/applied-consultant', 'ApplyOnlineController@index')->name('applied-consultant');
+Route::get('/admin-register', 'ApplyOnlineController@adminRegister')->name('admin-register');
+Route::post('admin/register', 'ApplyOnlineController@adminRegisterSubmit')->name('admin-register-submit');
+Route::get('/admin-users', 'ApplyOnlineController@adminusers')->name('admin-users');
+Route::get('/admin-details/{id}', 'ApplyOnlineController@showAdminDetails')->name('admin-details');
+Route::get('/admin-delete/{id}', 'ApplyOnlineController@adminDelete')->name('admin-delete');
+Route::post('/permissions/{id}', 'PermissionController@updatePermission')->name('updatePermission');
+Route::get('contact-us', 'FrontEnd\ContactUsController@index')->name('contact-us');
+Route::post('message-post', 'FrontEnd\ContactUsController@messagePost')->name('message-post');
+Route::get('get-messages', 'Admin\ContactUsController@getMessages')->name('get-messages');
+Route::get('/message-delete/{id}', 'Admin\ContactUsController@messageDelete')->name('message-delete');
+Route::post('reply-message', 'Admin\ContactUsController@replyMessage')->name('reply-message');
+
+Route::get('/consultant-details/{id}', 'ApplyOnlineController@show')->name('consultant-details');
+Route::get('/consultant-delete/{id}', 'ApplyOnlineController@delete')->name('consultant-delete');
+
 
 
 
@@ -400,7 +533,15 @@ Route::get('/{slug}', ['as'=>'dynamicPage','uses'=>'FrontEnd\HomeController@dyna
     Route::get('list_discount_offer/{id}/{location}','Api@list_discount_offer')->name('list_discount_offer');  
     Route::post('assign_discount_offer','Api@assign_discount_offer')->name('assign_discount_offer');
     Route::get('showfeedback/{id}','Api@showfeedback')->name('showfeedback');
-    
+    Route::get('showfeedback/{id}','Api@showfeedback')->name('showfeedback');
+    Route::get('/online-consultants/{access_key}', 'Api@getOnlineConsultants');
+
+
+
+    Route::get('list_apply_online/{aa}/{bb}','Api@list_apply_online')->name('list_apply_online');
+    Route::post('list_update_apply_onlin','Api@list_update_apply_onlin')->name('list_update_apply_onlin');
+    Route::get('contact_us_messages/{access_key}','Api@messages')->name('contact_us_messages');
+
     // Api End
 
 

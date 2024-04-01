@@ -1,4 +1,3 @@
-
 <div class="stickyposition_mobile sticky-header header-main">
 
   <aside id="siteRedirect" class="sticky-top bg-dark text-white p-3 p-sm-2 d-none" style="z-index:1025">
@@ -30,6 +29,14 @@
         50% {
           opacity: 0;
         }
+      }
+      .nav-item .nav-link{
+        display: flex;
+        align-items: center;
+        min-width: max-content;
+      }
+      .nav-item .nav-link i{
+        margin-right: 5px;
       }
     </style>
 
@@ -95,60 +102,68 @@
           display: none;
         }
       }
-
-
     </style>
-      <div class="bottom-nav-links col-auto c-navbar-contactUs">
-        <!--<small>Need help?</small>-->
-        @foreach(getSocialMeta() as $key => $social)
-        @if($social!==null)
-        <!-- <i class="fa fa-{{$key}} fa_icon" onclick="window.location.href=`{{url(($social)??'#.')}}`"></i> -->
-        @endif
-        @endforeach
-        <i class="fa fa-whatsapp fa_icon" onclick="window.open('https://api.whatsapp.com/send?phone=923112853194')"><span>Lahore</span> <span class="displaynonethis">03112853194</span></i>
+    <div class="bottom-nav-links col-auto c-navbar-contactUs">
+      <!--<small>Need help?</small>-->
+      @foreach(getSocialMeta() as $key => $social)
+      @if($social!==null)
+      <!-- <i class="fa fa-{{$key}} fa_icon" onclick="window.location.href=`{{url(($social)??'#.')}}`"></i> -->
+      @endif
+      @endforeach
+      <i class="fa fa-whatsapp fa_icon" onclick="window.open('https://api.whatsapp.com/send?phone=923112853194')"><span>Lahore</span> <span class="displaynonethis">03112853194</span></i>
 
-        <i class="fa fa-whatsapp fa_icon" onclick="window.open('https://api.whatsapp.com/send?phone=+923349990308')"><span>Islamabad</span> <span class="displaynonethis">03349990308</span></i>
-
-
-
-        <i class="fa fa-envelope-o" onclick="window.location.href=`mailto:info@universitiespage.com`"><span class=""> Email </span> <span class="displaynonethis">Click Mail</span></i>
+      <i class="fa fa-whatsapp fa_icon" onclick="window.open('https://api.whatsapp.com/send?phone=+923349990308')"><span>Islamabad</span> <span class="displaynonethis">03349990308</span></i>
 
 
-          <!-- <i class="fa fa-user-o" data-toggle="modal" data-target="#login_model"><span>Student</i>
+
+      <i class="fa fa-envelope-o" onclick="window.location.href=`mailto:info@universitiespage.com`"><span class=""> Email </span> <span class="displaynonethis">Click Mail</span></i>
+
+
+      <!-- <i class="fa fa-user-o" data-toggle="modal" data-target="#login_model"><span>Student</i>
           <i class="fa fa-user-o" data-toggle="modal" data-target="#login_model_consult"><span>Consultant </span></i> -->
-          <!-- <i class="fa fa-user-o"><span><a href="{{route('student-login')}}" class="">Student</a></i>
+      <!-- <i class="fa fa-user-o"><span><a href="{{route('student-login')}}" class="">Student</a></i>
           <i class="fa fa-user-o"><span><a href="{{route('consultant-login')}}" class="">Consultant</a></span></i> -->
-              @if(Auth::check())
-            <!-- User is logged in, hide the links -->
-              @else
-                  <!-- User is not logged in, show the links -->
-                  <i class="fa fa-user-o"><span><a href="{{ route('student-login') }}" class="">Student</a></span></i>
-                  <i class="fa fa-user-o"><span><a href="{{ route('consultant-login') }}" class="">Consultant</a></span></i>
-              @endif
-
-        @if(Auth::check())
-        @if(auth()->user()->user_type=='student' OR auth()->user()->user_type=='consultant')
-        <div class="fa username-box bottom-nav-links user-login-icons">
-          <a class="logedin-user" href="javascript:void(0);" style="font-size: 20px;"><i class="fa fa-fw fa-user-circle-o"></i></a>
-          <div class="dropdown-login-user">
-            <div class="carot"></div>
-            <ul>
-              <li align="center">HI, {{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</li>
-              <li align="center"><a href="{{url((auth()->user()->user_type=='student')?'dashboard':'admin')}}">Dashboard</a></li>
-              @if(auth()->user()->user_type=='student')<li align="center"><a href="{{url('dashboard#profile')}}">Profile</a></li>@endif
-              <li align="center" class="logout-btn">Logout</li>
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-              </form>
-            </ul>
-          </div>
-          {{-- <div class="username-name">
-               <span>{{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</span>
-        </div> --}}
+      @if(Auth::check())
+      <!-- User is logged in, hide the links -->
+      @else
+      <!-- User is not logged in, show the links -->
+      <i class="fa fa-user-o"><span><a href="{{ route('student-login') }}" class="">Student</a></span></i>
+      <!-- <div class="fa username-box bottom-nav-links user-login-icons">
+        <a class="logedin-user" href="javascript:void(0);" style="font-size: 20px;">
+          <i class="fa fa-user-o">
+            <span style="font-size: 14px; font-weight:300; color:black; display:inline-block;">
+              Student
+            </span>
+          </i>
+        </a>
+        <div class="dropdown-login-user">
+          <div class="carot"></div>
+          <ul>
+            <li align="center"><a href="{{ route('student-login') }}">Login</a></li>
+            <li align="center"><a href="{{route('student-register')}}">Register</a></li>
+          </ul>
+        </div>
       </div>
-      @endif
-      @endif
 
+      <div class="fa username-box bottom-nav-links user-login-icons">
+        <a class="logedin-user" href="javascript:void(0);" style="font-size: 20px;">
+          <i class="fa fa-user-o">
+            <span style="font-size: 14px; font-weight:300; color:black; display:inline-block;">
+            Consultant
+            </span>
+          </i>
+        </a>
+        <div class="dropdown-login-user">
+          <div class="carot"></div>
+          <ul>
+            <li align="center"><a href="{{ route('student-login') }}">Login</a></li>
+            <li align="center"><a href="{{route('consultant-register')}}">Register</a></li>
+          </ul>
+        </div>
+      </div> -->
+      <i class="fa fa-user-o" id="consultant"><span><a href="{{ route('consultant-login') }}" class="">Consultant</a></span></i>
+      @endif
+      
       @if(Auth::check())
       @if(auth()->user()->user_type=='student')
       <div id="vue-notification" class="fa bottom-nav-links user-login-icons">
@@ -235,7 +250,7 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                 </div>
-                                <input type="email" name="email" class="form-control" id="login_email" placeholder="Enter Your Email">
+                                <input type="email" name="email" class="form-control"  placeholder="Enter Your Email">
                                 <div id="ResetMsg" style="font-size: 12px;color: red;position: absolute;text-align: center;width: 100%;font-weight: 500;top: -20px;"></div>
                             </div>
 
@@ -246,7 +261,7 @@
                                         <i class="fa fa-key"></i>
                                     </div>
                                 </div>
-                                <input type="password" name="password" class="form-control" id="login_password" placeholder="Password">
+                                <input type="password" name="password" class="form-control"  placeholder="Password">
                             </div>
 
                             <div class="login-forgot-main pt-2 pb-4">
@@ -364,8 +379,8 @@
                                         <i class="fa fa-home"></i>
                                       </div>
                                     </div>
-                                        <select name="country" class="form-control w100p country-select">
-                                            <option selected="">--Nationality--</option>
+                                        <select name="country" class="form-control w100p country-select" required>
+                                            <option selected="" disabled>--Nationality--</option>
 
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
@@ -628,7 +643,7 @@
                                         </div>
                                       </div>
                                         <select name="prefer" class="form-control w100p prefer-select">
-                                            <option selected="">--What type of program would you prefer?--</option>
+                                            <option selected="" disabled>--What type of program would you prefer?--</option>
                                             @foreach(qualification() as $prefer)
                                             <option value="{{$prefer->id}}" @if(old('prefer')==$prefer->id) selected="" @endif>{{$prefer->title}}</option>
                                             @endforeach
@@ -707,7 +722,7 @@
                       <i class="fa fa-envelope-o"></i>
                     </div>
                   </div>
-                  <input type="email" name="email" class="form-control" id="login_email" placeholder="Enter Your Email">
+                  <input type="email" name="email" class="form-control"  placeholder="Enter Your Email">
                   <div id="ResetMsg" style="font-size: 12px;color: red;position: absolute;text-align: center;width: 100%;font-weight: 500;top: -20px;"></div>
                 </div>
 
@@ -718,7 +733,7 @@
                       <i class="fa fa-key"></i>
                     </div>
                   </div>
-                  <input type="password" name="password" class="form-control" id="login_password" placeholder="Password">
+                  <input type="password" name="password" class="form-control"  placeholder="Password">
                 </div>
 
                 <!-- <div class="form-check mb-2">
@@ -805,7 +820,6 @@
                       </div>
                       <select name="country" class="form-control w100p country-select">
                         <option selected="">--Nationality--</option>
-
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -1260,9 +1274,40 @@
     </div>
     <!-- modal end here -->
     @endif
+
+
+      @if(Auth::check())
+      @if(auth()->user()->user_type=='student' OR auth()->user()->user_type=='consultant')
+      <div class="fa username-box bottom-nav-links user-login-icons">
+        <a class="logedin-user" href="javascript:void(0);" style="font-size: 20px;"><i class="fa fa-fw fa-user-circle-o">
+            <span style="font-size: 14px; font-weight:300; color:black; display:inline-block;">{{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</span>
+            
+          </i>
+
+        </a>
+        <div class="dropdown-login-user">
+          <div class="carot"></div>
+          <ul>
+            <li align="center">HI, {{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</li>
+            <li align="center"><a href="{{url((auth()->user()->user_type=='student')?'dashboard':'admin')}}">Dashboard</a></li>
+            @if(auth()->user()->user_type=='student')<li align="center"><a href="{{url('dashboard#profile')}}">Profile</a></li>@endif
+            <li align="center" class="logout-btn">Logout</li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+            </form>
+          </ul>
+        </div>
+        {{-- <div class="username-name">
+               <span>{{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</span>
+      </div> --}}
+    </div>
+    @endif
+    @endif
+
+
 </div>
 <div class="largest-portal-block">
- 
+
   <!-- <p class="largest-portal-paragraph blue">Pakistan's Largest <br><span class="largest-span">Study Abroad Portal</span></p>
   <div class="largest-icon-main">
     <img class="largest-icon" src="{{ url('/filemanager/photos/1/new_style/svg/golden-one.svg') }}" alt="" srcset="">
@@ -1348,7 +1393,17 @@
             <span class="u-xs-small95">100% Discount Offer</span>
           </a>
         </li>
-        
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('apply-online')}}" style="margin-right: 7px;">
+            <span class="u-xs-small95">Apply Online</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('contact-us')}}" style="margin-right: 7px;">
+            <span class="u-xs-small95">Contact Us</span>
+          </a>
+        </li>
+
         @endif
         @endforeach
       </ul>

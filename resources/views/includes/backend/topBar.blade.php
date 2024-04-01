@@ -4,7 +4,7 @@
     <div class="topbar-left">
         {{-- <a href="index.html" class="logo"><span>Zir<span>cos</span></span><i class="mdi mdi-layers"></i></a> --}}
         <!-- Image logo -->
-        <a href="{{url("/")}}" class="logo">
+        <a href="{{url("/admin/home")}}" class="logo">
         <span>
         <img style="margin-top: 10px;" class="logo" src="{{ asset('assets_backend/images/webnet.png') }}" alt="" height="30">
         </span>

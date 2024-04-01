@@ -2,10 +2,50 @@
   .note-video-clip {
     width: 100% !important;
   }
+    .MsoNormal a{
+        color: red !important;
+    }
+    .MsoNormal a font{
+        color: red !important;
+    }
+    .MsoNormal a font:hover{
+      color: #b56308 !important;
+    }
+    .MsoNormal a:hover{
+        color: #b56308 !important;
+    }
+    .article-details-content-main a{
+      color: red !important;
+    }
+
+    .article-details-content-main a:hover{
+      color: #b56308 !important;
+    }
+    .article-details-content-main .fa_icon {
+        color:#fff !important;
+    }
+    .d-block.rounded{
+        color:#fff !important;
+    }
 </style>
 
 
+
 @if(!in_array(request()->path(), pluckBlog()))
+
+<div class="text-center firstsection">
+    <h1>Search Here Blogs Articles</h1>
+    <p>Browse, explore, Request Information from Articles.</p>
+    <div class="universities-form-main">
+      <form class="mb-1" action="{{ route('blog.search') }}" method="GET">
+        <div class="universities-form-block">
+          <input type="text" name="keyword" class="form-control uni-search searchform2" placeholder="Search..." autocomplete="Off">
+          <button type="submit" class="Searchbtn2"><i class="fa fa-search"></i></button>
+        </div>
+      </form>
+      <div style="position: absolute;" class="is-dropdown w-100 u-maxw-680px bg-white u-boxShadow-light d-none search-uni scroll2"></div>
+    </div>
+  </div>
 <div class="po_un_col1 my-5 left-heading-container">
   <div class="section-left-heading-block">
     <h3 class="section-heading ">latest
@@ -22,6 +62,19 @@
   </ul>
 </div>
 <div class="container">
+  <!-- <div class="text-center firstsection">
+    <h1>Search Here Blogs Articles</h1>
+    <p>Browse, explore, Request Information from Articles.</p>
+    <div class="universities-form-main">
+      <form class="mb-1" action="{{ route('blog.search') }}" method="GET">
+        <div class="universities-form-block">
+          <input type="text" name="keyword" class="form-control uni-search searchform2" placeholder="Search..." autocomplete="Off">
+          <button type="submit" class="Searchbtn2"><i class="fa fa-search"></i></button>
+        </div>
+      </form>
+      <div style="position: absolute;" class="is-dropdown w-100 u-maxw-680px bg-white u-boxShadow-light d-none search-uni scroll2"></div>
+    </div>
+  </div> -->
   <div class="row blog-main-row pb-5">
     @php
     $paginate = (isset($meta['paginate']))?$meta['paginate']:0;
@@ -50,6 +103,8 @@
       </a>
     </div>
     @endforeach
+
+
     <?php $check_count = 0; ?>
     @foreach(getBlogs($paginate,$category) as $blog)
     @if($blog->is_featured == 0)
@@ -76,7 +131,7 @@
       </div>
     <?php $check_count = 1;
     } else { ?>
-      <div class="article-card-main  col-sm-6">
+      <div class="article-card-main  col-sm-6 ">
         <a href="{{url(($blog->slug)??'#')}}">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pl-0 pr-0">
@@ -98,13 +153,11 @@
       </div>
     <?php  } ?>
     @endif
-
-
     @endforeach
 
-    <div class="col-sm-12 mt-5">
+    <div class="col-sm-12 mt-5" style="display: inline-block; margin:40px auto 40px; max-width:max-content;">
       @if(count(getBlogs($paginate,$category))>0 && $paginate !== 0 && count(getBlogs($paginate,$category))<count(getBlogs(0,$category))) <nav class="Page navigation" aria-label="Page navigation">
-        <ul class="pagination small blogs-pagination">
+        <ul class="pagination small blogs-pagination" >
           @php
           $result = getBlogs($paginate,$category);
           $count=$result->lastPage()+1;
@@ -311,7 +364,6 @@
 <div style="clear: both;"></div>
 
 @endif
-
 
 
 <div class="modal " id="apply_now_form" data-toggle="modal">

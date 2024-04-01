@@ -93,6 +93,7 @@ return [
         'image/png',
         'image/gif',
         'image/svg+xml',
+        'image/webp',
     ],
 
     // available since v1.3.0
@@ -103,6 +104,7 @@ return [
         'image/png',
         'image/gif',
         'image/svg+xml',
+        'image/webp',
         'application/pdf',
         'text/plain',
     ],

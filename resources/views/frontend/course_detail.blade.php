@@ -9,7 +9,7 @@
 
 @section('content')
 
-<div class="Milanbgimg herrobgimg" @if($data->feature_image!==null) style="background-image: url({{ url((fix($data->university->logo))??iph()) }});" @endif>
+<!-- <div class="Milanbgimg herrobgimg" @if($data->feature_image!==null) style="background-image: url({{ url((fix($data->university->logo))??iph()) }});" @endif>
   <div class="Milanbgimgoverly overlay11 course-detail-overlay">
     <div class="centered2 centertextdiv banner-content">
       <div class="banner-contant-main">
@@ -21,10 +21,37 @@
     </div>
 
   </div>
+</div> -->
+
+<div class="container p-0 mt-2" style="position: relative;">
+  <div class="Milanbgimg details-overlay university-details-banner p-0" @if($data->feature_image !== null)
+    style="background-image: url({{ url((isset($data->feature_image['image'][0])) ? fix($data->feature_image['image'][0]) : fix($data->logo)) }});"
+@elseif($uniData->feature_image !== null)
+    style="background-image: url({{ url(fix($uniData->feature_image)) }});"
+@endif>
+    <div class="course-detail-overlay university-details-overlay">
+      <div class="centered2 centertextdiv banner-content">
+        <div class="banner-contant-main">
+          <h1 class="banner-heading">{{($data->name)??''}} </h1>
+          <p class="banner-description" style="color: #000;">({{($data->qualificationName->title)??''}})</p>
+          <button class="btn Milanbtn1 course-banner-button btn-uni" onclick="send_emailcontat()" style="cursor: pointer;">Admission Request</button>
+          <button class="btn Milanbtn2 course-banner-button btn-uni" onclick="consulation()" style="cursor: pointer;">Free Consultation</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
 <header class="header course-details-header pt-5">
   <div class="container">
     <div class="course-header-main">
+    <div class="course-logo" @if($data->feature_image !== null)
+        style="background-image: url('{{ url((fix($data->feature_image)) ?? iph()) }}');"
+        @else
+        style="background-image: url('{{ url((fix($data->university->logo)) ?? iph()) }}');"
+        @endif
+        ></div>
       <div class="course-header-left">
         <div class="course-heading-main">
           <a href="{{url('university/'.$data->university->slug)}}" class="course-header-link">{!! $data->university->name !!} </a>
@@ -40,23 +67,7 @@
           <p class="course-header-paragraph">
             {{$data->university->city}}, {{$data->university->country}}
           </p>
-      </div>
-      <div class="course-header-right c-actionBtn-group ">
-        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url('courses/'.$data->id)}}/" class="o-titledIcon is-md-stacked u-smd-w100 btn c-actionBtn course-header-icon">
-          <i class="fa fa-fw fa-lg fa-facebook"></i>
-        </a>
-        <a target="_blank" href="https://twitter.com/home?status={{url('courses/'.$data->id)}}/" class="o-titledIcon is-md-stacked u-smd-w100 btn c-actionBtn course-header-icon">
-          <i class="fa fa-fw fa-lg fa-twitter"></i>
-        </a>
-        <a target="_blank" href="https://wa.me/?text={{url('courses/'.$data->id)}}" class="o-titledIcon is-md-stacked u-smd-w100 btn c-actionBtn course-header-icon">
-          <i class="fa fa-fw fa-lg fa-whatsapp"></i>
-        </a>
-        {{-- <a  onclick="consulation()" class="o-titledIcon is-md-stacked u-smd-w100 btn c-actionBtn course-header-icon">--}}
-        {{-- <i class="fa fa-fw fa-lg fa-whatsapp"></i>--}}
-        {{-- </a>--}}
-      </div>
-    </div>
-    <div class="apply-button-main  pb-3">
+          <div class="apply-button-main  pb-3">
       <div class="applybtn-course-detail">
         @if(auth()->check() && auth()->user()->user_type == 'student')
         <div class="apply-btn">
@@ -83,6 +94,23 @@
         @endif
       </div>
     </div>
+      </div>
+      <div class="course-header-right c-actionBtn-group ">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url('courses/'.$data->id)}}/" class="o-titledIcon is-md-stacked u-smd-w100 btn c-actionBtn course-header-icon">
+          <i class="fa fa-fw fa-lg fa-facebook"></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/home?status={{url('courses/'.$data->id)}}/" class="o-titledIcon is-md-stacked u-smd-w100 btn c-actionBtn course-header-icon">
+          <i class="fa fa-fw fa-lg fa-twitter"></i>
+        </a>
+        <a target="_blank" href="https://wa.me/?text={{url('courses/'.$data->id)}}" class="o-titledIcon is-md-stacked u-smd-w100 btn c-actionBtn course-header-icon">
+          <i class="fa fa-fw fa-lg fa-whatsapp"></i>
+        </a>
+        {{-- <a  onclick="consulation()" class="o-titledIcon is-md-stacked u-smd-w100 btn c-actionBtn course-header-icon">--}}
+        {{-- <i class="fa fa-fw fa-lg fa-whatsapp"></i>--}}
+        {{-- </a>--}}
+      </div>
+    </div>
+   
   </div>
 </header>
 
@@ -347,6 +375,8 @@
         },
       })
     });
+
+
     $('.save-for-later').on('click', function() {
       $('.save-for-later-form').submit();
     })
