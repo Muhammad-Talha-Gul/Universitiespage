@@ -84,3 +84,92 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/universities/public_html/resources/views/frontend/components/programs.blade.php on line 166
+[20-Jul-2024 19:37:11 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 142
+[20-Jul-2024 19:37:11 UTC] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 142
+[20-Jul-2024 19:37:11 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 143
+[20-Jul-2024 19:37:11 UTC] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 143
+[20-Jul-2024 19:37:11 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/guide-eee.blade.php on line 144
+[20-Jul-2024 20:45:06 UTC] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 29
+[20-Jul-2024 20:45:06 UTC] PHP Notice:  Trying to get property 'title' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 29
+[20-Jul-2024 20:45:06 UTC] PHP Notice:  Undefined variable: blog in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 32
+[20-Jul-2024 20:45:06 UTC] PHP Notice:  Trying to get property 'short_description' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 32
+[20-Jul-2024 20:45:06 UTC] PHP Notice:  Undefined variable: uni in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 84
+[20-Jul-2024 20:45:06 UTC] PHP Notice:  Trying to get property 'name' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 84
+[20-Jul-2024 20:45:06 UTC] PHP Notice:  Undefined variable: uni in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 87
+[20-Jul-2024 20:45:06 UTC] PHP Notice:  Trying to get property 'name' of non-object in /home/universities/public_html/resources/views/frontend/components/popular.blade.php on line 87
+[20-Jul-2024 21:00:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function url() in /home/universities/public_html/resources/views/frontend/components/programs.blade.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/programs.blade.php on line 43
+[22-Jul-2024 20:42:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function url() in /home/universities/public_html/resources/views/frontend/components/programs.blade.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/programs.blade.php on line 43
+[24-Jul-2024 20:26:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function url() in /home/universities/public_html/resources/views/frontend/components/programs.blade.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/programs.blade.php on line 43
+[03-Aug-2024 20:39:53 UTC] PHP Warning:  Undefined variable $blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 307
+[03-Aug-2024 20:39:53 UTC] PHP Warning:  Attempt to read property "title" on null in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 307
+[03-Aug-2024 20:39:53 UTC] PHP Warning:  Undefined variable $blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 334
+[03-Aug-2024 20:39:53 UTC] PHP Warning:  Attempt to read property "title" on null in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 334
+[03-Aug-2024 20:39:53 UTC] PHP Warning:  Undefined variable $blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 502
+[03-Aug-2024 20:39:53 UTC] PHP Warning:  Attempt to read property "sm_question" on null in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 502
+[03-Aug-2024 20:39:53 UTC] PHP Warning:  Undefined variable $blog in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 503
+[03-Aug-2024 20:39:53 UTC] PHP Warning:  Attempt to read property "sm_answer" on null in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 503
+[03-Aug-2024 20:39:53 UTC] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:504
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 504
+[04-Aug-2024 10:02:29 UTC] PHP Warning:  Undefined variable $blog in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 307
+[04-Aug-2024 10:02:29 UTC] PHP Warning:  Attempt to read property "title" on null in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 307
+[04-Aug-2024 10:02:29 UTC] PHP Warning:  Undefined variable $blog in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 334
+[04-Aug-2024 10:02:29 UTC] PHP Warning:  Attempt to read property "title" on null in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 334
+[04-Aug-2024 10:02:29 UTC] PHP Warning:  Undefined variable $blog in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 502
+[04-Aug-2024 10:02:29 UTC] PHP Warning:  Attempt to read property "sm_question" on null in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 502
+[04-Aug-2024 10:02:29 UTC] PHP Warning:  Undefined variable $blog in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 503
+[04-Aug-2024 10:02:29 UTC] PHP Warning:  Attempt to read property "sm_answer" on null in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 503
+[04-Aug-2024 10:02:29 UTC] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php:504
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 504
+[09-Sep-2024 12:46:09 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 504
+[09-Sep-2024 12:46:09 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:536
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 536
+[01-Nov-2024 15:13:19 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 617
+[01-Nov-2024 15:13:19 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:649
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 649
+[01-Nov-2024 23:38:31 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 504
+[01-Nov-2024 23:38:31 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php:536
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/bolg-copy.blade.php on line 536
+[02-Nov-2024 09:03:56 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 617
+[02-Nov-2024 09:03:56 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:649
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 649
+[02-Nov-2024 09:04:01 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 617
+[02-Nov-2024 09:04:01 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:649
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 649
+[02-Nov-2024 09:09:05 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 617
+[02-Nov-2024 09:09:05 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:649
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 649
+[02-Nov-2024 09:09:11 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 617
+[02-Nov-2024 09:09:11 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:649
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 649
+[02-Nov-2024 09:38:40 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 617
+[02-Nov-2024 09:38:40 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/universities/public_html/resources/views/frontend/components/blog.blade.php:649
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/resources/views/frontend/components/blog.blade.php on line 649

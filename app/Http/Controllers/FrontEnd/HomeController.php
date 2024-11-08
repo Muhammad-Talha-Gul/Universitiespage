@@ -47,6 +47,7 @@ use App\Model\Notifications;
 use App\Model\Subscribers;
 use App\Model\ContactMails;
 use App\Model\Blog;
+use App\Model\Comment;
 use App\Model\Preferences;
 use App\Model\Consultant;
 use App\Model\Guide;
@@ -57,6 +58,7 @@ use App\Model\DiscountOffers;
 use App\Model\WebEvents;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Auth\Passwords\PasswordBroker;
+
 use App\User;
 use Hash;
 use Response;
@@ -92,7 +94,29 @@ class HomeController extends Controller
             'familyDetail'=>$request->familyDetail
         ]);
 
-       
+                 $studentEmail = $request->email;
+
+        $details = [
+            'studentEmail' => $studentEmail
+        ];
+
+
+        Mail::send('emails.thank_you', $details, function ($message) use ($studentEmail) {
+            $message->from('noreply@universitiespage.com', 'Universities Page')
+                    ->to($studentEmail)
+                    ->subject('Universities Page');
+        });
+
+
+        if (Mail::failures()) {
+            $emailSended = '0'; 
+        } else {
+            $emailSended = '1';  
+        }
+
+        DB::insert("UPDATE discountOffers SET `emailSended` = $emailSended WHERE id = '".$mail->id."'");
+
+
         Session::flash('success','Thank You for contacting us :)');
         return redirect('discount-offer?message=success');
     }
@@ -1081,14 +1105,38 @@ class HomeController extends Controller
 
             return view('frontend.page',['data'=>$data,'components'=>$components,'slider'=>$slider]);
         }
-        if($blog!==null){
-            $data = Pages::where('slug','blog')->first();
+        if ($blog !== null) {
+            // Fetch comments related to the blog
+            $blogId = $blog->id;
+                   $comments = Comment::with(['replies' => function ($query) {
+                    $query->where('status', 1); // Filter only replies with status 1
+                }])
+                ->where('article_id', $blogId)
+                ->where('status', 1) // Filter only comments with status 1
+                ->orderBy('created_at', 'desc')
+                ->get();
+            // dd($comments); // Uncomment this line for debugging
+            $data = Pages::where('slug', 'blog')->first();
             $data['seo'] = $blog['seo'];
             $data['title'] = $blog['title'];
-            $components = PageComponents::where('page_id',$data['id'])->OrderBy('sort_order','ASC')->get();
-            foreach($components as $key => $value) { $value->meta = json_decode($value->meta,true); }
-            return view('frontend.page',['data'=>$data,'components'=>$components,'slider'=>null,'blog'=>$blog]);
-        }elseif($blogCategory!==null){
+            $components = PageComponents::where('page_id', $data['id'])->orderBy('sort_order', 'ASC')->get();
+        
+            foreach ($components as $key => $value) {
+                $value->meta = json_decode($value->meta, true);
+            }
+            // dd($comments);
+        
+            // Pass the comments to the view along with other data
+            return view('frontend.page', [
+                'data' => $data,
+                'components' => $components,
+                'slider' => null,
+                'blog' => $blog,
+                'comments' => $comments, // Ensure that comments are passed to the view
+            ]);
+        }
+        
+        elseif($blogCategory!==null){
             $data = Pages::where('slug','blog')->first();
             $data['seo'] = $blogCategory['seo'];
             $data['title'] = $blogCategory['name'];
@@ -1532,22 +1580,94 @@ class HomeController extends Controller
  
     public function freeConsulation(){
      $request =  request()->all();
-//        dd($request);
+       
         $validator = Validator::make(request()->all(), [
             'email' => 'required|email|max:255',
             'name'=> 'required|max:255',
+            "country" => 'required',
+            "state" => 'required',
+            "city" => 'required',
             "phone_number" => 'required',
             'last_education' => 'required|max:500',
             'apply_for' => 'required|max:500',
+            "selected_city_name" => 'required',
+            "selected_state_name" => 'required',
+             "selected_country_name" => 'required',
+             'interested_country' => 'required',
         ]);
         if ($validator->fails()){
             return response()->json(['message' => 'Validation errors', 'errors' =>  $validator->errors(), 'status' => false],422);
         }
-       FreeConsulation::create($request);
-    return  response()->json(['status'=>'success','msg'=>"Thankyou for inquiry, we will contact you back soon"],200);
+    //   FreeConsulation::create($request);
+      FreeConsulation::create([
+          'name' => $request['name'],
+          'email' => $request['email'],
+          'phone_number' => $request['phone_number'],
+          'last_education' => $request['last_education'],
+          'country' => $request['selected_country_name'],
+          'state' => $request['selected_state_name'],
+          'city' => $request['city'],
+          'apply_for' => $request['apply_for'],
+          'interested_country' => $request['interested_country'],
+          ]);
+
+
+
+           // pixel event start here
+
+
+     $accessToken = 'EAANNLuLQNasBOZCZA3ldU6NZAgEIRF4IQCoNYdMVEeRbkqdF5Wzf7Xm1Hwpn7hr1M5CHPOa5fiLEKvZBi7IqD8kIh88o5D15rS9O752q9lf5qKaYTBoRdQ9PFlShIrayE1peqHTUZAUuj1vV8ZBHeD0262pLnsqDKwdOD5eaOLxLcGVj0R0ZByeiIIwv1yEo1PmWQZDZD';
+    $pixelId = '707529750730580';
+
+    $email = hash('sha256', $request['email']); 
+
+    $userData = [
+        'email' => $email
+    ];
+
+    $event = [
+        'event_name' => 'Free Consultation', 
+        'event_time' => time(),
+        'user_data' => $userData,
+    ];
+
+    $payload = [
+        'data' => [$event],
+    ];
+
+    $jsonPayload = json_encode($payload);
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://graph.facebook.com/v14.0/{$pixelId}/events?access_token={$accessToken}");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonPayload);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Content-Type: application/json',
+    ]);
+
+    // Execute the request
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    // Check for errors
+    // if ($response === false) {
+    //     echo 'cURL Error: ' . curl_error($ch);
+    // } else {
+    //     echo "Response Code: {$httpCode}\n";
+    //     echo "Response: {$response}\n";
+    // }
+
+    curl_close($ch);
+
+
+     // pixel event ends here
+ return  response()->json(['status'=>'success','msg'=>"Thankyou for inquiry, we will contact you back soon"],200);
+
+   
 
     }
-    
+
     
         public function applyNowForm(){
      $request =  request()->all();
@@ -1646,29 +1766,29 @@ class HomeController extends Controller
       
    
 
-      Mail::send($mailpage, $data, function ($m) use($too_email) {
-                $m->from('Admission@universitiespage.com', 'Universities Page');
-                $m->to($too_email)->subject('Alert Email from Universities Page');
-            });
+    //   Mail::send($mailpage, $data, function ($m) use($too_email) {
+    //             $m->from('wemytonyna@mailinator.com', 'Universities Page');
+    //             $m->to($too_email)->subject('Alert Email from Universities Page');
+    //         });
       
-      if (Mail::failures()) {
-           echo json_encode(array('message' => 'error', 'message_text' => 'Request Information Could not Be Sent.Try Again.')); 
-           exit();
-       } else {
+    //   if (Mail::failures()) {
+    //        echo json_encode(array('message' => 'error', 'message_text' => 'Request Information Could not Be Sent.Try Again.')); 
+    //        exit();
+    //    } else {
           
-        ContactButton::create([
-            'university_id'=>$university_id,
-            'course_id'=>$course_id,
-            'student_id'=>$student_id,
-            'date'=>$date
-        ]);
+    //     ContactButton::create([
+    //         'university_id'=>$university_id,
+    //         'course_id'=>$course_id,
+    //         'student_id'=>$student_id,
+    //         'date'=>$date
+    //     ]);
         
-        $success_message = 'Your request information has been successfully sent to '.$unv_name.'. You will be contacted soon by this University.(Note:Send atleast 20 admission requests to different universities for fast response.)';
-        // Today you have '.$remailing_requests.' More Request Information Left.
-         echo json_encode(array('message' => 'success', 'message_text' => $success_message));
-         exit();
+    //     $success_message = 'Your request information has been successfully sent to '.$unv_name.'. You will be contacted soon by this University.(Note:Send atleast 20 admission requests to different universities for fast response.)';
+    //     // Today you have '.$remailing_requests.' More Request Information Left.
+    //      echo json_encode(array('message' => 'success', 'message_text' => $success_message));
+    //      exit();
           
-       }
+    //    }
       
     }
 
@@ -1771,7 +1891,7 @@ class HomeController extends Controller
         ]);
 
         Session::flash('success', "Student Record Has Been Sucessfully Added");    
-        return redirect('dashboard#liststd');
+        return redirect('dashboard#student-list');
 
 
     }
@@ -1985,4 +2105,41 @@ class HomeController extends Controller
     }
 
 
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+    
+        // Perform a search query to find related blogs based on the keyword
+        $relatedBlogs = Blog::where('title', 'like', '%' . $keyword . '%')
+                            ->select('title', 'slug', 'image', 'short_description')
+                            ->paginate(4); // Paginate the results with 12 items per page
+    
+        // Pass the search results to the view along with the keyword
+        return view('frontend.search-article', compact('relatedBlogs', 'keyword'));
+    }
+    
+    public function applyOnline(){
+        return view('frontend.apply-online');
+    }
+    
+    public function submitConsultationForm(Request $request){
+        FreeConsulation::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'phone_number' => $request['phone_number'],
+            'last_education' => $request['last_education'],
+            'country' => $request['country'],
+            'city' => $request['city'],
+            'apply_for' => $request['apply_for'],
+            'interested_country' => $request['interested_country'],
+        ]);
+
+
+
+
+
+        return ['status' => true];
+        
+    }
 }

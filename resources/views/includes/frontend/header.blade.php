@@ -1,4 +1,3 @@
-
 <div class="stickyposition_mobile sticky-header header-main">
 
   <aside id="siteRedirect" class="sticky-top bg-dark text-white p-3 p-sm-2 d-none" style="z-index:1025">
@@ -16,9 +15,23 @@
   </aside>
   <nav class="container-fluid c-navbar  top-navbar py-1 px-0">
     <a class="col-auto" href="{{url('/')}}">
-      <img src="{{ url('/filemanager/photos/1/thumbs/unipage_logo_2.png') }}" alt="" class="header-logo">
+      <img alt="Universities Page Logo" src="{{ url('/filemanager/photos/1/thumbs/unipage_logo_2.png') }}" alt="" class="header-logo">
     </a>
     <style>
+     body {
+            user-select: none;
+            -webkit-user-select: none;f
+            -moz-user-select: none;
+            -ms-user-select: none;
+            bac
+        }
+
+        img {
+            -webkit-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
       .blink_me_text_on_header {
         animation: blinker 1s linear infinite;
         font-weight: bold;
@@ -30,6 +43,17 @@
         50% {
           opacity: 0;
         }
+      }
+      .nav-item .nav-link{
+        display: flex;
+        align-items: center;
+        min-width: max-content;
+      }
+      .nav-item .nav-link i{
+        margin-right: 5px;
+      }
+      .bottom-navbar-main{
+        justify-content: center;
       }
     </style>
 
@@ -95,60 +119,82 @@
           display: none;
         }
       }
-
-
     </style>
-      <div class="bottom-nav-links col-auto c-navbar-contactUs">
-        <!--<small>Need help?</small>-->
-        @foreach(getSocialMeta() as $key => $social)
-        @if($social!==null)
-        <!-- <i class="fa fa-{{$key}} fa_icon" onclick="window.location.href=`{{url(($social)??'#.')}}`"></i> -->
-        @endif
-        @endforeach
-        <i class="fa fa-whatsapp fa_icon" onclick="window.open('https://api.whatsapp.com/send?phone=923112853194')"><span>Lahore</span> <span class="displaynonethis">03112853194</span></i>
+    <div class="bottom-nav-links col-auto c-navbar-contactUs">
+      <!--<small>Need help?</small>-->
+      @foreach(getSocialMeta() as $key => $social)
+      @if($social!==null)
+      <!-- <i class="fa fa-{{$key}} fa_icon" onclick="window.location.href=`{{url(($social)??'#.')}}`"></i> -->
+      @endif
+      @endforeach
+      <!-- <i class="fa fa-whatsapp fa_icon" onclick="window.open('https://api.whatsapp.com/send?phone=923112853194')"><span>Lahore</span> <span class="displaynonethis">03112853194</span></i>
 
-        <i class="fa fa-whatsapp fa_icon" onclick="window.open('https://api.whatsapp.com/send?phone=+923349990308')"><span>Islamabad</span> <span class="displaynonethis">03349990308</span></i>
+      <i class="fa fa-whatsapp fa_icon" onclick="window.open('https://api.whatsapp.com/send?phone=923349990308')"><span>Islamabad</span> <span class="displaynonethis">03349990308</span></i>
+      <i class="fa fa-whatsapp fa_icon" onclick="window.open('https://api.whatsapp.com/send?phone=923106225430')"><span>Karachi</span> <span class="displaynonethis">03106225430</span></i> -->
+
+      <i class="fa fa-phone fa_icon" onclick="makePhoneCall('03004010284')">
+        <span>Lahore</span>
+        <span class="displaynonethis">03004010284</span>
+      </i>
+
+      <i class="fa fa-phone fa_icon" onclick="makePhoneCall('03349990308')">
+          <span>Islamabad</span>
+          <span class="displaynonethis">03349990308</span>
+      </i>
+
+      <i class="fa fa-phone fa_icon" onclick="makePhoneCall('03106225430')">
+          <span>Karachi</span>
+          <span class="displaynonethis">03106225430</span>
+      </i>
+
+      <i class="fa fa-envelope" onclick="window.location.href=`mailto:info@universitiespage.com`"><span class=""> Email </span> <span class="displaynonethis">Click Mail</span></i>
 
 
-
-        <i class="fa fa-envelope-o" onclick="window.location.href=`mailto:info@universitiespage.com`"><span class=""> Email </span> <span class="displaynonethis">Click Mail</span></i>
-
-
-          <!-- <i class="fa fa-user-o" data-toggle="modal" data-target="#login_model"><span>Student</i>
+      <!-- <i class="fa fa-user-o" data-toggle="modal" data-target="#login_model"><span>Student</i>
           <i class="fa fa-user-o" data-toggle="modal" data-target="#login_model_consult"><span>Consultant </span></i> -->
-          <!-- <i class="fa fa-user-o"><span><a href="{{route('student-login')}}" class="">Student</a></i>
+      <!-- <i class="fa fa-user-o"><span><a href="{{route('student-login')}}" class="">Student</a></i>
           <i class="fa fa-user-o"><span><a href="{{route('consultant-login')}}" class="">Consultant</a></span></i> -->
-              @if(Auth::check())
-            <!-- User is logged in, hide the links -->
-              @else
-                  <!-- User is not logged in, show the links -->
-                  <i class="fa fa-user-o"><span><a href="{{ route('student-login') }}" class="">Student</a></span></i>
-                  <i class="fa fa-user-o"><span><a href="{{ route('consultant-login') }}" class="">Consultant</a></span></i>
-              @endif
-
-        @if(Auth::check())
-        @if(auth()->user()->user_type=='student' OR auth()->user()->user_type=='consultant')
-        <div class="fa username-box bottom-nav-links user-login-icons">
-          <a class="logedin-user" href="javascript:void(0);" style="font-size: 20px;"><i class="fa fa-fw fa-user-circle-o"></i></a>
-          <div class="dropdown-login-user">
-            <div class="carot"></div>
-            <ul>
-              <li align="center">HI, {{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</li>
-              <li align="center"><a href="{{url((auth()->user()->user_type=='student')?'dashboard':'admin')}}">Dashboard</a></li>
-              @if(auth()->user()->user_type=='student')<li align="center"><a href="{{url('dashboard#profile')}}">Profile</a></li>@endif
-              <li align="center" class="logout-btn">Logout</li>
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-              </form>
-            </ul>
-          </div>
-          {{-- <div class="username-name">
-               <span>{{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</span>
-        </div> --}}
+      @if(Auth::check())
+      <!-- User is logged in, hide the links -->
+      @else
+      <!-- User is not logged in, show the links -->
+      <i class="fa fa-user"><span><a href="{{ route('student-login') }}" class="">Student</a></span></i>
+      <!-- <div class="fa username-box bottom-nav-links user-login-icons">
+        <a class="logedin-user" href="javascript:void(0);" style="font-size: 20px;">
+          <i class="fa fa-user-o">
+            <span style="font-size: 14px; font-weight:300; color:black; display:inline-block;">
+              Student
+            </span>
+          </i>
+        </a>
+        <div class="dropdown-login-user">
+          <div class="carot"></div>
+          <ul>
+            <li align="center"><a href="{{ route('student-login') }}">Login</a></li>
+            <li align="center"><a href="{{route('student-register')}}">Register</a></li>
+          </ul>
+        </div>
       </div>
-      @endif
-      @endif
 
+      <div class="fa username-box bottom-nav-links user-login-icons">
+        <a class="logedin-user" href="javascript:void(0);" style="font-size: 20px;">
+          <i class="fa fa-user-o">
+            <span style="font-size: 14px; font-weight:300; color:black; display:inline-block;">
+            Consultant
+            </span>
+          </i>
+        </a>
+        <div class="dropdown-login-user">
+          <div class="carot"></div>
+          <ul>
+            <li align="center"><a href="{{ route('student-login') }}">Login</a></li>
+            <li align="center"><a href="{{route('consultant-register')}}">Register</a></li>
+          </ul>
+        </div>
+      </div> -->
+      <i class="fa fa-user" id="consultant"><span><a href="{{ route('consultant-login') }}" class="">Consultant</a></span></i>
+      @endif
+      
       @if(Auth::check())
       @if(auth()->user()->user_type=='student')
       <div id="vue-notification" class="fa bottom-nav-links user-login-icons">
@@ -235,7 +281,7 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                 </div>
-                                <input type="email" name="email" class="form-control" id="login_email" placeholder="Enter Your Email">
+                                <input type="email" name="email" class="form-control"  placeholder="Enter Your Email">
                                 <div id="ResetMsg" style="font-size: 12px;color: red;position: absolute;text-align: center;width: 100%;font-weight: 500;top: -20px;"></div>
                             </div>
 
@@ -246,7 +292,7 @@
                                         <i class="fa fa-key"></i>
                                     </div>
                                 </div>
-                                <input type="password" name="password" class="form-control" id="login_password" placeholder="Password">
+                                <input type="password" name="password" class="form-control"  placeholder="Password">
                             </div>
 
                             <div class="login-forgot-main pt-2 pb-4">
@@ -364,8 +410,8 @@
                                         <i class="fa fa-home"></i>
                                       </div>
                                     </div>
-                                        <select name="country" class="form-control w100p country-select">
-                                            <option selected="">--Nationality--</option>
+                                        <select name="country" class="form-control w100p country-select" required>
+                                            <option selected="" disabled>--Nationality--</option>
 
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
@@ -622,13 +668,99 @@
                                 </div>
                                 <div class="col-sm-6 mb-3">
                                     <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text input-icon student-login-icon">
+                                                <i class="fa fa-home"></i>
+                                            </div>
+                                        </div>
+                                         <select name="city"  v-model="list.city" class="form-control w100p city-select" required>
+                                            <option selected="" disabled>--Select City--</option>
+                                            <option value="Karachi">Karachi</option>
+                                                    <option value="Lahore">Lahore</option>
+                                                    <option value="Islamabad">Islamabad</option>
+                                                    <option value="Faisalabad">Faisalabad</option>
+                                                    <option value="Rawalpindi">Rawalpindi</option>
+                                                    <option value="Multan">Multan</option>
+                                                    <option value="Peshawar">Peshawar</option>
+                                                    <option value="Quetta">Quetta</option>
+                                                    <option value="Sialkot">Sialkot</option>
+                                                    <option value="Bahawalpur">Bahawalpur</option>
+                                                    <option value="Gujranwala">Gujranwala</option>
+                                                    <option value="Sargodha">Sargodha</option>
+                                                    <option value="Hyderabad">Hyderabad</option>
+                                                    <option value="Jhang">Jhang</option>
+                                                    <option value="Dera Ghazi Khan">Dera Ghazi Khan</option>
+                                                    <option value="Mardan">Mardan</option>
+                                                    <option value="Chiniot">Chiniot</option>
+                                                    <option value="Larkana">Larkana</option>
+                                                    <option value="Muzaffarabad">Muzaffarabad</option>
+                                                    <option value="Skardu">Skardu</option>
+                                                    <option value="Gwadar">Gwadar</option>
+                                                    <option value="Bannu">Bannu</option>
+                                                    <option value="Khuzdar">Khuzdar</option>
+                                                    <option value="Kasur">Kasur</option>
+                                                    <option value="Jhelum">Jhelum</option>
+                                                    <option value="Mianwali">Mianwali</option>
+                                                    <option value="Sahiwal">Sahiwal</option>
+                                                    <option value="Tando Adam">Tando Adam</option>
+                                                    <option value="Tando Allahyar">Tando Allahyar</option>
+                                                    <option value="Sukkur">Sukkur</option>
+                                                    <option value="Chaman">Chaman</option>
+                                                    <option value="Kohat">Kohat</option>
+                                                    <option value="Dir">Dir</option>
+                                                    <option value="Swat">Swat</option>
+                                                    <option value="Pishin">Pishin</option>
+                                                    <option value="Sadiqabad">Sadiqabad</option>
+                                                    <option value="Dera Ismail Khan">Dera Ismail Khan</option>
+                                                    <option value="Hafizabad">Hafizabad</option>
+                                                    <option value="Pakpattan">Pakpattan</option>
+                                                    <option value="Sheikhupura">Sheikhupura</option>
+                                                    <option value="Mingora">Mingora</option>
+                                                    <option value="Chiniot">Chiniot</option>
+                                                    <option value="Jampur">Jampur</option>
+                                                    <option value="Lodhran">Lodhran</option>
+                                                    <option value="Khushab">Khushab</option>
+                                                    <option value="Layyah">Layyah</option>
+                                                    <option value="Mandi Bahauddin">Mandi Bahauddin</option>
+                                                    <option value="Gujrat">Gujrat</option>
+                                                    <option value="Chakwal">Chakwal</option>
+                                                    <option value="Jaranwala">Jaranwala</option>
+                                                    <option value="Sohawa">Sohawa</option>
+                                                    <option value="Nowshera">Nowshera</option>
+                                                    <option value="Shikarpur">Shikarpur</option>
+                                                    <option value="Hangu">Hangu</option>
+                                                    <option value="Bannu">Bannu</option>
+                                                    <option value="Mirpurkhas">Mirpurkhas</option>
+                                                    <option value="Chak Jhumra">Chak Jhumra</option>
+                                                    <option value="Bhakkar">Bhakkar</option>
+                                                    <option value="Patti">Patti</option>
+                                                    <option value="Ghotki">Ghotki</option>
+                                                    <option value="Kashmore">Kashmore</option>
+                                                    <option value="Jacobabad">Jacobabad</option>
+                                                    <option value="Kotli">Kotli</option>
+                                                    <option value="Haveli">Haveli</option>
+                                                    <option value="Malkwal">Malkwal</option>
+                                                    <option value="Barkhan">Barkhan</option>
+                                                    <option value="Mastung">Mastung</option>
+                                                    <option value="Kalat">Kalat</option>
+                                                    <option value="Loralai">Loralai</option>
+                                                    <option value="Turbat">Turbat</option>
+                                                    <option value="Zhob">Zhob</option>
+                                        </select>
+                                        <div class="reg-error-msg" v-if="errors.city" v-for="error in errors.city">
+                                            <span v-text="error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <div class="input-group">
                                       <div class="input-group-prepend">
                                         <div class="input-group-text input-icon student-login-icon">
                                           <i class="fa fa-building"></i>
                                         </div>
                                       </div>
                                         <select name="prefer" class="form-control w100p prefer-select">
-                                            <option selected="">--What type of program would you prefer?--</option>
+                                            <option selected="" disabled>--What type of program would you prefer?--</option>
                                             @foreach(qualification() as $prefer)
                                             <option value="{{$prefer->id}}" @if(old('prefer')==$prefer->id) selected="" @endif>{{$prefer->title}}</option>
                                             @endforeach
@@ -707,7 +839,7 @@
                       <i class="fa fa-envelope-o"></i>
                     </div>
                   </div>
-                  <input type="email" name="email" class="form-control" id="login_email" placeholder="Enter Your Email">
+                  <input type="email" name="email" class="form-control"  placeholder="Enter Your Email">
                   <div id="ResetMsg" style="font-size: 12px;color: red;position: absolute;text-align: center;width: 100%;font-weight: 500;top: -20px;"></div>
                 </div>
 
@@ -718,7 +850,7 @@
                       <i class="fa fa-key"></i>
                     </div>
                   </div>
-                  <input type="password" name="password" class="form-control" id="login_password" placeholder="Password">
+                  <input type="password" name="password" class="form-control"  placeholder="Password">
                 </div>
 
                 <!-- <div class="form-check mb-2">
@@ -803,9 +935,8 @@
                           <i class="fa fa-home"></i>
                         </div>
                       </div>
-                      <select name="country" class="form-control w100p country-select">
+                      <select name="country" class="form-control w100p country-select" required>
                         <option selected="">--Nationality--</option>
-
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -1079,7 +1210,79 @@
                           <i class="fa fa-home"></i>
                         </div>
                       </div>
-                      <input type="text" name="city" v-model="list.city" class="form-control" placeholder="city">
+                       <select name="city"  v-model="list.city" class="form-control w100p city-select" required>
+                                            <option value="Karachi">Karachi</option>
+                                            <option value="Lahore">Lahore</option>
+                                            <option value="Islamabad">Islamabad</option>
+                                            <option value="Faisalabad">Faisalabad</option>
+                                            <option value="Rawalpindi">Rawalpindi</option>
+                                            <option value="Multan">Multan</option>
+                                            <option value="Peshawar">Peshawar</option>
+                                            <option value="Quetta">Quetta</option>
+                                            <option value="Sialkot">Sialkot</option>
+                                            <option value="Bahawalpur">Bahawalpur</option>
+                                            <option value="Gujranwala">Gujranwala</option>
+                                            <option value="Sargodha">Sargodha</option>
+                                            <option value="Hyderabad">Hyderabad</option>
+                                            <option value="Jhang">Jhang</option>
+                                            <option value="Dera Ghazi Khan">Dera Ghazi Khan</option>
+                                            <option value="Mardan">Mardan</option>
+                                            <option value="Chiniot">Chiniot</option>
+                                            <option value="Larkana">Larkana</option>
+                                            <option value="Muzaffarabad">Muzaffarabad</option>
+                                            <option value="Skardu">Skardu</option>
+                                            <option value="Gwadar">Gwadar</option>
+                                            <option value="Bannu">Bannu</option>
+                                            <option value="Khuzdar">Khuzdar</option>
+                                            <option value="Kasur">Kasur</option>
+                                            <option value="Jhelum">Jhelum</option>
+                                            <option value="Mianwali">Mianwali</option>
+                                            <option value="Sahiwal">Sahiwal</option>
+                                            <option value="Tando Adam">Tando Adam</option>
+                                            <option value="Tando Allahyar">Tando Allahyar</option>
+                                            <option value="Sukkur">Sukkur</option>
+                                            <option value="Chaman">Chaman</option>
+                                            <option value="Kohat">Kohat</option>
+                                            <option value="Dir">Dir</option>
+                                            <option value="Swat">Swat</option>
+                                            <option value="Pishin">Pishin</option>
+                                            <option value="Sadiqabad">Sadiqabad</option>
+                                            <option value="Dera Ismail Khan">Dera Ismail Khan</option>
+                                            <option value="Hafizabad">Hafizabad</option>
+                                            <option value="Pakpattan">Pakpattan</option>
+                                            <option value="Sheikhupura">Sheikhupura</option>
+                                            <option value="Mingora">Mingora</option>
+                                            <option value="Chiniot">Chiniot</option>
+                                            <option value="Jampur">Jampur</option>
+                                            <option value="Lodhran">Lodhran</option>
+                                            <option value="Khushab">Khushab</option>
+                                            <option value="Layyah">Layyah</option>
+                                            <option value="Mandi Bahauddin">Mandi Bahauddin</option>
+                                            <option value="Gujrat">Gujrat</option>
+                                            <option value="Chakwal">Chakwal</option>
+                                            <option value="Jaranwala">Jaranwala</option>
+                                            <option value="Sohawa">Sohawa</option>
+                                            <option value="Nowshera">Nowshera</option>
+                                            <option value="Shikarpur">Shikarpur</option>
+                                            <option value="Hangu">Hangu</option>
+                                            <option value="Bannu">Bannu</option>
+                                            <option value="Mirpurkhas">Mirpurkhas</option>
+                                            <option value="Chak Jhumra">Chak Jhumra</option>
+                                            <option value="Bhakkar">Bhakkar</option>
+                                            <option value="Patti">Patti</option>
+                                            <option value="Ghotki">Ghotki</option>
+                                            <option value="Kashmore">Kashmore</option>
+                                            <option value="Jacobabad">Jacobabad</option>
+                                            <option value="Kotli">Kotli</option>
+                                            <option value="Haveli">Haveli</option>
+                                            <option value="Malkwal">Malkwal</option>
+                                            <option value="Barkhan">Barkhan</option>
+                                            <option value="Mastung">Mastung</option>
+                                            <option value="Kalat">Kalat</option>
+                                            <option value="Loralai">Loralai</option>
+                                            <option value="Turbat">Turbat</option>
+                                            <option value="Zhob">Zhob</option>
+                                        </select>
                       <div class="reg-error-msg" v-if="errors.city" v-for="error in errors.city">
                         <span v-text="error"></span>
                       </div>
@@ -1260,15 +1463,46 @@
     </div>
     <!-- modal end here -->
     @endif
+
+
+      @if(Auth::check())
+      @if(auth()->user()->user_type=='student' OR auth()->user()->user_type=='consultant')
+      <div class="fa username-box bottom-nav-links user-login-icons">
+        <a class="logedin-user" href="javascript:void(0);" style="font-size: 20px;"><i class="fa fa-fw fa-user-circle-o">
+            <span style="font-size: 14px; font-weight:300; color:black; display:inline-block;">{{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</span>
+            
+          </i>
+
+        </a>
+        <div class="dropdown-login-user">
+          <div class="carot"></div>
+          <ul>
+            <li align="center">HI, {{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</li>
+            <li align="center"><a href="{{url((auth()->user()->user_type=='student')?'dashboard':'admin')}}">Dashboard</a></li>
+            @if(auth()->user()->user_type=='student')<li align="center"><a href="{{url('dashboard#profile')}}">Profile</a></li>@endif
+            <li align="center" class="logout-btn">Logout</li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+            </form>
+          </ul>
+        </div>
+        {{-- <div class="username-name">
+               <span>{{(auth()->user()->first_name)??''}} {{(auth()->user()->last_name)??''}}</span>
+      </div> --}}
+    </div>
+    @endif
+    @endif
+
+
 </div>
 <div class="largest-portal-block">
- 
+
   <!-- <p class="largest-portal-paragraph blue">Pakistan's Largest <br><span class="largest-span">Study Abroad Portal</span></p>
   <div class="largest-icon-main">
     <img class="largest-icon" src="{{ url('/filemanager/photos/1/new_style/svg/golden-one.svg') }}" alt="" srcset="">
     <img class="largest-icon img-hidden" src="{{ url('/filemanager/photos/1/new_style/svg/blue-one.svg') }}" alt="" srcset="">
   </div> -->
-  <img class="top-right-one-image" src="{{ url('/filemanager/photos/1/new_style/animation/no1.gif') }}" alt="" srcset="">
+  <img alt="Pakistani No 1Study Abroad Portal" class="top-right-one-image" src="{{ url('/filemanager/photos/1/new_style/animation/no1.gif') }}" alt="" srcset="">
 </div>
 </nav>
 {{-- <div class="modal c-navbarModal" id="SearchModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1304,12 +1538,12 @@
 
 
 <nav class="bg-primary navbar-main">
-  <div class="container navbar navbar-expand-lg navbar-light mobile-menu ">
-    <button style="background: white; cursor: pointer; line-height:0px;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container-fluid navbar navbar-expand-lg navbar-light mobile-menu bottom-navbar-main">
+    <button style="background: white; cursor: pointer; line-height:0px; margin-left:auto;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon" style="height: 30px; width:20px;"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mt-0">
+      <ul class="navbar-nav mt-0 bottom-nav-list">
         <!-- Your navigation list items go here -->
         <li class="nav-item">
           <a class="nav-link" style="margin-right: 7px;" href="{{url('/')}}">
@@ -1333,7 +1567,7 @@
         @else
 
         <li class="nav-item">
-          <a class="nav-link" style="margin-right: 7px;" onclick="consulation()">
+          <a id="triggerFreeConsultation" class="nav-link" style="margin-right: 7px;" onclick="consulation()">
             <span class="u-xs-small95">Free Consultation</span>
           </a>
         </li>
@@ -1348,7 +1582,26 @@
             <span class="u-xs-small95">100% Discount Offer</span>
           </a>
         </li>
-        
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('apply-online')}}" style="margin-right: 7px;">
+            <span class="u-xs-small95">Apply Online</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url('complaint')}}" style="margin-right: 7px;">
+            <span class="u-xs-small95">Complaint</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('contact-us')}}" style="margin-right: 7px;">
+            <span class="u-xs-small95">Contact Us</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('jobs')}}" style="margin-right: 7px;">
+            <span class="u-xs-small95">Job Opportunities</span>
+          </a>
+        </li>
         @endif
         @endforeach
       </ul>
@@ -1357,6 +1610,21 @@
 </nav>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    function makePhoneCall(phoneNumber) {
+        // Remove non-numeric characters from the phone number
+        phoneNumber = phoneNumber.replace(/\D/g, '');
+        
+        // Check if the platform supports the tel: protocol
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // For mobile devices, use tel: protocol to trigger phone call
+            window.location.href = 'tel:' + phoneNumber;
+        } else {
+            // For desktop or unsupported platforms, display a message or use a different method
+            alert('This feature is not supported on your device. Please dial the number manually.');
+        }
+    }
+</script>
 <script>
   $(document).ready(function() {
     // Check if the user is on the home page
@@ -1375,6 +1643,133 @@
       $('.mobile-menu .navbar-collapse').collapse('hide');
     });
 
+    
+        const articleModelStatus = 'articleFlag'; // Correctly spelled key
+        const consaltationFormTime = 'formSubmittedTime';
+        const timestampKey = 'articleFlagTimestamp'; // Key for the timestamp
+
+
+        // const articleFlag = 'false';  // This is the value to be stored
+
+        // If the value does not exist, set it to 'false'
+        if (localStorage.getItem(articleModelStatus) === null) {
+            const articleFlag = 'false'; // Initial value
+
+            localStorage.setItem(articleModelStatus, articleFlag);
+            
+        }
+
+
+
+        // Step 3: Use the retrieved value
+        articleFlagStatus = localStorage.getItem(articleModelStatus);
+        if (articleFlagStatus === 'false') {
+            // setInterval(function() {
+            //     showModal();
+            // }, 20000);
+            
+             const urlSegments = window.location.pathname.split('/'); // Get the URL segments
+                if (urlSegments[1] !== 'resume') { // Check if the first segment is not 'resume'
+                    setInterval(function() {
+                        showModal();
+                    }, 20000); // 20000 milliseconds = 20 seconds
+                }
+        }
+
+
+
+      // If the value does not exist, set it to 'false'
+       if (localStorage.getItem(articleModelStatus) === 'true' && checkFormSubmittedTime() ) {
+           
+          localStorage.removeItem('formSubmittedTime');
+          const articleFlag = 'false'; // Initial value
+           localStorage.setItem(articleModelStatus, articleFlag);
+          //   Show the modal again after 10 seconds
+        const urlSegments = window.location.pathname.split('/'); // Get the URL segments
+    if (urlSegments[1] !== 'resume') { // Check if the first segment is not 'resume'
+        setTimeout(function () {
+            showModal(); // Show the modal after 20 seconds
+        }, 20000);
+    }
+        }
+        
+
+
+
+
+        function showModal() {
+      
+        $('#modal-property-languages').fadeIn(); // Show the modal
+        $('#modal-property-languages').modal('show'); // Bootstrap method to show the modal
+    }
+
+    function checkFormSubmittedTime() {
+        // Retrieve the value from local storage
+        var storedTime = localStorage.getItem('formSubmittedTime');
+        if (storedTime) {
+          // Parse the stored time to a Date object
+          var storedDate = new Date(storedTime)
+          
+            // Get the current date and time
+            var currentDate = new Date();
+            // Calculate the difference in milliseconds
+            var timeDifference = currentDate - storedDate ;
+            // Check if the difference is greater than 30 seconds (30000 ms)
+            // if (timeDifference > 30000) {
+            //   console.log("this os the current tuime and ais passed away");
+            //   return true;
+               
+            // } else {
+            //   return false;
+            // }
+            
+             // Check if the difference is greater than 2 days (2 days = 2 * 24 * 60 * 60 * 1000 ms)
+            if (timeDifference > 2 * 24 * 60 * 60 * 1000) {
+                console.log("The time has exceeded 2 days. Removing from local storage.");
+                return true; // Indicate that time is expired
+            } else {
+                console.log('Form submission time is still valid.');
+                return false; // Time is still valid
+            }
+          } else {
+          return false;
+         
+        }
+    }
+
+ 
 
   });
+</script>
+<script>
+    document.addEventListener('keydown', function(event) {
+        // Disable F12
+        if (event.key === 'F12') {
+            event.preventDefault();
+        }
+
+        // Disable Ctrl+Shift+I (Inspect Element)
+        if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+            event.preventDefault();
+        }
+
+        // Disable Ctrl+Shift+J (Console)
+        if (event.ctrlKey && event.shiftKey && event.key === 'J') {
+            event.preventDefault();
+        }
+
+        // Disable Ctrl+U (View Source)
+        if (event.ctrlKey && event.key === 'U') {
+            event.preventDefault();
+        }
+    });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ED3GGDQ1XM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ED3GGDQ1XM');
 </script>

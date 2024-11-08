@@ -4,3 +4,18 @@
 [09-Feb-2023 21:24:07 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Auth\User' not found in /home/universities/public_html/app/User.php on line 8
 [30-Oct-2023 04:37:56 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Auth\User' not found in /home/universities/public_html/app/User.php on line 8
 [21-Dec-2023 08:22:05 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Auth\User' not found in /home/universities/public_html/app/User.php on line 8
+[17-May-2024 03:08:56 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/ContactUs.php on line 7
+[12-Aug-2024 17:21:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/universities/public_html/app/JobApply.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/app/JobApply.php on line 7
+[18-Aug-2024 23:39:32 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/ContactUsMessages.php on line 7
+[20-Aug-2024 07:45:33 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/ContactUsMessages.php on line 7
+[20-Aug-2024 09:43:47 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/ContactUsMessages.php on line 7
+[21-Aug-2024 07:44:50 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/ContactUsMessages.php on line 7
+[22-Aug-2024 07:45:17 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/ContactUsMessages.php on line 7
+[06-Oct-2024 00:32:25 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/JobApply.php on line 7
+[09-Oct-2024 11:24:02 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/ContactUs.php on line 7
+[18-Oct-2024 22:32:49 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Auth\User' not found in /home/universities/public_html/app/User.php on line 8
+[20-Oct-2024 01:08:37 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Auth\User' not found in /home/universities/public_html/app/User.php on line 8
+[22-Oct-2024 03:56:24 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Auth\User' not found in /home/universities/public_html/app/User.php on line 8

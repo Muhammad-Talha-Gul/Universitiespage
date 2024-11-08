@@ -98,3 +98,16 @@
 [28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'visa_applied' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 326
 [28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
 [28-Dec-2023 18:13:55 America/New_York] PHP Notice:  Trying to get property 'case_closed' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 332
+[20-Jul-2024 21:40:58 UTC] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[20-Jul-2024 21:40:58 UTC] PHP Notice:  Trying to get property 'photo_doc' of non-object in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 28
+[20-Jul-2024 21:40:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 33
+[20-Jul-2024 21:40:58 UTC] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 201
+[20-Jul-2024 21:40:58 UTC] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 210
+[20-Jul-2024 21:40:58 UTC] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 219
+[20-Jul-2024 21:40:58 UTC] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 228
+[20-Jul-2024 21:40:58 UTC] PHP Notice:  Undefined variable: cstudent in /home/universities/public_html/resources/views/frontend/consultant/student.blade.php on line 237
+[20-Jul-2024 21:49:11 UTC] PHP Notice:  Undefined variable: cstudents in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 410
+[20-Jul-2024 21:49:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 410
+[16-Sep-2024 02:54:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 410
+[16-Sep-2024 16:51:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 410
+[07-Nov-2024 14:17:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/universities/public_html/resources/views/frontend/consultant/dashboard.blade.php on line 410

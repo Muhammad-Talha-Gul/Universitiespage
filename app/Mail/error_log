@@ -1,0 +1,27 @@
+[06-Jun-2024 02:17:28 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/TestEmail.php on line 9
+[06-Jun-2024 16:54:19 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/TestEmail.php on line 9
+[10-Jun-2024 03:54:01 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CustomEmail.php on line 10
+[26-Jun-2024 00:51:37 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/FreeConsultationMail.php on line 10
+[27-Jun-2024 08:27:52 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/FreeConsultationMail.php on line 10
+[05-Jul-2024 07:48:43 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/ApplyOnlineMail.php on line 10
+[11-Jul-2024 08:11:25 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/discount_offerMail.php on line 9
+[12-Jul-2024 04:14:31 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CommentConfirmationMail.php on line 10
+[31-Jul-2024 06:52:11 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CommentAddedMail.php on line 10
+[07-Aug-2024 17:39:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/universities/public_html/app/Mail/DiscountOfferMail.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/app/Mail/DiscountOfferMail.php on line 10
+[17-Aug-2024 14:24:53 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/ApplyOnlineMail.php on line 10
+[07-Sep-2024 11:32:03 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CommentConfirmationMail.php on line 10
+[25-Sep-2024 15:11:58 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/SendUserEmail.php on line 10
+[27-Sep-2024 02:53:36 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/SendUserEmail.php on line 10
+[29-Sep-2024 02:36:57 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/SendUserEmail.php on line 10
+[30-Sep-2024 02:33:33 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/SendUserEmail.php on line 10
+[02-Oct-2024 09:19:09 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/DiscountOfferMail.php on line 10
+[03-Oct-2024 04:35:55 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CustomEmail.php on line 10
+[04-Oct-2024 18:12:04 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CustomEmail.php on line 10
+[04-Oct-2024 20:22:35 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CustomEmail.php on line 10
+[05-Oct-2024 18:07:37 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CustomEmail.php on line 10
+[06-Oct-2024 18:07:36 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CustomEmail.php on line 10
+[22-Oct-2024 14:15:14 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CommentAddedMail.php on line 10
+[31-Oct-2024 11:30:00 UTC] PHP Fatal error:  Class 'Illuminate\Mail\Mailable' not found in /home/universities/public_html/app/Mail/CommentConfirmationMail.php on line 10

@@ -19,7 +19,7 @@
                 <div class="modal-body">
                     <div class="row input mb-0">
                         <div class="col-md-6 mb-3">
-                            <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
+                            <input type="text" name="name" class="form-control" placeholder="Enter Your aaaName">
                         </div>
                         <div class="col-md-6 mb-3">
                             <input type="email" name="email" class="form-control" placeholder="Enter Your Email">

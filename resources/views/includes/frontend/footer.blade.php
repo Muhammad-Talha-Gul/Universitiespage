@@ -4,7 +4,7 @@
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <div class="footer-left-main">
           <div class="footer-logo-block">
-            <img class=" footer-logo img-fluid" src="{{ url('/filemanager/photos/1/thumbs/unipage_logo_2.png') }}" alt="">
+            <img alt="Universities Page Logo" class=" footer-logo img-fluid" src="{{ url('/filemanager/photos/1/thumbs/unipage_logo_2.png') }}" alt="">
           </div>
           <p class="footer-paragraph">Sunrise international education consultancy private limited built the Universities Page app as a Free app. This SERVICE is provided by sunrise international education consultancy private limited at no cost and is intended for use as is.</p>
         </div>
@@ -88,30 +88,39 @@
       </div>
     </div>
     <div class="row footerlastrow">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
-        <h3  class="footer-sub-heading">China Address</h3>
-        <p>Select Universities</p>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
-        <h3  class="footer-sub-heading">Thailand Address</h3>
-        <p>Bangkok,Thailand.</p>
-        <p>Email:Thailand@universitiespage.com</p>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
-        <h3  class="footer-sub-heading">Pakistan Lahore Addres</h3>
+     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 country-column">
+        <h3  class="footer-sub-heading mb-3">Lahore Addres</h3>
         <p>Universities Page,2nd Floor faisal bank,Raja Market,Garden town,Lahore,Pakistan</p>
         <p>Phone:0324 3640038</p>
         <p>Phone:0333 0033235</p>
         <p>Phone:0310 3162004</p>
       </div>
-
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
-        <h3  class="footer-sub-heading">Islamabad Address</h3>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 country-column">
+        <h3  class="footer-sub-heading mb-3">Islamabad Address</h3>
         <p>Universities Page, Punjab market,Venus Plaza, 1st Floor, Office No. 1, Sector G13/4,Islamabad</p>
         <p>Phone:0335 9990308</p>
-        <p>Phone:0334 9990308</p>
+        <p>Phone:0310 3172004</p>
+        <p>Phone:0300 4010286</p>
       </div>
-
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
+        <h3  class="footer-sub-heading mb-3">Karachi Address</h3>
+        <p>Universities Page,1st floor, Amber Estate, Shahrah-e-Faisal Rd, Bangalore Town Block A Shah, Karachi, Sindh</p>
+        <p>Phone:0310 6225430</p>
+        <p>Phone:0310 6225408</p>
+        <p>Phone:0310 6225410</p>
+      </div>
+     
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 country-column">
+        <h3  class="footer-sub-heading mb-3">Thailand Address</h3>
+        <p>70 Young Pl Alley, Khwaeng Khlong Toei Nuea, Watthana, Krung Thep Maha Nakhon ,Thailand.</p>
+        <p>Email:Thailand@universitiespage.com</p>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 country-column" >
+        <div class="footer-colmun-main">
+        <h3  class="footer-sub-heading mb-3">China Address</h3>
+        <p>Universities Page,East road of Madian plaza, Hai Dian District, Beijing, China</p>
+        </div>
+      </div>
     </div>
   </div>
   <!-- <hr class="hr3"> -->
@@ -130,6 +139,15 @@
 
   .ayoan_whatsapp_chatbox .widget-body .body-content .user-list .ayoan_item.active {
     border-left: 3px solid #0B6D76 !important;
+  }
+  @media (min-width: 1200px) and (max-width: 2400px) {
+.footer-colmun-main{
+    max-width: max-content;
+    margin-left: auto;
+}
+  }
+  .footerlastrow p {
+    font-size: 15px;
   }
 </style>
 

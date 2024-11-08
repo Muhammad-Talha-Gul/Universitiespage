@@ -47,6 +47,11 @@ class User extends Authenticatable
         return $this->hasOne('App\Model\Consultant', 'user_id');
     }
 
+    public function permission()
+    {
+        return $this->hasOne(Permissions::class, 'admin_id');
+    }
+
     public static function creator($data)
     {
         // dd($data);
@@ -76,6 +81,7 @@ class User extends Authenticatable
         }else{
             $user->is_active = (isset($data['is_active']))?1:0;
         }
+        $user->choosable_status = ($data['choosable_status'])??null;
         $user->save();
         return $user;
     }

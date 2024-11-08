@@ -1,5 +1,10 @@
 @extends('layouts.backend')
 @section('content')
+<style>
+    .MsoNormal a{
+        color: red !important;
+    }
+</style>
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">

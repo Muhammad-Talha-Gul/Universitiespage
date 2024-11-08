@@ -11,12 +11,9 @@ class VerifyCsrfToken extends BaseVerifier
      *
      * @var array
      */
-    protected $except = [
-        'https://universitiespage.com/list_update_students',
-        'https://universitiespage.com/list_update_consultations',
-        'https://universitiespage.com/assign_complaints',
-        'https://universitiespage.com/assign_students',
-        'https://universitiespage.com/assign_consultations',
-        'https://universitiespage.com/assign_discount_offer'
-    ];
+protected $except = [
+    'update_job_post',
+    'add_job_post'
+];
+
 }

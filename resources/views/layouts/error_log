@@ -4,3 +4,12 @@
 [02-Jan-2024 18:05:34 America/New_York] PHP Notice:  Trying to get property 'meta_keywords' of non-object in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 55
 [02-Jan-2024 18:05:34 America/New_York] PHP Notice:  Undefined variable: page in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 87
 [02-Jan-2024 18:05:34 America/New_York] PHP Notice:  Trying to get property 'meta_description' of non-object in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 87
+[03-Aug-2024 22:48:15 UTC] PHP Warning:  Undefined variable $page in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 34
+[03-Aug-2024 22:48:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 34
+[03-Aug-2024 22:48:15 UTC] PHP Warning:  Attempt to read property "meta_title" on null in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 34
+[03-Aug-2024 22:48:15 UTC] PHP Warning:  Undefined variable $page in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 55
+[03-Aug-2024 22:48:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 55
+[03-Aug-2024 22:48:15 UTC] PHP Warning:  Attempt to read property "meta_keywords" on null in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 55
+[03-Aug-2024 22:48:15 UTC] PHP Warning:  Undefined variable $page in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 86
+[03-Aug-2024 22:48:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 86
+[03-Aug-2024 22:48:15 UTC] PHP Warning:  Attempt to read property "meta_description" on null in /home/universities/public_html/resources/views/layouts/frontend.blade.php on line 86

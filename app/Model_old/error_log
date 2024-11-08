@@ -130,3 +130,5 @@
 [27-Nov-2023 06:37:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model_old/Notifications.php on line 7
 [01-Dec-2023 10:51:56 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model_old/Preferences.php on line 7
 [23-Dec-2023 02:48:48 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model_old/Student.php on line 7
+[29-Sep-2024 18:38:31 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model_old/Student.php on line 7
+[10-Oct-2024 23:58:16 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model_old/PagesLogs.php on line 7

@@ -16,3 +16,4 @@
 [10-Dec-2023 03:14:01 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/universities/public_html/app/Http/Controllers/Auth/LoginController.php on line 8
 [11-Dec-2023 03:08:03 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/universities/public_html/app/Http/Controllers/Auth/LoginController.php on line 8
 [17-Dec-2023 14:22:38 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/universities/public_html/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[17-May-2024 14:33:11 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/universities/public_html/app/Http/Controllers/Auth/LoginController.php on line 8

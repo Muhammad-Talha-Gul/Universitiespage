@@ -1,1 +1,2 @@
 [30-Oct-2023 12:55:10 America/New_York] PHP Fatal error:  Trait 'Maatwebsite\Excel\Concerns\Exportable' not found in /home/universities/public_html/app/Exports/SampleProducts.php on line 11
+[09-Jun-2024 14:08:03 UTC] PHP Fatal error:  Trait 'Maatwebsite\Excel\Concerns\Exportable' not found in /home/universities/public_html/app/Exports/SampleProducts.php on line 11

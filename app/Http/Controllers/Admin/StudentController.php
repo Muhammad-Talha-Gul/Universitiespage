@@ -105,18 +105,29 @@ class StudentController extends Controller
             $stud = Consultant::creator($request, $user->id);
         }
 
-        
-        try{    
-            if(request('email') !== null){
-                $email = $request['email']; $name = $user['first_name'].' '.$user['last_name'];
-                Mail::send('emails.user_created', $data, function ($m) use($name,$email) {
-                    $m->from('noreply@universitiespage.com', 'University');
-                    $m->to($email, $name)->subject('Your Account has been created');
-                });
-            }
-        } catch(\Exception $e){
-            //
+
+        $studentName = $request->first_name.' '.$request->last_name;
+        $studentEmail = $request->email;
+
+        $details = [
+            'studentName' => $studentName,
+        ];
+
+        Mail::send('emails.email_student', $details, function ($message) use ($studentEmail) {
+            $message->from('noreply@universitiespage.com', 'Universities Page')
+                    ->to($studentEmail)
+                    ->subject('Universities Page');
+        });
+
+        if (Mail::failures()) {
+            $emailSended = '0'; 
+        } else {
+            $emailSended = '1';  
         }
+
+        DB::insert("UPDATE users SET `emailSended` = $emailSended WHERE id = '".$user->id."'");
+
+
         $full_name = $request->first_name.' '.$request->last_name;
         Notifications::create([
             'type'=>'account',

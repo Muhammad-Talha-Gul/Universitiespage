@@ -24,6 +24,7 @@ if(isset($data['seo']->meta_title)){
       color: #ff6060;
       font-size: smaller;
     }
+    
   </style>
 @endsection
 @section('content')
@@ -60,6 +61,7 @@ if(isset($data['seo']->meta_title)){
                             </div>
                         </article>
                     </div><!-- end /.single_blog -->
+                    <h1 style="color: red;">This is Comment Section</h1>
                     <div class="comment_area">
                         <div class="comment__title"><h4>{{count($data->approve_comments)}} comments</h4></div>
                         {{-- {{dd($data)}} --}}

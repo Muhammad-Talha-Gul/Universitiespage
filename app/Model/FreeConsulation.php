@@ -12,8 +12,10 @@ class FreeConsulation extends Model
        'email',
        'phone_number',
        'last_education',
+       'country',
        'city',
        'apply_for',
+       'interested_country',
    ];
 
 }

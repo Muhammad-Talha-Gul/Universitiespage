@@ -149,30 +149,19 @@ View
     <!-- passport --> <br>
 
 
-    <div class="row" id="passport_docrow">
-    
-      
+    <div class="row" id="passport_docrow"> 
 <div class="col-md-12" style="margin-bottom: 10px;"><h5 style="color: black;">Passport Documents
-
 </h5></div> 
-
 <?php 
   $passport_docs = json_decode($cstudent->passport_doc);
-
-
 if($passport_docs != '[]') {
-    
 foreach($passport_docs as $passport_doc) {
-
 ?>
-
 <div class="col-md-2" id="doc<?php echo str_replace(".", "", $passport_doc); ?>">
 <h6 class="artigo_nome"><?php echo $passport_doc; ?></h6>
 <a target="_blank" href="<?php echo '../public/assets_frontend/cstudent/'.$passport_doc; ?>" class="btn btn-success"><i class="fa fa-eye"></i></a>
 </div>
-
 <?php
-
 }
 
 }

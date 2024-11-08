@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\Api;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +18,6 @@
 */
 
 use App\Model\Course;
-
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
     Artisan::call('config:clear');
@@ -20,6 +25,115 @@ Route::get('/clear-cache', function() {
     Artisan::call('view:clear');
     return redirect('/');
 });
+
+
+
+
+Route::get('/', function () {
+    // Check if assets are already cached
+    if (!Cache::has('assets_cached')) {
+        // Cache frontend assets
+        cacheAssets('frontend', 'css');
+        cacheAssets('frontend', 'js');
+        cacheImages('frontend');
+
+        // Cache backend assets
+        cacheAssets('backend', 'css');
+        cacheAssets('backend', 'js');
+        cacheImages('backend');
+
+        // Mark assets as cached
+        Cache::put('assets_cached', true, now()->addDay());
+    }
+
+    // Return a response indicating that assets are cached
+    return response()->json(['message' => 'Assets cached successfully']);
+});
+
+// Function to cache assets from a directory based on type (css/js) and area (frontend/backend)
+function cacheAssets($area, $type)
+{
+    // Define the directory path based on the area and type
+    $directory = public_path("assets_{$area}/{$type}");
+
+    // Get all files in the directory
+    $files = File::allFiles($directory);
+
+    // Loop through each file
+    foreach ($files as $file) {
+        $filename = $file->getRelativePathname();
+
+        // Check if the file is already cached
+        if (!Cache::has("{$area}_{$type}_{$filename}")) {
+            // Read the file contents
+            $content = File::get($file->getPathname());
+
+            // Set appropriate cache headers
+            $headers = [
+                'Content-Type' => File::mimeType($file->getPathname()),
+                'Cache-Control' => 'public, max-age=' . (strtotime('12:00 PM') - time()), // Cache until 12:00 PM
+            ];
+
+            // Create the response
+            $response = Response::make($content, 200, $headers);
+
+            // Cache the response
+            Cache::put("{$area}_{$type}_{$filename}", $response, now()->until('12:00 PM'));
+        }
+    }
+}
+
+// Function to cache all images from the public folder
+function cacheImages($area)
+{
+    // Define the directory path
+    $directory = public_path();
+
+    // Recursively get all image files in the directory
+    $imageFiles = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($directory)
+    );
+
+    // Loop through each image file
+    foreach ($imageFiles as $imageFile) {
+        // Exclude directories and non-image files
+        if ($imageFile->isFile() && starts_with(mime_content_type($imageFile), 'image/')) {
+            $filename = $imageFile->getRelativePathname();
+
+            // Check if the file is already cached
+            if (!Cache::has("{$area}_img_{$filename}")) {
+                // Read the file contents
+                $content = File::get($imageFile->getPathname());
+
+                // Set appropriate cache headers
+                $headers = [
+                    'Content-Type' => File::mimeType($imageFile->getPathname()),
+                    'Cache-Control' => 'public, max-age=' . (strtotime('12:00 PM') - time()), // Cache until 12:00 PM
+                ];
+
+                // Create the response
+                $response = Response::make($content, 200, $headers);
+
+                // Cache the response
+                Cache::put("{$area}_img_{$filename}", $response, now()->until('12:00 PM'));
+            }
+        }
+    }
+}
+
+// Route to serve cached assets
+Route::get('assets/{area}/{type}/{filename}', function ($area, $type, $filename) {
+    $cacheKey = "{$area}_{$type}_{$filename}";
+
+    // Check if the asset is cached
+    if (Cache::has($cacheKey)) {
+        return Cache::get($cacheKey);
+    }
+
+    // If the asset is not cached, return a 404 response
+    abort(404);
+});
+
 
 Route::get('sendbtnemail/{id}/{type}','FrontEnd\HomeController@sendbtnemail')->name('sendbtnemail');
 
@@ -35,9 +149,45 @@ Route::get('/student-register', 'Auth\RegisterController@register')->name('stude
 Route::get('/consultant-login', 'Auth\Consultant\LoginController@login')->name('consultant-login');
 Route::get('/consultant-register', 'Auth\Consultant\RegisterController@register')->name('consultant-register');
 Route::get('/discount-offer', 'FrontEnd\HomeController@discountOfferPage')->name('discount-offer');
+Route::get('/blog/search', 'FrontEnd\HomeController@search')->name('blog.search');
+Route::get('/apply-online', 'FrontEnd\HomeController@applyOnline')->name('apply-online');
+Route::post('/apply-online', 'ApplyOnlineController@store')->name('apply-online');
+Route::get('/applied-consultant', 'ApplyOnlineController@index')->name('applied-consultant');
+Route::get('/admin-register', 'ApplyOnlineController@adminRegister')->name('admin-register');
+Route::post('admin/register', 'ApplyOnlineController@adminRegisterSubmit')->name('admin-register-submit');
+Route::get('/admin-users', 'ApplyOnlineController@adminusers')->name('admin-users');
+Route::get('/admin-details/{id}', 'ApplyOnlineController@showAdminDetails')->name('admin-details');
+Route::get('/admin-delete/{id}', 'ApplyOnlineController@adminDelete')->name('admin-delete');
+Route::post('/permissions/{id}', 'PermissionController@updatePermission')->name('updatePermission');
+Route::get('contact-us', 'FrontEnd\ContactUsController@index')->name('contact-us');
+Route::post('message-post', 'FrontEnd\ContactUsController@messagePost')->name('message-post');
+Route::get('get-messages', 'Admin\ContactUsController@getMessages')->name('get-messages');
+Route::get('/message-delete/{id}', 'Admin\ContactUsController@messageDelete')->name('message-delete');
+Route::post('reply-message', 'Admin\ContactUsController@replyMessage')->name('reply-message');
+Route::post('comment-store', 'FrontEnd\CommentController@commentStore')->name('comment-store');
+Route::post('comment-reply', 'FrontEnd\CommentController@commentReply')->name('comment-reply');
+Route::get('articel-comments', 'Admin\ArticleCommentsController@comments')->name('articel-comments');
+Route::get('comment-delete/{id}', 'Admin\ArticleCommentsController@delete')->name('comment-delete');
+Route::post('/update-status/{id}', 'Admin\ArticleCommentsController@updateStatus')->name('update-status');
+Route::get('reply-delete/{id}', 'Admin\ArticleCommentsController@replyDelete')->name('reply-delete');
 
+Route::get('/consultant-details/{id}', 'ApplyOnlineController@show')->name('consultant-details');
+Route::get('/consultant-delete/{id}', 'ApplyOnlineController@delete')->name('consultant-delete');
+Route::get('/complaint', ['as'=>'complaint','uses'=>'FrontEnd\HomeController@complaintPage'])->name('complaint');
+Route::get('/send-test-email', 'EmailTestController@sendTestEmail')->name('send-test-email');
 
+Route::get('jobs', 'FrontEnd\JobOpprtunitiesController@index')->name('jobs');
+Route::get('job-details/{id}', 'FrontEnd\JobOpprtunitiesController@details')->name('job-details');
+Route::post('apply-job-post', 'FrontEnd\JobOpprtunitiesController@applyStore')->name('apply-job-post');
 
+Route::get('create-job', 'Admin\AdminJobOpprtunitiesController@create')->name('create-job');
+Route::post('job-post', 'Admin\AdminJobOpprtunitiesController@store')->name('job-post');
+Route::get('job-list', 'Admin\AdminJobOpprtunitiesController@jobList')->name('job-list');
+Route::post('/update-job-status/{id}', 'Admin\AdminJobOpprtunitiesController@updateStatus')->name('update-job-status');
+Route::get('/job-delete/{id}', 'Admin\AdminJobOpprtunitiesController@delete')->name('job-delete');
+
+Route::get('edit-job/{id}', 'Admin\AdminJobOpprtunitiesController@edit')->name('edit-job');
+Route::post('job-update/{id}', 'Admin\AdminJobOpprtunitiesController@update')->name('job-update');
 // events trigger
 
 Route::post('/event_trigger_web', 'FrontEnd\HomeController@event_trigger_web')->name('event_trigger_web');
@@ -45,7 +195,15 @@ Route::post('/event_trigger_web', 'FrontEnd\HomeController@event_trigger_web')->
 
 Route::get('/events_whatsappbutton', 'Admin\EventsController@whatsappbutton')->name('events_whatsappbutton');
 
+// reume
+Route::get('resume','resume\ResumeController@create')->name('resume');
+Route::post('resume-store','resume\ResumeController@store')->name('resume-store');
+Route::post('/resumes/{id}/update', 'resume\ResumeController@update')->name('resume-update');
+Route::get('list_single_resume/{access_key}/{bb}','Api@list_single_resume')->name('list_single_resume');
+Route::get('update_resume_record/{resume_date}', 'Api@update_resume_record')->name('update_resume_record');
 
+
+Route::post('/submit-consultation-form', 'FrontEnd\HomeController@submitConsultationForm')->name('submit-consultation-form');
 //awais
 
 
@@ -55,7 +213,6 @@ Route::post('ajax-email-verification',['as'=>'ajaxEmailVefication','uses'=>'Admi
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/get/site-notification','FrontEnd\HomeController@site_notifications')->name('getSiteNotifications');
 Route::get('/', ['as'=>'homepage','uses'=>'FrontEnd\HomeController@index']);
-Route::get('/complaint', ['as'=>'complaint','uses'=>'FrontEnd\HomeController@complaintPage']);
 
 // Route::get('/discount-offer', ['as'=>'discountOffer','uses'=>'FrontEnd\HomeController@discountOfferPage'])->name('discount-offer');
 Route::post('send-offer',['as'=>'discountOffer','uses'=>'FrontEnd\HomeController@submitOffer']);
@@ -98,7 +255,7 @@ Route::get('/suggestion', 'FrontEnd\HomeController@suggestSearch');
 Route::get('get-courses', ['as' => 'getCourses', 'uses' => 'Admin\UniversityController@course']);
 Route::get('get-student-search', ['as' => 'getStudentSearch', 'uses' => 'Admin\CourseController@studentSearch']);
 Route::post('/getCoursesOfUniversity', 'Admin\UniversityController@getCourse');
-Route::post('/send-comment', ['as' => 'blog_comment', 'uses' => 'FrontEnd\HomeController@post_comment']);
+// Route::post('/send-comment', ['as' => 'blog_comment', 'uses' => 'FrontEnd\HomeController@post_comment']);
 Route::post('/get-selected-course', 'Admin\CourseController@selectedCourse');
 Route::post('/getCoursesOfUniversity', 'Admin\UniversityController@getCourse');
 Route::post('admin/ajax-popular-university', ['as'=>'ajaxPopularUniversity', 'uses'=>'Admin\UniversityController@popular']);
@@ -377,30 +534,83 @@ Route::middleware(['auth'])->group(function (){
 
 });
 
+
+Route::post('send-email','FrontEnd\CommentController@sendEmail')->name('send-email');
+
 Route::get('/{slug}', ['as'=>'dynamicPage','uses'=>'FrontEnd\HomeController@dynamicPage']);
     // Api
     
-    
-    Route::get('list_students/{id}','Api@index')->name('list_students');
-    Route::post('list_update_students','Api@list_update_students')->name('list_update_students');
-    Route::get('list_single_students/{aa}/{bb}','Api@list_single_students')->name('list_single_students');
-    Route::post('assign_students','Api@assign_students')->name('assign_students');
-    
-    Route::get('list_consultations/{aa}','Api@index_consultations')->name('list_consultations');
-    Route::post('assign_consultations','Api@assign_consultations')->name('assign_consultations');
-    Route::get('list_single_consultations/{aa}/{bb}','Api@list_single_consultations')->name('list_single_consultations');
-    Route::post('list_update_consultations','Api@list_update_consultations')->name('list_update_consultations');
-    Route::post('assign_complaints','Api@assign_complaints')->name('assign_complaints');
-    
-    Route::get('list_applynow/{aa}','Api@index_applynow')->name('list_applynow');
-    Route::get('list_single_applynow/{aa}/{bb}','Api@list_single_applynow')->name('list_single_applynow');
+        // test post api
     
     
-    Route::get('list_complaints/{id}/{location}','Api@list_complaints')->name('list_complaints');  
-    Route::get('list_discount_offer/{id}/{location}','Api@list_discount_offer')->name('list_discount_offer');  
-    Route::post('assign_discount_offer','Api@assign_discount_offer')->name('assign_discount_offer');
-    Route::get('showfeedback/{id}','Api@showfeedback')->name('showfeedback');
+    Route::post('testpostapi', 'Api@testpostapi')->name('testpostapi');
     
+
+    
+    Route::get('list_students/{access_key}','Api@index')->name('list_students');
+    Route::get('list_update_students/{student_data}','Api@list_update_students')->name('list_update_students');
+    Route::get('list_single_students/{access_key}/{bb}','Api@list_single_students')->name('list_single_students');
+    Route::get('assign_students/{access_key}','Api@assign_students')->name('assign_students');
+    
+    Route::get('list_consultations/{access_key}','Api@index_consultations')->name('list_consultations');
+    Route::get('assign_consultations/{access_key}','Api@assign_consultations')->name('assign_consultations');
+    Route::get('list_single_consultations/{access_key}/{bb}','Api@list_single_consultations')->name('list_single_consultations');
+    Route::get('list_update_consultations/{consultant_data}','Api@list_update_consultations')->name('list_update_consultations');
+    Route::get('assign_complaints/{access_key}','Api@assign_complaints')->name('assign_complaints');
+    
+    Route::get('list_applynow/{access_key}','Api@index_applynow')->name('list_applynow');
+    Route::get('list_single_applynow/{access_key}/{bb}','Api@list_single_applynow')->name('list_single_applynow');
+    
+    
+    Route::get('list_complaints/{access_key}/{location}','Api@list_complaints')->name('list_complaints');  
+    Route::get('website_list_complaints/{access_key}','Api@website_list_complaints')->name('website_list_complaints');  
+    Route::get('list_single_complaint/{access_key}/{bb}','Api@list_single_complaint')->name('list_single_complaint');
+    Route::get('list_update_complaint/{complaint_data}','Api@list_update_complaint')->name('list_update_complaint');
+    
+    
+    Route::get('list_discount_offer/{access_key}/{location}','Api@list_discount_offer')->name('list_discount_offer');  
+    Route::get('website_list_discount_offer/{access_key}','Api@website_list_discount_offer')->name('website_list_discount_offer');  
+    Route::get('assign_discount_offer/{access_key}','Api@assign_discount_offer')->name('assign_discount_offer');
+    Route::get('list_update_discount_offer/{consultant_data}','Api@list_update_discount_offer')->name('list_update_discount_offer');
+     Route::get('list_single_discount_offer/{access_key}/{bb}','Api@list_single_discount_offer')->name('list_single_discount_offer');
+    
+    Route::get('showfeedback/{access_key}','Api@showfeedback')->name('showfeedback');
+    Route::get('showfeedback/{access_key}','Api@showfeedback')->name('showfeedback');
+    Route::get('/online-consultants/{access_key}', 'Api@getOnlineConsultants');
+
+
+
+    Route::get('list_apply_online/{access_key}/{bb}','Api@list_apply_online')->name('list_apply_online');
+    Route::get('list_update_apply_online/{apply_online_data}','Api@list_update_apply_online')->name('list_update_apply_online');
+    Route::get('assign_apply_online/{access_key}','Api@assign_apply_online')->name('assign_apply_online');
+     Route::get('list_single_apply_online/{access_key}/{bb}','Api@list_single_apply_online')->name('list_single_apply_online');
+    Route::get('contact_us_messages/{access_key}','Api@index_contactUs_messages')->name('contact_us_messages');
+    Route::get('assign_messages/{access_key}','Api@assign_messages')->name('assign_messages');
+    Route::get('list_contactUs_messages/{access_key}','Api@index_contactUs_messages')->name('list_contactUs_messages');
+    Route::get('list_single_message/{access_key}/{bb}','Api@list_single_message')->name('list_single_message');
+    Route::get('list_update_message/{message_data}','Api@list_update_message')->name('list_update_message');
+
+    // Comment section start
+    Route::get('article_comments/{access_key}','Api@comments')->name('article_comments'); 
+    Route::get('update_comment_status/{access_key}', 'Api@update_comment_status')->name('update_comment_status');
+    Route::get('comment_reply/{access_key}', 'Api@comment_reply')->name('comment_reply');
+    Route::get('list_comments/{access_key}','Api@index_comments')->name('list_comments');
+    Route::get('comment_mail/{access_key}','Api@comment_mail')->name('comment_mail');
+    Route::get('comment_all_replies/{access_key}/{bb}','Api@comment_all_replies')->name('comment_all_replies');
+    Route::get('update_reply_status/{access_key}', 'Api@update_reply_status')->name('update_reply_status');
+    Route::post('/reply-update-status/{access_key}', 'Admin\ArticleCommentsController@replyUpdateStatus')->name('reply-update-status');
+    Route::get('send_emai_testing/{access_key}', 'Api@send_emai_testing')->name('send_emai_testing');
+
+    // Jobs Api Start
+    Route::get('job_list/{access_key}','Api@jobList')->name('job_list');
+    Route::get('job_all_applies/{access_key}/{bb}','Api@job_all_applies')->name('job_all_applies');
+    Route::get('update_job_status/{job_data}', 'Api@update_job_status')->name('update_job_status');
+    Route::post('add_job_post', 'Api@add_job_post')->name('add_job_post');
+    Route::get('list_single_job/{id}/{access_key}','Api@list_single_job')->name('list_single_job');  
+    Route::post('update_job_post', 'Api@update_job_post')->name('update_job_post');
     // Api End
+    
+    
+
 
 

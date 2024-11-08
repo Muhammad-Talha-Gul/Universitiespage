@@ -30,6 +30,7 @@ class Student extends Model
     	$detail->user_id = $id;
     	$detail->name = $data->first_name.' '.$data->last_name;
         $detail->nationality = $data->country;
+        $detail->city = $data->city;
         $detail->gender = $data->gender;
         $detail->prefered_program = $data->prefer;
     	$detail->save();

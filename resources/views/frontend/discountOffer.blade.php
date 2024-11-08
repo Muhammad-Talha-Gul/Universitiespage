@@ -59,11 +59,18 @@
                                             <label class="label-control label1">Email</label>
                                             <input type="email" class="form-control descount-input" required="" value="{{old('email')}}" name="email" autocomplete="Off" placeholder="Enter Your  Email">
                                         </div>
+                                        
+                                        <div class="form-group col-md-6 inputcol121">
+                                            <label class="label-control label1">City</label>
+                                            <input type="text" class="form-control descount-input" required value="{{old('city')}}" name="city" autocomplete="Off" placeholder="Enter Your  City">
+                                        </div>
+                                        
                                         <div class="form-group col-md-6 inputcol121">
                                             <label class="label-control label1">Office Location</label>
                                             <select class="form-control descount-input" name="location">
                                                 <option {{old('location')== 'lahore' ? 'selected' : '' }} value="lahore">Lahore</option>
                                                 <option {{old('location')== 'islamabad' ? 'selected' : '' }} value="islamabad">Islamabad</option>
+                                                <option {{old('location')== 'islamabad' ? 'selected' : '' }} value="islamabad">Karachi</option>
                                             </select>
                                             <!--<input type="number" class="form-control descount-input" required="" value="{{old('phone')}}" name="phone" autocomplete="Off">-->
                                         </div>

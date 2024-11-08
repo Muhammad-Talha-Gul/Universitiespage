@@ -77,3 +77,98 @@
 [29-Dec-2023 01:07:25 America/New_York] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 626
 [29-Dec-2023 01:07:25 America/New_York] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 925
 [29-Dec-2023 01:07:25 America/New_York] PHP Notice:  Trying to get property 'id' of non-object in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 925
+[20-Jul-2024 17:46:23 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[20-Jul-2024 17:46:23 UTC] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 142
+[20-Jul-2024 17:46:23 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[20-Jul-2024 17:46:23 UTC] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 143
+[20-Jul-2024 17:46:23 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[20-Jul-2024 19:11:07 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 142
+[20-Jul-2024 19:11:07 UTC] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 142
+[20-Jul-2024 19:11:07 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 143
+[20-Jul-2024 19:11:07 UTC] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 143
+[20-Jul-2024 19:11:07 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[20-Jul-2024 19:23:08 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 300
+[20-Jul-2024 19:23:08 UTC] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 300
+[20-Jul-2024 19:23:08 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 301
+[20-Jul-2024 19:23:08 UTC] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 301
+[20-Jul-2024 19:23:08 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[20-Jul-2024 19:23:08 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 419
+[20-Jul-2024 19:23:08 UTC] PHP Notice:  Trying to get property 'id' of non-object in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 419
+[20-Jul-2024 19:24:10 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[20-Jul-2024 20:28:30 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 58
+[20-Jul-2024 21:11:52 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 737
+[20-Jul-2024 21:11:52 UTC] PHP Notice:  Trying to get property 'sm_question' of non-object in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 737
+[20-Jul-2024 21:11:52 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 738
+[20-Jul-2024 21:11:52 UTC] PHP Notice:  Trying to get property 'sm_answer' of non-object in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 738
+[20-Jul-2024 21:11:52 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[20-Jul-2024 21:11:52 UTC] PHP Notice:  Undefined variable: data in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 1053
+[20-Jul-2024 21:11:52 UTC] PHP Notice:  Trying to get property 'id' of non-object in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 1053
+[22-Jul-2024 20:07:27 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 58
+[22-Jul-2024 20:19:43 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[24-Jul-2024 19:57:41 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 58
+[23-Aug-2024 21:52:40 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[20-Sep-2024 03:46:33 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[20-Sep-2024 05:16:37 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[20-Sep-2024 05:27:39 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[20-Sep-2024 05:44:29 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[20-Sep-2024 05:49:31 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[20-Sep-2024 06:11:35 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 58
+[22-Sep-2024 14:56:40 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 58
+[22-Sep-2024 17:04:44 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[22-Sep-2024 17:51:41 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[22-Sep-2024 17:55:42 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[22-Sep-2024 17:56:44 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[22-Sep-2024 18:30:46 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[10-Oct-2024 18:10:16 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[11-Oct-2024 14:52:25 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[11-Oct-2024 22:27:52 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[13-Oct-2024 20:30:59 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[14-Oct-2024 06:40:23 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[16-Oct-2024 07:16:06 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[16-Oct-2024 15:54:19 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[17-Oct-2024 03:43:32 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[18-Oct-2024 12:43:24 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[18-Oct-2024 13:22:23 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[20-Oct-2024 20:54:21 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[21-Oct-2024 11:45:20 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[22-Oct-2024 10:12:13 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[22-Oct-2024 21:38:32 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[23-Oct-2024 19:27:53 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[25-Oct-2024 01:14:24 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[25-Oct-2024 07:33:10 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[25-Oct-2024 19:11:26 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[25-Oct-2024 22:54:26 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[27-Oct-2024 03:55:27 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[27-Oct-2024 05:49:14 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[28-Oct-2024 00:56:59 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 58
+[28-Oct-2024 05:02:06 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[28-Oct-2024 08:08:59 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[28-Oct-2024 22:41:26 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[29-Oct-2024 03:42:25 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[30-Oct-2024 01:29:06 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[30-Oct-2024 13:47:28 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[30-Oct-2024 21:07:25 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 58
+[30-Oct-2024 23:52:24 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[31-Oct-2024 09:49:10 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[31-Oct-2024 10:01:59 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[03-Nov-2024 01:07:30 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[03-Nov-2024 10:25:33 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[03-Nov-2024 11:18:35 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[03-Nov-2024 19:11:59 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[03-Nov-2024 20:05:00 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[03-Nov-2024 23:28:25 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[04-Nov-2024 20:24:00 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 58
+[05-Nov-2024 12:11:06 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[05-Nov-2024 20:22:11 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[05-Nov-2024 22:53:47 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[05-Nov-2024 22:57:50 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[06-Nov-2024 11:09:03 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[06-Nov-2024 13:32:00 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[06-Nov-2024 14:21:02 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide-eee.blade.php on line 144
+[06-Nov-2024 14:23:02 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302
+[06-Nov-2024 16:47:17 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visa_information.blade.php on line 234
+[06-Nov-2024 20:45:18 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/university_detail.blade.php on line 739
+[07-Nov-2024 00:20:26 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[07-Nov-2024 09:07:19 UTC] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/universities/public_html/resources/views/frontend/visit_visa.blade.php on line 58
+[07-Nov-2024 12:36:06 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/guide.blade.php on line 144
+[08-Nov-2024 00:00:31 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/universities/public_html/resources/views/frontend/course_detail.blade.php on line 302

@@ -227,3 +227,11 @@
 [18-Dec-2023 19:07:43 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/BlogCategory.php on line 7
 [26-Dec-2023 04:57:35 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/ContactMails.php on line 7
 [08-Jan-2024 20:18:02 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/Guide.php on line 7
+[02-May-2024 17:46:56 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/Consultant.php on line 7
+[03-May-2024 01:24:11 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/Consultant.php on line 7
+[10-Oct-2024 23:44:53 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/Subject.php on line 7
+[12-Oct-2024 08:11:09 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/Subject.php on line 7
+[12-Oct-2024 13:36:35 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/Subject.php on line 7
+[14-Oct-2024 08:43:37 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/Subject.php on line 7
+[16-Oct-2024 08:30:07 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/Subject.php on line 7
+[17-Oct-2024 09:04:25 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/universities/public_html/app/Model/Subject.php on line 7

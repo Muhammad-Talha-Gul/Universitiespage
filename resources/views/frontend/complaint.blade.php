@@ -51,6 +51,7 @@
                                 <select class="form-control" name="location">
                                     <option {{old('location')== 'lahore' ? 'selected' : '' }} value="lahore">Lahore</option>
                                     <option {{old('location')== 'islamabad' ? 'selected' : '' }} value="islamabad">Islamabad</option>
+                                    <option {{old('location')== 'karachi' ? 'selected' : '' }} value="karachi">Karachi</option>
                                 </select>
                                 <!--<input type="number" class="form-control" required="" value="{{old('phone')}}" name="phone" autocomplete="Off">-->
                             </div>

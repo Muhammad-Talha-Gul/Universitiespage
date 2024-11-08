@@ -3,3 +3,4 @@
 [22-May-2023 01:45:20 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/universities/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
 [17-Sep-2023 19:34:59 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\TrimStrings' not found in /home/universities/public_html/app/Http/Middleware/TrimStrings.php on line 7
 [20-Sep-2023 14:02:11 America/New_York] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/universities/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[24-Aug-2024 10:52:57 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/universities/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7

@@ -6,7 +6,7 @@
             <div class="login-section-main">
                 <div class="formcol track-application-form-main auth-form-main">
                     <!-- consultant register start here -->
-                    <div class="registration-form" id="registerValidateConsult">
+                    <div class="registration-form" id="registerValidateConsult" >
                         <div div class="modal-heading-container">
                             <h2 class="user-modal-heading user-form-heading">Registration as Consultant</h2>
                         </div>
@@ -34,7 +34,7 @@
                                             </div>
                                         </div>
                                         <select name="employeeno" class="form-control" v-model="list.employeeno">
-                                            <option selected="" value="">--No Of Employees--</option>
+                                            <option selected="" disabled value="">--No Of Employees--</option>
 
                                             <option value="1-5">1-5</option>
                                             <option value="6-10">6-10</option>
@@ -55,8 +55,7 @@
                                             </div>
                                         </div>
                                         <select name="country" class="form-control w100p country-select">
-                                            <option selected="">--Nationality--</option>
-
+                                            <option selected="" disabled>--Nationality--</option>
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
                                             <option value="Algeria">Algeria</option>
@@ -330,7 +329,80 @@
                                                 <i class="fa fa-home"></i>
                                             </div>
                                         </div>
-                                        <input type="text" name="city" v-model="list.city" class="form-control" placeholder="city">
+                                         <select name="city"  v-model="list.city" class="form-control w100p city-select" required>
+                                            <option value="">--Select City--</option>
+                                            <option value="Karachi">Karachi</option>
+                                            <option value="Lahore">Lahore</option>
+                                            <option value="Islamabad">Islamabad</option>
+                                            <option value="Faisalabad">Faisalabad</option>
+                                            <option value="Rawalpindi">Rawalpindi</option>
+                                            <option value="Multan">Multan</option>
+                                            <option value="Peshawar">Peshawar</option>
+                                            <option value="Quetta">Quetta</option>
+                                            <option value="Sialkot">Sialkot</option>
+                                            <option value="Bahawalpur">Bahawalpur</option>
+                                            <option value="Gujranwala">Gujranwala</option>
+                                            <option value="Sargodha">Sargodha</option>
+                                            <option value="Hyderabad">Hyderabad</option>
+                                            <option value="Jhang">Jhang</option>
+                                            <option value="Dera Ghazi Khan">Dera Ghazi Khan</option>
+                                            <option value="Mardan">Mardan</option>
+                                            <option value="Chiniot">Chiniot</option>
+                                            <option value="Larkana">Larkana</option>
+                                            <option value="Muzaffarabad">Muzaffarabad</option>
+                                            <option value="Skardu">Skardu</option>
+                                            <option value="Gwadar">Gwadar</option>
+                                            <option value="Bannu">Bannu</option>
+                                            <option value="Khuzdar">Khuzdar</option>
+                                            <option value="Kasur">Kasur</option>
+                                            <option value="Jhelum">Jhelum</option>
+                                            <option value="Mianwali">Mianwali</option>
+                                            <option value="Sahiwal">Sahiwal</option>
+                                            <option value="Tando Adam">Tando Adam</option>
+                                            <option value="Tando Allahyar">Tando Allahyar</option>
+                                            <option value="Sukkur">Sukkur</option>
+                                            <option value="Chaman">Chaman</option>
+                                            <option value="Kohat">Kohat</option>
+                                            <option value="Dir">Dir</option>
+                                            <option value="Swat">Swat</option>
+                                            <option value="Pishin">Pishin</option>
+                                            <option value="Sadiqabad">Sadiqabad</option>
+                                            <option value="Dera Ismail Khan">Dera Ismail Khan</option>
+                                            <option value="Hafizabad">Hafizabad</option>
+                                            <option value="Pakpattan">Pakpattan</option>
+                                            <option value="Sheikhupura">Sheikhupura</option>
+                                            <option value="Mingora">Mingora</option>
+                                            <option value="Chiniot">Chiniot</option>
+                                            <option value="Jampur">Jampur</option>
+                                            <option value="Lodhran">Lodhran</option>
+                                            <option value="Khushab">Khushab</option>
+                                            <option value="Layyah">Layyah</option>
+                                            <option value="Mandi Bahauddin">Mandi Bahauddin</option>
+                                            <option value="Gujrat">Gujrat</option>
+                                            <option value="Chakwal">Chakwal</option>
+                                            <option value="Jaranwala">Jaranwala</option>
+                                            <option value="Sohawa">Sohawa</option>
+                                            <option value="Nowshera">Nowshera</option>
+                                            <option value="Shikarpur">Shikarpur</option>
+                                            <option value="Hangu">Hangu</option>
+                                            <option value="Bannu">Bannu</option>
+                                            <option value="Mirpurkhas">Mirpurkhas</option>
+                                            <option value="Chak Jhumra">Chak Jhumra</option>
+                                            <option value="Bhakkar">Bhakkar</option>
+                                            <option value="Patti">Patti</option>
+                                            <option value="Ghotki">Ghotki</option>
+                                            <option value="Kashmore">Kashmore</option>
+                                            <option value="Jacobabad">Jacobabad</option>
+                                            <option value="Kotli">Kotli</option>
+                                            <option value="Haveli">Haveli</option>
+                                            <option value="Malkwal">Malkwal</option>
+                                            <option value="Barkhan">Barkhan</option>
+                                            <option value="Mastung">Mastung</option>
+                                            <option value="Kalat">Kalat</option>
+                                            <option value="Loralai">Loralai</option>
+                                            <option value="Turbat">Turbat</option>
+                                            <option value="Zhob">Zhob</option>
+                                        </select>
                                         <div class="reg-error-msg" v-if="errors.city" v-for="error in errors.city">
                                             <span v-text="error"></span>
                                         </div>

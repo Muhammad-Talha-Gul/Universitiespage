@@ -37,6 +37,7 @@ use App\User;
 use DevDojo\Chatter\Models\Models;
 use App\Model\Review;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\Cache;
 //use Storage;
 
 function show_types() {
@@ -648,17 +649,64 @@ function createSiteMap(){
     fclose($f_robot);
 }
 
+// function getBlogs($paginate, $category){
+// 	if($paginate !== 0 && $category==null){
+// 		return Blog::where('is_active', 1)->where('is_featured',0)->with('category')->orderBy('sort_order', 'ASC')->paginate($paginate);
+// 	}elseif($paginate !== 0 && $category!==null){
+// 		return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->paginate($paginate);
+// 	}elseif($paginate == 0 && $category!==null){
+// 		return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->get();
+// 	}else{
+// 		return Blog::where('is_active', 1)->where('is_featured',0)->orderBy('sort_order', 'ASC')->with('category')->get();
+// 	}
+// }
+
+// function getBlogs($paginate, $category){
+//     if($paginate !== 0 && $category==null){
+//         return Blog::where('is_active', 1)->where('is_featured',0)->with('category')->orderBy('sort_order', 'ASC')->paginate($paginate + 1);
+//     } elseif($paginate !== 0 && $category!==null){
+//         return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->paginate($paginate + 1);
+//     } elseif($paginate == 0 && $category!==null){
+//         return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->get();
+//     } else {
+//         return Blog::where('is_active', 1)->where('is_featured',0)->orderBy('sort_order', 'ASC')->with('category')->get();
+//     }
+// }
+
 function getBlogs($paginate, $category){
-	if($paginate !== 0 && $category==null){
-		return Blog::where('is_active', 1)->where('is_featured',0)->with('category')->orderBy('sort_order', 'ASC')->paginate($paginate);
-	}elseif($paginate !== 0 && $category!==null){
-		return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->paginate($paginate);
-	}elseif($paginate == 0 && $category!==null){
-		return Blog::where('is_active', 1)->where('is_featured',0)->where('category_id', $category)->orderBy('sort_order', 'ASC')->with('category')->get();
-	}else{
-		return Blog::where('is_active', 1)->where('is_featured',0)->orderBy('sort_order', 'ASC')->with('category')->get();
-	}
+    if($paginate !== 0 && $category==null){
+        return Blog::where('is_active', 1)
+                   ->where('is_featured',0)
+                   ->with('category')
+                   ->orderBy('created_at', 'DESC') // Order by latest first
+                   ->orderBy('sort_order', 'ASC')
+                   ->paginate($paginate + 1);
+    } elseif($paginate !== 0 && $category!==null){
+        return Blog::where('is_active', 1)
+                   ->where('is_featured',0)
+                   ->where('category_id', $category)
+                   ->with('category')
+                   ->orderBy('created_at', 'DESC') // Order by latest first
+                   ->orderBy('sort_order', 'ASC')
+                   ->paginate($paginate + 1);
+    } elseif($paginate == 0 && $category!==null){
+        return Blog::where('is_active', 1)
+                   ->where('is_featured',0)
+                   ->where('category_id', $category)
+                   ->with('category')
+                   ->orderBy('created_at', 'DESC') // Order by latest first
+                   ->orderBy('sort_order', 'ASC')
+                   ->get();
+    } else {
+        return Blog::where('is_active', 1)
+                   ->where('is_featured',0)
+                   ->orderBy('created_at', 'DESC') // Order by latest first
+                   ->orderBy('sort_order', 'ASC')
+                   ->with('category')
+                   ->get();
+    }
 }
+
 
 function pluckBlog(){
 	return Blog::where('is_active',1)->orderBy('sort_order', 'ASC')->pluck('slug')->toArray();
@@ -680,8 +728,30 @@ function popularBlog(){
 	return Blog::where('is_active',1)->where('is_featured', 1)->orderBy('sort_order', 'DESC')->get();
 }
 
+// function latestBlog($take){
+// 	return Blog::where('is_active',1)->orderBy('created_at', 'DESC')->take($take)->get();
+// }
 function latestBlog($take){
-	return Blog::where('is_active',1)->orderBy('created_at', 'DESC')->take($take)->get();
+    // Define the cache key
+    $cacheKey = 'latest_blogs_' . $take;
+
+    // Check if data is already cached
+    if (Cache::has($cacheKey)) {
+        // If cached, retrieve data from cache
+        return Cache::get($cacheKey);
+    } else {
+        // If not cached, fetch data from database
+        $latestBlogs = Blog::where('is_active', 1)
+            ->orderBy('created_at', 'DESC')
+            ->take($take)
+            ->get();
+
+        // Store data in cache until 12:00 PM
+        Cache::put($cacheKey, $latestBlogs, now()->until(now()->midDay()));
+
+        // Return fetched data
+        return $latestBlogs;
+    }
 }
 
 function getPopularBlog($take){
@@ -921,7 +991,7 @@ function fix($file, $size=null){
 	$temp = implode("/", $sliced);
 	$ext = explode(".", end($thumb));
 	$ext = strtolower(end($ext));
-	if(!in_array($ext, ['jpg', 'png', 'jpeg','svg','gif','exif','bmp'])){
+	if(!in_array($ext, ['jpg', 'png', 'jpeg','svg','gif','exif','bmp', 'webp'])){
 		return $url;
 	}
 	if($size!==null){
@@ -955,5 +1025,270 @@ function pre_url($REFERER){
     return $path;
 }
 
+function returnCountiesArray(){
+	return $nationalities = [
+		"Afghanistan" => "Afghanistan",
+		"Albania" => "Albania",
+		"Algeria" => "Algeria",
+		"American Samoa" => "American Samoa",
+		"Andorra" => "Andorra",
+		"Angola" => "Angola",
+		"Anguilla" => "Anguilla",
+		"Antigua & Barbuda" => "Antigua & Barbuda",
+		"Argentina" => "Argentina",
+		"Armenia" => "Armenia",
+		"Aruba" => "Aruba",
+		"Australia" => "Australia",
+		"Austria" => "Austria",
+		"Azerbaijan" => "Azerbaijan",
+		"Bahamas" => "Bahamas",
+		"Bahrain" => "Bahrain",
+		"Bangladesh" => "Bangladesh",
+		"Barbados" => "Barbados",
+		"Belarus" => "Belarus",
+		"Belgium" => "Belgium",
+		"Belize" => "Belize",
+		"Benin" => "Benin",
+		"Bermuda" => "Bermuda",
+		"Bhutan" => "Bhutan",
+		"Bolivia" => "Bolivia",
+		"Bonaire" => "Bonaire",
+		"Bosnia & Herzegovina" => "Bosnia & Herzegovina",
+		"Botswana" => "Botswana",
+		"Brazil" => "Brazil",
+		"British Indian Ocean Ter" => "British Indian Ocean Ter",
+		"Brunei" => "Brunei",
+		"Bulgaria" => "Bulgaria",
+		"Burkina Faso" => "Burkina Faso",
+		"Burundi" => "Burundi",
+		"Cambodia" => "Cambodia",
+		"Cameroon" => "Cameroon",
+		"Canada" => "Canada",
+		"Canary Islands" => "Canary Islands",
+		"Cape Verde" => "Cape Verde",
+		"Cayman Islands" => "Cayman Islands",
+		"Central African Republic" => "Central African Republic",
+		"Chad" => "Chad",
+		"Channel Islands" => "Channel Islands",
+		"Chile" => "Chile",
+		"China" => "China",
+		"Christmas Island" => "Christmas Island",
+		"Cocos Island" => "Cocos Island",
+		"Colombia" => "Colombia",
+		"Comoros" => "Comoros",
+		"Congo" => "Congo",
+		"Cook Islands" => "Cook Islands",
+		"Costa Rica" => "Costa Rica",
+		"Cote DIvoire" => "Cote DIvoire",
+		"Croatia" => "Croatia",
+		"Cuba" => "Cuba",
+		"Curacao" => "Curacao",
+		"Cyprus" => "Cyprus",
+		"Czech Republic" => "Czech Republic",
+		"Denmark" => "Denmark",
+		"Djibouti" => "Djibouti",
+		"Dominica" => "Dominica",
+		"Dominican Republic" => "Dominican Republic",
+		"East Timor" => "East Timor",
+		"Ecuador" => "Ecuador",
+		"Egypt" => "Egypt",
+		"El Salvador" => "El Salvador",
+		"Equatorial Guinea" => "Equatorial Guinea",
+		"Eritrea" => "Eritrea",
+		"Estonia" => "Estonia",
+		"Ethiopia" => "Ethiopia",
+		"Falkland Islands" => "Falkland Islands",
+		"Faroe Islands" => "Faroe Islands",
+		"Fiji" => "Fiji",
+		"Finland" => "Finland",
+		"France" => "France",
+		"French Guiana" => "French Guiana",
+		"French Polynesia" => "French Polynesia",
+		"French Southern Ter" => "French Southern Ter",
+		"Gabon" => "Gabon",
+		"Gambia" => "Gambia",
+		"Georgia" => "Georgia",
+		"Germany" => "Germany",
+		"Ghana" => "Ghana",
+		"Gibraltar" => "Gibraltar",
+		"Great Britain" => "Great Britain",
+		"Greece" => "Greece",
+		"Greenland" => "Greenland",
+		"Grenada" => "Grenada",
+		"Guadeloupe" => "Guadeloupe",
+		"Guam" => "Guam",
+		"Guatemala" => "Guatemala",
+		"Guinea" => "Guinea",
+		"Guyana" => "Guyana",
+		"Haiti" => "Haiti",
+		"Hawaii" => "Hawaii",
+		"Honduras" => "Honduras",
+		"Hong Kong" => "Hong Kong",
+		"Hungary" => "Hungary",
+		"Iceland" => "Iceland",
+		"Indonesia" => "Indonesia",
+		"India" => "India",
+		"Iran" => "Iran",
+		"Iraq" => "Iraq",
+		"Ireland" => "Ireland",
+		"Isle of Man" => "Isle of Man",
+		"Israel" => "Israel",
+		"Italy" => "Italy",
+		"Jamaica" => "Jamaica",
+		"Japan" => "Japan",
+		"Jordan" => "Jordan",
+		"Kazakhstan" => "Kazakhstan",
+		"Kenya" => "Kenya",
+		"Kiribati" => "Kiribati",
+		"Korea North" => "Korea North",
+		"Korea South" => "Korea South",
+		"Kuwait" => "Kuwait",
+		"Kyrgyzstan" => "Kyrgyzstan",
+		"Laos" => "Laos",
+		"Latvia" => "Latvia",
+		"Lebanon" => "Lebanon",
+		"Lesotho" => "Lesotho",
+		"Liberia" => "Liberia",
+		"Libya" => "Libya",
+		"Liechtenstein" => "Liechtenstein",
+		"Lithuania" => "Lithuania",
+		"Luxembourg" => "Luxembourg",
+		"Macau" => "Macau",
+		"Macedonia" => "Macedonia",
+		"Madagascar" => "Madagascar",
+		"Malaysia" => "Malaysia",
+		"Malawi" => "Malawi",
+		"Maldives" => "Maldives",
+		"Mali" => "Mali",
+		"Malta" => "Malta",
+		"Marshall Islands" => "Marshall Islands",
+		"Martinique" => "Martinique",
+		"Mauritania" => "Mauritania",
+		"Mauritius" => "Mauritius",
+		"Mayotte" => "Mayotte",
+		"Mexico" => "Mexico",
+		"Midway Islands" => "Midway Islands",
+		"Moldova" => "Moldova",
+		"Monaco" => "Monaco",
+		"Mongolia" => "Mongolia",
+		"Montserrat" => "Montserrat",
+		"Morocco" => "Morocco",
+		"Mozambique" => "Mozambique",
+		"Myanmar" => "Myanmar",
+		"Nambia" => "Nambia",
+		"Nauru" => "Nauru",
+		"Nepal" => "Nepal",
+		"Netherland Antilles" => "Netherland Antilles",
+		"Netherlands" => "Netherlands (Holland, Europe)",
+		"Nevis" => "Nevis",
+		"New Caledonia" => "New Caledonia",
+		"New Zealand" => "New Zealand",
+		"Nicaragua" => "Nicaragua",
+		"Niger" => "Niger",
+		"Nigeria" => "Nigeria",
+		"Niue" => "Niue",
+		"Norfolk Island" => "Norfolk Island",
+		"Norway" => "Norway",
+		"Oman" => "Oman",
+		"Pakistan" => "Pakistan",
+		"Palau Island" => "Palau Island",
+		"Palestine" => "Palestine",
+		"Panama" => "Panama",
+		"Papua New Guinea" => "Papua New Guinea",
+		"Paraguay" => "Paraguay",
+		"Peru" => "Peru",
+		"Philippines" => "Philippines",
+		"Pitcairn Island" => "Pitcairn Island",
+		"Poland" => "Poland",
+		"Portugal" => "Portugal",
+		"Puerto Rico" => "Puerto Rico",
+		"Qatar" => "Qatar",
+		"Republic of Montenegro" => "Republic of Montenegro",
+		"Republic of Serbia" => "Republic of Serbia",
+		"Reunion" => "Reunion",
+		"Romania" => "Romania",
+		"Russia" => "Russia",
+		"Rwanda" => "Rwanda",
+		"St Barthelemy" => "St Barthelemy",
+		"St Eustatius" => "St Eustatius",
+		"St Helena" => "St Helena",
+		"St Kitts-Nevis" => "St Kitts-Nevis",
+		"St Lucia" => "St Lucia",
+		"St Maarten" => "St Maarten",
+		"St Pierre & Miquelon" => "St Pierre & Miquelon",
+		"St Vincent & Grenadines" => "St Vincent & Grenadines",
+		"Saipan" => "Saipan",
+		"Samoa" => "Samoa",
+		"Samoa American" => "Samoa American",
+		"San Marino" => "San Marino",
+		"Sao Tome & Principe" => "Sao Tome & Principe",
+		"Saudi Arabia" => "Saudi Arabia",
+		"Senegal" => "Senegal",
+		"Seychelles" => "Seychelles",
+		"Sierra Leone" => "Sierra Leone",
+		"Singapore" => "Singapore",
+		"Slovakia" => "Slovakia",
+		"Slovenia" => "Slovenia",
+		"Solomon Islands" => "Solomon Islands",
+		"Somalia" => "Somalia",
+		"South Africa" => "South Africa",
+		"Spain" => "Spain",
+		"Sri Lanka" => "Sri Lanka",
+		"Sudan" => "Sudan",
+		"Suriname" => "Suriname",
+		"Swaziland" => "Swaziland",
+		"Sweden" => "Sweden",
+		"Switzerland" => "Switzerland",
+		"Syria" => "Syria",
+		"Tahiti" => "Tahiti",
+		"Taiwan" => "Taiwan",
+		"Tajikistan" => "Tajikistan",
+		"Tanzania" => "Tanzania",
+		"Thailand" => "Thailand",
+		"Togo" => "Togo",
+		"Tokelau" => "Tokelau",
+		"Tonga" => "Tonga",
+		"Trinidad & Tobago" => "Trinidad & Tobago",
+		"Tunisia" => "Tunisia",
+		"Turkey" => "Turkey",
+		"Turkmenistan" => "Turkmenistan",
+		"Turks & Caicos Is" => "Turks & Caicos Is",
+		"Tuvalu" => "Tuvalu",
+		"Uganda" => "Uganda",
+		"Ukraine" => "Ukraine",
+		"United Arab Emirates" => "United Arab Emirates",
+		"United Kingdom" => "United Kingdom",
+		"United States of America" => "United States of America",
+		"Uruguay" => "Uruguay",
+		"Uzbekistan" => "Uzbekistan",
+		"Vanuatu" => "Vanuatu",
+		"Vatican City State" => "Vatican City State",
+		"Venezuela" => "Venezuela",
+		"Vietnam" => "Vietnam",
+		"Virgin Islands (Brit)" => "Virgin Islands (Brit)",
+		"Virgin Islands (USA)" => "Virgin Islands (USA)",
+		"Wake Island" => "Wake Island",
+		"Wallis & Futana Is" => "Wallis & Futana Is",
+		"Yemen" => "Yemen",
+		"Zaire" => "Zaire",
+		"Zambia" => "Zambia",
+		"Zimbabwe" => "Zimbabwe"
+	];
+	
+	
+}
+//  faizan
+
+function getBlogWithCategory($categoryId , $blogId){
+	return Blog::select('id' , 'slug' , 'image' , 'title' , 'short_description')->where('category_id' , $categoryId)->where('id', '<', $blogId)->orderBy('id' , 'desc')->limit(3)->get();
+}
+
+
+
+
+
+function getFirstBlogWithCategory($categoryId){
+	return Blog::select('id' , 'slug' , 'image' , 'title' , 'short_description')->where('category_id' , $categoryId)->limit(3)->get();
+}
 
 ?>

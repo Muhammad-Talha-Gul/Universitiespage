@@ -102,3 +102,11 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/universities/public_html/routes/channels.php on line 18
+[17-Jul-2024 06:00:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Broadcast' not found in /home/universities/public_html/routes/channels.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/channels.php on line 18
+[06-Oct-2024 08:56:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/universities/public_html/routes/api.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/universities/public_html/routes/api.php on line 18

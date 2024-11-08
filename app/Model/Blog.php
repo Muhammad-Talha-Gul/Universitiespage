@@ -20,6 +20,11 @@ class Blog extends Model
         return $data;
     }
 
+    public function comments()
+{
+    return $this->hasMany(Comment::class, 'article_id', 'id');
+}
+
     function user() {
         return $this->hasOne('App\User', 'id','user_id');
     }
@@ -28,9 +33,9 @@ class Blog extends Model
         return $this->hasOne('App\Model\BlogCategory', 'id','category_id');
     }
 
-    function comments() {
-        return $this->hasMany('App\Model\PostsComments', 'post_id');
-    }
+    // function comments() {
+    //     return $this->hasMany('App\Model\PostsComments', 'post_id');
+    // }
 
     public function approve_comments() {
         return $this->comments()->where('is_active','=', 1);
