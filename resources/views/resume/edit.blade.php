@@ -159,6 +159,11 @@
             margin-bottom: 10px !important;
 
         }
+        .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #0b6d76;
+    background-color: #0b6d76;
+}
 
         @media (min-width: 320px) and (max-width: 767px) {
             .content-auth {
@@ -801,6 +806,12 @@
 .cv-container::after {
     right: 0; 
 } */
+
+.invisible-select{
+    height:0px;
+    width:0px;
+    opacity:0;
+}
                     </style>
 
                     <div class="cv-container" id="cvContainer">
@@ -1686,7 +1697,7 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                                                     data-current_count="{{ $count }}"
                                                     {{ $education->education_present == 1 ? 'checked' : '' }}>
                                                 <label class="custom-control-label"
-                                                    for="current-education-present-button{{ $count }}">Present</label>
+                                                    for="current-education-present-button{{ $count }}">Currently Studying</label>
                                             </div>
                                         </div>
                                         <!-- <div class="col-sm-12 mb-4">
@@ -1696,17 +1707,7 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                             </div>
                           </div> -->
 
-                                        <div class="col-sm-12 mb-4">
-                                            <div class="input-group">
-                                                <label for="" class="resume-form-label">Details</label>
-                                                <textarea class="form-control" name="education_details[]" cols="12" rows="5" id=""
-                                                    placeholder="Enter Education Details">{{ $education->details }}</textarea>
-                                                <div class="reg-error-msg" v-if="errors.country"
-                                                    v-for="error in errors.country">
-                                                    <span v-text="error"></span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 @endforeach
                                 <div class="education-append_container">
@@ -1722,16 +1723,14 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
 
 
 
-
-
-
-
                             <!-- experience details start -->
                             <div class="cv-block">
                                 <div class="col-sm-12">
                                     <h4 class="tx-color-01 mg-b-5 mb-4 text-center">Experience Details</h4>
                                 </div>
                                 @php $count = 0; @endphp
+                                @if(!empty($resumeDetails->experience_details[0]->position) || !empty($resumeDetails->experience_details[0]->employer))
+
                                 @foreach ($resumeDetails->experience_details as $index => $experience)
                                     @php ++$count; @endphp
                                     <div class="row education-section" id="experience-row{{ $count }}">
@@ -1882,6 +1881,9 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                                         </div>
                                     </div>
                                 @endforeach
+                                @else
+                                <p class="text-center my-5">click add button to add the record </p>
+                                @endif
 
 
 
@@ -1994,6 +1996,9 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                                                         class="form-control w100p language-professionalism"
                                                         id="language-professionalism">
                                                         <option value="">--Select Language Type--</option>
+                                                        <option value="English Proficiency Certificate"
+                                                            {{ $resumeDetails->languages[0]->cirtificate_type == 'English Proficiency Certificate' ? 'selected' : '' }}>
+                                                            English Proficiency Certificate</option>
                                                         <option value="IELTS"
                                                             {{ $resumeDetails->languages[0]->cirtificate_type == 'IELTS' ? 'selected' : '' }}>
                                                             IELTS</option>
@@ -2020,49 +2025,113 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                                             </div>
                                             <div class="col-sm-12 mb-3">
                                                 <div class="row" id="proficiency-container">
-                                                    @php
-                                                        $proficiencies = [
-                                                            'listening',
-                                                            'reading',
-                                                            'spoken_interaction',
-                                                            'spoken_production',
-                                                            'writing',
-                                                        ];
-                                                        $levels = [
-                                                            'IELTS' => [
-                                                                ['level' => 'B2', 'score' => '5.5-6.5'],
-                                                                ['level' => 'C1', 'score' => '7.0-8.0'],
-                                                                ['level' => 'C2', 'score' => '8.5-9.0'],
+                                                @php
+                                                $proficiencies = [
+                                                    'listening',
+                                                    'reading',
+                                                    'speaking',
+                                                    'writing',
+                                                    'overall'
+                                                ];
+                                                $levels = [
+                                                    'IELTS' => [
+                                                        ['level' => 'A0', 'score' => '1.0'],
+                                                        ['level' => 'A1', 'score' => '2.0-2.5'],
+                                                        ['level' => 'A2', 'score' => '3.0-3.5'],
+                                                        ['level' => 'B1', 'score' => '4.0-5.0'],
+                                                        ['level' => 'B2', 'score' => '5.5-6.5'],
+                                                        ['level' => 'C1', 'score' => '7.0-8.0'],
+                                                        ['level' => 'C2', 'score' => '8.5-9.0'],
+                                                    ],
+                                                    'PTE' => [
+                                                        ['level' => 'A1', 'score' => '10-29'],
+                                                        ['level' => 'A2', 'score' => '30-42'],
+                                                        ['level' => 'B1', 'score' => '43-58'],
+                                                        ['level' => 'B2', 'score' => '59-75'],
+                                                        ['level' => 'C1', 'score' => '76-84'],
+                                                        ['level' => 'C2', 'score' => '85-90'],
+                                                    ],
+                                                    'TOEFL iBT' => [
+                                                        'main' => [
+                                                            ['level' => 'A1', 'score' => '0-39'],
+                                                            ['level' => 'A2', 'score' => '40-56'],
+                                                            ['level' => 'B1', 'score' => '57-86'],
+                                                            ['level' => 'B2', 'score' => '87-109'],
+                                                            ['level' => 'C1', 'score' => '110-120'],
+                                                        ],
+                                                        'subTables' => [
+                                                            'Reading' => [
+                                                                ['level' => 'A2', 'score' => '0-3'],
+                                                                ['level' => 'B1', 'score' => '4-17'],
+                                                                ['level' => 'B2', 'score' => '18-23'],
+                                                                ['level' => 'C1', 'score' => '24-30'],
                                                             ],
-                                                            'PTE' => [
-                                                                ['level' => 'B2', 'score' => '59-75'],
-                                                                ['level' => 'C1', 'score' => '76-84'],
-                                                                ['level' => 'C2', 'score' => '85-90'],
+                                                            'Listening' => [
+                                                                ['level' => 'A2', 'score' => '0-8'],
+                                                                ['level' => 'B1', 'score' => '9-16'],
+                                                                ['level' => 'B2', 'score' => '17-21'],
+                                                                ['level' => 'C1', 'score' => '22-30'],
                                                             ],
-                                                            'TOEFL iBT' => [
-                                                                ['level' => 'B2', 'score' => '87-109'],
-                                                                ['level' => 'C1', 'score' => '110-120'],
+                                                            'Speaking' => [
+                                                                ['level' => 'A1', 'score' => '0-9'],
+                                                                ['level' => 'A2', 'score' => '10-15'],
+                                                                ['level' => 'B1', 'score' => '16-19'],
+                                                                ['level' => 'B2', 'score' => '20-24'],
+                                                                ['level' => 'C1', 'score' => '25-30'],
                                                             ],
-                                                            'TOEFL CBT' => [
-                                                                ['level' => 'B2', 'score' => '227-269'],
-                                                                ['level' => 'C1', 'score' => '270-300'],
+                                                            'Writing' => [
+                                                                ['level' => 'A1', 'score' => '0-6'],
+                                                                ['level' => 'A2', 'score' => '7-12'],
+                                                                ['level' => 'B1', 'score' => '13-16'],
+                                                                ['level' => 'B2', 'score' => '17-23'],
+                                                                ['level' => 'C1', 'score' => '24-30'],
                                                             ],
-                                                            'TOEFL PBT' => [
-                                                                ['level' => 'B2', 'score' => '567-636'],
-                                                                ['level' => 'C1', 'score' => '637-677'],
-                                                            ],
-                                                            'Duolingo' => [
-                                                                ['level' => 'B2', 'score' => '95-125'],
-                                                                ['level' => 'C1', 'score' => '130-155'],
-                                                                ['level' => 'C2', 'score' => '160'],
-                                                            ],
-                                                            'Language Cert International ESOL' => [
-                                                                ['level' => 'C2', 'score' => 'Mastery'],
-                                                                ['level' => 'C1', 'score' => 'Expert'],
-                                                                ['level' => 'B2', 'score' => 'Communicator'],
-                                                            ],
-                                                        ];
-                                                    @endphp
+                                                        ],
+                                                    ],
+                                                    'TOEFL CBT' => [
+                                                        ['level' => 'A1', 'score' => '0-119'],
+                                                        ['level' => 'A2', 'score' => '120-162'],
+                                                        ['level' => 'B1', 'score' => '163-226'],
+                                                        ['level' => 'B2', 'score' => '227-269'],
+                                                        ['level' => 'C1', 'score' => '270-300'],
+                                                    ],
+                                                    'TOEFL PBT' => [
+                                                        ['level' => 'A1', 'score' => '310-432'],
+                                                        ['level' => 'A2', 'score' => '433-486'],
+                                                        ['level' => 'B1', 'score' => '487-566'],
+                                                        ['level' => 'B2', 'score' => '567-636'],
+                                                        ['level' => 'C1', 'score' => '637-677'],
+                                                    ],
+                                                    'Duolingo' => [
+                                                        ['level' => 'B1', 'score' => '10-90'],
+                                                        ['level' => 'B2', 'score' => '95-125'],
+                                                        ['level' => 'C1', 'score' => '130-155'],
+                                                        ['level' => 'C2', 'score' => '160'],
+                                                    ],
+                                                    'Language Cert International ESOL' => [
+                                                        ['level' => 'A1', 'score' => 'A1 Preliminary'],
+                                                        ['level' => 'A2', 'score' => 'A2 Access'],
+                                                        ['level' => 'B1', 'score' => 'B1 Achiever'],
+                                                        ['level' => 'B2', 'score' => 'B2 Communicator'],
+                                                        ['level' => 'C1', 'score' => 'C1 Expert'],
+                                                        ['level' => 'C2', 'score' => 'C2 Mastery'],
+                                                    ],
+                                                    'Cambridge English Test' => [
+                                                        ['level' => 'A1', 'score' => '100-119'],
+                                                        ['level' => 'A2', 'score' => '120-139'],
+                                                        ['level' => 'B1', 'score' => '140-159'],
+                                                        ['level' => 'B2', 'score' => '160-179'],
+                                                        ['level' => 'C1', 'score' => '180-199'],
+                                                        ['level' => 'C2', 'score' => '200-230'],
+                                                    ],
+                                                    'English Proficiency Certificate' => [
+                                                        ['level' => 'B2', 'score' => '162-176'],
+                                                        ['level' => 'C1', 'score' => '185-200'],
+                                                        ['level' => 'C2', 'score' => '205-209+'],
+                                                    ],
+                                                ];
+                                                @endphp
+
 
                                                     {{-- {{ dd(isset($language)) }} --}}
 
@@ -2332,7 +2401,7 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
 
 
                                 <div class="experience-append_container">
-                                    <div class="row experience-section mt-5" id="appended-award-section">
+                                    <div class="mt-5" id="appended-award-section">
                                         <!-- experience form fields here as provided in your original code -->
                                     </div>
                                 </div>
@@ -2466,64 +2535,80 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
     <script src="//http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("language-professionalism").addEventListener("change", function() {
-                const selectedValue = this.value;
-                const proficiencyLevels = {
-                    "IELTS": [{
-                            level: "B2",
-                            score: "5.5-6.5"
-                        },
-                        {
-                            level: "C1",
-                            score: "7.0-8.0"
-                        },
-                        {
-                            level: "C2",
-                            score: "8.5-9.0"
-                        }
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("language-professionalism").addEventListener("change", function() {
+        const selectedValue = this.value;
+        const proficiencyContainer = document.getElementById("proficiency-container");
+        proficiencyContainer.innerHTML = ""; // Clear previous content
+
+        const proficiencyLevels = {
+            "IELTS": [
+                { level: "A0", score: "1.0" },
+                { level: "A1", score: "2.0-2.5" },
+                { level: "A2", score: "3.0-3.5" },
+                { level: "B1", score: "4.0-5.0" },
+                { level: "B2", score: "5.5-6.5" },
+                { level: "C1", score: "7.0-8.0" },
+                { level: "C2", score: "8.5-9.0" }
+            ],
+            "PTE": [
+                        // {
+                        //         level: "A0",
+                        //         score: "59-75"
+                        //     },
+                            {
+                                level: "A1",
+                                score: "10-29"
+                            },
+                            {
+                                level: "A2",
+                                score: "30-42"
+                            },
+                            {
+                                level: "B1",
+                                score: "43-58"
+                            },
+                            {
+                                level: "B2",
+                                score: "59-75"
+                            },
+                            {
+                                level: "C1",
+                                score: "76-84"
+                            },
+                            {
+                                level: "C2",
+                                score: "85-90"
+                            }
                     ],
-                    "PTE": [{
-                            level: "B2",
-                            score: "59-75"
-                        },
-                        {
-                            level: "C1",
-                            score: "76-84"
-                        },
-                        {
-                            level: "C2",
-                            score: "85-90"
-                        }
+
+                    "TOEFL CBT": [ {
+                                level: "A1",
+                                score: "0-119"
+                            },
+                            {
+                                level: "A2",
+                                score: "120-162"
+                            },
+                            {
+                                level: "B1",
+                                score: "163-226"
+                            },
+                            {
+                                level: "B2",
+                                score: "227-269"
+                            },
+                            {
+                                level: "C1",
+                                score: "270-300"
+                            }
                     ],
-                    "TOEFL iBT": [{
-                            level: "B2",
-                            score: "87-109"
+                    "Duolingo": [ {
+                            level: "B1",
+                            score: "10-90"
                         },
                         {
-                            level: "C1",
-                            score: "110-120"
-                        }
-                    ],
-                    "TOEFL CBT": [{
-                            level: "B2",
-                            score: "227-269"
-                        },
-                        {
-                            level: "C1",
-                            score: "270-300"
-                        }
-                    ],
-                    "TOEFL PBT": [{
-                            level: "B2",
-                            score: "567-636"
-                        },
-                        {
-                            level: "C1",
-                            score: "637-677"
-                        }
-                    ],
-                    "Duolingo": [{
                             level: "B2",
                             score: "95-125"
                         },
@@ -2536,21 +2621,79 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                             score: "160"
                         }
                     ],
-                    "Language Cert International ESOL": [{
-                            level: "C2",
-                            score: "Mastery"
+                    "Language Cert International ESOL": [ {
+                            level: "A1",
+                            score: "A1 Preliminary"
+                        },
+                        {
+                            level: "A2",
+                            score: "A2 Access"
+                        },
+                        {
+                            level: "B1",
+                            score: "B1 Achiever"
+                        },
+                        {
+                            level: "B2",
+                            score: "B2 Communicator"
                         },
                         {
                             level: "C1",
-                            score: "Expert"
+                            score: "C1 Expert"
+                        },
+                        {
+                            level: "C2",
+                            score: "C2 Mastery"
+                        }
+                    ],
+                    "Cambridge English Test": [ {
+                        level: "A1",
+                        score: "100-119"
+                    },
+                    {
+                        level: "A2",
+                        score: "120-139"
+                    },
+                    {
+                        level: "B1",
+                        score: "140-159"
+                    },
+                    {
+                        level: "B2",
+                        score: "160-179"
+                    },
+                    {
+                        level: "C1",
+                        score: "180-199"
+                    },
+                    {
+                        level: "C2",
+                        score: "200-230"
+                    }
+                    ],
+                    "TOEFL PBT": [ {
+                            level: "A1",
+                            score: "310-432"
+                        },
+                        {
+                            level: "A2",
+                            score: "433-486"
+                        },
+                        {
+                            level: "B1",
+                            score: "487-566"
                         },
                         {
                             level: "B2",
-                            score: "Communicator"
+                            score: "567-636"
+                        },
+                        {
+                            level: "C1",
+                            score: "637-677"
                         }
                     ],
-                    "Cambridge English Test": [{
-                            level: "B2",
+                    "English Proficiency Certificate": [{
+                        level: "B2",
                             score: "162-176"
                         },
                         {
@@ -2561,56 +2704,162 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                             level: "C2",
                             score: "205-209+"
                         }
+                    ],
+            
+            "TOEFL iBT": {
+                main: [
+                    { level: "A1", score: "0-39" },
+                    { level: "A2", score: "40-56" },
+                    { level: "B1", score: "57-86" },
+                    { level: "B2", score: "87-109" },
+                    { level: "C1", score: "110-120" }
+                ],
+                subTables: {
+                    "Reading": [
+                        { level: "A2", score: "0-3" },
+                        { level: "B1", score: "4-17" },
+                        { level: "B2", score: "18-23" },
+                        { level: "C1", score: "24-30" }
+                    ],
+                    "Listening": [
+                        { level: "A2", score: "0-8" },
+                        { level: "B1", score: "9-16" },
+                        { level: "B2", score: "17-21" },
+                        { level: "C1", score: "22-30" }
+                    ],
+                    "Speaking": [
+                        { level: "A1", score: "0-9" },
+                        { level: "A2", score: "10-15" },
+                        { level: "B1", score: "16-19" },
+                        { level: "B2", score: "20-24" },
+                        { level: "C1", score: "25-30" }
+                    ],
+                    "Writing": [
+                        { level: "A1", score: "0-6" },
+                        { level: "A2", score: "7-12" },
+                        { level: "B1", score: "13-16" },
+                        { level: "B2", score: "17-23" },
+                        { level: "C1", score: "24-30" }
                     ]
-                };
-
-                const proficiencyContainer = document.getElementById("proficiency-container");
-                proficiencyContainer.innerHTML = ""; // Clear previous content
-
-                if (selectedValue && proficiencyLevels[selectedValue]) {
-                    proficiencyContainer.style.display = "flex";
-
-                    // Create a row for each skill
-                    const skills = ["Listening", "Reading", "Spoken Interaction", "Spoken Production",
-                        "Writing", "Overall"
-                    ];
-
-                    skills.forEach(skill => {
-                        const div = document.createElement("div");
-                        div.className = "col-sm-6 mb-3";
-
-                        const select = document.createElement("select");
-                        select.className =
-                            `language_${skill.toLowerCase().replace(" ", "_")} form-control`;
-                        select.name =
-                            `language_${skill.toLowerCase().replace(" ", "_")}[]`; // Add name attribute
-
-                        // Add default option
-                        const defaultOption = document.createElement("option");
-                        defaultOption.value = "";
-                        defaultOption.textContent = "Select Level"; // Default option text
-                        select.appendChild(defaultOption);
-
-                        // Populate the select with options
-                        proficiencyLevels[selectedValue].forEach(level => {
-                            const option = document.createElement("option");
-                            option.value = level.level;
-                            option.textContent = `${level.level} (${level.score})`;
-                            select.appendChild(option);
-                        });
-
-                        div.innerHTML = `<label class="resume-form-label">${skill}</label>`;
-                        div.appendChild(select);
-                        proficiencyContainer.appendChild(
-                            div); // Append the skill select to the container
-                    });
-                } else {
-                    proficiencyContainer.style.display = "none";
+                   
                 }
-            });
+            }
+        };
+
+        if (selectedValue && proficiencyLevels[selectedValue]) {
+            proficiencyContainer.style.display = "flex";
+
+            // If TOEFL iBT is selected, handle main levels and sub-tables separately
+           if (selectedValue === "TOEFL iBT") {
+    // Sub-tables for TOEFL iBT (Reading, Listening, Speaking, Writing)
+    for (const [subTableName, subTableLevels] of Object.entries(proficiencyLevels["TOEFL iBT"].subTables)) {
+        const subTableDiv = document.createElement("div");
+        subTableDiv.className = "col-sm-6 mb-3 select-container-main";
+        subTableDiv.innerHTML = `<label class="resume-form-label">TOEFL iBT - ${subTableName}</label>`;
+
+        const subTableSelect = document.createElement("select");
+        subTableSelect.className = "form-control certificate-select";
+        subTableSelect.name = `language_${subTableName.toLowerCase()}[]`;
+
+        const defaultSubOption = document.createElement("option");
+        defaultSubOption.value = "";
+        defaultSubOption.textContent = "Select Level";
+        subTableSelect.appendChild(defaultSubOption);
+
+        subTableLevels.forEach(level => {
+            const option = document.createElement("option");
+            option.value = level.level;
+            option.textContent = `${level.level} (${level.score})`;
+            subTableSelect.appendChild(option);
         });
 
+        subTableDiv.appendChild(subTableSelect);
+        proficiencyContainer.appendChild(subTableDiv);
+    }
+
+    // Main TOEFL iBT Scores (Overall)
+    const mainDiv = document.createElement("div");
+    mainDiv.className = "col-sm-6 mb-3 select-container-main";
+    mainDiv.innerHTML = `<label class="resume-form-label">TOEFL iBT - Overall</label>`;
+
+    const mainSelect = document.createElement("select");
+    mainSelect.className = "form-control certificate-select";
+    mainSelect.name = "language_overall[]";
+
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.textContent = "Select Level";
+    mainSelect.appendChild(defaultOption);
+
+    proficiencyLevels["TOEFL iBT"].main.forEach(level => {
+        const option = document.createElement("option");
+        option.value = level.level;
+        option.textContent = `${level.level} (${level.score})`;
+        mainSelect.appendChild(option);
+    });
+
+    mainDiv.appendChild(mainSelect);
+    proficiencyContainer.appendChild(mainDiv);
+}
+ else {
+                // For other language tests, display general proficiency levels
+                const skills = ["Listening", "Reading", "Speaking", "Writing", "Overall"];
+                skills.forEach(skill => {
+                    const div = document.createElement("div");
+                    div.className = "col-sm-6 mb-3 select-container-main";
+
+                    const select = document.createElement("select");
+                    select.className = `language_${skill.toLowerCase().replace(" ", "_")} form-control certificate-select`;
+                    select.name = `language_${skill.toLowerCase().replace(" ", "_")}[]`;
+
+                    const defaultOption = document.createElement("option");
+                    defaultOption.value = "";
+                    defaultOption.textContent = "Select Level";
+                    select.appendChild(defaultOption);
+
+                    proficiencyLevels[selectedValue].forEach(level => {
+                        const option = document.createElement("option");
+                        option.value = level.level;
+                        option.textContent = `${level.level} (${level.score})`;
+                        select.appendChild(option);
+                    });
+
+                    div.innerHTML = `<label class="resume-form-label">${skill}</label>`;
+                    div.appendChild(select);
+                    proficiencyContainer.appendChild(div);
+                });
+            }
+        } else {
+            proficiencyContainer.style.display = "none";
+        }
+    });
+});
+
+        
         $(document).ready(function() {
+
+            $('#language-professionalism').change(function() {
+    var selectedValue = $(this).val();
+    var certificateSelect = $('.certificate-select');
+    var selectContainerMain = $('.select-container-main');
+    if (selectedValue === 'English Proficiency Certificate') {
+        // Prevent changes to the select, simulating "readonly"
+        certificateSelect.val('B2'); // Set the value to "B2"
+        selectContainerMain.addClass('invisible-select');
+        certificateSelect.prop('readonly', true); // Mark the element as readonly-like
+        certificateSelect.on('mousedown', function(e) {
+            e.preventDefault(); // Prevent selection change on click
+        });
+    } else {
+        // Enable selection and remove readonly-like behavior
+        certificateSelect.prop('readonly', false); // Remove readonly-like behavior
+        certificateSelect.off('mousedown'); // Allow selection change
+        selectContainerMain.removeClass('invisible-select');
+        certificateSelect.val(''); // Reset the select value
+    }
+});
+
+
             function readURL(input) {
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
@@ -3003,23 +3252,23 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
              <div class="col-sm-12 my-3">
                                     <div class="custom-control custom-switch">
                                         <input type="checkbox" class="custom-control-input current-education-present-button" id="current-education-present-button${currentCount}" data-current_count="${currentCount}">
-                                        <label class="custom-control-label" for="current-education-present-button${currentCount}">Present</label>
+                                        <label class="custom-control-label" for="current-education-present-button${currentCount}">Currently Studying</label>
                                     </div>
                               </div>
+
+                              <div class="col-sm-12 mb-3">
+                                <button type="button" class="btn-danger delete-education-row" data-row-id="education-row${currentCount}">Delete</button>
+                            </div>
           
-                              <div class="col-sm-12 mb-4">
-                                <div class="input-group">
-                                  <label for="" class="resume-form-label"> EducationDetails</label>
-                                  <textarea class="form-control" name="education_details[]" cols="12" rows="5" id="" placeholder="Enter Education Details"></textarea>
-                                  <div class="reg-error-msg" v-if="errors.country" v-for="error in errors.country">
-                                    <span v-text="error"></span>
-                                  </div>
-                                </div>
-                              </div>
+                             
         </div>`;
 
                 // Append the new education section to the container
                 $('.education-append_container').append(newEducationSection);
+                $('.delete-education-row').off('click').on('click', function() {
+                    var rowId = $(this).data('row-id');  // Get the ID of the row to delete
+                    $('#' + rowId).remove();  // Remove the row
+                });
             });
 
 
@@ -3384,26 +3633,25 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                                         <label class="custom-control-label" for="current-experience-present-button${currentCount}">Present</label>
                                     </div>
                               </div>
-                              <div class="col-sm-12 mb-4">
-                                <div class="input-group">
-                                  <label for="" class="resume-form-label">Experience Details</label>
-                                  <textarea class="form-control" name="experience_details[]" cols="12" rows="5" id="" placeholder="Enter Experience Details"></textarea>
-                                  <div class="reg-error-msg" v-if="errors.country" v-for="error in errors.country">
-                                    <span v-text="error"></span>
-                                  </div>
-                                </div>
-                              </div>
+                               <!-- Add delete button for the row -->
+                            <div class="col-sm-12 mb-3">
+                                <button type="button" class="btn-danger delete-experience-row" data-row-id="experience-row${currentCount}">Delete</button>
+                            </div>
                           </div>`;
 
                 // Append the new education section to the container
                 $('#experience-append_container').append(newExperienceSection);
+                $('.delete-experience-row').off('click').on('click', function() {
+                    var rowId = $(this).data('row-id');  // Get the ID of the row to delete
+                    $('#' + rowId).remove();  // Remove the row
+                });
             });
 
 
             $('#addMoreskills').click(function() {
-                // Define the HTML content for the new education section
+                var timestamp = new Date().getTime();
                 var newskillsSection = `                
-                          <div class="row skills-section my-2 py-2">
+                          <div class="row skills-section my-2 py-2" id="skills-section-${timestamp}">
                              <div class="col-sm-6 mb-3">
                                 <div class="input-group">
                                   <label for="" class="resume-form-label">Skill Name</label>
@@ -3417,7 +3665,7 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                             </div>
                             <div class="col-sm-6 mb-3">
                                 <div class="input-group">
-                                  <label for="" class="resume-form-label">Skill Perfoessionalim</label>
+                                  <label for="" class="resume-form-label">Skill Lavel</label>
                                   <div class="input-group-prepend">
                                     <div class="input-group-text input-icon student-login-icon">
                                         <i class="fa fa-star"></i>
@@ -3430,16 +3678,23 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                                   </select>
                                 </div>
                             </div>
+                             <div class="col-sm-12 mb-3">
+                                    <button type="button" class="btn-danger delete-skill" data-skill-id="skills-section-${timestamp}">Delete</button>
+                                </div>
                          </div>`;
 
                 // Append the new education section to the container
                 $('#skills-append_container').append(newskillsSection);
+                $('.delete-skill').off('click').on('click', function() {
+                    var skillId = $(this).data('skill-id'); // Get the ID of the skills section to delete
+                    $('#' + skillId).remove(); // Remove the skills section
+                });
             });
 
             $('#addMorelanguages').click(function() {
-                // Define the HTML content for the new education section
+                var timestamp = new Date().getTime();
                 var newlanguagesSection = `                   
-        <div class="row languages-section my-2 py-2">
+        <div class="row languages-section my-2 py-2" id="language-section-${timestamp}">
             <div class="col-sm-6 mb-3">
                 <div class="input-group">
                     <label for="" class="resume-form-label">Language Name</label>
@@ -3453,7 +3708,7 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
             </div>
             <div class="col-sm-6 mb-3">
                 <div class="input-group">
-                    <label for="" class="resume-form-label">Language Proficiency</label>
+                    <label for="" class="resume-form-label">Language Lanvel</label>
                     <div class="input-group-prepend">
                         <div class="input-group-text input-icon student-login-icon">
                             <i class="fa fa-star"></i>
@@ -3466,6 +3721,10 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                     </select>
                 </div>
             </div>
+
+              <div class="col-sm-12 mb-3">
+                        <button type="button" class="btn-danger delete-language" data-language-id="language-section-${timestamp}">Delete</button>
+                       </div>
            
            
               </div>
@@ -3473,6 +3732,10 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
 
                 // Append the new education section to the container
                 $('#languages-append_container').append(newlanguagesSection);
+                $('.delete-language').off('click').on('click', function() {
+                    var languageId = $(this).data('language-id'); // Get the ID of the skills section to delete
+                    $('#' + languageId).remove(); // Remove the skills section
+                });
             });
 
 
@@ -3483,21 +3746,21 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
             //  ==============================================================
 
             $('#add-more-driving-licence').click(function() {
-                // Define the HTML content for the new language section
+                var timestamp = new Date().getTime();
                 var newlanguagesSection = `
   
   
-                      
-                        <div class="col-sm-6 mb-3">
-                          <div class="input-group">
-                            <label for="" class="resume-form-label">Select Licence Cateogory</label>
+                         <div class="col-sm-6 mb-3" id="driving-section-${timestamp}">
+                          <div class="input-group" style="position: relative;">
+                            <label for="" class="resume-form-label">Select Licence Cateogory (optional)</label>
                             
-                            <select id="language_professionalism" name="driving_licence[]" class="form-control w100p country-select" required>
+                            <select  name="driving_licence[]" class="form-control  w100p country-select" required>
                             <option value="">Select Licence Category</option>
                            <option value="LTV">LTV</option>
                             <option value="HTV">HTV</option>
                             <option value=" Moter Car & Moter Bike"> Moter Car & Moter Bike</option>
                             </select>
+                            <button type="button" class="btn-danger delete-driving fa fa-minus" data-driving-id="driving-section-${timestamp}" style="position: absolute; top: 5px; right: 25px;"></button> 
                           </div>
                         </div>
                         
@@ -3505,6 +3768,10 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
 
                 // Append the new liecence  section to the container
                 $('#licence-append-container').append(newlanguagesSection);
+                $('.delete-driving').off('click').on('click', function() {
+                    var drivingId = $(this).data('driving-id'); // Get the ID of the skills section to delete
+                    $('#' + drivingId).remove(); // Remove the skills section
+                });
             });
 
 
@@ -3512,17 +3779,18 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
 
 
             $('#add-more-hobbies').click(function() {
-                // Define the HTML content for the new language section
+                var timestamp = new Date().getTime();   
                 var newhobieSection = `
 
-                                    <div class="col-sm-6 mb-3">
-                                        <div class="input-group">
+                                     <div class="col-sm-6 mb-3" id="hobbie-section-${timestamp}">
+                                        <div class="input-group" style="position: relative;">
 
-                                                                      <label for="" class="resume-form-label"> Hobbie </label>
+                                                                      <label for="" class="resume-form-label"> Hobbie (optional)</label>
 
 
-                                            <input type="text" class="form-control" value=""
+                                            <input type="text" class="form-control " value=""
                                                 placeholder="Enter Hobbie or interes" name="hobbies[]">
+                                                 <button type="button" class="btn-danger delete-hobbie fa fa-minus" data-hobbie-id="hobbie-section-${timestamp}" style="position: absolute; top: 5px; right: 0;"></button> 
 
                                         </div>
                                     </div>
@@ -3533,15 +3801,38 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
 
                 // Append the Hobbie  section to the container
                 $('#hobbie-append-container').append(newhobieSection);
+                $('.delete-hobbie').off('click').on('click', function() {
+                    var hobbieId = $(this).data('hobbie-id'); // Get the ID of the skills section to delete
+                    $('#' + hobbieId).remove(); // Remove the skills section
+                });
             });
 
 
 
 
             $('#add-more-awards').click(function() {
+                var timestamp = new Date().getTime();    
                 // Define the HTML content for the new language section
                 var newAwardSection = `
+                 <div class="row experience-section my-2 py-2" id="awards-section-${timestamp}"> 
 
+                                     <div class="col-sm-12 mb-3">
+                                        <div class="input-group">
+                                            <label for="" class="resume-form-label">Award Title</label>
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text input-icon student-login-icon">
+                                                    <i class="fa fa-building"></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Award Title"
+                                                name="Awarded_title[]" autocomplete="off">
+
+                                            <div class="reg-error-msg" v-if="errors.country"
+                                                v-for="error in errors.country">
+                                                <span v-text="error"></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                       <div class="col-sm-6 mb-3">
                                         <div class="input-group">
                                             <label for="" class="resume-form-label">Awarded Date</label>
@@ -3578,28 +3869,20 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                                     </div>
 
 
-                                    <div class="col-sm-12 mb-3">
-                                        <div class="input-group">
-                                            <label for="" class="resume-form-label">Award Title</label>
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text input-icon student-login-icon">
-                                                    <i class="fa fa-building"></i>
-                                                </div>
-                                            </div>
-                                            <input type="text" class="form-control" placeholder="Award Title"
-                                                name="Awarded_title[]" autocomplete="off">
-
-                                            <div class="reg-error-msg" v-if="errors.country"
-                                                v-for="error in errors.country">
-                                                <span v-text="error"></span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
+                                     <div class="col-sm-12 mb-3">
+                                    <button type="button" class="btn-danger delete-awards" data-awards-id="awards-section-${timestamp}">Delete</button>
+                                </div>
+                                </div>
                                    
                                 
                             `;
                 // Append the new liecence  section to the container
                 $('#appended-award-section').append(newAwardSection);
+                $('.delete-awards').off('click').on('click', function() {
+                    var awardsId = $(this).data('awards-id'); // Get the ID of the skills section to delete
+                    $('#' + awardsId).remove(); // Remove the skills section
+                });
             });
 
 
@@ -3607,8 +3890,28 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
 
 
             $('#add-more-projects').click(function() {
-                // Define the HTML content for the new language section
+                var timestamp = new Date().getTime(); 
                 var newAwardSection = `
+                                     <div class="row experience-section mt-3" id="project-section-${timestamp}"> 
+
+                                     <div class="col-sm-12 mb-3">
+                                        <div class="input-group">
+                                            <label for="" class="resume-form-label">Title </label>
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text input-icon student-login-icon">
+                                                    <i class="fa fa-book"></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Position Name"
+                                                name="project_title[]" autocomplete="off">
+
+                                            <div class="reg-error-msg" v-if="errors.country"
+                                                v-for="error in errors.country">
+                                                <span v-text="error"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                      <div class="col-sm-6 mb-3">
                                         <div class="input-group">
@@ -3646,32 +3949,18 @@ document.getElementById('downloadCv').addEventListener('click', function(event) 
                                         </div>
                                     </div>
 
-
                                     <div class="col-sm-12 mb-3">
-                                        <div class="input-group">
-                                            <label for="" class="resume-form-label">Title </label>
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text input-icon student-login-icon">
-                                                    <i class="fa fa-book"></i>
-                                                </div>
-                                            </div>
-                                            <input type="text" class="form-control" placeholder="Position Name"
-                                                name="project_title[]" autocomplete="off">
-
-                                            <div class="reg-error-msg" v-if="errors.country"
-                                                v-for="error in errors.country">
-                                                <span v-text="error"></span>
-                                            </div>
-                                        </div>
+                                        <button type="button" class="btn-danger delete-project" data-project-id="project-section-${timestamp}">Delete</button>
                                     </div>
-
-
-
-                                    
+                            </div>        
                                 
                             `;
                 // Append the more projects to the container
                 $('#project-details-appended-container').append(newAwardSection);
+                $('.delete-project').off('click').on('click', function() {
+                    var projectId = $(this).data('project-id'); // Get the ID of the skills section to delete
+                    $('#' + projectId).remove(); // Remove the skills section
+                });
             });
 
 

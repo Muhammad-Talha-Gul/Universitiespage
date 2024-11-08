@@ -1557,7 +1557,7 @@
     // Sub-tables for TOEFL iBT (Reading, Listening, Speaking, Writing)
     for (const [subTableName, subTableLevels] of Object.entries(proficiencyLevels["TOEFL iBT"].subTables)) {
         const subTableDiv = document.createElement("div");
-        subTableDiv.className = "col-sm-6 mb-3";
+        subTableDiv.className = "col-sm-6 mb-3 select-container-main";
         subTableDiv.innerHTML = `<label class="resume-form-label">TOEFL iBT - ${subTableName}</label>`;
 
         const subTableSelect = document.createElement("select");
@@ -1582,7 +1582,7 @@
 
     // Main TOEFL iBT Scores (Overall)
     const mainDiv = document.createElement("div");
-    mainDiv.className = "col-sm-6 mb-3";
+    mainDiv.className = "col-sm-6 mb-3 select-container-main";
     mainDiv.innerHTML = `<label class="resume-form-label">TOEFL iBT - Overall</label>`;
 
     const mainSelect = document.createElement("select");
@@ -1609,7 +1609,7 @@
                 const skills = ["Listening", "Reading", "Speaking", "Writing", "Overall"];
                 skills.forEach(skill => {
                     const div = document.createElement("div");
-                    div.className = "col-sm-6 mb-3";
+                    div.className = "col-sm-6 mb-3 select-container-main";
 
                     const select = document.createElement("select");
                     select.className = `language_${skill.toLowerCase().replace(" ", "_")} form-control certificate-select`;
@@ -1647,11 +1647,11 @@
               $('#language_professionalisms').change(function() {
     var selectedValue = $(this).val();
     var certificateSelect = $('.certificate-select');
-
+    var selectContainerMain = $('.select-container-main');
     if (selectedValue === 'English Proficiency Certificate') {
         // Prevent changes to the select, simulating "readonly"
         certificateSelect.val('B2'); // Set the value to "B2"
-        certificateSelect.addClass('invisible-select');
+        selectContainerMain.addClass('invisible-select');
         certificateSelect.prop('readonly', true); // Mark the element as readonly-like
         certificateSelect.on('mousedown', function(e) {
             e.preventDefault(); // Prevent selection change on click
@@ -1660,7 +1660,7 @@
         // Enable selection and remove readonly-like behavior
         certificateSelect.prop('readonly', false); // Remove readonly-like behavior
         certificateSelect.off('mousedown'); // Allow selection change
-        certificateSelect.removeClass('invisible-select');
+        selectContainerMain.removeClass('invisible-select');
         certificateSelect.val(''); // Reset the select value
     }
 });
